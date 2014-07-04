@@ -1,0 +1,168 @@
+\begin{thebibliography}{}
+
+\bibitem[Ali et~al., 2014]{ali_empirical_2014}
+Ali, S.~S., Lifshitz, M., and Raz, A. (2014).
+\newblock Empirical neuroenchantment: from reading minds to thinking
+  critically.
+\newblock {\em Frontiers in Human Neuroscience}, 8.
+
+\bibitem[Blankertz et~al., 2007a]{blankertz_non-invasive_2007}
+Blankertz, B., Dornhege, G., Krauledat, M., Müller, K.-R., and Curio, G.
+  (2007a).
+\newblock The non-invasive berlin brain–computer interface: fast acquisition
+  of effective performance in untrained subjects.
+\newblock {\em {NeuroImage}}, 37(2):539–550.
+
+\bibitem[Blankertz et~al., 2007b]{blankertz_note_2007}
+Blankertz, B., Krauledat, M., Dornhege, G., Williamson, J., Murray-Smith, R.,
+  and Müller, K.-R. (2007b).
+\newblock A note on brain actuated spelling with the berlin brain-computer
+  interface.
+\newblock In Stephanidis, C., editor, {\em Universal Access in Human-Computer
+  Interaction. Ambient Interaction}, number 4555 in Lecture Notes in Computer
+  Science, pages 759--768. Springer Berlin Heidelberg.
+
+\bibitem[Campbell et~al., 2010]{campbell_neurophone:_2010}
+Campbell, A., Choudhury, T., Hu, S., Lu, H., Mukerjee, M.~K., Rabbi, M., and
+  Raizada, R.~D. (2010).
+\newblock {NeuroPhone:} brain-mobile phone interface using a wireless {EEG}
+  headset.
+\newblock In {\em Proceedings of the second {ACM} {SIGCOMM} workshop on
+  Networking, systems, and applications on mobile handhelds}, page 3–8.
+  {ACM}.
+
+\bibitem[Carrino et~al., 2012]{carrino_self-paced_2012}
+Carrino, F., Dumoulin, J., Mugellini, E., Khaled, O., and Ingold, R. (2012).
+\newblock A self-paced {BCI} system to control an electric wheelchair:
+  Evaluation of a commercial, low-cost {EEG} device.
+\newblock In {\em Biosignals and Biorobotics Conference ({BRC)}, 2012
+  {ISSNIP}}, pages 1--6.
+
+\bibitem[Chuang et~al., 2013]{adams_i_2013}
+Chuang, J., Nguyen, H., Wang, C., and Johnson, B. (2013).
+\newblock I think, therefore i am: Usability and security of authentication
+  using brainwaves.
+\newblock In Adams, A., Brenner, M., and Smith, M., editors, {\em Financial
+  Cryptography and Data Security}, volume 7862 of {\em Lecture Notes in
+  Computer Science}, pages 1--16. Springer Berlin Heidelberg.
+
+\bibitem[Crowley et~al., 2010]{crowley_evaluating_2010}
+Crowley, K., Sliney, A., Pitt, I., and Murphy, D. (2010).
+\newblock Evaluating a brain-computer interface to categorise human emotional
+  response.
+\newblock In {\em {ICALT}}, page 276–278.
+
+\bibitem[D.~Mattia, 2011]{d._mattia_brain_2011}
+D.~Mattia, F.~Pichiorri, M. M. R.~R. (2011).
+\newblock Brain computer interface for hand motor function restoration and
+  rehabilitation.
+\newblock In {\em Towards Practical Brain Computer Interfaces}. Springer,
+  Biological and Medical Physics, Biomedical Engineering.
+
+\bibitem[Das et~al., 2013]{das_unsupervised_2013}
+Das, D., Chatterjee, D., and Sinha, A. (2013).
+\newblock Unsupervised approach for measurement of cognitive load using {EEG}
+  signals.
+\newblock pages 1--6. {IEEE}.
+
+\bibitem[Dornhege, 2007]{dornhege_toward_2007}
+Dornhege, G. (2007).
+\newblock {\em Toward Brain-computer Interfacing}.
+\newblock {MIT} Press.
+
+\bibitem[Ekandem et~al., 2012]{ekandem_evaluating_2012}
+Ekandem, J.~I., Davis, T.~A., Alvarez, I., James, M.~T., and Gilbert, J.~E.
+  (2012).
+\newblock Evaluating the ergonomics of {BCI} devices for research and
+  experimentation.
+\newblock {\em Ergonomics}, 55(5):592–598.
+
+\bibitem[Grierson and Kiefer, 2011]{grierson_better_2011}
+Grierson, M. and Kiefer, C. (2011).
+\newblock Better brain interfacing for the masses: progress in event-related
+  potential detection using commercial brain computer interfaces.
+\newblock page 1681. {ACM} Press.
+
+\bibitem[Hill et~al., 2014]{hill_practical_2014}
+Hill, N.~J., Ricci, E., Haider, S., McCane, L.~M., Heckman, S., Wolpaw, J.~R.,
+  and Vaughan, T.~M. (2014).
+\newblock A practical, intuitive brain–computer interface for communicating
+  ‘yes’ or ‘no’ by listening.
+\newblock {\em Journal of Neural Engineering}, 11(3):035003.
+
+\bibitem[Jain et~al., 2000]{jain_statistical_2000}
+Jain, A.~K., Duin, R. P.~W., and Mao, J. (2000).
+\newblock Statistical pattern recognition: A review.
+\newblock {\em Pattern Analysis and Machine Intelligence, {IEEE} Transactions
+  on}, 22(1):4–37.
+
+\bibitem[Larsen and Hokl, 2011]{larsen_classification_2011}
+Larsen, E.~A. and Hokl, C.-s.~J. (2011).
+\newblock {\em Classification of {EEG} Signals in a Brain- Computer Interface
+  System}.
+
+\bibitem[Leeb et~al., 2013]{leeb_transferring_2013}
+Leeb, R., Perdikis, S., Tonin, L., Biasiucci, A., Tavella, M., Creatura, M.,
+  Molina, A., Al-Khodairy, A., Carlson, T., and Millán, J. d.~R. (2013).
+\newblock Transferring brain–computer interfaces beyond the laboratory:
+  Successful application control for motor-disabled users.
+\newblock {\em Artificial Intelligence in Medicine}, 59(2):121--132.
+
+\bibitem[Lotte et~al., 2007]{lotte_review_2007}
+Lotte, F., Congedo, M., Lécuyer, A., Lamarche, F., Arnaldi, B., et~al. (2007).
+\newblock A review of classification algorithms for {EEG-based}
+  brain–computer interfaces.
+\newblock {\em Journal of neural engineering}, 4.
+
+\bibitem[Lu et~al., 2009]{shijian_lu_unsupervised_2009}
+Lu, S., Guan, C., and Zhang, H. (2009).
+\newblock Unsupervised brain computer interface based on intersubject
+  information and online adaptation.
+\newblock {\em {IEEE} Transactions on Neural Systems and Rehabilitation
+  Engineering}, 17(2):135--145.
+
+\bibitem[McFarland and Wolpaw, 2011]{mcfarland_brain-computer_2011}
+McFarland, D.~J. and Wolpaw, J.~R. (2011).
+\newblock Brain-computer interfaces for communication and control.
+\newblock {\em Commun {ACM}}, 54(5):60--66.
+
+\bibitem[Millán et~al., 2010]{millan_combining_2010}
+Millán, J. D.~R., Rupp, R., Müller-Putz, G.~R., Murray-Smith, R., Giugliemma,
+  C., Tangermann, M., Vidaurre, C., Cincotti, F., Kübler, A., Leeb, R.,
+  Neuper, C., Müller, K.-R., and Mattia, D. (2010).
+\newblock Combining brain-computer interfaces and assistive technologies:
+  State-of-the-art and challenges.
+\newblock {\em Front Neurosci}, 4.
+
+\bibitem[Raudys and Jain, 1991]{raudys_small_1991}
+Raudys, S.~J. and Jain, A.~K. (1991).
+\newblock Small sample size effects in statistical pattern recognition:
+  Recommendations for practitioners.
+\newblock {\em {IEEE} Transactions on pattern analysis and machine
+  intelligence}, 13(3):252–264.
+
+\bibitem[Shenoy et~al., 2006]{shenoy_towards_2006}
+Shenoy, P., Krauledat, M., Blankertz, B., Rao, R. P.~N., and Müller, K.-R.
+  (2006).
+\newblock Towards adaptive classification for {BCI}.
+\newblock {\em Journal of Neural Engineering}, 3(1):R13--R23.
+
+\bibitem[Vidaurre et~al., 2011a]{vidaurre_co-adaptive_2011}
+Vidaurre, C., Sannelli, C., Müller, K.-R., and Blankertz, B. (2011a).
+\newblock Co-adaptive calibration to improve {BCI} efficiency.
+\newblock {\em Journal of Neural Engineering}, 8(2):025009.
+
+\bibitem[Vidaurre et~al., 2011b]{vidaurre_machine-learning-based_2011}
+Vidaurre, C., Sannelli, C., Müller, K.-R., and Blankertz, B. (2011b).
+\newblock Machine-learning-based coadaptive calibration for brain-computer
+  interfaces.
+\newblock {\em Neural Computation}, 23(3):791--816.
+
+\bibitem[Vidaurre et~al., 2006]{vidaurre_fully_2006}
+Vidaurre, C., Schloogl, A., Cabeza, R., Scherer, R., and Pfurtscheller, G.
+  (2006).
+\newblock A fully on-line adaptive {BCI}.
+\newblock {\em {IEEE} Transactions on Biomedical Engineering},
+  53(6):1214--1219.
+
+\end{thebibliography}
