@@ -19,7 +19,7 @@
 
 \begin{document}
 
-\title{Toward Performant, Online Brain-Computer Interface in Naturalistic Environments}
+\title{Performant, Online Brain-Computer Interface in Naturalistic Settings}
 
 \author{\authorname{Nick Merrill\sup{1}, Thomas Maillart\sup{1}, Benjamin Johnson\sup{2} and John Chuang\sup{1}}
 \affiliation{\sup{1}School of Information, UC Berkeley, Berkeley, California, USA}
@@ -29,13 +29,14 @@
 
 \keywords{BCI, Mobile, Ubiquitous Computing}
 
-\abstract{By training machine learning (ML)-based classiers on electroencephalography (EEG) signals, researchers have built applications ranging from brain-controlled keyboards to prosthetic arms and hands. However, these applications require elaborate scanning caps, which are unwieldy both from an ergonomic perspective and from a computational one, as the data they produce are large in memory and expensive for machine learning classifiers to process. This study seeks to acheive a high-bitrate brain-computer interface (BCI) with a single EEG sensor and minimal computational requirements. We find that a quantization technique employing logarithmically-spaced bins significantly increases the computational speed of a classification-based BCI without great detriment to accuracy. We also find that this technique can be used to build effective mental task classifiers with under a minute of training data per task. We discuss implications for chronic neural recording and brain-computer interface in naturalistic environments.}
+\abstract{By training machine learning (ML)-based classiers on electroencephalography (EEG) signals, researchers have built applications ranging from brain-controlled keyboards to prosthetic arms and hands. However, these applications require elaborate scanning caps, which are unwieldy both from an ergonomic perspective and from a computational one, as the data they produce are large in memory and expensive for machine learning classifiers to process. Can we acheive effective, quick-to-calibrate brain-computer interface (BCI) with a single EEG sensor and minimal computational requirements? We find that a quantization technique employing logarithmically-spaced bins significantly increases the computational speed of a classification-based BCI without great detriment to accuracy. We also find that this technique can be used to build effective mental task classifiers with under a minute of training data per task. We discuss implications for chronic neural recording and brain-computer interface in naturalistic environments.}
 
 \onecolumn \maketitle \normalsize \vfill
 
 \input{Sections/intro}
 \input{Sections/background}
 \input{Sections/method}
+\input{Sections/results}
 \input{Sections/discussion}
 
 \vfill

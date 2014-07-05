@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.7.3)  4 JUL 2014 12:28
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.7.3)  4 JUL 2014 13:11
 entering extended mode
  %&-line parsing enabled.
 **test1.tex
@@ -407,7 +407,14 @@ nput line 55.
 LaTeX Warning: Citation `garrett_comparison_2003' on page 4 undefined on input 
 line 55.
 
-) (./Sections/discussion.tex
+) (./Sections/results.tex <Figures/fig3.png, id=14, 578.16pt x 433.62pt>
+File: Figures/fig3.png Graphic file (type png)
+
+<use Figures/fig3.png> <Figures/fig1.png, id=16, 578.16pt x 433.62pt>
+File: Figures/fig1.png Graphic file (type png)
+
+<use Figures/fig1.png>) (./Sections/discussion.tex [4 <./Figures/fig3.png> <./F
+igures/fig1.png>]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ú in font ptmr7t!
@@ -417,7 +424,7 @@ Missing character: There is no ù in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-) [4] (./test1.bbl
+) (./test1.bbl
 Missing character: There is no √ in font ptmr7t!
 Missing character: There is no º in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
@@ -489,21 +496,24 @@ Missing character: There is no º in font ptmr7t!
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 3471 strings out of 495061
- 48174 string characters out of 1182622
+ 3490 strings out of 495061
+ 48483 string characters out of 1182622
  117461 words of memory out of 3000000
- 6586 multiletter control sequences out of 15000+50000
+ 6598 multiletter control sequences out of 15000+50000
  41190 words of font info for 88 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 36i,6n,38p,1103b,260s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,6n,38p,1103b,284s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
 ve/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on test1.pdf (6 pages, 77259 bytes).
+Output written on test1.pdf (6 pages, 116737 bytes).
 PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
+ 39 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
