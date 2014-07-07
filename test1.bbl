@@ -1,11 +1,5 @@
 \begin{thebibliography}{}
 
-\bibitem[Ali et~al., 2014]{ali_empirical_2014}
-Ali, S.~S., Lifshitz, M., and Raz, A. (2014).
-\newblock Empirical neuroenchantment: from reading minds to thinking
-  critically.
-\newblock {\em Frontiers in Human Neuroscience}, 8.
-
 \bibitem[Blankertz et~al., 2007a]{blankertz_non-invasive_2007}
 Blankertz, B., Dornhege, G., Krauledat, M., Müller, K.-R., and Curio, G.
   (2007a).
@@ -21,6 +15,11 @@ Blankertz, B., Krauledat, M., Dornhege, G., Williamson, J., Murray-Smith, R.,
 \newblock In Stephanidis, C., editor, {\em Universal Access in Human-Computer
   Interaction. Ambient Interaction}, number 4555 in Lecture Notes in Computer
   Science, pages 759--768. Springer Berlin Heidelberg.
+
+\bibitem[Burges, 1998]{burges_tutorial_1998}
+Burges, C. (1998).
+\newblock A tutorial on support vector machines for pattern recognition.
+\newblock {\em Data Mining and Knowledge Discovery}, 2(2):121--167.
 
 \bibitem[Campbell et~al., 2010]{campbell_neurophone:_2010}
 Campbell, A., Choudhury, T., Hu, S., Lu, H., Mukerjee, M.~K., Rabbi, M., and
@@ -76,6 +75,18 @@ Ekandem, J.~I., Davis, T.~A., Alvarez, I., James, M.~T., and Gilbert, J.~E.
 \newblock Evaluating the ergonomics of {BCI} devices for research and
   experimentation.
 \newblock {\em Ergonomics}, 55(5):592–598.
+
+\bibitem[Fan et~al., 2008]{fan_liblinear:_2008}
+Fan, R.-E., Chang, K.-W., Hsieh, C.-J., Wang, X.-R., and Lin, C.-J. (2008).
+\newblock {LIBLINEAR:} a library for large linear classification.
+\newblock {\em J. Mach. Learn. Res.}, 9:1871–1874.
+
+\bibitem[Garrett et~al., 2003]{garrett_comparison_2003}
+Garrett, D., Peterson, D., Anderson, C., and Thaut, M. (2003).
+\newblock Comparison of linear, nonlinear, and feature selection methods for
+  eeg signal classification.
+\newblock {\em {IEEE} Transactions on Neural Systems and Rehabilitation
+  Engineering}, 11(2):141--144.
 
 \bibitem[Grierson and Kiefer, 2011]{grierson_better_2011}
 Grierson, M. and Kiefer, C. (2011).
@@ -133,6 +144,14 @@ Millán, J. D.~R., Rupp, R., Müller-Putz, G.~R., Murray-Smith, R., Giugliemma,
 \newblock Combining brain-computer interfaces and assistive technologies:
   State-of-the-art and challenges.
 \newblock {\em Front Neurosci}, 4.
+
+\bibitem[Pedregosa et~al., 2011]{pedregosa_scikit-learn:_2011}
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel,
+  O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J.,
+  Passos, A., Cournapeau, D., Brucher, M., Perrot, M., and Duchesnay, �.
+  (2011).
+\newblock Scikit-learn: Machine learning in python.
+\newblock {\em J. Mach. Learn. Res.}, 12:2825–2830.
 
 \bibitem[Raudys and Jain, 1991]{raudys_small_1991}
 Raudys, S.~J. and Jain, A.~K. (1991).

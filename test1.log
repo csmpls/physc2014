@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.7.3)  5 JUL 2014 13:21
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.7.3)  7 JUL 2014 13:35
 entering extended mode
  %&-line parsing enabled.
 **test1.tex
@@ -273,6 +273,9 @@ Package caption Info: subfigure package is loaded.
 
 LaTeX Warning: Label `fig:fig2' multiply defined.
 
+
+LaTeX Warning: Label `fig:fig2' multiply defined.
+
 )
 \openout1 = `test1.aux'.
 
@@ -359,211 +362,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--34
 (./Sections/intro.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
-
-
-LaTeX Warning: Citation `dornhege_toward_2007' on page 1 undefined on input lin
-e 4.
-
-
-LaTeX Warning: Citation `mcfarland_brain-computer_2011' on page 1 undefined on 
-input line 4.
-
-
-LaTeX Warning: Citation `blankertz_note_2007' on page 1 undefined on input line
- 4.
-
-
-LaTeX Warning: Citation `millan_combining_2010' on page 1 undefined on input li
-ne 4.
-
-
-LaTeX Warning: Citation `d._mattia_brain_2011' on page 1 undefined on input lin
-e 4.
-
-
-LaTeX Warning: Citation `hill_practical_2014' on page 1 undefined on input line
- 4.
-
-
-LaTeX Warning: Citation `campbell_neurophone:_2010' on page 1 undefined on inpu
-t line 4.
-
-
-LaTeX Warning: Citation `ekandem_evaluating_2012' on page 1 undefined on input 
-line 7.
-
-
-LaTeX Warning: Citation `leeb_transferring_2013' on page 1 undefined on input l
-ine 7.
-
-
-LaTeX Warning: Citation `vidaurre_fully_2006' on page 1 undefined on input line
- 7.
-
-
-LaTeX Warning: Citation `vidaurre_co-adaptive_2011' on page 1 undefined on inpu
-t line 7.
-
-
-LaTeX Warning: Citation `blankertz_non-invasive_2007' on page 1 undefined on in
-put line 7.
-
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 ) (./Sections/background.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
 
-]
-
-LaTeX Warning: Citation `crowley_evaluating_2010' on page 2 undefined on input 
-line 8.
-
-
-LaTeX Warning: Citation `grierson_better_2011' on page 2 undefined on input lin
-e 8.
-
-
-LaTeX Warning: Citation `adams_i_2013' on page 2 undefined on input line 8.
-
-
-LaTeX Warning: Citation `carrino_self-paced_2012' on page 2 undefined on input 
-line 8.
-
-
-LaTeX Warning: Citation `larsen_classification_2011' on page 2 undefined on inp
-ut line 8.
-
-
-LaTeX Warning: Citation `millan_combining_2010' on page 2 undefined on input li
-ne 14.
-
-
-LaTeX Warning: Citation `ali_empirical_2014' on page 2 undefined on input line 
-14.
-
-
-LaTeX Warning: Citation `lotte_review_2007' on page 2 undefined on input line 1
-4.
-
-
-LaTeX Warning: Citation `vidaurre_fully_2006' on page 2 undefined on input line
- 14.
-
-
-LaTeX Warning: Citation `vidaurre_machine-learning-based_2011' on page 2 undefi
-ned on input line 14.
-
-
-LaTeX Warning: Citation `lotte_review_2007' on page 2 undefined on input line 1
-6.
-
-
-LaTeX Warning: Citation `vidaurre_machine-learning-based_2011' on page 2 undefi
-ned on input line 16.
-
-
-LaTeX Warning: Citation `jain_statistical_2000' on page 2 undefined on input li
-ne 16.
-
-
-LaTeX Warning: Citation `raudys_small_1991' on page 2 undefined on input line 1
-6.
-
-
-LaTeX Warning: Citation `shenoy_towards_2006' on page 2 undefined on input line
- 20.
-
-
-LaTeX Warning: Citation `vidaurre_fully_2006' on page 2 undefined on input line
- 20.
-
-
-LaTeX Warning: Citation `vidaurre_co-adaptive_2011' on page 2 undefined on inpu
-t line 20.
-
-
-LaTeX Warning: Citation `vidaurre_machine-learning-based_2011' on page 2 undefi
-ned on input line 20.
-
-
-LaTeX Warning: Citation `vidaurre_fully_2006' on page 2 undefined on input line
- 21.
-
-
-LaTeX Warning: Citation `shijian_lu_unsupervised_2009' on page 2 undefined on i
-nput line 21.
-
-
-LaTeX Warning: Citation `das_unsupervised_2013' on page 2 undefined on input li
-ne 21.
-
-
-LaTeX Warning: Citation `mcfarland_brain-computer_2011' on page 2 undefined on 
-input line 26.
-
-
-LaTeX Warning: Citation `ali_empirical_2014' on page 2 undefined on input line 
-26.
-
-[2]) (./Sections/method.tex
+] [2]) (./Sections/method.tex
 Underfull \hbox (badness 1496) in paragraph at lines 17--18
 \OT1/ptm/m/n/10 1.5,1.5-1.75,1.75-2) have the val-ues (4,4,5,5) the
  []
 
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 31.
 
 LaTeX Warning: Reference `binnedEEGpowerspec' on page 3 undefined on input line
  31.
 
-
-LaTeX Warning: Citation `burges_tutorial_1998' on page 3 undefined on input lin
-e 48.
-
-
-LaTeX Warning: Citation `garrett_comparison_2003' on page 3 undefined on input 
-line 48.
-
-
-LaTeX Warning: Citation `grierson_better_2011' on page 3 undefined on input lin
-e 48.
-
-[3]
-
-LaTeX Warning: Citation `fan_liblinear:_2008' on page 4 undefined on input line
- 50.
-
-
-LaTeX Warning: Citation `pedregosa_scikit-learn:_2011' on page 4 undefined on i
-nput line 50.
-
-
-LaTeX Warning: Citation `garrett_comparison_2003' on page 4 undefined on input 
-line 50.
-
-
-LaTeX Warning: Citation `lotte_review_2007' on page 4 undefined on input line 5
-0.
-
-) (./Sections/results.tex <Figures/1-2.png, id=14, 578.16pt x 433.62pt>
+[3]) (./Sections/results.tex <Figures/1-2.png, id=14, 578.16pt x 433.62pt>
 File: Figures/1-2.png Graphic file (type png)
 
-<use Figures/1-2.png> <Figures/avg.png, id=16, 578.16pt x 433.62pt>
-File: Figures/avg.png Graphic file (type png)
+<use Figures/1-2.png> <Figures/3-1.png, id=16, 578.16pt x 433.62pt>
+File: Figures/3-1.png Graphic file (type png)
 
-<use Figures/avg.png> <Figures/best.png, id=17, 578.16pt x 433.62pt>
-File: Figures/best.png Graphic file (type png)
+<use Figures/3-1.png> <Figures/3.png, id=17, 578.16pt x 433.62pt>
+File: Figures/3.png Graphic file (type png)
 
-<use Figures/best.png> [4 <./Figures/1-2.png> <./Figures/avg.png> <./Figures/be
-st.png>]
-File: Figures/best.png Graphic file (type png)
- <use Figures/best.png>) (./Sections/discussion.tex
+<use Figures/3.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4 <./Figures/1-2.png> <./Figures/3-1.png>]
+<Figures/7.png, id=23, 578.16pt x 433.62pt>
+File: Figures/7.png Graphic file (type png)
+ <use Figures/7.png>)
+(./Sections/discussion.tex
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no œ in font ptmr7t!
@@ -584,11 +427,13 @@ Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
+ [5 <./Figures/3.png> <./Figures/7.png>]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
-
-[5]
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
@@ -631,6 +476,10 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
@@ -640,7 +489,9 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
-) [6] (./test1.aux)
+ [6]) [7
+
+] (./test1.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -649,19 +500,19 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3495 strings out of 495061
- 48556 string characters out of 1182622
- 118461 words of memory out of 3000000
- 6602 multiletter control sequences out of 15000+50000
+ 3499 strings out of 495061
+ 48597 string characters out of 1182622
+ 119461 words of memory out of 3000000
+ 6605 multiletter control sequences out of 15000+50000
  41190 words of font info for 88 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  36i,6n,38p,1103b,278s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
 ve/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on test1.pdf (6 pages, 167627 bytes).
+Output written on test1.pdf (7 pages, 180504 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
+ 48 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
