@@ -12,6 +12,7 @@
 \usepackage{apalike}
 \usepackage{SCITEPRESS}
 \usepackage[small]{caption}
+\usepackage{color}
 
 \subfigtopskip=0pt
 \subfigcapskip=0pt
@@ -29,7 +30,7 @@
 
 \keywords{BCI, Mobile, Ubiquitous Computing}
 
-\abstract{By training machine learning (ML)-based classiers on electroencephalography (EEG) signals, researchers have built applications ranging from brain-controlled keyboards to prosthetic arms and hands. However, these applications require elaborate scanning caps, which are unwieldy both from an ergonomic perspective and from a computational one, as the data they produce are large in memory and expensive for machine learning classifiers to process. Can we acheive effective, quick-to-calibrate brain-computer interface (BCI) with a single EEG sensor and minimal computational requirements? We find that a quantization technique employing logarithmically-spaced bins significantly increases the computational speed of a classification-based BCI without great detriment to accuracy. We also find that this technique can be used to build effective mental task classifiers with under a minute of training data per task. We discuss implications for chronic neural recording and brain-computer interface in naturalistic environments.}
+\abstract{By training machine learning (ML)-based classiers on electroencephalography (EEG) signals, researchers have built applications ranging from brain-controlled keyboards to prosthetic arms and hands. However, these applications require elaborate scanning caps, which are unwieldy both from an ergonomic perspective and from a computational one, as the data they produce are large in memory and expensive for machine learning classifiers to process \textcolor{red}{\bf In general, we should present the issue of ergonomic and computation as a trade-off}. Can we achieve effective, quick-to-calibrate brain-computer interface (BCI) with a single EEG sensor and minimal computational requirements? \textcolor{red}{\bf this is a tight definition of BCI, which could be detailed a little more} We find that a quantization technique employing logarithmically-spaced bins significantly increases the computational speed of a classification-based BCI without great detriment to accuracy \textcolor{red}{\bf this sentence suggests that we found the method by chance. We should explain the rational for this technique. Quantization is a complicated term for an abstract}. We also find that this technique can be used to build effective mental task classifiers with under a minute of training data per task \textcolor{red}{Is this the BCI you are mentioning above?}. We discuss implications for chronic \textcolor{red}{weird term $\rightarrow$ replace with ``real-time" ?} neural recording and brain-computer interface in naturalistic \textcolor{red}{weird term $\rightarrow$ makes me think of ``naturist", suggesting that we explore brainwave acquisition with naked people} environments.}
 
 \onecolumn \maketitle \normalsize \vfill
 

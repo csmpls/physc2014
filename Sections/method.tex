@@ -8,7 +8,7 @@ As our research involved human subjects, our experimental procedures were approv
 
 \subsection{Signal extraction}
 
-The Neurosky MindSet SDK delivered a power spectrum of its data at 2Hz. Offline, we compress the data in the temporal dimension, taking the middle \textit{n} seconds of the recording, where \textit{n} is {0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9}. 
+The Neurosky MindSet SDK delivered a power spectrum of its data every half second. Offline, we compress the data in the temporal dimension, taking the middle \textit{n} seconds of the recording, where $n = \{0.5, 1.0,1.5, 2.0,...,8.0, 8.5, 9.0\}$. 
 
 The Neurosky software computes a power spectrum every half second. The maximum frequency is 256Hz, as the maximum sampling rate of Neurosky hardware is 512Hz. The power spectrum is computed with discrete bins of 1/4 Hz. Each bin represents the intensity of activation of a frequency range (e.g., between 1 and 1.25 Hz) in a half-second time window. There are therefore 1024 values reported for one power spectrum. Our samples are more or less 10 seconds, which means around 20 power spectra computed per sample. Based on the signal quality also recorded some power spectra are removed (Benjamin knows the exact filtering method).
 
@@ -47,6 +47,8 @@ At this point, we have a one-dimensional signal flattened in the time dimension,
 
 Support vector machines (SVM) are a set of supervised machine learning methods that take labeled example data to create a model that can be used to predict the classes of unlabeled data. SVMs use a hyperplane (an n-dimensional construct in n+1 dimensional space) to draw discriminatory boundaries between classes. In contrast to linear discriminant analysis, which has a long history of use in BCIs, SVMs select the hyperplane that maximizes distance from the nearest training points, which has been shown to increase the model's generalizability \cite{burges_tutorial_1998}.  For more on SVM's in BCI: \cite{garrett_comparison_2003,grierson_better_2011} 
 
+\textcolor{red}{a diagram could help understand how SVM works}
+
 In this study, we use LinearSVC, \cite{fan_liblinear:_2008} a wrapper for LibLinear exposed in Python through the ScikitLearn library. \cite{pedregosa_scikit-learn:_2011} We chose LinearSVC primarily because its underlying C implementation is very performant, and because linear kernels performed as well or better than nonlinear ones in early experimentation, corroborating the findings of previous studies. \cite{garrett_comparison_2003,lotte_review_2007}  We use the default settings for LinearSVC - a C of 1.0, squared hinge loss function, and a tolerance parameter of of 1e-4. 
 
 % TODO:  explain what these parameters are, by e.g., providing the main formula of the LinearSVC.
@@ -54,7 +56,7 @@ In this study, we use LinearSVC, \cite{fan_liblinear:_2008} a wrapper for LibLin
 
 \subsection{Experiment 1}
 
-For each subject, we generated every pair of two tasks and cross-validated our SVM seven times on recordings for those two tasks. We used ScikitLearn's built-in cross-validation toolkit, which was configured to perform each of the seven cross-validation steps using different splits of trial data in the training and testing sets. We varied the number of bins in the samples we fed to the SVM and the length of recordings (a slice of our original recording from one second to 1+n seconds). For every task pair processed, we recorded mean classification accuracy across all cross-validation trials.
+For each subject, we generated every pair of two tasks and cross-validated our SVM seven times on recordings for those two tasks \textcolor{red}{(why 2 tasks (and not 3,4,5 etc)? why 7 times ?)}. We used ScikitLearn's built-in cross-validation toolkit, which was configured to perform each of the seven cross-validation steps using different splits of trial data in the training and testing sets. We varied the number of bins in the samples we fed to the SVM and the length of recordings (a slice of our original recording from one second to 1+n seconds). For every task pair processed, we recorded mean classification accuracy across all cross-validation trials.
 
 As an additional performance audit, we timed our SVM at training time and testing time. In this measure, we fit an SVM to all the data for two task-pairs from five randomly-selected subjects, and repeated this process ten thousand times at different bin sizes and different lengths, collecting the minimum time observed in each series of attempts. In order to establish a proper estimate, we time the SVM after all data has been loaded to memory, disregarding the time it takes to load the data from disk.
 
