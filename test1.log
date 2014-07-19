@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.7.3)  15 JUL 2014 15:12
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.7.3)  15 JUL 2014 15:49
 entering extended mode
  %&-line parsing enabled.
 **test1.tex
@@ -378,9 +378,6 @@ Missing character: There is no ô in font ptmr7t!
 ) (./Sections/background.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
@@ -389,7 +386,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
- [2]) (./Sections/method.tex
+
+Underfull \vbox (badness 2970) has occurred while \output is active []
+
+ [2])
+(./Sections/method.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
@@ -406,17 +407,22 @@ LaTeX Warning: Reference `binnedEEGpowerspec' on page 3 undefined on input line
 [3]) (./Sections/results.tex <Figures/1-2.png, id=17, 578.16pt x 433.62pt>
 File: Figures/1-2.png Graphic file (type png)
 
-<use Figures/1-2.png> [4 <./Figures/1-2.png>]
-<Figures/3-1.png, id=23, 578.16pt x 433.62pt>
+<use Figures/1-2.png> <Figures/3-1.png, id=19, 578.16pt x 433.62pt>
 File: Figures/3-1.png Graphic file (type png)
- <use Figures/3-1.png>
-<Figures/3.png, id=24, 578.16pt x 433.62pt>
+
+<use Figures/3-1.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Figures/3.png, id=20, 578.16pt x 433.62pt>
 File: Figures/3.png Graphic file (type png)
  <use Figures/3.png>
-<Figures/7.png, id=25, 578.16pt x 433.62pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Figures/7.png, id=21, 578.16pt x 433.62pt>
 File: Figures/7.png Graphic file (type png)
- <use Figures/7.png>)
-(./Sections/discussion.tex
+ <use Figures/7.png> [4 <./Figures/1-2.png>]) (./Sections/discussion.tex
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ú in font ptmr7t!
@@ -426,7 +432,7 @@ Missing character: There is no ù in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-) [5 <./Figures/3-1.png> <./Figures/3.png> <./Figures/7.png>] (./test1.bbl
+) (./test1.bbl
 Missing character: There is no √ in font ptmr7t!
 Missing character: There is no º in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
@@ -435,6 +441,7 @@ Missing character: There is no ì in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ì in font ptmr7t!
+ [5 <./Figures/3-1.png> <./Figures/3.png> <./Figures/7.png>]
 Missing character: There is no √ in font ptmr7t!
 Missing character: There is no º in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
@@ -449,7 +456,6 @@ Missing character: There is no ì in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ì in font ptmr7t!
- [6]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ì in font ptmr7t!
@@ -499,7 +505,9 @@ Missing character: There is no √ in font ptmr7t!
 Missing character: There is no º in font ptmr7t!
 Missing character: There is no √ in font ptmr7t!
 Missing character: There is no º in font ptmr7t!
-) [7] (./test1.aux)
+ [6]) [7
+
+] (./test1.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -508,11 +516,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3569 strings out of 495061
- 49604 string characters out of 1182622
- 118461 words of memory out of 3000000
+ 3568 strings out of 495061
+ 49598 string characters out of 1182622
+ 119461 words of memory out of 3000000
  6668 multiletter control sequences out of 15000+50000
- 51684 words of font info for 113 fonts, out of 3000000 for 9000
+ 50577 words of font info for 112 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  36i,7n,38p,1730b,290s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
@@ -521,7 +529,7 @@ pe1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pf
 b></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-
 texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on test1.pdf (7 pages, 205849 bytes).
+Output written on test1.pdf (7 pages, 205561 bytes).
 PDF statistics:
  60 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
