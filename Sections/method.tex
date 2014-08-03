@@ -49,14 +49,14 @@ Support vector machines (SVM) are a set of supervised machine learning methods t
 
 \textcolor{red}{a diagram could help understand how SVM works}
 
-In this study, we use LinearSVC, \cite{fan_liblinear:_2008} a wrapper for LibLinear exposed in Python through the ScikitLearn library. \cite{pedregosa_scikit-learn:_2011} We chose LinearSVC primarily because its underlying C implementation is very performant, and because linear kernels performed as well or better than nonlinear ones in early experimentation, corroborating the findings of previous studies. \cite{garrett_comparison_2003,lotte_review_2007}  We use the default settings for LinearSVC - a C of 1.0, squared hinge loss function, and a tolerance parameter of of 1e-4. 
+In this study, we use LinearSVC, \cite{fan_liblinear:_2008} a wrapper for LibLinear exposed in Python through the ScikitLearn library. \cite{pedregosa_scikit-learn:_2011} We chose LinearSVC primarily because its underlying C implementation is very performant, and because linear kernels performed as well or better than nonlinear ones in early experimentation, corroborating the findings of previous studies. \cite{garrett_comparison_2003,lotte_review_2007}  We use the default settings for LinearSVC: a C of 1.0, squared hinge loss function, and a tolerance parameter of of 1e-4. 
 
 % TODO:  explain what these parameters are, by e.g., providing the main formula of the LinearSVC.
 % TODO: provide evidence for "as well or better than nonlinear ones"
 
 \subsection{Experiment 1}
 
-For each subject, we generated every pair of two tasks and cross-validated our SVM seven times on recordings for those two tasks \textcolor{red}{(why 2 tasks (and not 3,4,5 etc)? why 7 times ?)}. We used ScikitLearn's built-in cross-validation toolkit, which was configured to perform each of the seven cross-validation steps using different splits of trial data in the training and testing sets. We varied the number of bins in the samples we fed to the SVM and the length of recordings (a slice of our original recording from one second to 1+n seconds). For every task pair processed, we recorded mean classification accuracy across all cross-validation trials.
+For each subject, we generated every pair of two tasks (a binary BCI) and cross-validated our SVM seven times, the recommended default from scikit-learn, on recordings for those two tasks. We used ScikitLearn's built-in cross-validation toolkit, which was configured to perform each of the seven cross-validation steps using different splits of trial data in the training and testing sets. We varied the number of bins in the samples we fed to the SVM and the length of recordings (a slice of our original recording from one second to 1+n seconds). For every task pair processed, we recorded mean classification accuracy across all cross-validation trials.
 
 As an additional performance audit, we timed our SVM at training time and testing time. In this measure, we fit an SVM to all the data for two task-pairs from five randomly-selected subjects, and repeated this process ten thousand times at different bin sizes and different lengths, collecting the minimum time observed in each series of attempts. In order to establish a proper estimate, we time the SVM after all data has been loaded to memory, disregarding the time it takes to load the data from disk.
 

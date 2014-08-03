@@ -5,34 +5,18 @@
 \begin{figure}[!h]
   \vspace{-0.2cm}
   \centering
-   {\epsfig{file = Figures/1-2.png, width = 5.5cm}}
-  \caption{Mean best-case accuracy among all subjects compared to log of the number of bins in training data.}
+   {\epsfig{file = Figures/1.png, width = 6cm}}
+  \caption{Mean best-case accuracy among all subjects compared to time needed to train the classifier.}
   \label{fig:fig1}
   \vspace{-0.1cm}
  \end{figure}
 
-Overall, both longer recording times and higher bin size are correlated with higher classifier accuracy. \textit{and what is important to report about this regression?}
+We ran an ordinary least squares regression on number of bins and classifier accuracy at recording lengths of four seconds. Number of bins was positively correlated with classifier accuracy, with each bin correpsonding to 1.13\% gain in accuracy (R-squared = .773, p \textless .001). 
 
-\begin{figure}[!h]
-  \vspace{-0.2cm}
-  \centering
-   {\epsfig{file = Figures/3-1.png, width = 5.5cm}}
-  \caption{SVM test time compared to number of bins in test set feature vector.}
-  \label{fig:fig2}
-  \vspace{-0.1cm}
-\end{figure}
+We ran an additional ordinary least squares regression on number of bins in the EEG data and the time it takes to train an SVM on those data, again at recordings of four seconds. Number of bins was positively correlated with time to train classifier, each additional bin corresponding to a 0.5 millisecond increase in training time (R-squared = .947, p \textless .001).
 
-\begin{figure}[!h]
-  \vspace{-0.2cm}
-  \centering
-   {\epsfig{file = Figures/3.png, width = 5.5cm}}
-  \caption{SVM train time compared to number of bins in training set feature vectors.}
-  \label{fig:fig2}
-  \vspace{-0.1cm}
-\end{figure}
+Since bin size has a linear relationship with both accuracy and SVM training time, we compare accuracy and training time directly in Figure 1.
 
-
-The number of bins is positively correlated with training and testing time. While test time grows linearly with the log of the number of bins, training time grows exponentially with the log of the number of bins. \textit{and what is important to report about this regression?}
 
 \subsection{Experiment 2}
 
@@ -44,5 +28,16 @@ The number of bins is positively correlated with training and testing time. Whil
   \label{fig:fig2}
   \vspace{-0.1cm}
 \end{figure}
+
+\begin{table}[h]
+\caption{Calibration time compared to number of bins used in EEG data.}\label{tab:example1} \centering
+\begin{tabular}{|c|c|}
+  \hline
+  Example column 1 & Example column 2 \\
+  \hline
+  Example text 1 & Example text 2 \\
+  \hline
+\end{tabular}
+\end{table}
 
  The amount of data on which the classifier is trained is positively correlated with the classifier's accuracy on data from later recordings. \textit{and what is important to report about this regression?}
