@@ -13,31 +13,32 @@
 
 We ran an ordinary least squares regression on number of bins and classifier accuracy at recording lengths of four seconds. Number of bins was positively correlated with classifier accuracy, with each bin correpsonding to 1.13\% gain in accuracy (R-squared = .773, p \textless .001). 
 
-We ran an additional ordinary least squares regression on number of bins in the EEG data and the time it takes to train an SVM on those data, again at recordings of four seconds. Number of bins was positively correlated with time to train classifier, each additional bin corresponding to a 0.5 millisecond increase in training time (R-squared = .947, p \textless .001).
+We ran an additional ordinary least squares regression on number of bins in the EEG data and the time it takes to train an SVM on those data, again at recordings of four seconds. Number of bins was positively correlated with time to train classifier (slope = 0.5 R-squared = .947, p \textless .001).
 
 Since bin size has a linear relationship with both accuracy and SVM training time, we compare accuracy and training time directly in Figure 1.
-
 
 \subsection{Experiment 2}
 
 \begin{figure}[!h]
   \vspace{-0.2cm}
   \centering
-   {\epsfig{file = Figures/7.png, width = 5.5cm}}
+   {\epsfig{file = Figures/2.png, width = 5.5cm}}
   \caption{Mean best-case accuracy compared to number of seconds of data in training set.}
   \label{fig:fig2}
   \vspace{-0.1cm}
 \end{figure}
 
-\begin{table}[h]
-\caption{Calibration time compared to number of bins used in EEG data.}\label{tab:example1} \centering
-\begin{tabular}{|c|c|}
-  \hline
-  Example column 1 & Example column 2 \\
-  \hline
-  Example text 1 & Example text 2 \\
-  \hline
-\end{tabular}
-\end{table}
+When using 0.5-second recordings to train the SVM, we found no evidence of a significant difference in SVM accuracy at bin sizes ranging from 20 to 500.
 
- The amount of data on which the classifier is trained is positively correlated with the classifier's accuracy on data from later recordings. \textit{and what is important to report about this regression?}
+\subsection{Experiment 3}
+
+\begin{figure}[!h]
+  \vspace{-0.2cm}
+  \centering
+   {\epsfig{file = Figures/3.png, width = 5.5cm}}
+  \caption{Mean per-subject accuracy after realistic calibration compared to number of bins.}
+  \label{fig:fig3}
+  \vspace{-0.1cm}
+\end{figure}
+
+We found no statistically significant difference between number of bins in EEG data and calibration time. Across all conditions, mean calibration time was 310 seconds (std = 123 seconds).
