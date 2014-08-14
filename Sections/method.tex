@@ -1,16 +1,10 @@
 \section{\uppercase{Method}}
 
-The data used in this experiment were taken from a previous study. As our research involved human subjects, our experimental procedures were approved by an Institutional Review Board. We recruited 15 subjects to participate in our study, all of whom were UC Berkeley undergraduate or graduate students. Each subject met with investigators in a quiet, closed room for two 40-50 minute sessions on two separate days. We briefed subjects on the objective of the study, fitted them with a Neurosky MindSet headset, and provided instructions for completing each task. As the subjects performed each task, we recorded readings from the headset (i.e., difference of potential and power spectrum every half second).
-
-\subsection{Tasks}
-
-% TODO: steal from passthoguhts
-
 \subsection{Signal extraction}
 
 The Neurosky MindSet SDK delivered a power spectrum of its data every half second. Offline, we compress the data in the temporal dimension, taking the middle \textit{n} seconds of the recording, where $n = \{0.5, 1.0,1.5, 2.0,...,8.0, 8.5, 9.0\}$. 
 
-The Neurosky software computes a power spectrum every half second. The maximum frequency is 256Hz, as the maximum sampling rate of Neurosky hardware is 512Hz. The power spectrum is computed with discrete bins of 1/4 Hz. Each bin represents the intensity of activation of a frequency range (e.g., between 1 and 1.25 Hz) in a half-second time window. There are therefore 1024 values reported for one power spectrum. Our samples are more or less 10 seconds, which means around 20 power spectra computed per sample. Based on the signal quality also recorded some power spectra are removed (Benjamin knows the exact filtering method).
+The Neurosky software computes a power spectrum every half second. The maximum frequency is 256Hz, as the maximum sampling rate of Neurosky hardware is 512Hz. The power spectrum is computed with discrete bins of 1/4 Hz. Each bin represents the intensity of activation of a frequency range (e.g., between 1 and 1.25 Hz) in a half-second time window. There are therefore 1024 values reported for one power spectrum. Our samples are more or less 10 seconds, which means around 20 power spectra computed per sample.
 
 Thereafter, the signal extraction method consists of two main steps: (i) to build a statistical significance out of the n power spectra produced in each sample, and (ii) to ``compress'' the information into a smaller vector size using a median filter. For each bin of 1/4 Hz, we can compute a median value out of the n power spectra generated for one sample. We obtain a discrete probability density function (pdf) with each bin being the median of the corresponding bins in the n power spectra. At this stage, we have a discrete pdf of 1024 bins for the whole sample. This method represents a ``stacking" of several probability density functions into one representing the statistical average of all the others.
 
