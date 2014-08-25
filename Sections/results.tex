@@ -1,13 +1,39 @@
-\section{\uppercase{Results}}
+\section{\uppercase{Experiments}}
 
-\subsection{Experiment 1}
+\subsection{Finding a compromise between data compression and classifier accuracy}
+
+In this experiment, we seek to understand how the level of data compression, operationally controlled by the number of bins, affects the accuracy of the resulting classifier and the computational expense of training that classifier. We are interested in minimizing the size of our feature vectors while retaining acceptable accuracy.
+
+For each subject, we generated every pair of two tasks (a binary BCI) and cross-validated our SVM seven times, the recommended default from scikit-learn, on recordings for those two tasks. We used ScikitLearn's built-in cross-validation toolkit, which was configured to perform each of the seven cross-validation steps using different splits of trial data in the training and testing sets. We varied the number of bins in the samples we fed to the SVM and the length of recordings (a slice of our original recording from one second to 1+n seconds). For every task pair processed, we recorded mean classification accuracy across all cross-validation trials.
+
+As an additional performance audit, we timed our SVM at training time and testing time. In this measure, we fit an SVM to all the data for two task-pairs from five randomly-selected subjects, and repeated this process ten thousand times at different bin sizes and different lengths, collecting the minimum time observed in each series of attempts. In order to establish a proper estimate, we time the SVM after all data has been loaded to memory, disregarding the time it takes to load the data from disk.
+
+\subsection{Results}
 
 \begin{figure}[!h]
   \vspace{-0.2cm}
   \centering
-   {\epsfig{file = Figures/1.png, width = 6cm}}
+   {\epsfig{file = Figures/1a.png, width = 6cm}}
   \caption{Mean best-case accuracy among all subjects compared to time needed to train the classifier.}
-  \label{fig:fig1}
+  \label{fig:fig1a}
+  \vspace{-0.1cm}
+ \end{figure}
+
+ \begin{figure}[!h]
+  \vspace{-0.2cm}
+  \centering
+   {\epsfig{file = Figures/1b.png, width = 6cm}}
+  \caption{Mean best-case accuracy among all subjects compared to time needed to train the classifier.}
+  \label{fig:fig1b}
+  \vspace{-0.1cm}
+ \end{figure}
+
+\begin{figure}[!h]
+  \vspace{-0.2cm}
+  \centering
+   {\epsfig{file = Figures/1c.png, width = 6cm}}
+  \caption{Mean best-case accuracy among all subjects compared to time needed to train the classifier.}
+  \label{fig:fig1c}
   \vspace{-0.1cm}
  \end{figure}
 
@@ -15,9 +41,19 @@ We ran an ordinary least squares regression on number of bins and classifier acc
 
 We ran an additional ordinary least squares regression on number of bins in the EEG data and the time it takes to train an SVM on those data, again at recordings of four seconds. Number of bins was positively correlated with time to train classifier (slope = 0.5 R-squared = .947, p \textless .001).
 
-Since bin size has a linear relationship with both accuracy and SVM training time, we compare accuracy and training time directly in Figure 1.
+Since bin size has a linear relationship with both accuracy and SVM training time, we compare accuracy and training time directly in Figure 1. 
 
-\subsection{Experiment 2}
+Overall, we find that relatively small feature vectors (75-100 bins) produced with our method yield classifiers as accurate as those that use much higher resolution samples, and that reducing vector size in this way can dramatically increase the computational speed of training the BCI's support vector machine. 
+
+\subsection{Making inferences about EEG data through time}
+
+Whereas the last experiment trained and tested on data from all recorded trials, this experiment uses only the first few seconds of recorded data to build inferences about data seen in the future. We vary the amount of data used to train the classifier. 
+
+For each subject, we spliced all recordings into 0.5-second chunks, each one representing a single power spectrum reading from our headset. Again, we tested all possible task pairs; however, in contrast to our methods in the last experiment, we trained the SVM only on the first recordings from each user (that is, data collected from the first few trials each subject performed), and tested the SVM only on recordings from later trials. In order to simulate the constraints of quick, naturalistic interaction, we tested on only the first reading (i.e., the first 1/2 second) in each trial. 
+
+We varied the number of seconds of data used to train the SVM. We also varied the number of bins in each recording. Once again, we measured mean classifier accuracy on all items in our training set.
+
+\subsection{Results}
 
 \begin{figure}[!h]
   \vspace{-0.2cm}
@@ -28,17 +64,32 @@ Since bin size has a linear relationship with both accuracy and SVM training tim
   \vspace{-0.1cm}
 \end{figure}
 
-When using 0.5-second recordings to train the SVM, we found no evidence of a significant difference in SVM accuracy at bin sizes ranging from 20 to 500.
+When using 60 seconds of training data, we acheive 94-96\% accuracy across different bin sizes. At ten seconds, we acheive 83-86\% accuracy. Although these results demonstrate a clear tradeoff between training time and accuracy, we find no significant difference between accuracy at ten seconds and 50 seconds, and the average accuracy at ten seconds falls above [who's? (when?)] [what percent?] threshold for effective BCI control. [cite]
 
-\subsection{Experiment 3}
+Although 20-bin data performed significantly worse at 20 seconds of training data and 500-bin data significantly better at 10 seconds, we find no significant effect of bin size on past-to-future classification accuracy at other bin sizes.
+
+This experiment finds no evidence that our compression method does has an effect on our ability to make inferences about future data after calibration.
+
+\subsection{Opportunistic strategy for calibrating a binary BCI}
+
+In this experiment, we evaluate a calibration strategy. We wish to minimize training time while maximizes the resulting accuracy of the brain-computer interface.
+
+Using the 0.5-second recordings from Experiment 2, we simulated the calibration process of all fourteen subjects. We began with sixty seconds of recording from the three tasks most commonly associated with best-case performance (base, pass, color) for an initial training time of 120 seconds. We then performed a seven-fold cross-validation on every permutation of two of these tasks (base versus task, pass versus task, pass versus color, etc). The taskpair with the highest mean score across all seven cross-validations was selected for a more robust calibration, in which the reamining 80 seconds of recordings for each taskpair were used to validate the SVM. If the resulting score was below 75\%, we added the first 60 seconds of recording from the taskpair that was next most correlated with bestcase accuracy. 
+
+This process was repeated until all taskpairs were added, or until one taskpair acheived over 75\% accuracy on after-calibration data. We attempted this calibration process at a number of 100 bins. We recorded the accuracy achieved among subjects and the number of seconds of training data required to achieve the resulting accuracy.
+
+\subsection{Results}
 
 \begin{figure}[!h]
   \vspace{-0.2cm}
   \centering
    {\epsfig{file = Figures/3.png, width = 5.5cm}}
-  \caption{Mean time to calibrate at different bin sizes (bottom) and mean post-calibration classifier accuracy at different bin sizes (top).}
+  \caption{Calibration time across subjects (top) and resulting classifier accuracy (bottom).}
   \label{fig:fig2}
   \vspace{-0.1cm}
 \end{figure}
 
-\textcolor{red}{\bf still wondering how to report these results.... no statistically significant difference in time-to-calibrate, and very rarely is there a statistically significant difference in the post-calibration accuracy.... }.
+
+
+
+

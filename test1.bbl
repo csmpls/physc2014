@@ -16,11 +16,6 @@ Blankertz, B., Krauledat, M., Dornhege, G., Williamson, J., Murray-Smith, R.,
   Interaction. Ambient Interaction}, number 4555 in Lecture Notes in Computer
   Science, pages 759--768. Springer Berlin Heidelberg.
 
-\bibitem[Burges, 1998]{burges_tutorial_1998}
-Burges, C. (1998).
-\newblock A tutorial on support vector machines for pattern recognition.
-\newblock {\em Data Mining and Knowledge Discovery}, 2(2):121--167.
-
 \bibitem[Campbell et~al., 2010]{campbell_neurophone:_2010}
 Campbell, A., Choudhury, T., Hu, S., Lu, H., Mukerjee, M.~K., Rabbi, M., and
   Raizada, R.~D. (2010).
@@ -69,13 +64,6 @@ Dornhege, G. (2007).
 \newblock {\em Toward Brain-computer Interfacing}.
 \newblock {MIT} Press.
 
-\bibitem[Ekandem et~al., 2012]{ekandem_evaluating_2012}
-Ekandem, J.~I., Davis, T.~A., Alvarez, I., James, M.~T., and Gilbert, J.~E.
-  (2012).
-\newblock Evaluating the ergonomics of {BCI} devices for research and
-  experimentation.
-\newblock {\em Ergonomics}, 55(5):592–598.
-
 \bibitem[Fan et~al., 2008]{fan_liblinear:_2008}
 Fan, R.-E., Chang, K.-W., Hsieh, C.-J., Wang, X.-R., and Lin, C.-J. (2008).
 \newblock {LIBLINEAR:} a library for large linear classification.
@@ -107,17 +95,16 @@ Jain, A.~K., Duin, R. P.~W., and Mao, J. (2000).
 \newblock {\em Pattern Analysis and Machine Intelligence, {IEEE} Transactions
   on}, 22(1):4–37.
 
+\bibitem[Kindermans et~al., 2014]{kindermans_true_2014}
+Kindermans, P.-J., Schreuder, M., Schrauwen, B., Müller, K.-R., and
+  Tangermann, M. (2014).
+\newblock True zero-training brain-computer interfacing – an online study.
+\newblock {\em {PLoS} {ONE}}, 9(7):e102504.
+
 \bibitem[Larsen and Hokl, 2011]{larsen_classification_2011}
 Larsen, E.~A. and Hokl, C.-s.~J. (2011).
 \newblock {\em Classification of {EEG} Signals in a Brain- Computer Interface
   System}.
-
-\bibitem[Leeb et~al., 2013]{leeb_transferring_2013}
-Leeb, R., Perdikis, S., Tonin, L., Biasiucci, A., Tavella, M., Creatura, M.,
-  Molina, A., Al-Khodairy, A., Carlson, T., and Millán, J. d.~R. (2013).
-\newblock Transferring brain–computer interfaces beyond the laboratory:
-  Successful application control for motor-disabled users.
-\newblock {\em Artificial Intelligence in Medicine}, 59(2):121--132.
 
 \bibitem[Lotte et~al., 2007]{lotte_review_2007}
 Lotte, F., Congedo, M., Lécuyer, A., Lamarche, F., Arnaldi, B., et~al. (2007).

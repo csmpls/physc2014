@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  3 AUG 2014 20:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  21 AUG 2014 11:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -388,9 +388,6 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
 Missing character: There is no √ in font ptmr7t!
 Missing character: There is no ° in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
 ) (/Users/ffff/Documents/physc2014/Sections/background.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
@@ -405,42 +402,82 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
-[2]) (/Users/ffff/Documents/physc2014/Sections/method.tex
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
+[2]) (/Users/ffff/Documents/physc2014/Sections/data.tex) (/Users/ffff/Documents
+/physc2014/Sections/method.tex
+Underfull \hbox (badness 1436) in paragraph at lines 6--1
+\OT1/ptm/m/n/10 ing; imag-in-ing mov-ing one's right in-dex fin-ger;
+ []
 
-Underfull \hbox (badness 1496) in paragraph at lines 17--18
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
+
+Underfull \hbox (badness 1496) in paragraph at lines 11--12
 \OT1/ptm/m/n/10 1.5,1.5-1.75,1.75-2) have the val-ues (4,4,5,5) the
  []
 
 
 LaTeX Warning: Reference `binnedEEGpowerspec' on page 3 undefined on input line
- 31.
+ 25.
 
-[3]) (/Users/ffff/Documents/physc2014/Sections/results.tex [4] <Figures/1.png, 
-id=21, 578.16pt x 433.62pt>
-File: Figures/1.png Graphic file (type png)
-<use Figures/1.png>
-Package pdftex.def Info: Figures/1.png used on input line 8.
+[3]) (/Users/ffff/Documents/physc2014/Sections/results.tex <Figures/1a.png, id=
+18, 578.16pt x 433.62pt>
+File: Figures/1a.png Graphic file (type png)
+<use Figures/1a.png>
+Package pdftex.def Info: Figures/1a.png used on input line 16.
 (pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 14.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Figures/1b.png, id=20, 578.16pt x 433.62pt>
+File: Figures/1b.png Graphic file (type png)
+<use Figures/1b.png>
+Package pdftex.def Info: Figures/1b.png used on input line 25.
+(pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Figures/1c.png, id=21, 578.16pt x 433.62pt>
+File: Figures/1c.png Graphic file (type png)
+<use Figures/1c.png>
+Package pdftex.def Info: Figures/1c.png used on input line 34.
+(pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 40.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 14.
-<Figures/2.png, id=23, 578.16pt x 433.62pt>
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 40.
+[4]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<Figures/2.png, id=25, 578.16pt x 433.62pt>
 File: Figures/2.png Graphic file (type png)
 <use Figures/2.png>
-Package pdftex.def Info: Figures/2.png used on input line 25.
+Package pdftex.def Info: Figures/2.png used on input line 61.
 (pdftex.def)             Requested size: 156.49014pt x 117.36346pt.
-<Figures/3.png, id=24, 578.16pt x 433.62pt>
+
+Underfull \hbox (badness 1102) in paragraph at lines 67--68
+[]\OT1/ptm/m/n/10 When us-ing 60 sec-onds of train-ing data, we
+ []
+
+
+Underfull \hbox (badness 2495) in paragraph at lines 69--70
+[]\OT1/ptm/m/n/10 Although 20-bin data per-formed sig-nif-i-cantly
+ []
+
+[5 </Users/ffff/Documents/physc2014/Figures/1a.png> </Users/ffff/Documents/phys
+c2014/Figures/1b.png> </Users/ffff/Documents/physc2014/Figures/1c.png> </Users/
+ffff/Documents/physc2014/Figures/2.png>] <Figures/3.png, id=33, 556.0775pt x 57
+8.16pt>
 File: Figures/3.png Graphic file (type png)
 <use Figures/3.png>
-Package pdftex.def Info: Figures/3.png used on input line 38.
-(pdftex.def)             Requested size: 156.49014pt x 117.36346pt.
+Package pdftex.def Info: Figures/3.png used on input line 86.
+(pdftex.def)             Requested size: 156.49014pt x 162.70413pt.
 ) (/Users/ffff/Documents/physc2014/Sections/discussion.tex
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
@@ -448,12 +485,11 @@ Missing character: There is no ú in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
-[5 </Users/ffff/Documents/physc2014/Figures/1.png> </Users/ffff/Documents/physc
-2014/Figures/2.png> </Users/ffff/Documents/physc2014/Figures/3.png>]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-) (/Users/ffff/Documents/physc2014/test1.bbl
+) [6 </Users/ffff/Documents/physc2014/Figures/3.png>] (/Users/ffff/Documents/ph
+ysc2014/test1.bbl
 Missing character: There is no √ in font ptmr7t!
 Missing character: There is no º in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
@@ -476,10 +512,6 @@ Missing character: There is no ì in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ì in font ptmr7t!
-[6]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ì in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ò in font ptmr7t!
@@ -492,11 +524,12 @@ Missing character: There is no ò in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
+[7]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ì in font ptmr7t!
 Missing character: There is no √ in font ptmr7t!
-Missing character: There is no ° in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ì in font ptmr7t!
@@ -526,7 +559,9 @@ Missing character: There is no √ in font ptmr7t!
 Missing character: There is no º in font ptmr7t!
 Missing character: There is no √ in font ptmr7t!
 Missing character: There is no º in font ptmr7t!
-) [7] (/Users/ffff/Documents/physc2014/test1.aux)
+) [8
+
+] (/Users/ffff/Documents/physc2014/test1.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -535,13 +570,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4298 strings out of 493117
- 64045 string characters out of 6135433
- 128558 words of memory out of 5000000
- 7641 multiletter control sequences out of 15000+600000
+ 4311 strings out of 493117
+ 64288 string characters out of 6135433
+ 129542 words of memory out of 5000000
+ 7649 multiletter control sequences out of 15000+600000
  50577 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,7n,38p,1765b,296s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,7n,38p,1767b,296s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
@@ -549,11 +584,11 @@ ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
 ve/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/te
 xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/f
 onts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/ffff/Documents/physc2014/test1.pdf (7 pages, 186102 by
+Output written on /Users/ffff/Documents/physc2014/test1.pdf (8 pages, 212390 by
 tes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 67 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -20,17 +20,17 @@
 
 \begin{document}
 
-\title{Strategies for Practical Brain-Computer Interface in Real-World Settings}
+\title{Strategies for the quick calibration of sensor-driven systems with low computational overhead}
 
-\author{\authorname{Nick Merrill\sup{1}, Thomas Maillart\sup{1}, Benjamin Johnson\sup{2} and John Chuang\sup{1}}
-\affiliation{\sup{1}School of Information, UC Berkeley, Berkeley, California, USA}
-\affiliation{\sup{2}???}
-\email{ffff@berkeley.edu}
-}
+%\author{\authorname{Nick Merrill\sup{1}, Thomas Maillart\sup{1}, Benjamin Johnson\sup{2} and John Chuang\sup{1}}
+%\affiliation{\sup{1}School of Information, UC Berkeley, Berkeley, California, USA}
+%\affiliation{\sup{2}???}
+%\email{ffff@berkeley.edu}
+%}
 
 \keywords{BCI, Mobile, Ubiquitous Computing}
 
-\abstract{Brain-computer interface (BCI) systems are notoriously hard to calibrate to their users, especially with the sorts of low-cost, ergonomic sensors suitable for realistic, out-of-lab settings. In this study, we explore strategies for quickly achieving BCI with a single EEG sensor and minimal computational requirements, looking specifically at the effect of a novel signal processing technique on these factors. We simulate the calibration of a binary BCI on 14 healthy subjects, and describe the tradeoffs between computational speed, time needed to calibrate the system, and the accuracy of the resulting BCI. We discuss possibilities for the design of consumer-ready BCIs, and for the use of predictive agents in sensor-driven applications generally.}
+\abstract{Physiological computing applications rely on time series data from sensors, which vary widely between users and over time. Application designers face a tradeoff between computational complexity, calibration time, and classification accuracy. We describe a novel quantization technique for EEG signals, which we find increases the computational speed associated with training a machine-learning based classifier without a significant detriment to system accuracy. We test this technique on a brain-computer interface (BCI), and find that an opportunistic calibration strategy can achieve acceptable accuracy in 86.6\% of subjects with under five minutes of training. We discuss implications for the design of consumer-ready BCI and other physiological computing applications.}
 
 \onecolumn \maketitle \normalsize \vfill
 

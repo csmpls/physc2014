@@ -12,45 +12,45 @@ while executing---line 1095 of file apalike.bst
 Warning--empty booktitle in das_unsupervised_2013
 Warning--empty booktitle in grierson_better_2011
 Warning--empty publisher in larsen_classification_2011
-You've used 28 entries,
+You've used 26 entries,
             1935 wiz_defined-function locations,
-            636 strings with 10227 characters,
-and the built_in function-call counts, 13872 in all, are:
-= -- 1300
-> -- 771
-< -- 16
-+ -- 290
-- -- 274
-* -- 1256
-:= -- 2383
-add.period$ -- 89
-call.type$ -- 28
-change.case$ -- 272
-chr.to.int$ -- 26
-cite$ -- 31
-duplicate$ -- 484
-empty$ -- 869
-format.name$ -- 310
-if$ -- 2707
+            624 strings with 9671 characters,
+and the built_in function-call counts, 12841 in all, are:
+= -- 1203
+> -- 711
+< -- 15
++ -- 266
+- -- 252
+* -- 1154
+:= -- 2203
+add.period$ -- 83
+call.type$ -- 26
+change.case$ -- 251
+chr.to.int$ -- 24
+cite$ -- 29
+duplicate$ -- 456
+empty$ -- 807
+format.name$ -- 286
+if$ -- 2515
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 30
-newline$ -- 142
-num.names$ -- 88
-pop$ -- 267
+missing$ -- 28
+newline$ -- 132
+num.names$ -- 82
+pop$ -- 251
 preamble$ -- 1
-purify$ -- 274
+purify$ -- 253
 quote$ -- 0
-skip$ -- 359
+skip$ -- 338
 stack$ -- 0
-substring$ -- 870
-swap$ -- 92
+substring$ -- 788
+swap$ -- 90
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 164
+type$ -- 152
 warning$ -- 3
-while$ -- 97
+while$ -- 89
 width$ -- 0
-write$ -- 367
+write$ -- 341
 (There were 3 error messages)

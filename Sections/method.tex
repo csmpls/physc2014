@@ -12,13 +12,13 @@ Binning the pdf is a simple way to ``compress" the information contained in the 
 
 % thomas notes: I think here is the originality of the method: we take all the power spectrum with one advantage and one disadvantage. The advantage is that we have a much larger spectrum to characterize and classify tasks, at the cost of probably more pollution from non-EEG signal from the environment, from muscles, etc.]}
 
-% \begin{figure}
-% \begin{center}
-% \includegraphics[width=5in]{Figures/binned_EEGpowerspectrum.png}
-% \caption{Binned power spectrum}
-% \label{binnedEEGpowerspec}
-% \end{center}
-% \end{figure}
+\begin{figure}
+\begin{center}
+\includegraphics[width=5in]{Figures/binned_EEGPowerSpectrum.png}
+\caption{Binned power spectrum}
+\label{binnedEEGpowerspec}
+\end{center}
+\end{figure}
 
 %thomas notes: About here, a short pitch on pink noise is required to set the stage of the great method, and to justify the log log binning]}
 
@@ -37,11 +37,15 @@ In summary, we build a probability density function of brain frequencies as capt
 
 At this point, we have a one-dimensional signal flattened in the time dimension, computing the mean magnitude of each bin over all readings in the recording - a row vector with one entry for each each measured frequncy bin. 
 
-\subsection{Classifier}
+\subsection{Strategies for BCI with minimal training time and low computational requirements}
 
-Support vector machines (SVM) are a set of supervised machine learning methods that take labeled example data to create a model that can be used to predict the classes of unlabeled data. In contrast to linear discriminant analysis, which has a long history of use in BCIs, SVMs select the hyperplane that maximizes distance from the nearest training points, which has been shown to increase the model's generalizability \cite{burges_tutorial_1998}.  For more on SVM's in BCI: \cite{garrett_comparison_2003,grierson_better_2011} 
+Our study explores three major questions. First, what is the tradeoff between data compression and classification accuracy? For computational reasons, we wish to keep the size of our data small, but what is the optimal compromise between this computational concern and the usability of the resulting BCI?
 
-In this study, we use LinearSVC, \cite{fan_liblinear:_2008} a wrapper for LibLinear exposed in Python through the ScikitLearn library. \cite{pedregosa_scikit-learn:_2011} We chose LinearSVC primarily because its underlying C implementation is very performant. We use the default settings for LinearSVC: a C of 1.0, squared hinge loss function, and a tolerance parameter of of 1e-4. 
+Second, how well do the data we record during calibration represent the data we will see after calibration? From an ergonomic standpoint, we wish to keep the duration of example recordings as brief as possible. With how little initial data can we confidently make inferences about data we see in the future, and does our compression method affect our ability to make these inferences?
+
+Third, how can we minimize the time the user spends training while maximizing the accuracy of the resulting system? For ergonomic reasons, it is desireable that the user not spend too much time calibrating the system (recording example data, testing BCI accuracy). Can we design our calibration phase to keep training times low and classification accuracies high across all users?
+
+We explore these research questions using a binary BCI built around a support vector machine trained per-subject on examples from our dataset. (For more on the use of SVMs in BCI: \cite{garrett_comparison_2003,grierson_better_2011}). In this study, we use LinearSVC, \cite{fan_liblinear:_2008} a wrapper for LibLinear exposed in Python through the ScikitLearn library. \cite{pedregosa_scikit-learn:_2011} We chose LinearSVC primarily because its underlying C implementation is very performant. We use the default settings for LinearSVC: a C of 1.0, squared hinge loss function, and a tolerance parameter of of 1e-4. 
 
 % TODO: provide evidence for "as well or better than nonlinear ones"
 % generally presumed to be linear  \cite{garrett_comparison_2003,lotte_review_2007}
