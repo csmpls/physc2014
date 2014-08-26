@@ -14,7 +14,7 @@ As an additional performance audit, we timed our SVM at training time and testin
   \vspace{-0.2cm}
   \centering
    {\epsfig{file = Figures/1a.png, width = 6cm}}
-  \caption{Mean best-case accuracy among all subjects compared to time needed to train the classifier.}
+  \caption{Mean best-case accuracy among all subjects compared to time needed to train the classifier. At over 100 bins, we find no evidence of an increase in classification accuracy, which plateaus at around 95\%. }
   \label{fig:fig1a}
   \vspace{-0.1cm}
  \end{figure}
@@ -23,7 +23,7 @@ As an additional performance audit, we timed our SVM at training time and testin
   \vspace{-0.2cm}
   \centering
    {\epsfig{file = Figures/1b.png, width = 6cm}}
-  \caption{Mean best-case accuracy among all subjects compared to time needed to train the classifier.}
+  \caption{Log of mean classifier training time compared to log of number of bins in data. The time needed to train the classifier decreases logarithmically as the number of bins decrease.}
   \label{fig:fig1b}
   \vspace{-0.1cm}
  \end{figure}
@@ -32,7 +32,7 @@ As an additional performance audit, we timed our SVM at training time and testin
   \vspace{-0.2cm}
   \centering
    {\epsfig{file = Figures/1c.png, width = 6cm}}
-  \caption{Mean best-case accuracy among all subjects compared to time needed to train the classifier.}
+  \caption{ By decreasing the number of bins in the EEG data, we can decrease the time needed to train the support vector machine up to nine times without without detriment to classifier accuracy. }
   \label{fig:fig1c}
   \vspace{-0.1cm}
  \end{figure}
@@ -59,7 +59,7 @@ We varied the number of seconds of data used to train the SVM. We also varied th
   \vspace{-0.2cm}
   \centering
    {\epsfig{file = Figures/2.png, width = 5.5cm}}
-  \caption{Mean best-case accuracy compared to number of seconds of data in training set.}
+  \caption{Mean best-case accuracy compared to number of seconds of data in training set. While 20-bin data performed significantly less well given 20 and 30 seconds of training data, we find that bin size has no significant effect at other training set sizes.}
   \label{fig:fig2}
   \vspace{-0.1cm}
 \end{figure}
@@ -84,7 +84,7 @@ This process was repeated until all taskpairs were added, or until one taskpair 
   \vspace{-0.2cm}
   \centering
    {\epsfig{file = Figures/3.png, width = 5.5cm}}
-  \caption{Calibration time across subjects (top) and resulting classifier accuracy (bottom).}
+  \caption{Calibration time across subjects (top) and classifier accuracy (bottom). The vast majority of subjects acheive acceptable accuracy in under five minutes of training, and all subjects acheive BCI literacy in under 15 minutes. }
   \label{fig:fig2}
   \vspace{-0.1cm}
 \end{figure}
