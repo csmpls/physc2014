@@ -1,4 +1,188 @@
 
+
+
+
+
+
+
+
+
+repeat for experiment 2
+
+
+
+
+
+refactor methods
+	to set up the punches in experiment 1
+
+
+
+
+write discussion -----> future work
+
+
+
+
+
+
+
+
+* * @ ~
+
+
+each section should summarize the preceeding parts of the paper
+end of each section should summarize itself
+
+remove the 2nd experiment
+
+
+
+
+
+it is
+	experiment 1 / 2 first -- the real core, as i'd tell it to someone
+	methods section sets up the way i talk about experiment 1 / 2
+	data section is a piece of connective tissue
+	discussion is a succinct summary of what we found and what that .means.
+	future work shows why it matters
+
+the introduction frames it all -- as i said earlier --
+
+	what is the tradeoff between compression and system performance? 
+	past techniques work like this and this   buuuuut for them to work irl we need to show that they can work with a low number of sensors and not too much water from the computational faucet.
+
+
+
+
+
+
+
+
+
+
+--METHODS---
+.
+.
+.
+
+.
+
+make sure methods section "frames" (justifies) the dataset
+
+.
+
+--
+
+what's the 1-sentence question behind this research paper?
+###
+
+
+1. optimize for computational performance
+2. show that we could use this to build irl bci
+
+
+
+
+
+
+
+
+
+
+---RESULTS---
+not "experiments"
+
+.
+
+*a clear hyptohesis* right at the top of every methods section, which we either reject or fail to reject
+
+does the second experiment have a point really? ask john
+
+
+explain what cross-validation is and why we do it:
+>  
+
+
+
+
+
+
+---DISCUSSION----
+
+a short summary of what i have done to start
+
+a sentence starting with "we find" should be in the results section lol
+
+add a conclusion section
+
+the last 3 notes are on point
+
+
+
+-----=RELATED WORK=-----
+
+go thru and clean up -- careful about stuff that isnt actually 'related work'
+
+rethink the 'co-adaptive' stance based on whatever happens in the earlier revision cycles
+
+
+
+---INTRODUCTION----
+
+
+what is the tradeoff between compression and system performance? 
+
+past techniques work like this and this   buuuuut for them to work irl we need to show that they can work with a low number of sensors and not too much water from the computational faucet.
+
+a logical **story** with one sentence building right off the next
+
+
+
+--- ABSTRACT ---
+
+emphasize that we're 'getting more out of' the signal
+
+
+
+---OVERALL-----
+
+
+(i) you are not telling an organized and *logical* story, with one sentence logically followed the former one. 
+
+	In addition, you should always put your points in perspective with the main aim of the paper, i.e., the research question (c.f. my annotation on this), so that even if the reader has lost attention for a while she has a chance to reconnect at low cost. 
+
+
+By definition, a reviewer is a lazy person, because she does not get paid for this, and most often, in conferences a reviewer has an assignment of several papers to read, process, and judge in very little time. 
+
+
+
+
+
+
+(ii) The technical explanation of the methods used is very weak. 
+
+	For the binning, it says little on how it is new compared to formerly used techniques, and for the machine learning, the underpinning principles are not stated and explained. 
+
+I would be the reviewer I would reject the paper right away, because I would guess that the authors do not master the techniques they used. A researcher who has written ten papers on the topic of SVM, or could demonstrate enough quantitative expertise, might be forgiven, but this is not your case for the moment. Be patient it will come much faster than what you think, but in the meantime, you have to do the homework. Another even more important reason for taking time explaining clearly, but conceasily, a method, is that the world of science, is a world of massive reuse of methods...with different terminologies from one field to another If a method is explained clearly, then virtually everyone can reconnect and the reader will be very grateful for this :-) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 1. resist writing in a conversational tone; provide specifics where possible, e.g., accuracy declined by 2.5% when data compressed by 1000%; increasing training time from 3 minutes to 30 minutes only improved accuracy from 90% to 92%.
 
 2. practice to write "defensively". This is analogous to driving defensively. Be aware of the claims that you are making, and make sure that they are precise and defensible. It is better to err on making a narrower claim than one that may be challenged by the reviewers. 
@@ -12,50 +196,6 @@ Section 1.
 
 You can come back to iterate on this introductory section (context, research questions, contributions, which may include a summary of key techniques and main findings) after you have taken a pass through the rest of the paper
 
-.
-.
-.
-
-
-.
-
-
-
-.
-
-. . . . . . . . . 
-
-.
-
-.
-
-
-Section 3.3:
-
-.
-.
-
-.
-
-.
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-.
-.
-
-Experiment 1 results:
-
-.
-.
 
 Experiment 2 results:
 
@@ -63,13 +203,3 @@ Experiment 2 results:
 
 The figure also raises a question for me: why is it that most of the accuracy loss occurs from 60s to 50s, particularly for larger bin-sizes? 
 
-.
-
-
-
-
-Section 5.
-
-.
-
-.
