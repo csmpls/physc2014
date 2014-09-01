@@ -1,14 +1,12 @@
 
 \section{\uppercase{Dataset}}
 
-The data used in this experiment were taken from a previous study. \cite{adams_i_2013} The anonymized dataset consists of power spectrum time series data recorded by the software from the Neurosky MindSet headset from 15 subjects, who were students at UC Berkeley, performing mental tasks. 
+The data used in this experiment were taken from a previous study. \cite{adams_i_2013} The anonymized dataset consists of power spectrum time series data recorded by the software from the Neurosky MindSet headset from 15 subjects, students at UC Berkeley, performing mental tasks. 
 
 The seven mental tasks were: focusing on breathing; imagining moving one's right index finger; imagining moving one's body to repeatedly perform a sports-related movement of the subject's choice; imagining singing a song or reciting a passage; listening to a tone with eyes closed; choosing a color (red; green; yellow or blue) and counting how many times one's chosen color appears on a screen; choosing any thought to use as a ``password''.
 
 Participants performed each of the seven mental tasks, enumerated below, ten times. Each of the ten trials lasted ten seconds.
 
-The Neurosky MindSet SDK delivered a power spectrum of its data every half second. Offline, we compress the data in the temporal dimension, taking the middle \textit{n} seconds of the recording, where $n = \{0.5, 1.0,1.5, 2.0,...,8.0, 8.5, 9.0\}$. 
-
-The Neurosky software computes a power spectrum every half second. The maximum frequency is 256Hz, as the maximum sampling rate of Neurosky hardware is 512Hz. The power spectrum is computed with discrete bins of 1/4 Hz. Each bin represents the intensity of activation of a frequency range (e.g., between 1 and 1.25 Hz) in a half-second time window. There are therefore 1024 values reported for one power spectrum. Our samples are more or less 10 seconds, which means around 20 power spectra computed per sample.
+The Neurosky MindSet SDK delivered a power spectrum of its data every half second. The power spectra that the SDK delivers are computed with discrete bins of 1/4 Hz. Each bin represents the intensity of activation of a frequency range (e.g., between 1 and 1.25 Hz) in a half-second time window. There are therefore 1024 values reported for one power spectrum. Since our mental task recordings are 10 seconds long, each recording is represetned by twenty power spectra on average.
 
 The dataset was further cleaned by removing all readings marked as suboptimal signal quality by the Neurosky SDK. The SDK delivers a signal quality value that is greater than zero when signal quality is suboptimal. Factors causing this value to be greater than zero include lack of contact between elctrode and skin, excessive non-EEG noise (EKG, EMG, EOG, electrostatic) and excessive motion.

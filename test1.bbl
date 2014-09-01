@@ -153,6 +153,11 @@ Shenoy, P., Krauledat, M., Blankertz, B., Rao, R. P.~N., and Müller, K.-R.
 \newblock Towards adaptive classification for {BCI}.
 \newblock {\em Journal of Neural Engineering}, 3(1):R13--R23.
 
+\bibitem[Vidaurre and Blankertz, 2010]{vidaurre_towards_2010}
+Vidaurre, C. and Blankertz, B. (2010).
+\newblock Towards a cure for {BCI} illiteracy.
+\newblock {\em Brain topography}, 23(2):194–198.
+
 \bibitem[Vidaurre et~al., 2011a]{vidaurre_co-adaptive_2011}
 Vidaurre, C., Sannelli, C., Müller, K.-R., and Blankertz, B. (2011a).
 \newblock Co-adaptive calibration to improve {BCI} efficiency.

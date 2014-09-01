@@ -5,23 +5,18 @@
 
 
 
-
-
-repeat for experiment 2
-
-
-
-
-
-refactor methods
-	to set up the punches in experiment 1
+print
+	make sure experiments has call/response with hypothesis
+	figure out which graph is missing?
+	line readings thru discussion
 
 
 
+[after 1/2 rounds line revisions etc, feel whats //missing// from the methods section, what kind of bulletpointed subsections need to be there for any1 to 'get it' esp w cross validation and the other key conceptions]
 
-write discussion -----> future work
 
 
+[after revising this a lot, try to draw a diagram for exp 2]
 
 
 
@@ -34,23 +29,14 @@ write discussion -----> future work
 each section should summarize the preceeding parts of the paper
 end of each section should summarize itself
 
-remove the 2nd experiment
+.
 
 
 
-
-
-it is
-	experiment 1 / 2 first -- the real core, as i'd tell it to someone
-	methods section sets up the way i talk about experiment 1 / 2
-	data section is a piece of connective tissue
-	discussion is a succinct summary of what we found and what that .means.
-	future work shows why it matters
-
-the introduction frames it all -- as i said earlier --
-
-	what is the tradeoff between compression and system performance? 
-	past techniques work like this and this   buuuuut for them to work irl we need to show that they can work with a low number of sensors and not too much water from the computational faucet.
+story?:
+	past techniques work like sensors + machine learning
+	buuuuut for them to work irl we need to show that they can work with a low number of sensors and not too much water from the computational faucet.
+	bci is a gr8 example case for this bc signals are nonstationary and every1 is so different......the problem in its purest form :0 :)
 
 
 
@@ -74,10 +60,7 @@ make sure methods section "frames" (justifies) the dataset
 
 --
 
-what's the 1-sentence question behind this research paper?
-###
-
-
+is the story ? :
 1. optimize for computational performance
 2. show that we could use this to build irl bci
 
@@ -97,7 +80,6 @@ not "experiments"
 
 *a clear hyptohesis* right at the top of every methods section, which we either reject or fail to reject
 
-does the second experiment have a point really? ask john
 
 
 explain what cross-validation is and why we do it:
@@ -108,34 +90,23 @@ explain what cross-validation is and why we do it:
 
 
 
----DISCUSSION----
-
-a short summary of what i have done to start
-
-a sentence starting with "we find" should be in the results section lol
-
-add a conclusion section
-
-the last 3 notes are on point
-
 
 
 -----=RELATED WORK=-----
 
-go thru and clean up -- careful about stuff that isnt actually 'related work'
+go thru and clean up -- careful about stuff that isnt actually 'literature'
 
-rethink the 'co-adaptive' stance based on whatever happens in the earlier revision cycles
+rethink or reposition the 'co-adaptive' angle/stance/literature based on whatever happens in the earlier revision cycles
 
 
 
 ---INTRODUCTION----
 
 
-what is the tradeoff between compression and system performance? 
-
-past techniques work like this and this   buuuuut for them to work irl we need to show that they can work with a low number of sensors and not too much water from the computational faucet.
-
 a logical **story** with one sentence building right off the next
+
+	past techniques work like this and this   buuuuut for them to work irl we need to show that they can work with a low number of sensors and not too much water from the computational faucet.
+
 
 
 
@@ -194,12 +165,32 @@ x
 
 Section 1.
 
-You can come back to iterate on this introductory section (context, research questions, contributions, which may include a summary of key techniques and main findings) after you have taken a pass through the rest of the paper
+(context, research questions, contributions, may include a summary of key techniques and main findings).........................after you have taken a pass through the rest of the paper
 
 
-Experiment 2 results:
+Experiment 2:
 
 .
 
 The figure also raises a question for me: why is it that most of the accuracy loss occurs from 60s to 50s, particularly for larger bin-sizes? 
 
+
+
+
+
+
+
+
+
+
+
+
+a style that is the chorus of "mr me too" with the unedited vers of the best verse within every 64 bars st lmao
+
+just slowly modulate the chorus
+
+
+
+
+
+`

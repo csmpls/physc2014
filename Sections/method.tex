@@ -1,26 +1,31 @@
 \section{\uppercase{Method}}
 
+This section details the signal extraction technique that this study evaluates and describes the machine learning classifier used in our binary BCI.
+
 \subsection{Signal extraction}
 
-Our method of extracting signal from EEG data consists of two main steps: (i) building a statistical significance out of the power spectra produced in each sample, and (ii) to ``compress'' the information into a smaller vector size using a median filter. For each bin of 1/4 Hz, we can compute a median value out of the n power spectra generated for one sample. We obtain a discrete probability density function (PDF) with each bin being the median of the corresponding bins in the n power spectra. At this stage, we have a discrete PDF of 1024 bins for the whole sample. This method represents a ``stacking" of several probability density functions into one representing the statistical average of all the others.
+\subsubsection{Compressing power spectra in the temporal dimension}
 
-Binning the PDF is a simple way to ``compress" the information contained in the original power spectrum. The basic idea is to take the median of several bins. For instance, four contiguous bins (1-1.25,1.25-1.5,1.5-1.75,1.75-2) have the values (4,4,5,5) the value resulting from combining these values into one bin would be 4.5. The PDF is heavy-tailed and it is desirable to arrange the bins such that they provide relevant information on the whole distribution. One way to do this efficiently is to arrange the compression bins in a logarithmic fashion, such that a greater proportion of bins are tied to endogenous neural signals than to other sources of magnetic energy.
+For each bin of 1/4 Hz, we compute a median value out of the n power spectra generated for one sample. We obtain a discrete probability density function (PDF) with each bin being the median of the corresponding bins in the n power spectra. At this stage, we have a discrete PDF of 1024 bins for the whole sample. This method represents a ``stacking" of several PDFs into one PDF that represents the statistical average of all the others.
+
+\subsubsection{Logarithmic binning}
+
+Binning the PDF is a simple way to ``quantize'' the information contained in the original power spectrum. By taking the median of several bins, we are left with a single bin that compresses the information of its neighbors. For instance, four contiguous bins (1-1.25,1.25-1.5,1.5-1.75,1.75-2) have the values (4,4,5,5) the value resulting from combining these values into one bin would be 4.5. 
+
+It is desirable to arrange the bins such that they provide relevant information on the whole distribution. Because the PDF is heavy-tailed, one way to do this efficiently is to arrange the compression bins in a logarithmic fashion. 
 
 % thomas notes: I think here is the originality of the method: we take all the power spectrum with one advantage and one disadvantage. The advantage is that we have a much larger spectrum to characterize and classify tasks, at the cost of probably more pollution from non-EEG signal from the environment, from muscles, etc.]}
 
-\begin{figure}
-\begin{center}
-\includegraphics[width=5in]{Figures/binned_EEGPowerSpectrum.png}
-\caption{Binned power spectrum}
+\begin{figure}[!h]
+  \vspace{-0.2cm}
+  {\epsfig{file = Figures/binned_EEGPowerSpectrum.png, width = 6cm}}
+\caption{In double logarithmic scale, the original 1024 bins (blue dots) of the PDF obtained from averaging the n power spectra of one recording, and the resulting ``quanitized''  PDF with a resolution of 100 log-bins. The quantized PDF preserves very well the structure of the original, 1024-point PDF. }
 \label{binnedEEGpowerspec}
-\end{center}
+\vspace{-0.1cm}
 \end{figure}
 
-%thomas notes: About here, a short pitch on pink noise is required to set the stage of the great method, and to justify the log log binning]}
+In summary, we build a probability density function of brain frequencies as captured by the Neurosky hardware, from the n power spectra of each sample. We then used a log-binning method to reduce the 1024 bins from the original power spectrum to an arbitrary smaller number of log-bins (e.g., 100 log-bins on the Figure). This method makes a sort of statistical averaging by stacking, and then compresses the result in way that it is easy to use in a classifier.
 
-Figure \ref{binnedEEGpowerspec} shows, in double logarithmic scale, the original 1024 bins (blue dots) of the PDF obtained from averaging the n power spectra of one sample, and the resulting ``compressed''  PDF with 100 log-bins. As we can see, the log-binning preserves the structure of the PDF.
-
-In summary, we build a probability density function of brain frequencies as captured by the Neurosky hardware, from the n power spectra of each sample. We then used a log-binning method to reduce the 1024 bins from the original power spectrum to an arbitrary smaller number of log-bins (e.g., 100 log-bins on the Figure). This method makes a sort of statistical averaging by stacking, and then ``compresses" the result in way that it is easy to use in a classifier.
 
 % {\bf NB:} I believe that the classifier does well because it can efficiently capture the overall level of activity for all log-bins, but also more local deviations. On the figure, we can see some local peaks mostly between $10^1$ and $10^1.5$, but in all other parts of the PDF though in a less visible way. I believe these deviations are quite unique and can make the difference in the classifier. We should indeed check this further if we want to understand to origins of the good results.
 
@@ -31,17 +36,17 @@ In summary, we build a probability density function of brain frequencies as capt
 
 % \textcolor{red}{\bf [Maybe a schema would be great to help the reader get the point quickly]}
 
-At this point, we have a one-dimensional signal flattened in the time dimension, computing the mean magnitude of each bin over all readings in the recording - a row vector with one entry for each each measured frequncy bin. 
 
-\subsection{Strategies for BCI with minimal training time and low computational requirements}
+\subsection{Classifying EEG signals}
 
-Our study explores three major questions. First, what is the tradeoff between data compression and classification accuracy? For computational reasons, we wish to keep the size of our data small, but what is the optimal compromise between this computational concern and the usability of the resulting BCI?
 
-%Second, how well do the data we record during calibration represent the data we will see after calibration? From an ergonomic standpoint, we wish to keep the duration of example recordings as brief as possible. With how little initial data can we confidently make inferences about data we see in the future, and does our compression method affect our ability to make these inferences?
+In this study, we build a binary BCI using a support vector machine (SVM) classifier, which we train individually for each subject. SVMs work by drawing a discriminatory boundary (a ``hyperplane'') between training examples such that the margin of the hyperplane is maximized for all examples in the set. (For more on the use of SVMs in BCI: \cite{garrett_comparison_2003,grierson_better_2011}). 
 
-Third, how can we minimize the time the user spends training while maximizing the accuracy of the resulting system? For ergonomic reasons, it is desireable that the user not spend too much time calibrating the system (recording example data, testing BCI accuracy). Can we design our calibration phase to keep training times low and classification accuracies high across all users?
+\subsubsection{LibLinear}
+We use LinearSVC, \cite{fan_liblinear:_2008} a wrapper for LibLinear exposed in Python through the ScikitLearn library. \cite{pedregosa_scikit-learn:_2011} We chose LinearSVC because BCI classification problems are generally presumed to be linear  \cite{garrett_comparison_2003,lotte_review_2007}, and because LibLinear's underlying C implementation boasts among the fastest train- and test-time performance among state-of-the-art solutions. \cite{fan_liblinear:_2008} For the SVM's paramaters, we use a squared hinge loss function, which maximizes the margin for greater generalizability, and a hyperparameter of 100, found through a ``grid search'', or an exhaustive search through a randomly selected sample of our dataset. 
 
-We explore these research questions using a binary BCI built around a support vector machine (SVM), which we train per-subject. (For more on the use of SVMs in BCI: \cite{garrett_comparison_2003,grierson_better_2011}). In this study, we use LinearSVC, \cite{fan_liblinear:_2008} a wrapper for LibLinear exposed in Python through the ScikitLearn library. \cite{pedregosa_scikit-learn:_2011} We chose LinearSVC primarily because its underlying C implementation demonstrates train-time and test-time performance on par with that of state-of-the-art solutions. \cite{fan_liblinear:_2008} We use a squared hinge loss function, which maximizes the margin for greater generalizability, and a hyperparameter of 100, found through a ``grid search'', or an exhaustive search through a randomly selected sample of our dataset. 
+\subsubsection{Cross-validation}
 
-% TODO: provide evidence for "as well or better than nonlinear ones"
-% generally presumed to be linear  \cite{garrett_comparison_2003,lotte_review_2007}
+\textcolor{red}{\bf explanation of why we bother with cross validation, and what it means to estimate the accuracy of a classifier }
+
+We use ScikitLearn's built-in cross-validation toolkit, which performs each of the seven cross-validation steps using different splits of trial data in the training and testing sets. 

@@ -1,24 +1,24 @@
 \section{\uppercase{Experiments}}
 
-\subsection{Finding a compromise between data compression and classifier accuracy}
+\subsection{Finding a compromise between computational speed and classifier accuracy}
 
-In order to build physiological computing systems suitable for real-world use, we seek to maxmize the system's classification accuracy while minimizing its computational requirements.
+Generally, we seek to maxmize our system's classification accuracy while minimizing its computational expense. One way to reduce the computational requirements of a SVM classifier is to reduce the size of the feature vectors on which it is trained and tested. Our signal quantization method allows us to directly adjust the size of feature vectors by changing the signal's resolution (see 3.1), though lowering the resolution of feature vectors could negatively effect the classifier's performance.
 
-In this experiment, we examine the effect of data resolution, operationalized by the number of bins in the quantization step, on our BCI's performance, operationalized by the SVM's training time and by the SVM's estimated accuracy. 
+In this experiment, we examine the effect of resolution, operationalized by the number of bins used in the quantization step, on our BCI's performance, operationalized by the SVM's training time and by the SVM's estimated accuracy. We hypothesize that SVM accuracy will decrease with resolution, as will SVM training time.
 
-We hypothesize that SVM accuracy will decrease with resolution, as will SVM training time.
+\subsubsection{Protocol}
 
-For each subject, we generated every pair of two tasks and cross-validated our SVM seven times on recordings for those two tasks. We used ScikitLearn's built-in cross-validation toolkit, which performs each of the seven cross-validation steps using different splits of trial data in the training and testing sets. We varied the number of bins in the samples we fed to the SVM and the length of recordings (a slice of our original recording from one second to 1+n seconds). For every task pair processed, we recorded mean classification accuracy across all cross-validation trials.
+For each subject, we generate every pair of two tasks and cross-validate our SVM seven times on recordings for those two tasks. We vary the resolution of the samples we feed to the SVM. For every task pair processed, we record mean classification accuracy across all rounds of cross-validation.
 
-As an additional performance audit, we timed our SVM at training time and testing time. In this measure, we fit an SVM to all the data for two task-pairs from five randomly-selected subjects, and repeated this process ten thousand times at different bin sizes and different lengths, collecting the minimum time observed in each series of attempts. In order to establish a proper estimate, we time the SVM after all data has been loaded to memory, disregarding the time it takes to load the data from disk.
+As an additional performance audit, we measure the time needed to fit an SVM to the data for two randomly selected taskpairs across all subjects. We repeat this process ten thousand times at different resolutions, collecting the minimum time observed in each series of attempts.
 
-\subsection{Results}
+\subsubsection{Results}
 
 \begin{figure}[!h]
   \vspace{-0.2cm}
   \centering
    {\epsfig{file = Figures/1a.png, width = 6cm}}
-  \caption{Mean best-case accuracy among all subjects compared to time needed to train the classifier. At over 100 bins, we find no evidence of an increase in classification accuracy, which plateaus at around 95\%. }
+  \caption{Mean best-case accuracy among all subjects compared to time needed to train the classifier. At reoslutions of 100 points and greater, we find no evidence of an increase in classification accuracy. }
   \label{fig:fig1a}
   \vspace{-0.1cm}
  \end{figure}
@@ -27,7 +27,7 @@ As an additional performance audit, we timed our SVM at training time and testin
   \vspace{-0.2cm}
   \centering
    {\epsfig{file = Figures/1b.png, width = 6cm}}
-  \caption{Log of mean classifier training time compared to log of number of bins in data. The time needed to train the classifier decreases logarithmically as the number of bins decrease.}
+  \caption{Log of mean classifier training time compared to log of data resolution. The time needed to train the classifier increases logarithmically with resolution.}
   \label{fig:fig1b}
   \vspace{-0.1cm}
  \end{figure}
@@ -36,31 +36,53 @@ As an additional performance audit, we timed our SVM at training time and testin
   \vspace{-0.2cm}
   \centering
    {\epsfig{file = Figures/1c.png, width = 6cm}}
-  \caption{ By decreasing the number of bins in the EEG data, we can decrease the time needed to train the support vector machine up to nine times without without detriment to classifier accuracy. }
+  \caption{ Best-case accuracy compared to the time needed to train the classifier. By decreasing the number of bins in the EEG data, we can decrease the time needed to train the support vector machine up to nine times without without significant detriment to classifier accuracy. }
   \label{fig:fig1c}
   \vspace{-0.1cm}
  \end{figure}
 
-We ran an ordinary least squares regression on number of bins and classifier accuracy at recording lengths of four seconds. Number of bins was positively correlated with classifier accuracy, with each bin correpsonding to 1.13\% gain in accuracy (R-squared = .773, p \textless .001). 
+Resolution was positively correlated with classifier accuracy (slope = .0013 R-squared = .773, p \textless .001). Resolution was also positively correlated with time to train classifier (slope = 0.5 R-squared = .947, p \textless .001). We compare accuracy and SVM training time directly in \ref{fig:fig1c}.
 
-We ran an additional ordinary least squares regression on number of bins in the EEG data and the time it takes to train an SVM on those data, again at recordings of four seconds. Number of bins was positively correlated with time to train classifier (slope = 0.5 R-squared = .947, p \textless .001).
+We find support for our hypothesis that computational requirements (SVM training time) decreases along with resolution of the signal. We find partial support for the hypothesis that SVM accuracy decreases along with signal: this effect appears at resolutions lower than 100 points, but we find no significant increase in SVM accuracy at higher resolutions.
 
-Since bin size has a linear relationship with both accuracy and SVM training time, we compare accuracy and training time directly in Figure 1. 
-
-Overall, we find that relatively small feature vectors (75-100 bins) produced with our method yield classifiers as accurate as those that use much higher resolution samples, and that reducing vector size in this way can dramatically increase the computational speed of training the BCI's support vector machine. 
-
+Overall, we find that relatively small feature vectors (75-100 bins) produced with our method yield classifiers as accurate as those that use much higher resolution samples, and that reducing vector size in this way can dramatically increase the computational speed of training an SVM. 
 
 \subsection{Opportunistic strategy for calibrating a binary BCI}
 
-In the previous experiment, we found a maximum level of data compression that preserves SVM accuracy while significantly speeding up SVM training time. However, 
+In the previous experiment, we found that our compression technique can speed up an SVM classifier without significant detriment to BCI accuracy. However, for the technique to be useful in real-world applications, it must also allow users to quickly calibrate the system to their personal physiological signals.
 
-In this experiment, we evaluate this level of compression in the context of a user calibration strategy. Using recordings from our dataset, we evaluate the amount of user calibration time needed to acheive a BCI accuracy of over 75\%.
+In this experiment, we evaluate an opportunistic strategy for user calibration. Using a resolution of 100 points identified as optimal in the previous experiment, we measure user calibration time (the time it takes a user to achieve a threshold accuracy with the BCI) and the classification accuracy each user achieves after calibration. We hypothesize that this technique will allow for faster calibration than an exhaustive search (720 seconds) while maintaining sufficient system accuracy across users.
 
-For each subject, we spliced all recordings into 0.5-second chunks, each one representing a single power spectrum reading from our headset. We begin with sixty seconds of recording from the three tasks most commonly associated with best-case performance (base, pass, color) for an initial user calibration time of 120 seconds. We then perform a seven-fold cross-validation on every permutation of two of these tasks (base versus task, pass versus task, pass versus color, etc). The taskpair with the highest mean score across all seven cross-validations is selected for a more robust calibration, in which the reamining 80 seconds of recordings for both tasks are used to validate the SVM. If the score on this validation round is below 75\%, we add the first 60 seconds of recording from the taskpair that was next most correlated with bestcase accuracy. 
+\subsubsection{Protocol}
 
-This process is repeated until all taskpairs are added, or until one taskpair acheives over 75\% accuracy on after-calibration data. We record the accuracy achieved among subjects and the number of seconds of calibration data required to achieve the resulting accuracy.
+For each subject, we spliced all mental task recordings into $\sfrac{1}{2}$-second chunks, each one representing a single power spectrum reading from our headset. By sampling from our dataset, we simulate recording a sixty second example of mental tasks from each user. We begin with examples of the three tasks most commonly associated with best-case performance (base, pass, color) for an initial user calibration time of 120 seconds. We then perform a seven-fold cross-validation on every permutation of two of these tasks (base versus task, pass versus task, pass versus color, etc). 
 
-\subsection{Results}
+% this is where i put a table of tasks correlated with bestcase performance and a quick description, how we generated those data and what we need them for
+
+\begin{table}[!h]
+  \vspace{-0.2cm}
+  \centering
+  \begin{tabular}{ | l | l | l | p{5cm} |}
+  \hline
+  Task & Freq Bestcase \\ \hline
+  Color & 10 \\ \hline
+  Base & 5 \\ \hline
+  Pass & 4 \\ \hline
+  Sport & 3 \\ \hline
+  Finger & 2 \\ \hline
+  Song & 2 \\ \hline
+  Eye & 2 \\ \hline
+  \end{tabular}
+  \caption{An exhaustive search of SVM accuracy on taskpairs identified each subject's best-performing taskpair. We recorded the frequency of each task's occurrence in a best-case taskpair, shown here. We used these data to inform the order in which our opportunistic calibration strategy would prompt the user to record tasks.}
+  \label{table:name}
+  \vspace{-0.1cm}
+\end{table}
+
+The taskpair with the highest mean score across cross-validation rounds is selected for an additional testing session, in which the reamining 80 seconds of recordings for both tasks are used to generate an estimate of the classifier's accuracy on new EEG signals.
+
+If the score on this additional testing round is below 75\% (a threshold for BCI literacy) \cite{vidaurre_towards_2010}, the user records sixty seconds of the taskpair next most correlated with bestcase accuracy across users. We repeat the above process on unexplored taskpairs repeated until a taskpair acheives over 75\% accuracy on post-calibration data, or until all taskpairs have been evaluated.
+
+\subsubsection{Results}
 
 \begin{figure}[!h]
   \vspace{-0.2cm}
@@ -71,7 +93,7 @@ This process is repeated until all taskpairs are added, or until one taskpair ac
   \vspace{-0.1cm}
 \end{figure}
 
-
+We find that our strategy calibrates users to BCI control more quickly than an exhaustive search.
 
 
 
