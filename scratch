@@ -1,6 +1,14 @@
 
 
+we hypothesize a lower average accuracy than the baseline method, because ite will sometimes find local optima
+
+
+making the process by with we deal with that nonstationarity smoother?   making physiological data easier to work with overall?   like, the mp3 of physiological data?    and we're showing its just as good for our use case, implies maybe in many other use cases too?
+
+dont be afriad to dis calibration time / sensor # directly in intro
+
+
 
 we preserve data that isnt neural activity - more general physiological signals
 
-We use ScikitLearn's built-in cross-validation toolkit, which performs each of the seven cross-validation steps using different splits of trial data in the training and testing sets. 
+should talk about how neurosky cleans their data............black box heh   call the guy

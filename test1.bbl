@@ -1,20 +1,18 @@
 \begin{thebibliography}{}
 
-\bibitem[Blankertz et~al., 2007a]{blankertz_non-invasive_2007}
-Blankertz, B., Dornhege, G., Krauledat, M., Müller, K.-R., and Curio, G.
-  (2007a).
-\newblock The non-invasive berlin brain–computer interface: fast acquisition
-  of effective performance in untrained subjects.
-\newblock {\em {NeuroImage}}, 37(2):539–550.
-
-\bibitem[Blankertz et~al., 2007b]{blankertz_note_2007}
+\bibitem[Blankertz et~al., 2007]{blankertz_note_2007}
 Blankertz, B., Krauledat, M., Dornhege, G., Williamson, J., Murray-Smith, R.,
-  and Müller, K.-R. (2007b).
+  and Müller, K.-R. (2007).
 \newblock A note on brain actuated spelling with the berlin brain-computer
   interface.
 \newblock In Stephanidis, C., editor, {\em Universal Access in Human-Computer
   Interaction. Ambient Interaction}, number 4555 in Lecture Notes in Computer
   Science, pages 759--768. Springer Berlin Heidelberg.
+
+\bibitem[Burges, 1998]{burges_tutorial_1998}
+Burges, C. (1998).
+\newblock A tutorial on support vector machines for pattern recognition.
+\newblock {\em Data Mining and Knowledge Discovery}, 2(2):121--167.
 
 \bibitem[Campbell et~al., 2010]{campbell_neurophone:_2010}
 Campbell, A., Choudhury, T., Hu, S., Lu, H., Mukerjee, M.~K., Rabbi, M., and
@@ -53,11 +51,12 @@ D.~Mattia, F.~Pichiorri, M. M. R.~R. (2011).
 \newblock In {\em Towards Practical Brain Computer Interfaces}. Springer,
   Biological and Medical Physics, Biomedical Engineering.
 
-\bibitem[Das et~al., 2013]{das_unsupervised_2013}
-Das, D., Chatterjee, D., and Sinha, A. (2013).
-\newblock Unsupervised approach for measurement of cognitive load using {EEG}
-  signals.
-\newblock pages 1--6. {IEEE}.
+\bibitem[De~Vos and Debener, 2014]{de2014mobile}
+De~Vos, M. and Debener, S. (2014).
+\newblock Mobile eeg: towards brain activity monitoring during natural action
+  and cognition.
+\newblock {\em International journal of psychophysiology: official journal of
+  the International Organization of Psychophysiology}, 91(1):1--2.
 
 \bibitem[Dornhege, 2007]{dornhege_toward_2007}
 Dornhege, G. (2007).
@@ -95,12 +94,6 @@ Jain, A.~K., Duin, R. P.~W., and Mao, J. (2000).
 \newblock {\em Pattern Analysis and Machine Intelligence, {IEEE} Transactions
   on}, 22(1):4–37.
 
-\bibitem[Kindermans et~al., 2014]{kindermans_true_2014}
-Kindermans, P.-J., Schreuder, M., Schrauwen, B., Müller, K.-R., and
-  Tangermann, M. (2014).
-\newblock True zero-training brain-computer interfacing – an online study.
-\newblock {\em {PLoS} {ONE}}, 9(7):e102504.
-
 \bibitem[Larsen and Hokl, 2011]{larsen_classification_2011}
 Larsen, E.~A. and Hokl, C.-s.~J. (2011).
 \newblock {\em Classification of {EEG} Signals in a Brain- Computer Interface
@@ -111,13 +104,6 @@ Lotte, F., Congedo, M., Lécuyer, A., Lamarche, F., Arnaldi, B., et~al. (2007).
 \newblock A review of classification algorithms for {EEG-based}
   brain–computer interfaces.
 \newblock {\em Journal of neural engineering}, 4.
-
-\bibitem[Lu et~al., 2009]{shijian_lu_unsupervised_2009}
-Lu, S., Guan, C., and Zhang, H. (2009).
-\newblock Unsupervised brain computer interface based on intersubject
-  information and online adaptation.
-\newblock {\em {IEEE} Transactions on Neural Systems and Rehabilitation
-  Engineering}, 17(2):135--145.
 
 \bibitem[McFarland and Wolpaw, 2011]{mcfarland_brain-computer_2011}
 McFarland, D.~J. and Wolpaw, J.~R. (2011).
@@ -146,12 +132,6 @@ Raudys, S.~J. and Jain, A.~K. (1991).
   Recommendations for practitioners.
 \newblock {\em {IEEE} Transactions on pattern analysis and machine
   intelligence}, 13(3):252–264.
-
-\bibitem[Shenoy et~al., 2006]{shenoy_towards_2006}
-Shenoy, P., Krauledat, M., Blankertz, B., Rao, R. P.~N., and Müller, K.-R.
-  (2006).
-\newblock Towards adaptive classification for {BCI}.
-\newblock {\em Journal of Neural Engineering}, 3(1):R13--R23.
 
 \bibitem[Vidaurre and Blankertz, 2010]{vidaurre_towards_2010}
 Vidaurre, C. and Blankertz, B. (2010).

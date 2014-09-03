@@ -9,48 +9,47 @@ Too many commas in name 1 of "D. Mattia, F. Pichiorri, M. Molinari, R. Rupp" for
 while executing---line 1020 of file apalike.bst
 Too many commas in name 1 of "D. Mattia, F. Pichiorri, M. Molinari, R. Rupp" for entry d._mattia_brain_2011
 while executing---line 1095 of file apalike.bst
-Warning--empty booktitle in das_unsupervised_2013
 Warning--empty booktitle in grierson_better_2011
 Warning--empty publisher in larsen_classification_2011
-You've used 27 entries,
+You've used 24 entries,
             1935 wiz_defined-function locations,
-            629 strings with 9792 characters,
-and the built_in function-call counts, 13250 in all, are:
-= -- 1243
-> -- 724
-< -- 16
-+ -- 270
-- -- 256
-* -- 1192
-:= -- 2272
-add.period$ -- 86
-call.type$ -- 27
-change.case$ -- 258
-chr.to.int$ -- 25
-cite$ -- 30
-duplicate$ -- 470
-empty$ -- 839
-format.name$ -- 293
-if$ -- 2596
-int.to.chr$ -- 3
+            614 strings with 9165 characters,
+and the built_in function-call counts, 11614 in all, are:
+= -- 1092
+> -- 624
+< -- 17
++ -- 233
+- -- 220
+* -- 1033
+:= -- 1990
+add.period$ -- 76
+call.type$ -- 24
+change.case$ -- 225
+chr.to.int$ -- 23
+cite$ -- 26
+duplicate$ -- 420
+empty$ -- 739
+format.name$ -- 256
+if$ -- 2280
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 29
-newline$ -- 137
-num.names$ -- 85
-pop$ -- 255
+missing$ -- 26
+newline$ -- 122
+num.names$ -- 76
+pop$ -- 220
 preamble$ -- 1
-purify$ -- 260
+purify$ -- 227
 quote$ -- 0
-skip$ -- 349
+skip$ -- 317
 stack$ -- 0
-substring$ -- 827
-swap$ -- 91
-text.length$ -- 9
+substring$ -- 715
+swap$ -- 84
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 158
-warning$ -- 3
-while$ -- 92
+type$ -- 140
+warning$ -- 2
+while$ -- 81
 width$ -- 0
-write$ -- 354
+write$ -- 315
 (There were 3 error messages)

@@ -1,6 +1,6 @@
 \section{\uppercase{Method}}
 
-This section describes the signal extraction technique that this study evaluates and discusses the machine learning classifier used to build our binary BCI.
+This section describes the signal extraction technique used in this study evaluates and discusses the supervised machine learning classifier used to build our binary BCI.
 
 \subsection{Signal extraction}
 
@@ -39,7 +39,6 @@ In summary, we build a probability density function of frequencies captured by t
 
 \subsection{Classifying EEG signals}
 
-
 In this study, we build a binary BCI using a support vector machine (SVM) classifier, which we train individually on each subject's recordings. 
 
 \subsubsection{LibLinear}
@@ -47,6 +46,4 @@ We use LinearSVC, \cite{fan_liblinear:_2008} a wrapper for LibLinear exposed in 
 
 \subsubsection{Cross-validation}
 
-\textcolor{red}{\bf explanation of why we bother with cross validation, and what it means to estimate the accuracy of a classifier }
-
-We use ScikitLearn's built-in cross-validation toolkit, which performs each of the seven cross-validation steps using different splits of trial data in the training and testing sets. 
+When training a classifier, it is important to make good estimates of the classifier's performance. A common way to do this is through \textit{cross-validation}, in which we train and test a classifier several times using different subsets of the data for training and testing. We use ScikitLearn's built-in cross-validation toolkit, which performs seven cross-validation steps using different splits of data in each round.
