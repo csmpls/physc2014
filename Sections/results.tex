@@ -1,18 +1,20 @@
-\section{\uppercase{Experiments}}
+\section{\uppercase{The effect of quantization technique on classifier speed and accuracy}}
 
-\subsection{Finding a compromise between computational speed and classifier accuracy}
 
 Generally, we seek to maxmize our system's classification accuracy while minimizing its computational expense. One way to reduce the computational requirements of a SVM classifier is to reduce the size of the feature vectors on which it is trained and tested. Our signal quantization method allows us to directly adjust the size of feature vectors by changing the signal's resolution (see 3.1), though lowering the resolution of feature vectors could negatively effect the classifier's performance.
 
-In this experiment, we examine the effect of resolution, operationalized by the number of bins used in the quantization step, on our BCI's performance, operationalized by the SVM's training time and by the SVM's estimated accuracy. We hypothesize that SVM accuracy will decrease with resolution, as will SVM training time.
+In this experiment, we examine the effect of resolution, operationalized by the number of bins used in the quantization step, on our BCI's performance, operationalized by the SVM's training time and by the SVM's estimated accuracy. 
 
-\subsubsection{Protocol}
+H1: SVM accuracy will decrease with resolution.
+H2: SVM training time will decrease with resolution.
 
-For each subject, we generate every pair of two tasks and cross-validate our SVM seven times on recordings for those two tasks. We vary the resolution of the samples we feed to the SVM. For every task pair processed, we record mean classification accuracy across all rounds of cross-validation.
+\subsection{Protocol}
+
+For each subject, we generate every pair of two tasks and cross-validate our SVM seven times on the recordings for this pair of tasks. We vary the resolution of the samples we feed to the SVM. For every task pair processed, we record mean classification accuracy across all rounds of cross-validation. For each subject, we record the best-performing taskpair, which corresponds to our estimation of optimal performance of the BCI for that subject.
 
 As an additional performance audit, we measure the time needed to fit an SVM to the data for two randomly selected taskpairs across all subjects. We repeat this process ten thousand times at different resolutions, collecting the minimum time observed in each series of attempts.
 
-\subsubsection{Results}
+\subsection{Results}
 
 \begin{figure}[!h]
   \vspace{-0.2cm}
@@ -41,21 +43,24 @@ As an additional performance audit, we measure the time needed to fit an SVM to 
   \vspace{-0.1cm}
  \end{figure}
 
-Resolution was positively correlated with classifier accuracy (slope = .0013 R-squared = .773, p \textless .001). Resolution was also positively correlated with time to train classifier (slope = 0.5 R-squared = .947, p \textless .001). We compare accuracy and SVM training time directly in \ref{fig:fig1c}.
 
-We find support for our hypothesis that computational requirements (SVM training time) decreases along with resolution of the signal. We find partial support for the hypothesis that SVM accuracy decreases along with signal: this effect appears at resolutions lower than 100 points, but we find no significant increase in SVM accuracy at higher resolutions.
+We find support for H1. Although resolution was positively correlated with classifier accuracy (slope = .0013 R-squared = .773, p \textless .001), this effect appears only at resolutions lower than 100 points. We find no significant increase in SVM accuracy at resolutions over 100 bins. 
 
-Overall, we find that relatively small feature vectors (75-100 bins) produced with our method yield classifiers as accurate as those that use much higher resolution samples, and that reducing vector size in this way can dramatically increase the computational speed of training an SVM. 
+Resolution was also positively correlated with time to train classifier (slope = 0.5 R-squared = .947, p \textless .001). We compare accuracy and SVM training time directly in \ref{fig:fig1c}. Thus, we find support for H2.
 
-\subsection{Opportunistic strategy for calibrating a binary BCI}
+Overall, we find that relatively small feature vectors produced with our method (100 values) yield classifiers as accurate as full-resolution samples (1024 values), and that reducing vector size in this way can dramatically increase the computational speed of training an SVM. 
+
+\section{\uppercase{Opportunistic strategy for calibrating a binary BCI}}
 
 In the previous experiment, we found that our compression technique can speed up an SVM classifier without significant detriment to BCI accuracy. However, for the technique to be useful in real-world applications, it must also allow users to quickly calibrate the system to their personal physiological signals.
 
 In this experiment, we evaluate an opportunistic strategy for user calibration. Using a resolution of 100 points identified as optimal in the previous experiment, we measure user calibration time (the time it takes a user to achieve a threshold accuracy with the BCI) and the classification accuracy each user achieves after calibration. We hypothesize that this technique will allow for faster calibration than an exhaustive search (720 seconds) while maintaining sufficient system accuracy across users.
 
-\subsubsection{Protocol}
+\subsection{Protocol}
 
-For each subject, we spliced all mental task recordings into $\sfrac{1}{2}$-second chunks, each one representing a single power spectrum reading from our headset. By sampling from our dataset, we simulate recording a sixty second example of mental tasks from each user. We begin with examples of the three tasks most commonly associated with best-case performance (base, pass, color) for an initial user calibration time of 120 seconds. We then perform a seven-fold cross-validation on every permutation of two of these tasks (base versus task, pass versus task, pass versus color, etc). 
+As a baseline, we perform an exhaustive search of SVM accuracy on taskpairs identified each subject's best-performing taskpair. We recorded the frequency of each task's occurrence in a best-case taskpair \ref{table:name}. We used these data to inform the order in which our opportunistic calibration strategy would prompt the user to record tasks.
+
+We begin with examples of the three tasks most commonly associated with best-case performance (base, pass, color) for an initial user calibration time of 120 seconds. We then perform a seven-fold cross-validation on every permutation of two of these tasks (base versus task, pass versus task, pass versus color, etc). The taskpair with the highest mean score across cross-validation rounds is selected for an additional testing session, in which the reamining 80 seconds of recordings for both tasks are used to generate an estimate of the classifier's accuracy on new EEG signals.
 
 % this is where i put a table of tasks correlated with bestcase performance and a quick description, how we generated those data and what we need them for
 
@@ -78,11 +83,13 @@ For each subject, we spliced all mental task recordings into $\sfrac{1}{2}$-seco
   \vspace{-0.1cm}
 \end{table}
 
-The taskpair with the highest mean score across cross-validation rounds is selected for an additional testing session, in which the reamining 80 seconds of recordings for both tasks are used to generate an estimate of the classifier's accuracy on new EEG signals.
-
 If the score on this additional testing round is below 75\% (a threshold for BCI literacy) \cite{vidaurre_towards_2010}, the user records sixty seconds of the taskpair next most correlated with bestcase accuracy across users. We repeat the above process on unexplored taskpairs repeated until a taskpair acheives over 75\% accuracy on post-calibration data, or until all taskpairs have been evaluated.
 
-\subsubsection{Results}
+H1: We hypothesize that the opportunistic calibration strategy will reach threshold accuracy in less  time than will the exhaustive search.
+
+H2: We hypothesize that the opportunistic strategy will acheive lower accuracy than will the exhaustive method, as it could find local optima.
+
+\subsection{Results}
 
 \begin{figure}[!h]
   \vspace{-0.2cm}
@@ -93,7 +100,7 @@ If the score on this additional testing round is below 75\% (a threshold for BCI
   \vspace{-0.1cm}
 \end{figure}
 
-We find that our strategy calibrates users to BCI control more quickly than an exhaustive search.
+A baseline exhaustive search required 2520 seconds of calibration time and produced an average accuracy of 92.5\% across subjects (\textit{std} = .09). Our opportunistic strategy took an average of 225.3 seconds of calibration time (\textit{std} = 52.2) and produced an average accuracy of 88.3\% (\textit{std} = .11).
 
-
+We find that our strategy calibrates users to BCI control significantly more quickly than an exhaustive search (\textit{p-value} < .001 ). Thus, we find support for H1. Further, we do not a statistically significant difference in per-user accuracy between an opportunistic strategy and an exhaustive search (\textit{p-value} = .264). Thus, we find no support for H2.
 

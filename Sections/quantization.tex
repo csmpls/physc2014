@@ -1,0 +1,34 @@
+
+\section{\uppercase{Signal quantization}}
+
+In this section we present the novel contribution of our paper, a signal quantization technique that preserves the informative aspects of EEG power spectrum data while drastically reducing its size in memory. 
+
+\subsection{Compressing power spectra in the temporal dimension}
+
+First, we compute an average of all the power spectra associated with a recording. We obtain a discrete probability density function (PDF) in which each bin is the mean of its corresponding bins through time. At this stage, we have a discrete PDF of 1024 bins for the entire n second recording. 
+
+\subsection{Logarithmic binning}
+
+Binning a probability density function (PDF) is a simple way to ``quantize'' the information contained in the full signal. By taking the mean of several adjacent points in the PDF, we are left with a single bin that compresses the information contained in its local area of frequencies. For instance, four contiguous frequencies (1, 1.25, 1.5, 1.75) of the values (4,4,5,5) could be combined into a single bin with the value 4.5. 
+
+Since EEG activity is associated with frequencies from 1-40Hz, we presume this range contains the majority of relevant signal. However, we do not rule out the possiblity that useful signal exists in other frequency ranges (muscular activity, for example, might be correlated with mental gestures in some cases). In order to exploit the entire frequency spectrum while preserving our bias toward known sources of useful signal, we logarithmically space bins through the PDF, as shown in \ref{binnedEEGpowerspec}.
+
+\begin{figure}[!h]
+  \vspace{-0.2cm}
+  {\epsfig{file = Figures/binned_EEGPowerSpectrum.png, width = 6cm}}
+\caption{In double logarithmic scale, the original 1024 bins (blue dots) of the PDF obtained from averaging the n power spectra of one recording, and the resulting ``quanitized''  PDF with a resolution of 100 log-bins. The quantized PDF preserves very well the structure of the original, 1024-point PDF. }
+\label{binnedEEGpowerspec}
+\vspace{-0.1cm}
+\end{figure}
+
+
+In summary, we build a probability density function of frequencies captured by the EEG scanning device from all the power spectra in a recording. We then use logarithmically-spaced bins to reduce the original 1024 frequency values to a smaller number of bins (e.g., 100 log-bins in \ref{binnedEEGpowerspec}). This method produces a statistical average of a time series, compressed into a single feature vector that it is easy to use in a classifier.
+
+% {\bf NB:} I believe that the classifier does well because it can efficiently capture the overall level of activity for all log-bins, but also more local deviations. On the figure, we can see some local peaks mostly between $10^1$ and $10^1.5$, but in all other parts of the PDF though in a less visible way. I believe these deviations are quite unique and can make the difference in the classifier. We should indeed check this further if we want to understand to origins of the good results.
+
+% {\bf Side note:} one way to investigate further would be to see indeed to what extent the ``compression", i.e. the small number of log-bins, affects the quality of the classifier. Another quite promising further research direction, would be to determine the minimum number of n power spectra, which should be taken into account to reach a target level of correct classification. This would be useful to determine what should be the most adequate sample size for a certain level of identification. This level might of course vary as a function of subjects and tasks.
+
+%-----------
+
+
+% \textcolor{red}{\bf [Maybe a schema would be great to help the reader get the point quickly]}

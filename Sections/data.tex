@@ -1,5 +1,9 @@
 
-\section{\uppercase{Dataset}}
+\section{\uppercase{Data \& methods}}
+
+In this section we describe the dataset that we used in this study and introduce the machine learning techniques that we employed.
+
+\subsection{Dataset}
 
 The data used in this experiment were taken from a previous study. \cite{adams_i_2013} The anonymized dataset consists of power spectrum time series data recorded by the software from the Neurosky MindSet headset from 15 subjects, students at UC Berkeley, performing mental tasks. 
 
@@ -10,3 +14,19 @@ Participants performed each of the seven mental tasks, enumerated below, ten tim
 The Neurosky MindSet SDK delivered a power spectrum of its data every half second. The power spectra that the SDK delivers are computed with discrete bins of 1/4 Hz. Each bin represents the intensity of activation of a frequency range (e.g., between 1 and 1.25 Hz) in a half-second time window. There are therefore 1024 values reported for one power spectrum. Since our mental task recordings are 10 seconds long, each recording is represetned by twenty power spectra on average.
 
 The dataset was further cleaned by removing all readings marked as suboptimal signal quality by the Neurosky SDK. The SDK delivers a signal quality value that is greater than zero when signal quality is suboptimal. Factors causing this value to be greater than zero include lack of contact between elctrode and skin, excessive non-EEG noise (EKG, EMG, EOG, electrostatic) and excessive motion.
+
+\subsection{Signal extraction}
+
+We are interested in minimizing computational expense of classifying mental gestures. This study investigates a signal quantization technique that reduces the size of EEG data for fast classfication but retains high accuracy.
+
+\subsection{Classifying EEG signals}
+
+In this study, we build a binary BCI using a support vector machine (SVM) classifier, which we train individually on each subject's recordings. We use LinearSVC, \cite{fan_liblinear:_2008} a wrapper for LibLinear exposed in Python through the ScikitLearn library. \cite{pedregosa_scikit-learn:_2011} We chose LinearSVC because BCI classification problems are generally presumed to be linear  \cite{garrett_comparison_2003,lotte_review_2007}, and because LibLinear's underlying C implementation boasts among the fastest train- and test-time performance among state-of-the-art solutions. \cite{fan_liblinear:_2008} We use a hyperparameter of 100, found through a ``grid search'', or an exhaustive search through a randomly-selected sample of our dataset. 
+
+When training a classifier, the only way to make accurate estimates of the classifier's performance is to test it on data on which the classifier was not trained. A common way to do this is through \textit{cross-validation}, in which we train and test a classifier several times using different subsets of the data for training and testing. We use ScikitLearn's built-in cross-validation toolkit, which performs seven cross-validation steps using different splits of data in each round.
+
+\subsection{Creating a binary BCI}
+
+A binary BCI allows users to select one of two options. In our system, have a ``vocabulary'' of two mental gestures, and our SVM discriminates which gesture thay are performing in a given recording. Thus, for any given user, we are interested in finding two tasks between which our SVM can reliably discriminate. This taskpair differs between subjects: one subject's best-case taskpair may be \textit{song} and \textit{sport} while another's could be \textit{eye} and \textit{finger}. 
+
+In order to simulate a binary BCI with our dataset, we spliced all mental task recordings into $\sfrac{1}{2}$-second chunks, each one representing a single power spectrum reading from our headset. In Section 5, we simulate calibrating the BCI to a taskpair by cross-validating an SVM trained on all taskpair data. In Section 6, we use a more realistic approach in which we train the SVM on the first eighty seconds of data for both tasks, then testing the classifier on the remaining 40 seconds of data.
