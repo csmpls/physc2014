@@ -1,24 +1,14 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  7 SEP 2014 17:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  7 SEP 2014 23:40
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
-**test1.tex
-(./test1.tex
-LaTeX2e <2009/09/24>
-Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
-rman-x-2009-06-19, ngerman-x-2009-06-19, afrikaans, ancientgreek, ibycus, arabi
-c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
-h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
-h, french, galician, german, ngerman, swissgerman, monogreek, greek, hungarian,
- icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, marathi, or
-iya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, kurmanji,
- lao, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, pol
-ish, portuguese, romanian, russian, sanskrit, serbian, serbianc, slovak, sloven
-ian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, loaded
-.
-(./article.cls
+**/Users/ffff/Documents/physc2014/test1.tex
+(/Users/ffff/Documents/physc2014/test1.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(/Users/ffff/Documents/physc2014/article.cls
 Document Class: article 2000/05/19 v1.4b Standard LaTeX document class
-(/usr/local/texlive/2011/texmf-dist/tex/latex/base/size10.clo
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -32,36 +22,27 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/epsfig.sty
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphics.sty
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/graphics.cfg
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-
-(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
-)
-(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count87
 ))
@@ -70,8 +51,7 @@ Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
 )
 \epsfxsize=\dimen105
 \epsfysize=\dimen106
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/subfigure/subfigure.sty
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip43
 \subfigcapskip=\skip44
@@ -83,15 +63,13 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \c@lofdepth=\count89
 \c@subtable=\count90
 \c@lotdepth=\count91
-
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-(/usr/local/texlive/2011/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/subfigure/subfigure.cfg)
 \subfig@top=\skip47
 \subfig@bottom=\skip48
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/calc.sty
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count92
 \calc@Bcount=\count93
@@ -99,57 +77,50 @@ Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Bdimen=\dimen110
 \calc@Askip=\skip49
 \calc@Bskip=\skip50
-LaTeX Info: Redefining \setlength on input line 76.
-LaTeX Info: Redefining \addtolength on input line 77.
+LaTeX Info: Redefining \setlength on input line 75.
+LaTeX Info: Redefining \addtolength on input line 76.
 \calc@Ccount=\count94
 \calc@Cskip=\skip51
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/amssymb.sty
-Package: amssymb 2009/06/22 v3.00
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks15
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
-))
-(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amstext.sty
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks16
 \ex@=\dimen111
-))
-(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2000/07/18 v2.13 AMS math features
+)) (/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip52
-
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen112
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count95
-LaTeX Info: Redefining \frac on input line 211.
+LaTeX Info: Redefining \frac on input line 210.
 \uproot@=\count96
 \leftroot@=\count97
-LaTeX Info: Redefining \overline on input line 307.
+LaTeX Info: Redefining \overline on input line 306.
 \classnum@=\count98
 \DOTSCASE@=\count99
-LaTeX Info: Redefining \ldots on input line 379.
-LaTeX Info: Redefining \dots on input line 382.
-LaTeX Info: Redefining \cdots on input line 467.
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen113
-LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \macc@depth=\count100
 \c@MaxMatrixCols=\count101
 \dotsspace@=\muskip10
@@ -170,11 +141,10 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \multlinegap=\skip53
 \multlinetaggap=\skip54
 \mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2666.
-LaTeX Info: Redefining \] on input line 2667.
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/amscls/amsthm.sty
-Package: amsthm 2009/07/02 v2.20.1
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2004/08/06 v2.20
 \thm@style=\toks21
 \thm@bodyfont=\toks22
 \thm@headfont=\toks23
@@ -184,9 +154,8 @@ Package: amsthm 2009/07/02 v2.20.1
 \thm@postskip=\skip56
 \thm@headsep=\skip57
 \dth@everypar=\toks26
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/multicol.sty
-Package: multicol 2008/12/05 v1.6h multicolumn formatting (FMi)
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2014/04/23 v1.8e multicolumn formatting (FMi)
 \c@tracingmulticols=\count107
 \mult@box=\box28
 \multicol@leftmargin=\dimen120
@@ -203,6 +172,7 @@ Package: multicol 2008/12/05 v1.6h multicolumn formatting (FMi)
 \multicolbaselineskip=\skip59
 \partial@page=\box29
 \last@line=\box30
+\maxbalancingoverflow=\dimen125
 \mult@rightbox=\box31
 \mult@grightbox=\box32
 \mult@gfirstbox=\box33
@@ -226,13 +196,13 @@ Package: multicol 2008/12/05 v1.6h multicolumn formatting (FMi)
 \@tempa=\box51
 \c@columnbadness=\count113
 \c@finalcolumnbadness=\count114
-\last@try=\dimen125
-\multicolovershoot=\dimen126
-\multicolundershoot=\dimen127
+\last@try=\dimen126
+\multicolovershoot=\dimen127
+\multicolundershoot=\dimen128
 \mult@nat@firstbox=\box52
 \colbreak@box=\box53
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/pslatex/pslatex.sty
+\mc@col@check@num=\count115
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/pslatex/pslatex.sty
 Package: pslatex 1996/07/24 v1.2 pslatex emulation (DPC)
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 65.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -266,233 +236,152 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 75.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 75.
-)
-(./apalike.sty
+) (/Users/ffff/Documents/physc2014/apalike.sty
 \bibhang=\skip60
-) (./SCITEPRESS.sty
+) (/Users/ffff/Documents/physc2014/SCITEPRESS.sty
 Conference Style for SCITEPRESS for LaTeX 2e -- version of April 2013
 \titlebox=\skip61
-) (/usr/local/texlive/2011/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2010/01/09 v3.1m Customizing captions (AR)
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2010/01/14 v3.1m caption3 kernel (AR)
-\captionmargin=\dimen128
-\captionmargin@=\dimen129
-\captionwidth=\dimen130
-\caption@indent=\dimen131
-\caption@parindent=\dimen132
-\caption@hangindent=\dimen133
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen129
+\captionmargin@=\dimen130
+\captionwidth=\dimen131
+\caption@tempdima=\dimen132
+\caption@indent=\dimen133
+\caption@parindent=\dimen134
+\caption@hangindent=\dimen135
 )
-\c@ContinuedFloat=\count115
+\c@ContinuedFloat=\count116
 Package caption Info: subfigure package is loaded.
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/color.cfg
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 130.
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/mh/xfrac.sty
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/expl3.sty
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/l3names.sty
-Package: l3names 2011/01/08 v2122 L3 Experimental Naming Scheme for TeX Primiti
-ves
-)
-Package: expl3 2011/04/09 v2222 L3 Experimental code bundle wrapper
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/etex-pkg/etex.sty
+Package color Info: Driver file: pdftex.def on input line 137.
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/l3packages/xfrac/xfrac.sty (/us
+r/local/texlive/2014/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty (/us
+r/local/texlive/2014/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2014/05/20 v4814 L3 programming layer (loader) 
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2014/05/20 v4814 L3 programming layer (code) 
+L3 Module: l3bootstrap 2014/05/16 v4782 L3 Bootstrap code
+(/usr/local/texlive/2014/texmf-dist/tex/latex/etex-pkg/etex.sty
 Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
-\et@xins=\count116
+\et@xins=\count117
 )
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/l3basics.sty
-Package: l3basics 2011/04/23 v2246 L3 Experimental basic definitions
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/l3expan.sty
-Package: l3expan 2011/04/09 v2223 L3 Experimental Argument Expansion module
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/l3tl.sty
-Package: l3tl 2011/04/09 v2223 L3 Experimental Token Lists
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/l3int.sty
-Package: l3int 2011/04/11 v2229 L3 Experimental Integer module
-\l_tmpa_int=\count117
-\l_tmpb_int=\count118
-\l_tmpc_int=\count119
-\g_tmpa_int=\count120
-\g_tmpb_int=\count121
-\c_max_int=\count122
-\g_tl_inline_level_int=\count123
-\g_prg_inline_level_int=\count124
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/l3quark.sty
-Package: l3quark 2011/04/14 v2234 L3 Experimental Quark Commands
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/l3seq.sty
-Package: l3seq 2011/04/21 v2245 The LaTeX3 kernel: sequences and stacks
-\g_seq_nesting_depth_int=\count125
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/l3toks.sty
-Package: l3toks 2011/04/09 v2223 L3 Experimental Token Registers
-\l_tmpb_toks=\toks27
-\l_tmpc_toks=\toks28
-\g_tmpa_toks=\toks29
-\g_tmpb_toks=\toks30
-\g_tmpc_toks=\toks31
-\c_empty_toks=\toks32
-\l_tl_replace_toks=\toks33
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/l3prg.sty
-Package: l3prg 2011/04/09 v2223 L3 Experimental control structures
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/l3clist.sty
-Package: l3clist 2011/04/09 v2223 L3 Experimental comma separated lists
-\g_clist_map_inline_int=\count126
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/l3token.sty
-Package: l3token 2011/04/09 v2223 L3 Experimental token investigation and manip
-ulation
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/l3prop.sty
-Package: l3prop 2011/04/09 v2223 L3 Experimental Property Lists
-\g_prop_inline_level_int=\count127
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/l3msg.sty
-Package: l3msg 2010/10/02 v2052 L3 Experimental LaTeX Messages module
-\l_msg_redirect_classes_prop=\toks34
-\l_msg_redirect_names_prop=\toks35
-\l_msg_redirect_fatal_prop=\toks36
-\l_msg_redirect_error_prop=\toks37
-\l_msg_redirect_warning_prop=\toks38
-\l_msg_redirect_info_prop=\toks39
-\l_msg_redirect_log_prop=\toks40
-\l_msg_redirect_trace_prop=\toks41
-\l_msg_redirect_none_prop=\toks42
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/l3io.sty
-Package: l3io 2010/10/03 v2063 L3 Experimental i/o module
-\g_iow_streams_prop=\toks43
-\g_ior_streams_prop=\toks44
-\l_iow_stream_int=\count128
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/l3skip.sty
-Package: l3skip 2011/02/15 v2149 L3 Experimental skip registers
-\l_tmpa_skip=\skip62
-\l_tmpb_skip=\skip63
-\l_tmpc_skip=\skip64
-\g_tmpa_skip=\skip65
-\g_tmpb_skip=\skip66
-\l_tmpa_dim=\dimen134
-\l_tmpb_dim=\dimen135
-\l_tmpc_dim=\dimen136
-\l_tmpd_dim=\dimen137
-\g_tmpa_dim=\dimen138
-\g_tmpb_dim=\dimen139
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/l3box.sty
-Package: l3box 2011/04/09 v2223 L3 Experimental Box module
-\l_tmpb_box=\box54
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/l3keyval.sty
-Package: l3keyval 2011/04/09 v2223 L3 Experimental keyval processing
-\l_KV_level_int=\count129
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/l3keys.sty
-Package: l3keys 2010/11/11 v2082 L3 Experimental key-value support
+L3 Module: l3names 2014/05/04 v4728 L3 Namespace for primitives
+L3 Module: l3basics 2014/05/04 v4728 L3 Basic definitions
+L3 Module: l3expan 2014/04/30 v4712 L3 Argument expansion
+L3 Module: l3tl 2014/05/04 v4728 L3 Token lists
+L3 Module: l3seq 2014/04/30 v4712 L3 Sequences and stacks
+L3 Module: l3int 2014/05/16 v4776 L3 Integers
+\c_max_int=\count118
+\l_tmpa_int=\count119
+\l_tmpb_int=\count120
+\g_tmpa_int=\count121
+\g_tmpb_int=\count122
+L3 Module: l3quark 2014/05/04 v4728 L3 Quarks
+L3 Module: l3prg 2014/05/04 v4728 L3 Control structures
+\g__prg_map_int=\count123
+L3 Module: l3clist 2014/05/04 v4728 L3 Comma separated lists
+L3 Module: l3token 2014/05/04 v4728 L3 Experimental token manipulation
+L3 Module: l3prop 2014/04/30 v4712 L3 Property lists
+L3 Module: l3msg 2014/05/04 v4728 L3 Messages
+L3 Module: l3file 2014/05/05 v4737 L3 File and I/O operations
+\l_iow_line_count_int=\count124
+\l__iow_target_count_int=\count125
+\l__iow_current_line_int=\count126
+\l__iow_current_word_int=\count127
+\l__iow_current_indentation_int=\count128
+L3 Module: l3skip 2014/05/05 v4738 L3 Dimensions and skips
+\c_zero_dim=\dimen136
+\c_max_dim=\dimen137
+\l_tmpa_dim=\dimen138
+\l_tmpb_dim=\dimen139
+\g_tmpa_dim=\dimen140
+\g_tmpb_dim=\dimen141
+\c_zero_skip=\skip62
+\c_max_skip=\skip63
+\l_tmpa_skip=\skip64
+\l_tmpb_skip=\skip65
+\g_tmpa_skip=\skip66
+\g_tmpb_skip=\skip67
+\c_zero_muskip=\muskip11
+\c_max_muskip=\muskip12
+\l_tmpa_muskip=\muskip13
+\l_tmpb_muskip=\muskip14
+\g_tmpa_muskip=\muskip15
+\g_tmpb_muskip=\muskip16
+L3 Module: l3keys 2014/05/08 v4753 L3 Key-value interfaces
+\g__keyval_level_int=\count129
 \l_keys_choice_int=\count130
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/l3precom.sty
-Package: l3precom 2011/04/09 v2223 L3 Experimental precompilation module
-\g_gen_sym_int=\count131
-\g_ggen_sym_int=\count132
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/l3xref.sty
-Package: l3xref 2011/04/09 v2223 L3 Experimental cross referencing
-\g_xref_all_curr_immediate_fields_prop=\toks45
-\g_xref_all_curr_deferred_fields_prop=\toks46
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/l3file.sty
-Package: l3file 2011/04/21 v2242 The LaTeX3 kernel: file operations
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/l3fp.sty
-Package: l3fp 2011/03/19 v2201 L3 Experimental floating-point operations
-\c_one_million=\count133
-\c_one_hundred_million=\count134
-\c_five_hundred_million=\count135
-\c_one_thousand_million=\count136
-\c_fp_pi_by_four_decimal_int=\count137
-\c_fp_pi_by_four_extended_int=\count138
-\c_fp_pi_decimal_int=\count139
-\c_fp_pi_extended_int=\count140
-\c_fp_two_pi_decimal_int=\count141
-\c_fp_two_pi_extended_int=\count142
-\l_fp_count_int=\count143
-\l_fp_div_offset_int=\count144
-\l_fp_exp_integer_int=\count145
-\l_fp_exp_decimal_int=\count146
-\l_fp_exp_extended_int=\count147
-\l_fp_exp_exponent_int=\count148
-\l_fp_input_a_sign_int=\count149
-\l_fp_input_a_integer_int=\count150
-\l_fp_input_a_decimal_int=\count151
-\l_fp_input_a_exponent_int=\count152
-\l_fp_input_b_sign_int=\count153
-\l_fp_input_b_integer_int=\count154
-\l_fp_input_b_decimal_int=\count155
-\l_fp_input_b_exponent_int=\count156
-\l_fp_input_a_extended_int=\count157
-\l_fp_input_b_extended_int=\count158
-\l_fp_mul_a_i_int=\count159
-\l_fp_mul_a_ii_int=\count160
-\l_fp_mul_a_iii_int=\count161
-\l_fp_mul_a_iv_int=\count162
-\l_fp_mul_a_v_int=\count163
-\l_fp_mul_a_vi_int=\count164
-\l_fp_mul_b_i_int=\count165
-\l_fp_mul_b_ii_int=\count166
-\l_fp_mul_b_iii_int=\count167
-\l_fp_mul_b_iv_int=\count168
-\l_fp_mul_b_v_int=\count169
-\l_fp_mul_b_vi_int=\count170
-\l_fp_mul_output_int=\count171
-\l_fp_output_sign_int=\count172
-\l_fp_output_integer_int=\count173
-\l_fp_output_decimal_int=\count174
-\l_fp_output_exponent_int=\count175
-\l_fp_output_extended_int=\count176
-\l_fp_round_position_int=\count177
-\l_fp_round_target_int=\count178
-\l_fp_split_sign_int=\count179
-\l_fp_tmp_int=\count180
-\l_fp_trig_octant_int=\count181
-\l_fp_trig_sign_int=\count182
-\l_fp_trig_decimal_int=\count183
-\l_fp_trig_extended_int=\count184
-\l_fp_tmp_dim=\dimen140
-\l_fp_tmp_skip=\skip67
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/expl3/l3luatex.sty
-Package: l3luatex 2010/07/18 v1985 L3 Experimental LuaTeX functions
-\g_cctab_allocate_int=\count185
-\g_cctab_stack_int=\count186
+L3 Module: l3fp 2014/04/30 v4712 L3 Floating points
+\c__fp_leading_shift_int=\count131
+\c__fp_middle_shift_int=\count132
+\c__fp_trailing_shift_int=\count133
+\c__fp_big_leading_shift_int=\count134
+\c__fp_big_middle_shift_int=\count135
+\c__fp_big_trailing_shift_int=\count136
+\c__fp_Bigg_leading_shift_int=\count137
+\c__fp_Bigg_middle_shift_int=\count138
+\c__fp_Bigg_trailing_shift_int=\count139
+L3 Module: l3box 2014/05/04 v4728 L3 Experimental boxes
+\c_empty_box=\box54
+\l_tmpa_box=\box55
+\l_tmpb_box=\box56
+\g_tmpa_box=\box57
+\g_tmpb_box=\box58
+L3 Module: l3coffins 2014/05/04 v4728 L3 Coffin code layer
+\l__coffin_internal_box=\box59
+\l__coffin_internal_dim=\dimen142
+\l__coffin_offset_x_dim=\dimen143
+\l__coffin_offset_y_dim=\dimen144
+\l__coffin_x_dim=\dimen145
+\l__coffin_y_dim=\dimen146
+\l__coffin_x_prime_dim=\dimen147
+\l__coffin_y_prime_dim=\dimen148
+\c_empty_coffin=\box60
+\l__coffin_aligned_coffin=\box61
+\l__coffin_aligned_internal_coffin=\box62
+\l_tmpa_coffin=\box63
+\l_tmpb_coffin=\box64
+\l__coffin_display_coffin=\box65
+\l__coffin_display_coord_coffin=\box66
+\l__coffin_display_pole_coffin=\box67
+\l__coffin_display_offset_dim=\dimen149
+\l__coffin_display_x_dim=\dimen150
+\l__coffin_display_y_dim=\dimen151
+L3 Module: l3color 2014/04/30 v4712 L3 Experimental color support
+L3 Module: l3luatex 2014/04/30 v4712 L3 Experimental LuaTeX-specific functions
+\g__cctab_allocate_int=\count140
+\g__cctab_stack_int=\count141
+L3 Module: l3candidates 2014/05/04 v4734 L3 Experimental additions to l3kernel
+\l__box_top_dim=\dimen152
+\l__box_bottom_dim=\dimen153
+\l__box_left_dim=\dimen154
+\l__box_right_dim=\dimen155
+\l__box_top_new_dim=\dimen156
+\l__box_bottom_new_dim=\dimen157
+\l__box_left_new_dim=\dimen158
+\l__box_right_new_dim=\dimen159
+\l__box_internal_box=\box68
+\l__coffin_bounding_shift_dim=\dimen160
+\l__coffin_left_corner_dim=\dimen161
+\l__coffin_right_corner_dim=\dimen162
+\l__coffin_bottom_corner_dim=\dimen163
+\l__coffin_top_corner_dim=\dimen164
+\l__coffin_scaled_total_height_dim=\dimen165
+\l__coffin_scaled_width_dim=\dimen166
 ))
-Package: xfrac 2010/02/02 v0.3 Text fractions
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/xpackages/xtras/l3keys2e.sty
-Package: l3keys2e 2011/05/06 v2320 Parsing LaTeX3 keyvals as LaTeX2e package op
-tions
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/xpackages/xbase/xparse.sty
-Package: xparse 2011/04/08 v2219 Generic document command parser
-\c_xparse_shorthands_prop=\toks47
-\l_xparse_m_args_int=\count187
-\l_xparse_mandatory_args_int=\count188
-\l_xparse_processor_int=\count189
-\l_xparse_total_args_int=\count190
-))
-(/usr/local/texlive/2011/texmf-dist/tex/latex/base/textcomp.sty
+Package: l3keys2e 2014/05/05 v4740 LaTeX2e option processing using LaTeX3 keys
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -506,8 +395,7 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             Family '?' is the default used for unknown fonts.
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/base/ts1enc.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 )
 LaTeX Info: Redefining \oldstylenums on input line 266.
@@ -542,71 +430,77 @@ Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
 Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
 Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
 Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
-Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 311.
-Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 312.
-Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 313.
-Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 314.
-Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 315.
-Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 316.
-Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 317.
-Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 318.
-Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 319.
-Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 320.
-Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 321.
-Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 322.
-Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 323.
-Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 324.
-Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
-Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2014/05/05 v4740 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count142
+\l__xparse_m_args_int=\count143
+\l__xparse_mandatory_args_int=\count144
+\l__xparse_processor_int=\count145
+\l__xparse_v_nesting_int=\count146
 )
-(/usr/local/texlive/2011/texmf-dist/tex/latex/xpackages/xbase/xtemplate.sty
-Package: xtemplate 2011/01/03 v2115 Prototype document functions
-\g_xtemplate_object_type_prop=\toks48
-\l_xtemplate_collections_prop=\toks49
-\l_xtemplate_keytypes_prop=\toks50
-\l_xtemplate_values_prop=\toks51
-\l_xtemplate_vars_prop=\toks52
-\l_xtemplate_tmp_dim=\dimen141
-\l_xtemplate_tmp_int=\count191
-\l_xtemplate_tmp_skip=\skip68
+(/usr/local/texlive/2014/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.st
+y
+Package: xtemplate 2014/05/05 v4740 L3 Experimental prototype document function
+s
+\l__xtemplate_tmp_dim=\dimen167
+\l__xtemplate_tmp_int=\count147
+\l__xtemplate_tmp_muskip=\muskip17
+\l__xtemplate_tmp_skip=\skip68
+Variant \prop_get:NoNTF already defined; not changing it on line 106
+Variant \prop_get:NoNT already defined; not changing it on line 107
+Variant \prop_get:NoNF already defined; not changing it on line 108
 )
-\l_xfrac_slash_box=\box55
-\l_xfrac_tmp_box=\box56
-\l_xfrac_denominator_bot_sep_dim=\dimen142
-\l_xfrac_numerator_bot_sep_dim=\dimen143
-\l_xfrac_numerator_top_sep_dim=\dimen144
-\l_xfrac_slash_left_sep_dim=\dimen145
-\l_xfrac_slash_right_sep_dim=\dimen146
- LaTeX info: Defining object type 'xfrac' with 3 argument(s) on line 71.
-
-\g_xtemplate_defaults>xfrac/text_prop=\toks53
- LaTeX info: Defining template interface for 'xfrac/text' on line 97.
-
-\g_xtemplate_keytypes>xfrac/text_prop=\toks54
- LaTeX info: Defining template code for 'xfrac/text' on line 303.
-
-\g_xtemplate_vars>xfrac/text_prop=\toks55
-\g_xtemplate_defaults>xfrac/math_prop=\toks56
- LaTeX info: Defining template interface for 'xfrac/math' on line 316.
-
-\g_xtemplate_keytypes>xfrac/math_prop=\toks57
- LaTeX info: Defining template code for 'xfrac/math' on line 316.
-
-\g_xtemplate_vars>xfrac/math_prop=\toks58
-\l_xtemplate_values>xfrac//default_prop=\toks59
-\l_xtemplate_values>xfrac//mathdefault_prop=\toks60
-\l_xtemplate_values>xfrac/plainmath/mathdefault_prop=\toks61
-\l_xtemplate_values>xfrac//cmr_prop=\toks62
-\l_xtemplate_values>xfrac//cmss_prop=\toks63
-\l_xtemplate_values>xfrac//cmtt_prop=\toks64
-\l_xtemplate_values>xfrac//lmr_prop=\toks65
-\l_xtemplate_values>xfrac//lmss_prop=\toks66
-\l_xtemplate_values>xfrac//lmtt_prop=\toks67
- LaTeX info: Defining document command \sfrac
-(LaTeX)  with arg. spec. 'omom' on line 396.
-
-)
-(./test1.aux)
+Package: xfrac 2014/05/04 v4728 L3 Experimental split-level fractions
+\l__xfrac_slash_box=\box69
+\l__xfrac_tmp_box=\box70
+\l__xfrac_denominator_bot_sep_dim=\dimen168
+\l__xfrac_numerator_bot_sep_dim=\dimen169
+\l__xfrac_numerator_top_sep_dim=\dimen170
+\l__xfrac_slash_left_sep_dim=\dimen171
+\l__xfrac_slash_right_sep_dim=\dimen172
+\l__xfrac_slash_left_muskip=\muskip18
+\l__xfrac_slash_right_muskip=\muskip19
+.................................................
+. xtemplate info: "declare-object-type"
+. 
+. Declaring object type 'xfrac' taking 3 argument(s) on line 96.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \sfrac with arg. spec. 'omom' on line 436.
+.................................................
+) (/Users/ffff/Documents/physc2014/test1.aux)
 \openout1 = `test1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
@@ -618,7 +512,7 @@ LaTeX Font Info:    ... okay on input line 22.
 LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 22.
 LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 22
 .
- (/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/omspzccm.fd
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omspzccm.fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
 LaTeX Font Info:    ... okay on input line 22.
@@ -628,57 +522,46 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 22.
-(/usr/local/texlive/2011/texmf-dist/tex/latex/base/ts1cmr.fd
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 22.
-
-(/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
+(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count192
-\scratchdimen=\dimen147
-\scratchbox=\box57
-\nofMPsegments=\count193
-\nofMParguments=\count194
-\everyMPshowfont=\toks68
-\MPscratchCnt=\count195
-\MPscratchDim=\dimen148
-\MPnumerator=\count196
-\makeMPintoPDFobject=\count197
-\everyMPtoPDFconversion=\toks69
-) (/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
-
-(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+\scratchcounter=\count148
+\scratchdimen=\dimen173
+\scratchbox=\box71
+\nofMPsegments=\count149
+\nofMParguments=\count150
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count151
+\MPscratchDim=\dimen174
+\MPnumerator=\count152
+\makeMPintoPDFobject=\count153
+\everyMPtoPDFconversion=\toks28
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Managing graphics extensions (HO)
-
-(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
-))
-(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
-
-(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
-
-(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+)) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
@@ -688,8 +571,7 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
@@ -702,21 +584,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--50
 
  []
 
-(./Sections/intro.tex
+(/Users/ffff/Documents/physc2014/Sections/intro.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 22.
 
-Underfull \hbox (badness 1596) in paragraph at lines 4--5
-\OT1/ptm/m/n/10 in-di-vid-u-als over time. Brain-computer in-ter-face
- []
+LaTeX Warning: Reference `sec:quantization_eval' on page 1 undefined on input l
+ine 22.
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 16--17
-\OT1/ptm/m/n/10 the sig-nals are ac-quired from a low-cost mo-bile
- []
+LaTeX Warning: Reference `sec:calibration_eval' on page 1 undefined on input li
+ne 22.
 
-) (./Sections/background.tex [1{/usr/local/texlive/2011/texmf-var/fonts/map/pdf
-tex/updmap/pdftex.map}
+) (/Users/ffff/Documents/physc2014/Sections/background.tex [1{/usr/local/texliv
+e/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
@@ -729,112 +611,140 @@ Underfull \hbox (badness 1418) in paragraph at lines 20--21
 \OT1/ptm/m/n/10 them also em-ploy dry con-tact elec-trodes, which
  []
 
-[2]) (./Sections/data.tex) (./Sections/quantization.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-<Figures/binned_EEGPowerSpectrum.png, id=12, 600.2425pt x 421.575pt>
+[2]) (/Users/ffff/Documents/physc2014/Sections/data.tex) (/Users/ffff/Documents
+/physc2014/Sections/quantization.tex <Figures/binned_EEGPowerSpectrum.png, id=1
+2, 600.2425pt x 421.575pt>
 File: Figures/binned_EEGPowerSpectrum.png Graphic file (type png)
-
 <use Figures/binned_EEGPowerSpectrum.png>
 Package pdftex.def Info: Figures/binned_EEGPowerSpectrum.png used on input line
  27.
 (pdftex.def)             Requested size: 170.71652pt x 119.89925pt.
 
-
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[3]) (./Sections/results.tex
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 23.
+[3]
 
-(/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/omlptm.fd
+LaTeX Warning: Reference `sec:quantization_eval' on page 4 undefined on input l
+ine 49.
+
+
+LaTeX Warning: Reference `sec:calibration_eval' on page 4 undefined on input li
+ne 49.
+
+) (/Users/ffff/Documents/physc2014/Sections/results.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<Figures/acc-bins.png, id=17, 578.16pt x 433.62pt>
+File: Figures/acc-bins.png Graphic file (type png)
+<use Figures/acc-bins.png>
+Package pdftex.def Info: Figures/acc-bins.png used on input line 24.
+(pdftex.def)             Requested size: 227.62204pt x 170.71231pt.
+
+Overfull \hbox (14.20761pt too wide) in paragraph at lines 24--25
+[][] 
+ []
+
+<Figures/traintime-bins.png, id=18, 578.16pt x 433.62pt>
+File: Figures/traintime-bins.png Graphic file (type png)
+<use Figures/traintime-bins.png>
+Package pdftex.def Info: Figures/traintime-bins.png used on input line 33.
+(pdftex.def)             Requested size: 227.62204pt x 170.71231pt.
+
+Overfull \hbox (14.20761pt too wide) in paragraph at lines 33--34
+[][] 
+ []
+
+<Figures/acc-traintime.png, id=19, 578.16pt x 433.62pt>
+File: Figures/acc-traintime.png Graphic file (type png)
+<use Figures/acc-traintime.png>
+Package pdftex.def Info: Figures/acc-traintime.png used on input line 42.
+(pdftex.def)             Requested size: 227.62204pt x 170.71231pt.
+
+Overfull \hbox (14.20761pt too wide) in paragraph at lines 42--43
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 18.4396pt on input line 48.
+
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 50.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 23.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 50.
 
-<Figures/1a.png, id=17, 578.16pt x 433.62pt>
-File: Figures/1a.png Graphic file (type png)
- <use Figures/1a.png>
-Package pdftex.def Info: Figures/1a.png used on input line 38.
-(pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
- [4 <./Figures/binned_EEGPowerSpectrum.png>] <Figures/1b.png, id=23, 578.16pt x
- 433.62pt>
-File: Figures/1b.png Graphic file (type png)
-
-<use Figures/1b.png>
-Package pdftex.def Info: Figures/1b.png used on input line 47.
-(pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
- <Figures/1c.png, id=24, 578.16pt x 433.62pt>
-File: Figures/1c.png Graphic file (type png)
-
-<use Figures/1c.png>
-Package pdftex.def Info: Figures/1c.png used on input line 56.
-(pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
-
-Underfull \hbox (badness 1442) in paragraph at lines 62--63
+Underfull \hbox (badness 1442) in paragraph at lines 54--55
 []\OT1/ptm/m/n/10 Overall, we find that rel-a-tively small fea-ture
  []
 
 
-Underfull \hbox (badness 1990) in paragraph at lines 62--63
+Underfull \hbox (badness 1990) in paragraph at lines 54--55
 \OT1/ptm/m/n/10 vec-tors pro-duced with our method (100 val-ues)
  []
 
-LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 83
-.
-(/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
-File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
-)
-LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 83
-.
+[4 </Users/ffff/Documents/physc2014/Figures/binned_EEGPowerSpectrum.png>]
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no   in font ptmr7t!
 
-(/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/omlptmcm.fd
-File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
-)
-LaTeX Font Info:    Try loading font information for OMX+psycm on input line 83
-.
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/omxpsycm.fd
-File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
-)
-LaTeX Font Info:    Try loading font information for U+msa on input line 83.
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 83.
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-)
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
- [5 <./Figures/1a.png> <./Figures/1b.png> <./Figures/1c.png>]
-Underfull \hbox (badness 1701) in paragraph at lines 108--109
-\OT1/ptm/m/n/10 achieve lower ac-cu-racy than will the ex-haus-tive
+Underfull \hbox (badness 1430) in paragraph at lines 66--67
+\OT1/ptm/m/n/10 com-monly as-so-ci-ated with best-case per-for-mance
  []
 
-<Figures/3.png, id=31, 556.0775pt x 578.16pt>
-File: Figures/3.png Graphic file (type png)
- <use Figures/3.png>
-Package pdftex.def Info: Figures/3.png used on input line 119.
-(pdftex.def)             Requested size: 156.49014pt x 162.70413pt.
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 73
+.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
+File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 73
+.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlptmcm.fd
+File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 73
+.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omxpsycm.fd
+File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 73.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 73.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 73.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 73.
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no   in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no   in font ptmr7t!
+
+Underfull \hbox (badness 1259) in paragraph at lines 84--84
+[]\OT1/ptm/m/n/9 Table 1: |An ex-haus-tive search of SVM ac-cu-racy on
+ []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./Sections/discussion.tex
+[5 </Users/ffff/Documents/physc2014/Figures/acc-bins.png> </Users/ffff/Document
+s/physc2014/Figures/traintime-bins.png> </Users/ffff/Documents/physc2014/Figure
+s/acc-traintime.png>] <Figures/3.png, id=31, 556.0775pt x 578.16pt>
+File: Figures/3.png Graphic file (type png)
+<use Figures/3.png>
+Package pdftex.def Info: Figures/3.png used on input line 100.
+(pdftex.def)             Requested size: 156.49014pt x 162.70413pt.
+) (/Users/ffff/Documents/physc2014/Sections/discussion.tex
 Underfull \hbox (badness 1448) in paragraph at lines 10--11
 []\OT1/ptm/m/n/10 Our study im-plies that prac-ti-cal BCI can be
  []
 
 Missing character: There is no â in font ptmr7t!
-[6 <./Figures/3.png>]) (./test1.bbl
+[6 </Users/ffff/Documents/physc2014/Figures/3.png>]) (/Users/ffff/Documents/phy
+sc2014/test1.bbl
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
@@ -883,23 +793,28 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
- [7]) [8
+[7]) [8
 
-] (./test1.aux) ) 
+] (/Users/ffff/Documents/physc2014/test1.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 8988 strings out of 493633
- 150862 string characters out of 3143378
- 208815 words of memory out of 3000000
- 12076 multiletter control sequences out of 15000+200000
- 26882 words of font info for 56 fonts, out of 3000000 for 9000
- 831 hyphenation exceptions out of 8191
- 38i,8n,38p,1011b,288s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/base/8r.en
-c}</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-></usr/local/texlive/2011/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/loc
-al/texlive/2011/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive
-/2011/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on test1.pdf (8 pages, 190024 bytes).
+ 10359 strings out of 493117
+ 192250 string characters out of 6135433
+ 240419 words of memory out of 5000000
+ 13672 multiletter control sequences out of 15000+600000
+ 27989 words of font info for 57 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 40i,8n,38p,10448b,300s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dis
+t/fonts/type1/urw/times/utmri8a.pfb>
+Output written on /Users/ffff/Documents/physc2014/test1.pdf (8 pages, 193997 by
+tes).
 PDF statistics:
  59 PDF objects out of 1000 (max. 8388607)
  34 compressed objects within 1 object stream
