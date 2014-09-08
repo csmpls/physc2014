@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  7 SEP 2014 17:35
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  7 SEP 2014 17:41
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -744,7 +744,7 @@ Package pdftex.def Info: Figures/binned_EEGPowerSpectrum.png used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[3]) (./Sections/quantization_eval.tex
+[3]) (./Sections/results.tex
 LaTeX Font Info:    Try loading font information for OML+ptm on input line 23.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/omlptm.fd
@@ -771,58 +771,58 @@ File: Figures/1c.png Graphic file (type png)
 <use Figures/1c.png>
 Package pdftex.def Info: Figures/1c.png used on input line 56.
 (pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
-) (./Sections/calibration_eval.tex
-Underfull \hbox (badness 1442) in paragraph at lines 62--1
+
+Underfull \hbox (badness 1442) in paragraph at lines 62--63
 []\OT1/ptm/m/n/10 Overall, we find that rel-a-tively small fea-ture
  []
 
 
-Underfull \hbox (badness 1990) in paragraph at lines 62--1
+Underfull \hbox (badness 1990) in paragraph at lines 62--63
 \OT1/ptm/m/n/10 vec-tors pro-duced with our method (100 val-ues)
  []
 
-LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 19
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 83
 .
 (/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 19
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 83
 .
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/omlptmcm.fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+psycm on input line 19
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 83
 .
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/omxpsycm.fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 19.
+LaTeX Font Info:    Try loading font information for U+msa on input line 83.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 19.
+LaTeX Font Info:    Try loading font information for U+msb on input line 83.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
  [5 <./Figures/1a.png> <./Figures/1b.png> <./Figures/1c.png>]
-Underfull \hbox (badness 1701) in paragraph at lines 44--45
+Underfull \hbox (badness 1701) in paragraph at lines 108--109
 \OT1/ptm/m/n/10 achieve lower ac-cu-racy than will the ex-haus-tive
  []
 
 <Figures/3.png, id=31, 556.0775pt x 578.16pt>
 File: Figures/3.png Graphic file (type png)
  <use Figures/3.png>
-Package pdftex.def Info: Figures/3.png used on input line 55.
+Package pdftex.def Info: Figures/3.png used on input line 119.
 (pdftex.def)             Requested size: 156.49014pt x 162.70413pt.
 
 
@@ -887,8 +887,8 @@ Missing character: There is no ¼ in font ptmr7t!
 
 ] (./test1.aux) ) 
 Here is how much of TeX's memory you used:
- 8991 strings out of 493633
- 150968 string characters out of 3143378
+ 8988 strings out of 493633
+ 150862 string characters out of 3143378
  208815 words of memory out of 3000000
  12076 multiletter control sequences out of 15000+200000
  26882 words of font info for 56 fonts, out of 3000000 for 9000
