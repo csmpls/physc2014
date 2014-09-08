@@ -1,55 +1,62 @@
 \section{\uppercase{Opportunistic strategy for calibrating a binary BCI}}
 \label{sec:calibration_eval}
 
-In the previous experiment, we found that our compression technique can speed up an SVM classifier without significant detriment to BCI accuracy. However, for the technique to be useful in real-world applications, it must also allow users to quickly calibrate the system to their personal physiological signals.
+\noindent In the previous section, we find that our compression technique can speed up an SVM classifier without significant detriment to BCI accuracy. However, for the technique to be useful in real-world applications, it must also allow users to quickly calibrate the system to their personal physiological signals.
 
-In this experiment, we evaluate an opportunistic strategy for user calibration. Using a resolution of 100 points identified as optimal in the previous experiment, we measure user calibration time (the time it takes a user to achieve a threshold accuracy with the BCI) and the classification accuracy each user achieves after calibration. We hypothesize that this technique will allow for faster calibration than an exhaustive search (720 seconds) while maintaining sufficient system accuracy across users.
+In this section, we evaluate an opportunistic strategy for user calibration. Using the logarithmic binning method to produce quantized signals with a resolution of 100 bins, we measure user calibration time (the time it takes a user to achieve a threshold accuracy with the BCI) and the classification accuracy each user achieves after calibration. We hypothesize that an opportunistic approach will allow for faster calibration than an exhaustive search while maintaining sufficient system accuracy across users.
 
-\subsection{Protocol}
+%In this section, we evaluate an opportunistic strategy for user calibration. Using a resolution of 100 points identified as optimal in the previous experiment, we measure user calibration time (the time it takes a user to achieve a threshold accuracy with the BCI) and the classification accuracy each user achieves after calibration. We hypothesize that this technique will allow for faster calibration than an exhaustive search (720 seconds) while maintaining sufficient system accuracy across users.
 
-As a baseline, we perform an exhaustive search of SVM accuracy on taskpairs identified each subject's best-performing taskpair. We recorded the frequency of each task's occurrence in a best-case taskpair \ref{table:name}. We used these data to inform the order in which our opportunistic calibration strategy would prompt the user to record tasks.
+%\subsection{Protocol}
 
-We begin with examples of the three tasks most commonly associated with best-case performance (base, pass, color) for an initial user calibration time of 120 seconds. We then perform a seven-fold cross-validation on every permutation of two of these tasks (base versus task, pass versus task, pass versus color, etc). The taskpair with the highest mean score across cross-validation rounds is selected for an additional testing session, in which the reamining 80 seconds of recordings for both tasks are used to generate an estimate of the classifier's accuracy on new EEG signals.
+As a baseline, we perform an exhaustive search of SVM accuracy on mental task pairs, and identify each subject's best-performing task pair. We record the frequency of each task's occurrence in a best-case task pair in Table \ref{table:name}. Assuming that we can establish a consistent ordering of best performing tasks for a target population, we use this data to inform the order in which our opportunistic calibration strategy would prompt the user to perform the mental tasks.
 
-% this is where i put a table of tasks correlated with bestcase performance and a quick description, how we generated those data and what we need them for
+% this is where i put a table of tasks correlated with bestcase performance and a quick description, how we generated those data and what we need them for
 
 \begin{table}[!h]
-  \vspace{-0.2cm}
+%  \vspace{-0.2cm}
   \centering
   \begin{tabular}{ | l | l | l | p{5cm} |}
   \hline
-  Task & Freq Bestcase \\ \hline
-  Color & 10 \\ \hline
-  Base & 5 \\ \hline
-  Pass & 4 \\ \hline
-  Sport & 3 \\ \hline
-  Finger & 2 \\ \hline
-  Song & 2 \\ \hline
-  Eye & 2 \\ \hline
+  Task & Frequency \\ \hline
+  \textit{color} & 10 \\ \hline
+  \textit{breathing} & 5 \\ \hline
+  \textit{pass} & 4 \\ \hline
+  \textit{sport} & 3 \\ \hline
+  \textit{finger} & 2 \\ \hline
+  \textit{song} & 2 \\ \hline
+  \textit{audio} & 2 \\ \hline
   \end{tabular}
-  \caption{An exhaustive search of SVM accuracy on taskpairs identified each subject's best-performing taskpair. We recorded the frequency of each task's occurrence in a best-case taskpair, shown here. We used these data to inform the order in which our opportunistic calibration strategy would prompt the user to record tasks.}
+  \caption{Frequency where a mental task occurs in a task pair that achieves a highest classification accuracy, across all possible task pairs.}
+%  \caption{An exhaustive search of SVM accuracy on taskpairs identified each subject's best-performing taskpair. We recorded the frequency of each task's occurrence in a best-case taskpair, shown here. We used these dataÂ to inform the order in which our opportunistic calibration strategy would prompt the user to record tasks.}
   \label{table:name}
-  \vspace{-0.1cm}
+%  \vspace{-0.1cm}
 \end{table}
 
-If the score on this additional testing round is below 75\% (a threshold for BCI literacy) \cite{vidaurre_towards_2010}, the user records sixty seconds of the taskpair next most correlated with bestcase accuracy across users. We repeat the above process on unexplored taskpairs repeated until a taskpair acheives over 75\% accuracy on post-calibration data, or until all taskpairs have been evaluated.
+The opportunistic strategy starts with three tasks most commonly associated with best-case performance (\textit{color}, \textit{breathing}, \textit{pass}) for an initial user calibration time of 120 seconds (40 seconds per task). We then perform a seven-fold cross-validation on every permutation of two of these tasks (i.e., \textit{color} versus \textit{breathing}, \textit{color} versus \textit{pass}, \textit{breathing} versus \textit{pass}). The task pair with the highest mean score across cross-validation rounds is selected for an additional testing session, in which the remaining 80 seconds of recordings for both tasks are used to generate an estimate of the classifier's accuracy on new EEG signals.
 
-H1: We hypothesize that the opportunistic calibration strategy will reach threshold accuracy in less  time than will the exhaustive search.
+If the score on this additional testing round is below 75\%, a commonly used threshold for BCI literacy \cite{vidaurre_towards_2010}, the user will be prompted to record sixty seconds of the next candidate mental task. We repeat the above process on unexplored tasks until a task pair achieves over 75\% accuracy on post-calibration data, or until all tasks have been evaluated.
 
-H2: We hypothesize that the opportunistic strategy will acheive lower accuracy than will the exhaustive method, as it could find local optima.
+We can test two hypotheses regarding this opportunistic calibration strategy.
 
-\subsection{Results}
+H1: The opportunistic calibration strategy will reach threshold accuracy in less time than will the exhaustive search method.
+
+H2: The opportunistic calibration strategy will achieve lower accuracy than will the exhaustive search method, as it could find local optima.
+
+%\subsection{Results}
+
+For the given set of seven candidate mental tasks, the baseline exhaustive search strategy requires 2520 seconds of calibration time and produces an average accuracy of 92.5\% across subjects (\textit{std} = 0.09). Our opportunistic strategy takes an average of 225.3 seconds of calibration time (\textit{std} = 52.2) and produces an average accuracy of 88.3\% (\textit{std} = 0.11).
+
+Figure \ref{fig:calibration_results} shows the results from a subject's perspective. Out of 15 subjects, the opportunistic calibration strategy allows 73.6\% (11 subjects) to be calibrated in under 4 minutes, and 86.6\% (13 subjects) in under 5 minutes. The remaining two subjects were calibrated under 10 and 15 minutes, respectively. All 15 subjects can achieve a minimum of 75\% classification accuracy. Six subjects (40\%) can achieve 100\% accuracy.
 
 \begin{figure}[!h]
   \vspace{-0.2cm}
   \centering
    {\epsfig{file = Figures/3.png, width = 5.5cm}}
-  \caption{Calibration time across subjects (top) and classifier accuracy (bottom). The vast majority of subjects acheive acceptable accuracy in under five minutes of training, and all subjects acheive BCI literacy in under 15 minutes. }
-  \label{fig:fig2}
+  \caption{Calibration time across subjects (top) and classifier accuracy (bottom). The vast majority of subjects achieve acceptable accuracy in under five minutes of training, and all subjects achieve BCI literacy in under 15 minutes. }
+  \label{fig:calibration_results}
   \vspace{-0.1cm}
 \end{figure}
 
-A baseline exhaustive search required 2520 seconds of calibration time and produced an average accuracy of 92.5\% (\textit{$\sigma$} = .09) across subjects . Our opportunistic strategy took an average of 225.3 seconds of calibration time (\textit{$\sigma$} = 52.2) and produced an average accuracy of 88.3\% (\textit{$\sigma$} = .11).
-
-We find that our strategy calibrates users to BCI control significantly more quickly than an exhaustive search (\textit{p} \textless .001 ). Thus, we find support for H1. Further, we do not a statistically significant difference in per-user accuracy between an opportunistic strategy and an exhaustive search (\textit{p} = .264). Thus, we find no support for H2.
+We find that our strategy calibrates users to BCI control significantly more quickly than an exhaustive search, finding support for H1 at the \textit{p} \textless 0.001 level. On the other hand, we do not find a statistically significant difference in per-user accuracy between an opportunistic strategy and an exhaustive search (\textit{p-value} = 0.264). Thus, we find no support for H2.
 

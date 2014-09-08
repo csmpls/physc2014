@@ -1,55 +1,62 @@
-\section{\uppercase{The effect of quantization technique on classifier speed and accuracy}}
+\section{\uppercase{Effect of quantization on classifier speed and accuracy}}
+%\section{\uppercase{The effect of quantization technique on classifier speed and accuracy}}
 \label{sec:quantization_eval}
 
+%Generally, we seek to maximize our system's classification accuracy while minimizing its computational expense. One way to reduce the computational requirements of a SVM classifier is to reduce the size of the feature vectors on which it is trained and tested. Our signal quantization method allows us to directly adjust the size of feature vectors by changing the signal's resolution (see 3.1), though lowering the resolution of feature vectors could negatively effect the classifier's performance.
 
-Generally, we seek to maxmize our system's classification accuracy while minimizing its computational expense. One way to reduce the computational requirements of a SVM classifier is to reduce the size of the feature vectors on which it is trained and tested. Our signal quantization method allows us to directly adjust the size of feature vectors by changing the signal's resolution (see 3.1), though lowering the resolution of feature vectors could negatively effect the classifier's performance.
+We examine the effect of signal resolution, operationalized by the number of bins used in the quantization step, on our BCI's performance, measured by the SVM's training time and by the SVM's estimated accuracy. 
+We hypothesize that both the SVM training time and accuracy increase with signal resolution, i.e., the greater the number of bins, the higher the accuracy but also the longer the training time.
 
-In this experiment, we examine the effect of resolution, operationalized by the number of bins used in the quantization step, on our BCI's performance, operationalized by the SVM's training time and by the SVM's estimated accuracy. 
+%H1: SVM accuracy will decrease with resolution.
+%H2: SVM training time will decrease with resolution.
 
-H1: SVM accuracy will decrease with resolution.
-H2: SVM training time will decrease with resolution.
+%\subsection{Protocol}
 
-\subsection{Protocol}
+For each subject, we generate every pair of two mental tasks and cross-validate our SVM on the recordings for this pair of tasks. Given the availability of seven candidate tasks, we have a total of 21 possible task pairs. For every task pair, we vary the signal resolution by varying the number of bins from 1 to 1024. For every task pair processed, we record mean classification accuracy across all rounds of cross-validation. For each subject, we record the best-performing task pair, which corresponds to our estimation of optimal performance of the BCI for that subject.
 
-For each subject, we generate every pair of two tasks and cross-validate our SVM seven times on the recordings for this pair of tasks. We vary the resolution of the samples we feed to the SVM. For every task pair processed, we record mean classification accuracy across all rounds of cross-validation. For each subject, we record the best-performing taskpair, which corresponds to our estimation of optimal performance of the BCI for that subject.
+%For each subject, we generate every pair of two tasks and cross-validate our SVM seven times on the recordings for this pair of tasks. We vary the resolution of the samples we feed to the SVM. For every task pair processed, we record mean classification accuracy across all rounds of cross-validation. For each subject, we record the best-performing taskpair, which corresponds to our estimation of optimal performance of the BCI for that subject.
 
-As an additional performance audit, we measure the time needed to fit an SVM to the data for two randomly selected taskpairs across all subjects. We repeat this process ten thousand times at different resolutions, collecting the minimum time observed in each series of attempts.
+As an additional performance audit, we measure the time needed to fit an SVM to the data for two randomly selected task pairs across all subjects. We repeat this process ten thousand times at different resolutions, collecting the minimum time observed in each series of attempts.
 
-\subsection{Results}
+%\subsection{Results}
 
-\begin{figure}
+Figure \ref{fig:accuracy_vs_bins} shows the mean best-case accuracy of the classifier versus the number of bins. We can see that the accuracy level remains above 90\% even as we reduce the signal resolution down to 100 bins. Although classifier accuracy is positively correlated with signal resolution (Slope = 0.0013, R-squared = 0.773, p \textless 0.001), this effect appears only at resolutions lower than 100 bins. We find no significant difference in SVM accuracy at resolutions over 100 bins.
 
-\begin{subfigure}%[!h]
-  % \vspace{-0.2cm}
-  % \centering
-   {\epsfig{file = Figures/acc-bins.png, width = 8cm}}
-  \caption{Mean best-case accuracy among all subjects compared to data resolution. At reoslutions of 100 points and greater, we find no evidence of an increase in classification accuracy. }
-  \label{fig:fig1a}
-  % \vspace{-0.1cm}
- \end{subfigure}
+%Figure \ref{fig:accuracy_vs_bins} shows the mean best-case accuracy of the classifier versus the number of bins. Although classifier accuracy is positively correlated with signal resolution (Slope = 0.0013, R-squared = 0.773, p \textless 0.001), this effect appears only at resolutions lower than 100 bins. We find no significant difference in SVM accuracy at resolutions over 100 bins.
 
- \begin{subfigure}[b]%[!h]
-  % \vspace{-0.2cm}
-  % \centering
-   {\epsfig{file = Figures/traintime-bins.png, width = 8cm}}
-  \caption{Log of mean classifier training time compared to log of data resolution. The time needed to train the classifier increases logarithmically with resolution.}
-  \label{fig:fig1b}
-  % \vspace{-0.1cm}
- \end{subfigure}
+%We find support for H1. Although resolution was positively correlated with classifier accuracy (slope = .0013 R-squared = .773, p \textless .001), this effect appears only at resolutions lower than 100 points. We find no significant increase in SVM accuracy at resolutions over 100 bins. 
 
- \begin{subfigure}%[!h]
-  % \vspace{-0.2cm}
-  % \centering
-   {\epsfig{file = Figures/acc-traintime.png, width = 8cm}}
-  \caption{ Best-case accuracy compared to the time needed to train the classifier. By decreasing the number of bins in the EEG data, we can decrease the time needed to train the support vector machine up to nine times without without significant detriment to classifier accuracy. }
-  \label{fig:fig1c}
-  % \vspace{-0.1cm}
- \end{subfigure}
+Figure \ref{fig:training_vs_bins} shows, in log-log scale, the SVM training time versus the number of bins. We see that the log of the classifier training time is positively correlated with the log of signal resolution (Slope = 0.5, R-squared = 0.947, p \textless 0.001). 
 
+Combining these two results, Figure \ref{fig:accuracy_vs_training} confirms the direct tradeoff between classifier accuracy and classifier training time. It also points to the existence of a threshold resolution at around 100 bins that provides a 450\% speed improvement over a non-quantized baseline of 1024 bins, without any significant degradation in classifier accuracy.
+
+%Resolution was also positively correlated with time to train classifier (slope = 0.5 R-squared = 0.947, p \textless .001). We compare accuracy and SVM training time directly in \ref{fig:fig1c}. Thus, we find support for H2.
+
+\begin{figure}[!h]
+%  \vspace{-0.2cm}
+  \centering
+   {\epsfig{file = Figures/1a.png, width = 6cm}}
+  \caption{Mean best-case accuracy among all subjects compared to time needed to train the classifier. At signal resolutions of 100 points (bins) and greater, we find no evidence of an increase in classification accuracy. }
+  \label{fig:accuracy_vs_bins}
+  \vspace{-0.1cm}
  \end{figure}
 
-We find support for H1. Although resolution was positively correlated with classifier accuracy (slope = .0013 R-squared = .773, p \textless .001), this effect appears only at resolutions lower than 100 points. We find no significant increase in SVM accuracy at resolutions over 100 bins. 
+ \begin{figure}[!h]
+  \vspace{-0.2cm}
+  \centering
+   {\epsfig{file = Figures/1b.png, width = 6cm}}
+  \caption{Log of mean classifier training time compared to log of data resolution. The slope is 0.5, implying that the time needed to train the classifier increases as approximately the square root of the signal resolution.}
+  \label{fig:training_vs_bins}
+  \vspace{-0.1cm}
+ \end{figure}
 
-Resolution was also positively correlated with time to train classifier (slope = 0.5 R-squared = .947, p \textless .001). We compare accuracy and SVM training time directly in \ref{fig:fig1c}. Thus, we find support for H2.
+\begin{figure}[!h]
+  \vspace{-0.2cm}
+  \centering
+   {\epsfig{file = Figures/1c.png, width = 6cm}}
+  \caption{ Best-case accuracy compared to the time needed to train the classifier. By decreasing the number of bins in the EEG data, we can decrease the time needed to train the support vector machine up to nine times without without significant detriment to classifier accuracy. }
+  \label{fig:accuracy_vs_training}
+%  \vspace{-0.1cm}
+ \end{figure}
 
 Overall, we find that relatively small feature vectors produced with our method (100 values) yield classifiers as accurate as full-resolution samples (1024 values), and that reducing vector size in this way can dramatically increase the computational speed of training an SVM. 
