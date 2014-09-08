@@ -1,7 +1,8 @@
-\section{\uppercase{The effect of quantization technique on classifier speed and accuracy}}
+\section{\uppercase{Effect of quantization on classifier speed and accuracy}}
+%\section{\uppercase{The effect of quantization technique on classifier speed and accuracy}}
+\label{sec:results}
 
-
-Generally, we seek to maxmize our system's classification accuracy while minimizing its computational expense. One way to reduce the computational requirements of a SVM classifier is to reduce the size of the feature vectors on which it is trained and tested. Our signal quantization method allows us to directly adjust the size of feature vectors by changing the signal's resolution (see 3.1), though lowering the resolution of feature vectors could negatively effect the classifier's performance.
+Generally, we seek to maximize our system's classification accuracy while minimizing its computational expense. One way to reduce the computational requirements of a SVM classifier is to reduce the size of the feature vectors on which it is trained and tested. Our signal quantization method allows us to directly adjust the size of feature vectors by changing the signal's resolution (see 3.1), though lowering the resolution of feature vectors could negatively effect the classifier's performance.
 
 In this experiment, we examine the effect of resolution, operationalized by the number of bins used in the quantization step, on our BCI's performance, operationalized by the SVM's training time and by the SVM's estimated accuracy. 
 
@@ -51,6 +52,7 @@ Resolution was also positively correlated with time to train classifier (slope =
 Overall, we find that relatively small feature vectors produced with our method (100 values) yield classifiers as accurate as full-resolution samples (1024 values), and that reducing vector size in this way can dramatically increase the computational speed of training an SVM. 
 
 \section{\uppercase{Opportunistic strategy for calibrating a binary BCI}}
+\label{sec:calibration}
 
 In the previous experiment, we found that our compression technique can speed up an SVM classifier without significant detriment to BCI accuracy. However, for the technique to be useful in real-world applications, it must also allow users to quickly calibrate the system to their personal physiological signals.
 

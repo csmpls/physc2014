@@ -1,32 +1,23 @@
 
-\section{\uppercase{Data \& methods}}
+\section{\uppercase{Data}}
+\label{sec:data}
 
-In this section we describe the dataset that we used in this study and introduce the machine learning techniques that we employed.
+%In this section we describe the dataset that we used in this study and introduce the machine learning techniques that we employed.
 
-\subsection{Dataset}
+\noindent We did not acquire any experimental data for this study. Rather, we obtained an anonymized dataset from the Passthoughts study \cite{adams_i_2013}. The dataset includes EEG recordings of 15 subjects, all students from UC Berkeley, performing seven mental tasks in a sitting position over two sessions. The signals were recorded using a consumer-grade EEG headset, the Neurosky MindSet, with a dry contact EEG sensor over the Fp2 position. In particular, we use the power spectrum time series data recorded using the Neuroview software.
 
-The data used in this experiment were taken from a previous study. \cite{adams_i_2013} The anonymized dataset consists of power spectrum time series data recorded by the software from the Neurosky MindSet headset from 15 subjects, students at UC Berkeley, performing mental tasks. 
+%The data used in this experiment were taken from a previous study. \cite{adams_i_2013} The anonymized dataset consists of power spectrum time series data recorded by the software from the Neurosky MindSet headset from 15 subjects, students at UC Berkeley, performing mental tasks. 
 
-The seven mental tasks were: focusing on breathing; imagining moving one's right index finger; imagining moving one's body to repeatedly perform a sports-related movement of the subject's choice; imagining singing a song or reciting a passage; listening to a tone with eyes closed; choosing a color (red; green; yellow or blue) and counting how many times one's chosen color appears on a screen; choosing any thought to use as a ``password''.
+For each of the two sessions, participants performed each of the seven mental tasks, enumerated below, ten times. Each of the ten trials lasted ten seconds.
 
-Participants performed each of the seven mental tasks, enumerated below, ten times. Each of the ten trials lasted ten seconds.
+The seven mental tasks were: (i) breathing with eyes closed; (ii) motor imagery of right index finger movement; (iii) motor imagery of subject's choice of repetitive sports motion; (iv) mentally sing a song or recite a passage; (v) listen for an audio tone with eyes closed; (vi) visual counting of rectangles of a chosen color on a computer screen; and (vii) any mental thought of subject's choice as their chosen ``password''.
 
-The Neurosky MindSet SDK delivered a power spectrum of its data every half second. The power spectra that the SDK delivers are computed with discrete bins of 1/4 Hz. Each bin represents the intensity of activation of a frequency range (e.g., between 1 and 1.25 Hz) in a half-second time window. There are therefore 1024 values reported for one power spectrum. Since our mental task recordings are 10 seconds long, each recording is represetned by twenty power spectra on average.
+%Participants performed each of the seven mental tasks, enumerated below, ten times. Each of the ten trials lasted ten seconds.
 
-The dataset was further cleaned by removing all readings marked as suboptimal signal quality by the Neurosky SDK. The SDK delivers a signal quality value that is greater than zero when signal quality is suboptimal. Factors causing this value to be greater than zero include lack of contact between elctrode and skin, excessive non-EEG noise (EKG, EMG, EOG, electrostatic) and excessive motion.
+The power spectrum time series data consists of one power spectrum every 0.5 seconds. Therefore, for a 10 second recording, we have a sequence of 20 power spectra. Each power spectrum contains frequency components from 0 Hz to 256 Hz at 0.25Hz intervals. Therefore there are 1024 values reported for each power spectrum.
 
-\subsection{Signal extraction}
+%The Neurosky MindSet SDK delivered a power spectrum of its data every half second. The power spectra that the SDK delivers are computed with discrete bins of 1/4 Hz. Each bin represents the intensity of activation of a frequency range (e.g., between 1 and 1.25 Hz) in a half-second time window. There are therefore 1024 values reported for one power spectrum. Since our mental task recordings are 10 seconds long, each recording is represented by twenty power spectra on average.
 
-We are interested in minimizing computational expense of classifying mental gestures. This study investigates a signal quantization technique that reduces the size of EEG data for fast classfication but retains high accuracy.
+The dataset was further cleaned by removing all readings marked as having suboptimal signal quality by the Neurosky SDK. The SDK delivers a signal quality value that is greater than zero when signal quality is suboptimal. Factors causing this value to be greater than zero include lack of contact between the electrode and skin, excessive non-EEG noise (e.g., EKG, EMG, EOG, electrostatic), and excessive motion.
 
-\subsection{Classifying EEG signals}
 
-In this study, we build a binary BCI using a support vector machine (SVM) classifier, which we train individually on each subject's recordings. We use LinearSVC, \cite{fan_liblinear:_2008} a wrapper for LibLinear exposed in Python through the ScikitLearn library. \cite{pedregosa_scikit-learn:_2011} We chose LinearSVC because BCI classification problems are generally presumed to be linear  \cite{garrett_comparison_2003,lotte_review_2007}, and because LibLinear's underlying C implementation boasts among the fastest train- and test-time performance among state-of-the-art solutions. \cite{fan_liblinear:_2008} We use a hyperparameter of 100, found through a ``grid search'', or an exhaustive search through a randomly-selected sample of our dataset. 
-
-When training a classifier, the only way to make accurate estimates of the classifier's performance is to test it on data on which the classifier was not trained. A common way to do this is through \textit{cross-validation}, in which we train and test a classifier several times using different subsets of the data for training and testing. We use ScikitLearn's built-in cross-validation toolkit, which performs seven cross-validation steps using different splits of data in each round.
-
-\subsection{Creating a binary BCI}
-
-A binary BCI allows users to select one of two options. In our system, have a ``vocabulary'' of two mental gestures, and our SVM discriminates which gesture thay are performing in a given recording. Thus, for any given user, we are interested in finding two tasks between which our SVM can reliably discriminate. This taskpair differs between subjects: one subject's best-case taskpair may be \textit{song} and \textit{sport} while another's could be \textit{eye} and \textit{finger}. 
-
-In order to simulate a binary BCI with our dataset, we spliced all mental task recordings into $\sfrac{1}{2}$-second chunks, each one representing a single power spectrum reading from our headset. In Section 5, we simulate calibrating the BCI to a taskpair by cross-validating an SVM trained on all taskpair data. In Section 6, we use a more realistic approach in which we train the SVM on the first eighty seconds of data for both tasks, then testing the classifier on the remaining 40 seconds of data.

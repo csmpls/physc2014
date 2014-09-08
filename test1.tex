@@ -21,30 +21,43 @@
 
 \begin{document}
 
-\title{Strategies for the quick calibration of sensor-driven systems with low computational overhead}
+\title{Logarithmic Quantization and Opportunistic Calibration for Physiological Signal Classifiers}
+
+%Quantization and Calibration%Logarithmic Quantization and Opportunistic Calibration for Physiological Signal Classifiers
+%Quantization and Calibration for Efficient Physiological Signal Classifiers%Towards Rapid Calibration of Physiological Signal Classifiers
+
+%\title{Strategies for the quick calibration of sensor-driven systems with low computational overhead}
+
+\author{\authorname{Anonymized Authors}
+\affiliation{Anonymized Institution}
+\affiliation{Anonymized Institution}
+\email{Anonymized Emails}
+}
 
 %\author{\authorname{Nick Merrill\sup{1}, Thomas Maillart\sup{1}, Benjamin Johnson\sup{2} and John Chuang\sup{1}}
 %\affiliation{\sup{1}School of Information, UC Berkeley, Berkeley, California, USA}
-%\affiliation{\sup{2}???}
-%\email{ffff@berkeley.edu}
+%\affiliation{\sup{2}Carnegie Mellon University}
+%\email{ffff@berkeley.edu,,,john.chuang@berkeley.edu}
 %}
 
-\keywords{BCI, Mobile, Ubiquitous Computing}
+\keywords{bio-signal processing, signal quantization, logarithmic binning, user calibration, brain-computer interface}
+%\keywords{BCI, Mobile, Ubiquitous Computing}
 
-\abstract{Physiological computing applications rely on time series data from sensors, which vary widely between users and over time. Application designers face a tradeoff between computational complexity, calibration time, and classification accuracy. We describe a novel quantization technique for EEG signals, which we find increases the computational speed associated with training a machine-learning based classifier without a significant detriment to system accuracy. We test this technique on a brain-computer interface (BCI), and find that an opportunistic calibration strategy can achieve acceptable accuracy in 86.6\% of subjects with under five minutes of training. We discuss implications for the design of consumer-ready BCI and other physiological computing applications.}
+\abstract{Physiological computing applications rely on time series sensor data, which vary widely between users and over time. Application designers face a tradeoff between computational complexity, calibration time, and classification accuracy. We describe a novel quantization technique for electro-encephalograph (EEG) signals, which we find increases the computational speed associated with training a machine-learning based classifier without a significant detriment to system accuracy. We test this technique on a brain-computer interface (BCI) protocol, and find that an opportunistic calibration strategy can achieve high accuracy in 86.6\% of subjects with under five minutes of training, and 100\% of subjects under 15 minutes. We discuss implications for the design of consumer-ready BCI and other physiological computing applications.}
 
 \onecolumn \maketitle \normalsize \vfill
 
 \input{Sections/intro}
 \input{Sections/background}
-
-
 \input{Sections/data}
+%\input{Sections/method}
 \input{Sections/quantization}
-\input{Sections/results}
+\input{Sections/quantization_eval}
+\input{Sections/calibration_eval}
+%\input{Sections/results}
 \input{Sections/discussion}
 
-\vfill
+%\vfill
 \bibliographystyle{apalike}
 {\small
 \bibliography{references}}
