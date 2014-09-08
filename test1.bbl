@@ -126,34 +126,15 @@ Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel,
 \newblock Scikit-learn: Machine learning in python.
 \newblock {\em J. Mach. Learn. Res.}, 12:2825–2830.
 
-\bibitem[Raudys and Jain, 1991]{raudys_small_1991}
-Raudys, S.~J. and Jain, A.~K. (1991).
-\newblock Small sample size effects in statistical pattern recognition:
-  Recommendations for practitioners.
-\newblock {\em {IEEE} Transactions on pattern analysis and machine
-  intelligence}, 13(3):252–264.
-
 \bibitem[Vidaurre and Blankertz, 2010]{vidaurre_towards_2010}
 Vidaurre, C. and Blankertz, B. (2010).
 \newblock Towards a cure for {BCI} illiteracy.
 \newblock {\em Brain topography}, 23(2):194–198.
 
-\bibitem[Vidaurre et~al., 2011a]{vidaurre_co-adaptive_2011}
-Vidaurre, C., Sannelli, C., Müller, K.-R., and Blankertz, B. (2011a).
-\newblock Co-adaptive calibration to improve {BCI} efficiency.
-\newblock {\em Journal of Neural Engineering}, 8(2):025009.
-
-\bibitem[Vidaurre et~al., 2011b]{vidaurre_machine-learning-based_2011}
-Vidaurre, C., Sannelli, C., Müller, K.-R., and Blankertz, B. (2011b).
+\bibitem[Vidaurre et~al., 2011]{vidaurre_machine-learning-based_2011}
+Vidaurre, C., Sannelli, C., Müller, K.-R., and Blankertz, B. (2011).
 \newblock Machine-learning-based coadaptive calibration for brain-computer
   interfaces.
 \newblock {\em Neural Computation}, 23(3):791--816.
-
-\bibitem[Vidaurre et~al., 2006]{vidaurre_fully_2006}
-Vidaurre, C., Schloogl, A., Cabeza, R., Scherer, R., and Pfurtscheller, G.
-  (2006).
-\newblock A fully on-line adaptive {BCI}.
-\newblock {\em {IEEE} Transactions on Biomedical Engineering},
-  53(6):1214--1219.
 
 \end{thebibliography}

@@ -21,68 +21,6 @@
 
 
 
-* * @ ~
-
-
-each section should summarize the preceeding parts of the paper
-end of each section should summarize itself
-
-.
-
-
-
-story?:
-	past techniques work like sensors + machine learning
-	buuuuut for them to work irl we need to show that they can work with a low number of sensors and not too much water from the computational faucet.
-	bci is a gr8 example case for this bc signals are nonstationary and every1 is so different......the problem in its purest form :0 :)
-
-
-
-
-
-
-
-
-
-
---METHODS---
-.
-.
-.
-
-.
-
-make sure methods section "frames" (justifies) the dataset
-
-.
-
---
-
-is the story ? :
-1. optimize for computational performance
-2. show that we could use this to build irl bci
-
-
-
-
-
-
-
-
-
-
----RESULTS---
-not "experiments"
-
-.
-.
-
-
-explain what cross-validation is and why we do it:
->  
-
-
-
 
 
 

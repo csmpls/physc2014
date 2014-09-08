@@ -1,6 +1,10 @@
 This is BibTeX, Version 0.99d (TeX Live 2014)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: test1.aux
+White space in argument---line 8 of file test1.aux
+ : \citation{vidaurre_machine-learning-based_2011,
+ :                                                 friedrich_whatever_2013}
+I'm skipping whatever remains of this command
 The style file: apalike.bst
 Database file #1: references.bib
 Too many commas in name 1 of "D. Mattia, F. Pichiorri, M. Molinari, R. Rupp" for entry d._mattia_brain_2011
@@ -11,45 +15,45 @@ Too many commas in name 1 of "D. Mattia, F. Pichiorri, M. Molinari, R. Rupp" for
 while executing---line 1095 of file apalike.bst
 Warning--empty booktitle in grierson_better_2011
 Warning--empty publisher in larsen_classification_2011
-You've used 24 entries,
+You've used 21 entries,
             1935 wiz_defined-function locations,
-            614 strings with 9161 characters,
-and the built_in function-call counts, 11614 in all, are:
-= -- 1092
-> -- 624
-< -- 17
-+ -- 233
-- -- 220
-* -- 1033
-:= -- 1990
-add.period$ -- 76
-call.type$ -- 24
-change.case$ -- 225
-chr.to.int$ -- 23
-cite$ -- 26
-duplicate$ -- 420
-empty$ -- 739
-format.name$ -- 256
-if$ -- 2280
-int.to.chr$ -- 2
+            595 strings with 8659 characters,
+and the built_in function-call counts, 10254 in all, are:
+= -- 963
+> -- 560
+< -- 16
++ -- 208
+- -- 198
+* -- 901
+:= -- 1755
+add.period$ -- 67
+call.type$ -- 21
+change.case$ -- 199
+chr.to.int$ -- 21
+cite$ -- 23
+duplicate$ -- 378
+empty$ -- 646
+format.name$ -- 229
+if$ -- 2020
+int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 26
-newline$ -- 122
-num.names$ -- 76
-pop$ -- 220
+missing$ -- 23
+newline$ -- 107
+num.names$ -- 67
+pop$ -- 201
 preamble$ -- 1
-purify$ -- 227
+purify$ -- 201
 quote$ -- 0
-skip$ -- 317
+skip$ -- 287
 stack$ -- 0
-substring$ -- 715
-swap$ -- 84
+substring$ -- 601
+swap$ -- 81
 text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 140
+type$ -- 122
 warning$ -- 2
-while$ -- 81
+while$ -- 71
 width$ -- 0
-write$ -- 315
-(There were 3 error messages)
+write$ -- 276
+(There were 4 error messages)

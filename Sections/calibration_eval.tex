@@ -1,4 +1,5 @@
 \section{\uppercase{Opportunistic strategy for calibrating a binary BCI}}
+\label{sec:calibration_eval}
 
 In the previous experiment, we found that our compression technique can speed up an SVM classifier without significant detriment to BCI accuracy. However, for the technique to be useful in real-world applications, it must also allow users to quickly calibrate the system to their personal physiological signals.
 
@@ -48,7 +49,7 @@ H2: We hypothesize that the opportunistic strategy will acheive lower accuracy t
   \vspace{-0.1cm}
 \end{figure}
 
-A baseline exhaustive search required 2520 seconds of calibration time and produced an average accuracy of 92.5\% across subjects (\textit{std} = .09). Our opportunistic strategy took an average of 225.3 seconds of calibration time (\textit{std} = 52.2) and produced an average accuracy of 88.3\% (\textit{std} = .11).
+A baseline exhaustive search required 2520 seconds of calibration time and produced an average accuracy of 92.5\% (\textit{$\sigma$} = .09) across subjects . Our opportunistic strategy took an average of 225.3 seconds of calibration time (\textit{$\sigma$} = 52.2) and produced an average accuracy of 88.3\% (\textit{$\sigma$} = .11).
 
-We find that our strategy calibrates users to BCI control significantly more quickly than an exhaustive search (\textit{p-value} \textless .001 ). Thus, we find support for H1. Further, we do not a statistically significant difference in per-user accuracy between an opportunistic strategy and an exhaustive search (\textit{p-value} = .264). Thus, we find no support for H2.
+We find that our strategy calibrates users to BCI control significantly more quickly than an exhaustive search (\textit{p} \textless .001 ). Thus, we find support for H1. Further, we do not a statistically significant difference in per-user accuracy between an opportunistic strategy and an exhaustive search (\textit{p} = .264). Thus, we find no support for H2.
 
