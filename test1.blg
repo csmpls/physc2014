@@ -3,7 +3,7 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: test1.aux
 White space in argument---line 8 of file test1.aux
  : \citation{vidaurre_machine-learning-based_2011,
- :                                                 friedrich_whatever_2013}
+ :                                                 friedrich2013whatever}
 I'm skipping whatever remains of this command
 The style file: apalike.bst
 Database file #1: references.bib

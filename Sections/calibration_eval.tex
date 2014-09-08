@@ -27,8 +27,7 @@ As a baseline, we perform an exhaustive search of SVM accuracy on mental task pa
   \textit{song} & 2 \\ \hline
   \textit{audio} & 2 \\ \hline
   \end{tabular}
-  \caption{Frequency where a mental task occurs in a task pair that achieves a highest classification accuracy, across all possible task pairs.}
-%  \caption{An exhaustive search of SVM accuracy on taskpairs identified each subject's best-performing taskpair. We recorded the frequency of each task's occurrence in a best-case taskpair, shown here. We used these dataÂ to inform the order in which our opportunistic calibration strategy would prompt the user to record tasks.}
+  \caption{Frequency of each mental task's occurrence in a task pair that achieves a highest classification accuracy.}
   \label{table:name}
 %  \vspace{-0.1cm}
 \end{table}
@@ -45,7 +44,7 @@ H2: The opportunistic calibration strategy will achieve lower accuracy than will
 
 %\subsection{Results}
 
-For the given set of seven candidate mental tasks, the baseline exhaustive search strategy requires 2520 seconds of calibration time and produces an average accuracy of 92.5\% across subjects (\textit{std} = 0.09). Our opportunistic strategy takes an average of 225.3 seconds of calibration time (\textit{std} = 52.2) and produces an average accuracy of 88.3\% (\textit{std} = 0.11).
+For the given set of seven candidate mental tasks, the baseline exhaustive search strategy requires 2520 seconds of calibration time and produces an average accuracy of 92.5\% across subjects (\textit{$\sigma$} = 0.09). Our opportunistic strategy takes an average of 225.3 seconds of calibration time (\textit{$\sigma$} = 52.2) and produces an average accuracy of 88.3\% (\textit{$\sigma$} = 0.11).
 
 Figure \ref{fig:calibration_results} shows the results from a subject's perspective. Out of 15 subjects, the opportunistic calibration strategy allows 73.6\% (11 subjects) to be calibrated in under 4 minutes, and 86.6\% (13 subjects) in under 5 minutes. The remaining two subjects were calibrated under 10 and 15 minutes, respectively. All 15 subjects can achieve a minimum of 75\% classification accuracy. Six subjects (40\%) can achieve 100\% accuracy.
 
@@ -58,5 +57,5 @@ Figure \ref{fig:calibration_results} shows the results from a subject's perspect
   \vspace{-0.1cm}
 \end{figure}
 
-We find that our strategy calibrates users to BCI control significantly more quickly than an exhaustive search, finding support for H1 at the \textit{p} \textless 0.001 level. On the other hand, we do not find a statistically significant difference in per-user accuracy between an opportunistic strategy and an exhaustive search (\textit{p-value} = 0.264). Thus, we find no support for H2.
+We find that our strategy calibrates users to BCI control significantly more quickly than an exhaustive search, finding support for H1 at the \textit{p} \textless 0.001 level. On the other hand, we do not find a statistically significant difference in per-user accuracy between an opportunistic strategy and an exhaustive search (\textit{p} = 0.264). Thus, we find no support for H2.
 
