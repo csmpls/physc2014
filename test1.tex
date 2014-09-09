@@ -6,6 +6,7 @@
 \usepackage{amssymb}
 \usepackage{amstext}
 \usepackage{amsmath}
+\usepackage{tikz}
 \usepackage{amsthm}
 \usepackage{multicol}
 \usepackage{pslatex}
@@ -21,7 +22,7 @@
 
 \begin{document}
 
-\title{Logarithmic Quantization and Opportunistic Calibration for Physiological Signal Classifiers}
+\title{Improving physiological signal classification using logarithmic quantization & progressive calibration}
 
 %Quantization and Calibration
 %Logarithmic Quantization and Opportunistic Calibration for Physiological Signal Classifiers
@@ -45,7 +46,8 @@
 \keywords{bio-signal processing, signal quantization, logarithmic binning, user calibration, brain-computer interface}
 %\keywords{BCI, Mobile, Ubiquitous Computing}
 
-\abstract{Physiological computing applications rely on time series sensor data, which vary widely between users and change over time. Application designers face a tradeoff between computational complexity, calibration time, and classification accuracy. We describe a novel quantization technique for electroencephalograph (EEG) signals, which we find increases the computational speed associated with training a machine-learning based classifier without significant detriment to the system's accuracy. We test this technique on a brain-computer interface (BCI) that uses a single EEG sensor, and find that an opportunistic calibration strategy can achieve high accuracy in 86.6\% of subjects with under five minutes of training, and in 100\% of subjects with under 15 minutes. We discuss implications for the design of consumer-ready BCI and other physiological computing applications.}
+% make this cooler and more accessible
+\abstract{Physiological computing applications rely on time series sensor data, the meanings of which vary widely between users and change over time. Application designers face a tradeoff between computational complexity, calibration time, and classification accuracy. We describe a quantization technique for electroencephalograph (EEG) signals which we find increases the computational speed associated with training a machine-learning based classifier without a significant detriment to the system's accuracy. We test this technique on a brain-computer interface (BCI) that uses a single EEG sensor, and find that an opportunistic calibration strategy achieves high accuracy in 86.6\% of subjects with under five minutes of training, and in 100\% of subjects with under 15 minutes. We discuss implications for consumer-ready BCI and for physiological computing applications generally.}
 
 \onecolumn \maketitle \normalsize \vfill
 

@@ -4,19 +4,16 @@
 
 %Generally, we seek to maximize our system's classification accuracy while minimizing its computational expense. One way to reduce the computational requirements of a SVM classifier is to reduce the size of the feature vectors on which it is trained and tested. Our signal quantization method allows us to directly adjust the size of feature vectors by changing the signal's resolution (see 3.1), though lowering the resolution of feature vectors could negatively effect the classifier's performance.
 
-We examine the effect of signal resolution, operationalized by the number of bins used in the quantization step, on our BCI's performance, measured by the SVM's training time and by the SVM's estimated accuracy. 
-We hypothesize that both the SVM training time and accuracy increase with signal resolution, i.e., the greater the number of bins, the higher the accuracy but also the longer the training time.
+We examine the effect of signal resolution, operationalized by the number of bins used in the quantization step, on our BCI's performance, measured by the SVM's training time and by the SVM's estimated accuracy. We hypothesize that both the SVM training time and accuracy increase with signal resolution, i.e., the greater the number of bins, the higher the accuracy but also the longer the training time.
 
 %H1: SVM accuracy will decrease with resolution.
 %H2: SVM training time will decrease with resolution.
 
 %\subsection{Protocol}
 
-For each subject, we generate every pair of two mental tasks and cross-validate our SVM on the recordings for this pair of tasks. Given the availability of seven candidate tasks, we have a total of 21 possible task pairs. For every task pair, we vary the signal resolution by varying the number of bins from 1 to 1024. For every task pair processed, we record mean classification accuracy across all rounds of cross-validation. For each subject, we record the best-performing task pair, which corresponds to our estimation of optimal performance of the BCI for that subject.
+For each subject, we generate every pair of two mental gestures and cross-validate our SVM on the recordings for this pair of gestures. Given the availability of seven candidate gestures, we have a total of 21 possible gesture pairs. For every pair, we vary the signal resolution by varying the number of bins from 1 to 1024. For every pair processed, we record mean classification accuracy across all rounds of cross-validation. For each subject, we record the best-performing pair, which corresponds to our estimation of optimal performance of the BCI for that subject.
 
-%For each subject, we generate every pair of two tasks and cross-validate our SVM seven times on the recordings for this pair of tasks. We vary the resolution of the samples we feed to the SVM. For every task pair processed, we record mean classification accuracy across all rounds of cross-validation. For each subject, we record the best-performing taskpair, which corresponds to our estimation of optimal performance of the BCI for that subject.
-
-As an additional performance audit, we measure the time needed to fit an SVM to the data for two randomly selected task pairs across all subjects. We repeat this process ten thousand times at different resolutions, collecting the minimum time observed in each series of attempts.
+As an additional performance audit, we measure the time needed to fit an SVM to the data for two randomly selected gesture pairs across all subjects. We repeat this process ten thousand times at different resolutions, collecting the minimum time observed in each series of attempts.
 
 %\subsection{Results}
 
