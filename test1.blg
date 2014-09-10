@@ -11,45 +11,45 @@ Too many commas in name 1 of "D. Mattia, F. Pichiorri, M. Molinari, R. Rupp" for
 while executing---line 1095 of file apalike.bst
 Warning--empty booktitle in grierson_better_2011
 Warning--empty publisher in larsen_classification_2011
-You've used 22 entries,
+You've used 23 entries,
             1935 wiz_defined-function locations,
-            602 strings with 8897 characters,
-and the built_in function-call counts, 10661 in all, are:
-= -- 1001
-> -- 578
+            610 strings with 9111 characters,
+and the built_in function-call counts, 11152 in all, are:
+= -- 1048
+> -- 606
 < -- 16
-+ -- 214
-- -- 204
-* -- 940
-:= -- 1827
-add.period$ -- 70
-call.type$ -- 22
-change.case$ -- 207
-chr.to.int$ -- 22
-cite$ -- 24
-duplicate$ -- 392
-empty$ -- 675
-format.name$ -- 236
-if$ -- 2098
++ -- 224
+- -- 214
+* -- 989
+:= -- 1913
+add.period$ -- 73
+call.type$ -- 23
+change.case$ -- 217
+chr.to.int$ -- 23
+cite$ -- 25
+duplicate$ -- 406
+empty$ -- 705
+format.name$ -- 247
+if$ -- 2190
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 24
-newline$ -- 112
-num.names$ -- 70
-pop$ -- 207
+missing$ -- 25
+newline$ -- 117
+num.names$ -- 73
+pop$ -- 215
 preamble$ -- 1
-purify$ -- 209
+purify$ -- 219
 quote$ -- 0
-skip$ -- 297
+skip$ -- 307
 stack$ -- 0
-substring$ -- 631
-swap$ -- 82
+substring$ -- 668
+swap$ -- 83
 text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 128
+type$ -- 134
 warning$ -- 2
-while$ -- 74
+while$ -- 78
 width$ -- 0
-write$ -- 289
+write$ -- 302
 (There were 3 error messages)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  9 SEP 2014 23:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  10 SEP 2014 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -426,7 +426,25 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
-))) (/usr/local/texlive/2014/texmf-dist/tex/latex/amscls/amsthm.sty
+)))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2008/06/26 v3.0.0 (rcs-revision 1.1)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+code.tex
+File: pgflibraryarrows.code.tex 2013/09/23 v3.0.0 (rcs-revision 1.16)
+\arrowsize=\dimen166
+)) (/usr/local/texlive/2014/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2004/08/06 v2.20
 \thm@style=\toks33
 \thm@bodyfont=\toks34
@@ -441,21 +459,21 @@ Package: amsthm 2004/08/06 v2.20
 Package: multicol 2014/04/23 v1.8e multicolumn formatting (FMi)
 \c@tracingmulticols=\count126
 \mult@box=\box39
-\multicol@leftmargin=\dimen166
+\multicol@leftmargin=\dimen167
 \c@unbalance=\count127
 \c@collectmore=\count128
 \doublecol@number=\count129
 \multicoltolerance=\count130
 \multicolpretolerance=\count131
-\full@width=\dimen167
-\page@free=\dimen168
-\premulticols=\dimen169
-\postmulticols=\dimen170
+\full@width=\dimen168
+\page@free=\dimen169
+\premulticols=\dimen170
+\postmulticols=\dimen171
 \multicolsep=\skip58
 \multicolbaselineskip=\skip59
 \partial@page=\box40
 \last@line=\box41
-\maxbalancingoverflow=\dimen171
+\maxbalancingoverflow=\dimen172
 \mult@rightbox=\box42
 \mult@grightbox=\box43
 \mult@gfirstbox=\box44
@@ -479,9 +497,9 @@ Package: multicol 2014/04/23 v1.8e multicolumn formatting (FMi)
 \@tempa=\box62
 \c@columnbadness=\count132
 \c@finalcolumnbadness=\count133
-\last@try=\dimen172
-\multicolovershoot=\dimen173
-\multicolundershoot=\dimen174
+\last@try=\dimen173
+\multicolovershoot=\dimen174
+\multicolundershoot=\dimen175
 \mult@nat@firstbox=\box63
 \colbreak@box=\box64
 \mc@col@check@num=\count134
@@ -529,13 +547,13 @@ Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 (/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen175
-\captionmargin@=\dimen176
-\captionwidth=\dimen177
-\caption@tempdima=\dimen178
-\caption@indent=\dimen179
-\caption@parindent=\dimen180
-\caption@hangindent=\dimen181
+\captionmargin=\dimen176
+\captionmargin@=\dimen177
+\captionwidth=\dimen178
+\caption@tempdima=\dimen179
+\caption@indent=\dimen180
+\caption@parindent=\dimen181
+\caption@hangindent=\dimen182
 )
 \c@ContinuedFloat=\count135
 Package caption Info: subfigure package is loaded.
@@ -578,12 +596,12 @@ L3 Module: l3file 2014/05/05 v4737 L3 File and I/O operations
 \l__iow_current_word_int=\count146
 \l__iow_current_indentation_int=\count147
 L3 Module: l3skip 2014/05/05 v4738 L3 Dimensions and skips
-\c_zero_dim=\dimen182
-\c_max_dim=\dimen183
-\l_tmpa_dim=\dimen184
-\l_tmpb_dim=\dimen185
-\g_tmpa_dim=\dimen186
-\g_tmpb_dim=\dimen187
+\c_zero_dim=\dimen183
+\c_max_dim=\dimen184
+\l_tmpa_dim=\dimen185
+\l_tmpb_dim=\dimen186
+\g_tmpa_dim=\dimen187
+\g_tmpb_dim=\dimen188
 \c_zero_skip=\skip62
 \c_max_skip=\skip63
 \l_tmpa_skip=\skip64
@@ -617,13 +635,13 @@ L3 Module: l3box 2014/05/04 v4728 L3 Experimental boxes
 \g_tmpb_box=\box69
 L3 Module: l3coffins 2014/05/04 v4728 L3 Coffin code layer
 \l__coffin_internal_box=\box70
-\l__coffin_internal_dim=\dimen188
-\l__coffin_offset_x_dim=\dimen189
-\l__coffin_offset_y_dim=\dimen190
-\l__coffin_x_dim=\dimen191
-\l__coffin_y_dim=\dimen192
-\l__coffin_x_prime_dim=\dimen193
-\l__coffin_y_prime_dim=\dimen194
+\l__coffin_internal_dim=\dimen189
+\l__coffin_offset_x_dim=\dimen190
+\l__coffin_offset_y_dim=\dimen191
+\l__coffin_x_dim=\dimen192
+\l__coffin_y_dim=\dimen193
+\l__coffin_x_prime_dim=\dimen194
+\l__coffin_y_prime_dim=\dimen195
 \c_empty_coffin=\box71
 \l__coffin_aligned_coffin=\box72
 \l__coffin_aligned_internal_coffin=\box73
@@ -632,31 +650,31 @@ L3 Module: l3coffins 2014/05/04 v4728 L3 Coffin code layer
 \l__coffin_display_coffin=\box76
 \l__coffin_display_coord_coffin=\box77
 \l__coffin_display_pole_coffin=\box78
-\l__coffin_display_offset_dim=\dimen195
-\l__coffin_display_x_dim=\dimen196
-\l__coffin_display_y_dim=\dimen197
+\l__coffin_display_offset_dim=\dimen196
+\l__coffin_display_x_dim=\dimen197
+\l__coffin_display_y_dim=\dimen198
 L3 Module: l3color 2014/04/30 v4712 L3 Experimental color support
 L3 Module: l3luatex 2014/04/30 v4712 L3 Experimental LuaTeX-specific functions
 \g__cctab_allocate_int=\count159
 \g__cctab_stack_int=\count160
 L3 Module: l3candidates 2014/05/04 v4734 L3 Experimental additions to l3kernel
-\l__box_top_dim=\dimen198
-\l__box_bottom_dim=\dimen199
-\l__box_left_dim=\dimen200
-\l__box_right_dim=\dimen201
+\l__box_top_dim=\dimen199
+\l__box_bottom_dim=\dimen200
+\l__box_left_dim=\dimen201
 Normal \dimen register pool exhausted, switching to extended pool.
-\l__box_top_new_dim=\dimen256
-\l__box_bottom_new_dim=\dimen257
-\l__box_left_new_dim=\dimen258
-\l__box_right_new_dim=\dimen259
+\l__box_right_dim=\dimen256
+\l__box_top_new_dim=\dimen257
+\l__box_bottom_new_dim=\dimen258
+\l__box_left_new_dim=\dimen259
+\l__box_right_new_dim=\dimen260
 \l__box_internal_box=\box79
-\l__coffin_bounding_shift_dim=\dimen260
-\l__coffin_left_corner_dim=\dimen261
-\l__coffin_right_corner_dim=\dimen262
-\l__coffin_bottom_corner_dim=\dimen263
-\l__coffin_top_corner_dim=\dimen264
-\l__coffin_scaled_total_height_dim=\dimen265
-\l__coffin_scaled_width_dim=\dimen266
+\l__coffin_bounding_shift_dim=\dimen261
+\l__coffin_left_corner_dim=\dimen262
+\l__coffin_right_corner_dim=\dimen263
+\l__coffin_bottom_corner_dim=\dimen264
+\l__coffin_top_corner_dim=\dimen265
+\l__coffin_scaled_total_height_dim=\dimen266
+\l__coffin_scaled_width_dim=\dimen267
 ))
 Package: l3keys2e 2014/05/05 v4740 LaTeX2e option processing using LaTeX3 keys
 ) (/usr/local/texlive/2014/texmf-dist/tex/latex/base/textcomp.sty
@@ -750,7 +768,7 @@ Package: xparse 2014/05/05 v4740 L3 Experimental document command parser
 y
 Package: xtemplate 2014/05/05 v4740 L3 Experimental prototype document function
 s
-\l__xtemplate_tmp_dim=\dimen267
+\l__xtemplate_tmp_dim=\dimen268
 \l__xtemplate_tmp_int=\count166
 \l__xtemplate_tmp_muskip=\muskip17
 \l__xtemplate_tmp_skip=\skip68
@@ -761,11 +779,11 @@ Variant \prop_get:NoNF already defined; not changing it on line 108
 Package: xfrac 2014/05/04 v4728 L3 Experimental split-level fractions
 \l__xfrac_slash_box=\box80
 \l__xfrac_tmp_box=\box81
-\l__xfrac_denominator_bot_sep_dim=\dimen268
-\l__xfrac_numerator_bot_sep_dim=\dimen269
-\l__xfrac_numerator_top_sep_dim=\dimen270
-\l__xfrac_slash_left_sep_dim=\dimen271
-\l__xfrac_slash_right_sep_dim=\dimen272
+\l__xfrac_denominator_bot_sep_dim=\dimen269
+\l__xfrac_numerator_bot_sep_dim=\dimen270
+\l__xfrac_numerator_top_sep_dim=\dimen271
+\l__xfrac_slash_left_sep_dim=\dimen272
+\l__xfrac_slash_right_sep_dim=\dimen273
 \l__xfrac_slash_left_muskip=\muskip18
 \l__xfrac_slash_right_muskip=\muskip19
 .................................................
@@ -781,39 +799,39 @@ Package: xfrac 2014/05/04 v4728 L3 Experimental split-level fractions
 ) (/Users/ffff/Documents/physc2014/test1.aux)
 \openout1 = `test1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 23.
-LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 23
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 24.
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 24
 .
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omspzccm.fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 23.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 24.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    ... okay on input line 24.
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count167
-\scratchdimen=\dimen273
+\scratchdimen=\dimen274
 \scratchbox=\box82
 \nofMPsegments=\count168
 \nofMParguments=\count169
 \everyMPshowfont=\toks39
 \MPscratchCnt=\count170
-\MPscratchDim=\dimen274
+\MPscratchDim=\dimen275
 \MPnumerator=\count171
 \makeMPintoPDFobject=\count172
 \everyMPtoPDFconversion=\toks40
@@ -856,9 +874,9 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 53.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--53
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
 
  []
 
@@ -874,47 +892,43 @@ e/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
-
-Underfull \hbox (badness 1418) in paragraph at lines 20--21
-\OT1/ptm/m/n/10 them also em-ploy dry con-tact elec-trodes, which
- []
-
-[2]) (/Users/ffff/Documents/physc2014/Sections/data.tex) (/Users/ffff/Documents
-/physc2014/Sections/quantization.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-<Figures/binned_EEGPowerSpectrum.png, id=15, 600.2425pt x 421.575pt>
+) (/Users/ffff/Documents/physc2014/Sections/data.tex [2]) (/Users/ffff/Document
+s/physc2014/Sections/quantization.tex <Figures/binned_EEGPowerSpectrum.png, id=
+15, 600.2425pt x 421.575pt>
 File: Figures/binned_EEGPowerSpectrum.png Graphic file (type png)
 <use Figures/binned_EEGPowerSpectrum.png>
 Package pdftex.def Info: Figures/binned_EEGPowerSpectrum.png used on input line
  28.
 (pdftex.def)             Requested size: 170.71652pt x 119.89925pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[3]) (/Users/ffff/Documents/physc2014/Sections/quantization_eval.tex
+[3 </Users/ffff/Documents/physc2014/Figures/binned_EEGPowerSpectrum.png>]) (/Us
+ers/ffff/Documents/physc2014/Sections/quantization_eval.tex
 LaTeX Font Info:    Try loading font information for OML+ptm on input line 20.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 20.
-<Figures/acc-bins.png, id=20, 578.16pt x 433.62pt>
+<Figures/acc-bins.png, id=21, 578.16pt x 433.62pt>
 File: Figures/acc-bins.png Graphic file (type png)
 <use Figures/acc-bins.png>
 Package pdftex.def Info: Figures/acc-bins.png used on input line 35.
 (pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
-[4 </Users/ffff/Documents/physc2014/Figures/binned_EEGPowerSpectrum.png>] <Figu
-res/traintime-bins.png, id=26, 578.16pt x 433.62pt>
+<Figures/traintime-bins.png, id=22, 578.16pt x 433.62pt>
 File: Figures/traintime-bins.png Graphic file (type png)
 <use Figures/traintime-bins.png>
 Package pdftex.def Info: Figures/traintime-bins.png used on input line 44.
 (pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
-<Figures/acc-traintime.png, id=27, 578.16pt x 433.62pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Figures/acc-traintime.png, id=23, 578.16pt x 433.62pt>
 File: Figures/acc-traintime.png Graphic file (type png)
 <use Figures/acc-traintime.png>
 Package pdftex.def Info: Figures/acc-traintime.png used on input line 53.
 (pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 ) (/Users/ffff/Documents/physc2014/Sections/calibration_eval.tex
 Underfull \hbox (badness 1442) in paragraph at lines 59--1
 []\OT1/ptm/m/n/10 Overall, we find that rel-a-tively small fea-ture
@@ -925,47 +939,54 @@ Underfull \hbox (badness 1990) in paragraph at lines 59--1
 \OT1/ptm/m/n/10 vec-tors pro-duced with our method (100 val-ues)
  []
 
-LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 19
-.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[4 </Users/ffff/Documents/physc2014/Figures/acc-bins.png>]
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 8.
+
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 19
-.
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 8.
+
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlptmcm.fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+psycm on input line 19
-.
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 8.
+
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omxpsycm.fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 19.
+LaTeX Font Info:    Try loading font information for U+msa on input line 8.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 19.
+LaTeX Font Info:    Try loading font information for U+msb on input line 8.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
-[5 </Users/ffff/Documents/physc2014/Figures/acc-bins.png> </Users/ffff/Document
-s/physc2014/Figures/traintime-bins.png> </Users/ffff/Documents/physc2014/Figure
-s/acc-traintime.png>]
-Underfull \hbox (badness 1701) in paragraph at lines 46--47
-\OT1/ptm/m/n/10 achieve lower ac-cu-racy than will the ex-haus-tive
- []
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
+LaTeX Font Info:    Calculating math sizes for size <6.99997> on input line 8.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.99997> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <4.89995> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <3.49998> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
 
-<Figures/3.png, id=34, 556.0775pt x 578.16pt>
-File: Figures/3.png Graphic file (type png)
-<use Figures/3.png>
-Package pdftex.def Info: Figures/3.png used on input line 59.
-(pdftex.def)             Requested size: 156.49014pt x 162.70413pt.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5 </Users/ffff/Documents/physc2014/Figures/traintime-bins.png> </Users/ffff/Do
+cuments/physc2014/Figures/acc-traintime.png>]
+\cyclecount=\count173
+\ind=\count174
+Missing character: There is no ; in font nullfont!
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -974,9 +995,9 @@ Underfull \hbox (badness 1448) in paragraph at lines 10--11
 []\OT1/ptm/m/n/10 Our study im-plies that prac-ti-cal BCI can be
  []
 
+[6]
 Missing character: There is no â in font ptmr7t!
-[6 </Users/ffff/Documents/physc2014/Figures/3.png>]) (/Users/ffff/Documents/phy
-sc2014/test1.bbl
+) (/Users/ffff/Documents/physc2014/test1.bbl
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
@@ -1015,31 +1036,35 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
+[7]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
-) [7] (/Users/ffff/Documents/physc2014/test1.aux) ) 
+) [8
+
+] (/Users/ffff/Documents/physc2014/test1.aux) ) 
 Here is how much of TeX's memory you used:
- 20069 strings out of 493117
- 400343 string characters out of 6135433
- 422133 words of memory out of 5000000
- 23174 multiletter control sequences out of 15000+600000
- 28319 words of font info for 58 fonts, out of 8000000 for 9000
+ 21506 strings out of 493117
+ 435994 string characters out of 6135433
+ 453144 words of memory out of 5000000
+ 24594 multiletter control sequences out of 15000+600000
+ 66324 words of font info for 154 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,8n,54p,10448b,294s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/tex
-mf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2014/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
-pe1/urw/symbol/usyr.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/tim
-es/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.
-pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/ffff/Documents/physc2014/test1.pdf (7 pages, 196720 by
+ 55i,12n,60p,10448b,798s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014/texmf-d
+ist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/u
+rw/symbol/usyr.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/ut
+mb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
+/usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on /Users/ffff/Documents/physc2014/test1.pdf (8 pages, 183920 by
 tes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 68 PDF objects out of 1000 (max. 8388607)
+ 43 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

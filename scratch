@@ -2,15 +2,8 @@
 
 
 
+color outline?
 
-
-In this section, we evaluate an opportunistic strategy for user calibration. Using the logarithmic binning method to produce quantized signals with a resolution of 100 bins, we measure user calibration time (the time it takes a user to achieve a threshold accuracy with the BCI) and the classification accuracy each user achieves after calibration. 
-
-
-
-
-
-We examine the effect of signal resolution, operationalized by the number of bins used in the quantization step, on our BCI's performance, measured by the SVM's training time and by the SVM's estimated accuracy. 
 
 
 

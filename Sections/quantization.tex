@@ -10,17 +10,17 @@
 
 %\subsection{Compressing power spectra in the temporal dimension}
 
-First, we compress the power spectrum time series in the temporal dimension. Given a sequence of 20 power spectra (from a 10 second trial), with 1024 frequency components per spectrum, we compute a discrete probability density function (pdf) in which each component is the mean of its corresponding frequency components through time. This results in a discrete pdf with 1024 components for each trial.
+We compress the power spectrum time series in the temporal dimension. Given a sequence of 20 power spectra (from a 10 second trial), with 1024 frequency components per spectrum, we compute a discrete probability density function (pdf) in which each component is the mean of its corresponding frequency components through time. This results in a discrete pdf with 1024 components for each trial.
 
 %First, we compute an average of all the power spectra associated with a recording. We obtain a discrete probability density function (PDF) in which each bin is the mean of its corresponding bins through time. At this stage, we have a discrete PDF of 1024 bins for the entire n second recording. 
 
 \subsection{Logarithmic Binning}
 
-Now, we apply the quantization step by performing data binning on the probability density function. Data binning offers a simple way to ``quantize'' the information contained in the full signal. By taking the mean of several adjacent points in the pdf, we are left with a single bin that compresses the information contained in its local area of frequencies. For instance, four contiguous frequencies (1Hz, 1.25Hz, 1.5Hz, 1.75Hz) of the values (4, 4, 5, 5) could be combined into a single bin with the value 4.5. The number of bins can be chosen to provide a desired level of  resolution on the signal.
+Since EEG activity is associated with frequencies from 1-40Hz, we presume this range contains the majority of relevant signal. However, this frequency range can be polluted with non-neural signals \cite{ball2009signal}, and we do not rule out the possibility that useful signal exists in other frequency ranges as well. Muscular activity, for example, might be correlated with mental gestures in some cases. In order to exploit the entire frequency spectrum while preserving our bias toward known sources of useful signal, we select a logarithmic spacing of the data bins through the pdf. Figure \ref{binnedEEGpowerspec} shows an example of logarithmic binning with 100 bins. It offers a 10x compression ratio while still preserving the structure of the original 1024-point pdf.
+
+We apply the quantization step by performing data binning on the probability density function. Data binning offers a simple way to ``quantize'' the information contained in the full signal. By taking the mean of several adjacent points in the pdf, we are left with a single bin that compresses the information contained in its local area of frequencies. For instance, four contiguous frequencies (1Hz, 1.25Hz, 1.5Hz, 1.75Hz) of the values (4, 4, 5, 5) could be combined into a single bin with the value 4.5. The number of bins can be chosen to provide a desired level of  resolution on the signal.
 
 %Binning a probability density function (PDF) is a simple way to ``quantize'' the information contained in the full signal. By taking the mean of several adjacent points in the PDF, we are left with a single bin that compresses the information contained in its local area of frequencies. For instance, four contiguous frequencies (1, 1.25, 1.5, 1.75) of the values (4,4,5,5) could be combined into a single bin with the value 4.5. 
-
-Since EEG activity is associated with frequencies from 1-40Hz, we presume this range contains the majority of relevant signal. However, we do not rule out the possibility that useful signal exists in other frequency ranges. Muscular activity, for example, might be correlated with mental gestures in some cases. In order to exploit the entire frequency spectrum while preserving our bias toward known sources of useful signal, we select a logarithmic spacing of the data bins through the pdf. Figure \ref{binnedEEGpowerspec} shows an example of logarithmic binning with 100 bins. It offers a 10x compression ratio while still preserving the structure of the original 1024-point pdf.
 
 \begin{figure}[!h]
   \vspace{-0.2cm}

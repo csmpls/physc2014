@@ -23,7 +23,7 @@ Figure \ref{fig:accuracy_vs_bins} shows the mean best-case accuracy of the class
 
 %We find support for H1. Although resolution was positively correlated with classifier accuracy (slope = .0013 R-squared = .773, p \textless .001), this effect appears only at resolutions lower than 100 points. We find no significant increase in SVM accuracy at resolutions over 100 bins. 
 
-Figure \ref{fig:training_vs_bins} shows, in log-log scale, the SVM training time versus the number of bins. We see that the log of the classifier training time is positively correlated with the log of signal resolution (Slope = 0.5, R-squared = 0.947, p \textless 0.001). 
+Figure \ref{fig:training_vs_bins} shows, in log-log scale, the SVM training time versus the number of bins. We see that the log of the classifier training time is positively correlated with the log of signal resolution (Slope = 0.5, R-squared = 0.947, p \textless 0.001). We also observe an increase in variance in the data, possibly due to variability in memory read and write times, which exacerbates SVM training time at larger vector sizes (as more reads and writes are being performed).
 
 Combining these two results, Figure \ref{fig:accuracy_vs_training} confirms the tradeoff between classifier accuracy and classifier training time. It also points to the existence of a threshold resolution at around 100 bins that provides a 450\% speed improvement over a non-quantized baseline of 1024 bins, without any significant degradation in classifier accuracy.
 

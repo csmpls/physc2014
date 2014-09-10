@@ -3,20 +3,20 @@
 
 %In this section we describe the dataset that we used in this study and introduce the machine learning techniques that we employed.
 
-\noindent We did not acquire any experimental data for this study. Rather, we obtained an anonymized dataset from the Passthoughts study \cite{adams_i_2013}. The dataset includes EEG recordings of 15 subjects, all students from UC Berkeley, performing seven mental tasks in a sitting position over two sessions. The signals were recorded using a consumer-grade EEG headset, the Neurosky MindSet, with a dry contact EEG sensor over the Fp2 position. In particular, we use the power spectrum time series data recorded using the Neuroview software.
+\noindent We obtained an anonymized dataset of EEG recordings from 15 subjects, all students at UC Berkeley, performing seven mental gestures in a sitting position over two sessions \cite{adams_i_2013}. The signals were recorded using a consumer-grade EEG headset, the Neurosky MindSet, with a dry contact EEG sensor over the Fp2 position. The power spectrum time series data were recorded using the Neuroview software.
 
 %The data used in this experiment were taken from a previous study. \cite{adams_i_2013} The anonymized dataset consists of power spectrum time series data recorded by the software from the Neurosky MindSet headset from 15 subjects, students at UC Berkeley, performing mental tasks. 
 
-For each of the two sessions, participants performed each of the seven mental tasks, enumerated below, ten times. Each of the ten trials lasted ten seconds.
+Participants performed each of the seven mental gestures ten times. Each of the ten trials lasted ten seconds.
 
-The seven mental tasks were: (i) breathing with eyes closed; (ii) motor imagery of right index finger movement; (iii) motor imagery of subject's choice of repetitive sports motion; (iv) mentally sing a song or recite a passage; (v) listen for an audio tone with eyes closed; (vi) visual counting of rectangles of a chosen color on a computer screen; and (vii) any mental thought of subject's choice as their chosen ``password''.
+The seven mental gestures were: (i) breathing with eyes closed; (ii) motor imagery of right index finger movement; (iii) motor imagery of subject's choice of repetitive sports motion; (iv) mentally sing a song or recite a passage; (v) listen for an audio tone with eyes closed; (vi) visual counting of rectangles of a chosen color on a computer screen; and (vii) any mental thought of subject's choice as their chosen ``password''.
 
-%Participants performed each of the seven mental tasks, enumerated below, ten times. Each of the ten trials lasted ten seconds.
+%Participants performed each of the seven mental gestures, enumerated below, ten times. Each of the ten trials lasted ten seconds.
 
 The power spectrum time series data consists of one power spectrum every 0.5 seconds. Therefore, for a 10 second recording, we have a sequence of 20 power spectra. Each power spectrum contains frequency components from 0 Hz to 256 Hz at 0.25Hz intervals. Therefore there are 1024 values reported for each power spectrum.
 
-%The Neurosky MindSet SDK delivered a power spectrum of its data every half second. The power spectra that the SDK delivers are computed with discrete bins of 1/4 Hz. Each bin represents the intensity of activation of a frequency range (e.g., between 1 and 1.25 Hz) in a half-second time window. There are therefore 1024 values reported for one power spectrum. Since our mental task recordings are 10 seconds long, each recording is represented by twenty power spectra on average.
+%The Neurosky MindSet SDK delivered a power spectrum of its data every half second. The power spectra that the SDK delivers are computed with discrete bins of 1/4 Hz. Each bin represents the intensity of activation of a frequency range (e.g., between 1 and 1.25 Hz) in a half-second time window. There are therefore 1024 values reported for one power spectrum. Since our mental gesture recordings are 10 seconds long, each recording is represented by twenty power spectra on average.
 
 The dataset was further cleaned by removing all readings marked as having suboptimal signal quality by the Neurosky SDK. The SDK delivers a signal quality value that is greater than zero when signal quality is suboptimal. Factors causing this value to be greater than zero include lack of contact between the electrode and skin, excessive non-EEG noise (e.g., EKG, EMG, EOG, electrostatic), and excessive motion.
 
-
+At this point, each mental gesture is represented by ten trials, each trial consisting of a time series of 20 power spectra. Each power spectrum is comprised of 1024 frequency readings. 

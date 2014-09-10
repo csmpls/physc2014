@@ -1,0 +1,6 @@
+PWD /Users/ffff/Documents/physc2014/Sections
+INPUT /usr/local/texlive/2014/texmf.cnf
+INPUT /usr/local/texlive/2014/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2014/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/ffff/Documents/physc2014/Sections/discussion.tex
+OUTPUT /Users/ffff/Documents/physc2014/Sections/discussion.log
