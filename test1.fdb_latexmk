@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex test1"] 1410230034 "test1.aux" "test1.bbl" "test1" 1410303449
+["bibtex test1"] 1410330162 "test1.aux" "test1.bbl" "test1" 1410330390
   "./apalike.bst" 1407007028 21813 a6bc43259122f57cbcaa6ae34b78e94b ""
   "references.bib" 1410229380 27781 f1857b35432717dbae4cfa93594b7497 ""
-  "test1.aux" 1410303448 2932 beb4135a36dac676b3047918a78bbcf8 ""
+  "test1.aux" 1410330389 2932 beb4135a36dac676b3047918a78bbcf8 ""
   "test1.bcf" 0 -1 0 ""
   (generated)
   "test1.blg"
   "test1.bbl"
-["pdflatex"] 1410303447 "/Users/ffff/Documents/physc2014/test1.tex" "/Users/ffff/Documents/physc2014/test1.pdf" "test1" 1410303449
-  "/Users/ffff/Documents/physc2014/test1.aux" 1410303448 2932 beb4135a36dac676b3047918a78bbcf8 ""
-  "/Users/ffff/Documents/physc2014/test1.tex" 1410303445 2780 310555c03a2d12af1a4c5f5bbcd04907 ""
+["pdflatex"] 1410330388 "/Users/ffff/Documents/physc2014/test1.tex" "/Users/ffff/Documents/physc2014/test1.pdf" "test1" 1410330390
+  "/Users/ffff/Documents/physc2014/test1.aux" 1410330389 2932 beb4135a36dac676b3047918a78bbcf8 ""
+  "/Users/ffff/Documents/physc2014/test1.tex" 1410330386 2778 826f267ef8039792f4eb3b804a1e9aeb ""
   "/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2014/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -163,7 +163,7 @@
   "Figures/traintime-bins.png" 1410154576 24752 1bc5f6cbcedfb216d2161e909ac301b9 ""
   "SCITEPRESS.sty" 1407007028 5508 27fdbeff48f5a3bb528dc111c86e343c ""
   "Sections/background.tex" 1410300824 6798 af2ecdba3d141928faca86673820602a ""
-  "Sections/calibration_eval.tex" 1410230107 5790 157134517bc8005d9b876d22d91d5c70 ""
+  "Sections/calibration_eval.tex" 1410306929 5790 9f8f7a0091322ef77c3887d9de97eacf ""
   "Sections/data.tex" 1410303445 2945 09ff2d8c5953e3d6c1c40fedc079ab1f ""
   "Sections/discussion.tex" 1410206696 2954 8edbd3307629239123b94373f5253f99 ""
   "Sections/intro.tex" 1410228998 4312 8989bb6de9f8c48209cefdc5dcc01e92 ""
@@ -171,9 +171,9 @@
   "Sections/quantization_eval.tex" 1410302771 5688 014a61a1c7cf4543ca4c420ef1477692 ""
   "apalike.sty" 1407007028 1152 7e0216a1c626932f944fefc448e30fd5 ""
   "article.cls" 1407007028 20842 1d83f5084dd6851bbb8f990661490551 ""
-  "test1.aux" 1410303448 2932 beb4135a36dac676b3047918a78bbcf8 ""
-  "test1.bbl" 1410230034 6605 5a031566620d8123e6a03dd649de5a0d "bibtex test1"
-  "test1.tex" 1410303445 2780 310555c03a2d12af1a4c5f5bbcd04907 ""
+  "test1.aux" 1410330389 2932 beb4135a36dac676b3047918a78bbcf8 ""
+  "test1.bbl" 1410330162 6605 5a031566620d8123e6a03dd649de5a0d "bibtex test1"
+  "test1.tex" 1410330386 2778 826f267ef8039792f4eb3b804a1e9aeb ""
   (generated)
   "/Users/ffff/Documents/physc2014/test1.pdf"
   "/Users/ffff/Documents/physc2014/test1.log"

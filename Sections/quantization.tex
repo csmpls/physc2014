@@ -47,8 +47,6 @@ Out of the seven mental gestures in the dataset, we want to identify and select,
 
 %A binary BCI allows users to select one of two options. In our system, have a ``vocabulary'' of two mental gestures, and our SVM discriminates which gesture they are performing in a given recording. Thus, for any given user, we are interested in finding two tasks between which our SVM can reliably discriminate. This task-pair differs between subjects: one subject's best-case task-pair may be \textit{song} and \textit{sport} while another's could be \textit{eye} and \textit{finger}. 
 
-In order to simulate a binary BCI with our dataset, we splice all mental task recordings into 0.5-second chunks, each one representing a single power spectrum reading. In Section \ref{sec:quantization_eval}, we simulate calibrating the BCI to a task-pair by cross-validating an SVM trained on all task-pair data. In Section \ref{sec:calibration_eval}, we use a more realistic approach in which we train the SVM on the first 80 seconds of data for both tasks, then test the classifier on the remaining 40 seconds of data.
-
 % Question: for each task, we have 20 trials of 10 seconds each, so total should be 200 seconds, right??
 
 %In order to simulate a binary BCI with our dataset, we spliced all mental task recordings into $\sfrac{1}{2}$-second chunks, each one representing a single power spectrum reading from our headset. In Section 5, we simulate calibrating the BCI to a taskpair by cross-validating an SVM trained on all taskpair data. In Section 6, we use a more realistic approach in which we train the SVM on the first eighty seconds of data for both tasks, then testing the classifier on the remaining 40 seconds of data.

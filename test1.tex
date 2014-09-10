@@ -22,7 +22,7 @@
 
 \begin{document}
 
-\title{Improving physiological signal classification using logarithmic quantization & progressive calibration}
+\title{Improving physiological signal classification using logarithmic quantization \& a progressive calibration technique}
 
 %Quantization and Calibration
 %Logarithmic Quantization and Opportunistic Calibration for Physiological Signal Classifiers
@@ -43,11 +43,12 @@
 %\email{ffff@berkeley.edu,,,john.chuang@berkeley.edu}
 %}
 
-\keywords{bio-signal processing, signal quantization, logarithmic binning, user calibration, brain-computer interface}
+\keywords{bio-signal processing, signal quantization, logarithmic binning, calibration, brain-computer interface}
 %\keywords{BCI, Mobile, Ubiquitous Computing}
 
-% make this cooler and more accessible
-\abstract{Physiological computing applications rely on time series sensor data, the meanings of which vary widely between users and change over time. Application designers face a tradeoff between computational complexity, calibration time, and classification accuracy. We describe a quantization technique for electroencephalograph (EEG) signals which increases the computational speed associated with training a machine-learning based classifier without a significant detriment to the system's accuracy. We test this technique on a brain-computer interface (BCI) that uses a single EEG sensor, and find that a progressive calibration strategy achieves high accuracy in 86.6\% of subjects with under five minutes of training, and in 100\% of subjects with under 15 minutes. We discuss implications for consumer-ready BCI and for physiological computing applications generally.}
+
+\abstract{Since physiological signals vary widely between persons (and within individuals over time), applications that use physiological data as inputs often require calibration. In this paper, we describe a data quantization technique for fast, accurate classification of time series of power spectra. We test this technique on electroencephalograph (EEG) signals by simulating the calibration of a binary brain-computer interface (BCI). We increase the computational speed associated with training a machine-learning based classifier without a significant detriment to the system's accuracy. A progressive calibration strategy achieves high accuracy in 86.6\% of subjects with under five minutes of quantized calibration data, and in 100\% of subjects with under 15 minutes. We discuss implications for consumer BCI devices and for physiological computing applications generally.}
+
 
 \onecolumn \maketitle \normalsize \vfill
 
