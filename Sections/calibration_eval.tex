@@ -66,7 +66,7 @@ If the score on this additional testing round is below 75\%, a commonly used thr
   \end{tikzpicture}
   \vspace{0.3cm}
   
-  \caption{Progressive calibration routine. We begin with 60 second recordings of the three best-performing gestures (see Table \ref{table:name}). We then perform seven cross-validation folds on each pair of gestures. The pair that scored highest on cross-validation is selected for testing on an additional 80 seconds of data, 40 from each gesture. If this test fails to reach 75\% accuracy, we prompt the user to record a 60 second sample of the next highest-scoring gesture and repeat the cross-validation process on all new (unexplored) taskpairs.}
+  \caption{Progressive calibration routine. We begin with 60 second recordings of the three best-performing gestures (Table \ref{table:name}). We then perform seven-fold cross-validation on each pair of gestures. The pair that scored highest on cross-validation is selected for testing on an additional 80 seconds of data, 40 from each gesture. If this test fails to reach 75\% accuracy, we prompt the user to record a 60 second sample of the next highest-scoring gesture and repeat the cross-validation process on all new (unexplored) taskpairs.}
 
   \label{fig:calibration_schematic}
   \vspace{-0.1cm}
