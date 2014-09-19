@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.3.4)  19 SEP 2014 11:50
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.3.4)  19 SEP 2014 11:57
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1007,7 +1007,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 ) (./Sections/data.tex [2])
 (./Sections/quantization.tex
 Package epstopdf Info: Source file: <Figures/figure1.eps>
-(epstopdf)                    date: 2014-09-19 11:37:48
+(epstopdf)                    date: 2014-09-19 11:55:10
 (epstopdf)                    size: 38933 bytes
 (epstopdf)             Output file: <Figures/figure1-eps-converted-to.pdf>
 (epstopdf)                    date: 2014-09-19 11:47:27
@@ -1015,7 +1015,12 @@ Package epstopdf Info: Source file: <Figures/figure1.eps>
 (epstopdf)             Command: <epstopdf --outfile=Figures/figure1-eps-convert
 ed-to.pdf Figures/figure1.eps>
 (epstopdf)             \includegraphics on input line 28.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=Figures/figure1-eps-converted-to.pdf Figures/figur
+e1.eps)...executed.
+
+Package epstopdf Info: Result file: <Figures/figure1-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-09-19 11:57:45
+(epstopdf)                    size: 146813 bytes.
 
 <Figures/figure1-eps-converted-to.pdf, id=15, 722.7pt x 505.89pt>
 File: Figures/figure1-eps-converted-to.pdf Graphic file (type pdf)
@@ -1193,7 +1198,7 @@ Here is how much of TeX's memory you used:
  21979 multiletter control sequences out of 15000+200000
  66324 words of font info for 154 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,12n,60p,1069b,752s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,12n,60p,1088b,752s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.en
 c}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 ></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
@@ -1201,7 +1206,7 @@ c}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 /texlive/2012/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2
 012/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2012/texmf-
 dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on test1.pdf (8 pages, 294526 bytes).
+Output written on test1.pdf (8 pages, 294530 bytes).
 PDF statistics:
  94 PDF objects out of 1000 (max. 8388607)
  47 compressed objects within 1 object stream
