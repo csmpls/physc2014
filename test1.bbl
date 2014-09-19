@@ -1,5 +1,11 @@
 \begin{thebibliography}{}
 
+\bibitem[Ball et~al., 2009]{ball2009signal}
+Ball, T., Kern, M., Mutschler, I., Aertsen, A., and Schulze-Bonhage, A. (2009).
+\newblock Signal quality of simultaneously recorded invasive and non-invasive
+  eeg.
+\newblock {\em Neuroimage}, 46(3):708--716.
+
 \bibitem[Blankertz et~al., 2007]{blankertz_note_2007}
 Blankertz, B., Krauledat, M., Dornhege, G., Williamson, J., Murray-Smith, R.,
   and Müller, K.-R. (2007).
@@ -67,6 +73,12 @@ Dornhege, G. (2007).
 Fan, R.-E., Chang, K.-W., Hsieh, C.-J., Wang, X.-R., and Lin, C.-J. (2008).
 \newblock {LIBLINEAR:} a library for large linear classification.
 \newblock {\em J. Mach. Learn. Res.}, 9:1871–1874.
+
+\bibitem[Friedrich et~al., 2013]{friedrich2013whatever}
+Friedrich, E.~V., Neuper, C., and Scherer, R. (2013).
+\newblock Whatever works: A systematic user-centered training protocol to
+  optimize brain-computer interfacing individually.
+\newblock {\em PloS one}, 8(9):e76214.
 
 \bibitem[Garrett et~al., 2003]{garrett_comparison_2003}
 Garrett, D., Peterson, D., Anderson, C., and Thaut, M. (2003).
