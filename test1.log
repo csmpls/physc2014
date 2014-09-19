@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.3.4)  19 SEP 2014 11:57
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.3.4)  19 SEP 2014 12:40
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1006,21 +1006,18 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
 ) (./Sections/data.tex [2])
 (./Sections/quantization.tex
+Underfull \vbox (badness 1342) has occurred while \output is active []
+
 Package epstopdf Info: Source file: <Figures/figure1.eps>
 (epstopdf)                    date: 2014-09-19 11:55:10
 (epstopdf)                    size: 38933 bytes
 (epstopdf)             Output file: <Figures/figure1-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-09-19 11:47:27
+(epstopdf)                    date: 2014-09-19 11:57:45
 (epstopdf)                    size: 146813 bytes
 (epstopdf)             Command: <epstopdf --outfile=Figures/figure1-eps-convert
 ed-to.pdf Figures/figure1.eps>
 (epstopdf)             \includegraphics on input line 28.
-runsystem(epstopdf --outfile=Figures/figure1-eps-converted-to.pdf Figures/figur
-e1.eps)...executed.
-
-Package epstopdf Info: Result file: <Figures/figure1-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-09-19 11:57:45
-(epstopdf)                    size: 146813 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 <Figures/figure1-eps-converted-to.pdf, id=15, 722.7pt x 505.89pt>
 File: Figures/figure1-eps-converted-to.pdf Graphic file (type pdf)
@@ -1132,12 +1129,19 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <4.89995> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <3.49998> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
- [5 <./Figures/traintime-bins.png> <./Figures/acc-traintime.png>]
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5 <./Figures/traintime-bins.png> <./Figures/acc-traintime.png>]
 \cyclecount=\count293
 \ind=\count294
 Missing character: There is no ; in font nullfont!
-) (./Sections/discussion.tex
-[6]
+
+Underfull \vbox (badness 1859) has occurred while \output is active []
+
+)
+(./Sections/discussion.tex [6]
 Underfull \hbox (badness 1448) in paragraph at lines 10--11
 []\OT1/ptm/m/n/10 Our study im-plies that prac-ti-cal BCI can be
  []
@@ -1192,10 +1196,10 @@ Missing character: There is no ¼ in font ptmr7t!
 
 ] (./test1.aux) ) 
 Here is how much of TeX's memory you used:
- 19091 strings out of 493488
- 359487 string characters out of 3141327
- 396942 words of memory out of 3000000
- 21979 multiletter control sequences out of 15000+200000
+ 19092 strings out of 493488
+ 359500 string characters out of 3141327
+ 397966 words of memory out of 3000000
+ 21980 multiletter control sequences out of 15000+200000
  66324 words of font info for 154 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  56i,12n,60p,1088b,752s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1206,7 +1210,7 @@ c}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 /texlive/2012/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2
 012/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2012/texmf-
 dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on test1.pdf (8 pages, 294530 bytes).
+Output written on test1.pdf (8 pages, 295149 bytes).
 PDF statistics:
  94 PDF objects out of 1000 (max. 8388607)
  47 compressed objects within 1 object stream

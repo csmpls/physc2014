@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2014)
+This is BibTeX, Version 0.99d (TeX Live 2012)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: test1.aux
 The style file: apalike.bst
@@ -11,45 +11,45 @@ Too many commas in name 1 of "D. Mattia, F. Pichiorri, M. Molinari, R. Rupp" for
 while executing---line 1095 of file apalike.bst
 Warning--empty booktitle in grierson_better_2011
 Warning--empty publisher in larsen_classification_2011
-You've used 23 entries,
+You've used 24 entries,
             1935 wiz_defined-function locations,
-            610 strings with 9111 characters,
-and the built_in function-call counts, 11152 in all, are:
-= -- 1048
-> -- 606
-< -- 16
-+ -- 224
-- -- 214
-* -- 989
-:= -- 1913
-add.period$ -- 73
-call.type$ -- 23
-change.case$ -- 217
-chr.to.int$ -- 23
-cite$ -- 25
-duplicate$ -- 406
-empty$ -- 705
-format.name$ -- 247
-if$ -- 2190
+            618 strings with 9376 characters,
+and the built_in function-call counts, 11755 in all, are:
+= -- 1115
+> -- 624
+< -- 17
++ -- 230
+- -- 220
+* -- 1033
+:= -- 2001
+add.period$ -- 77
+call.type$ -- 24
+change.case$ -- 225
+chr.to.int$ -- 24
+cite$ -- 26
+duplicate$ -- 435
+empty$ -- 750
+format.name$ -- 254
+if$ -- 2325
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 25
-newline$ -- 117
-num.names$ -- 73
-pop$ -- 215
+missing$ -- 26
+newline$ -- 122
+num.names$ -- 76
+pop$ -- 223
 preamble$ -- 1
-purify$ -- 219
+purify$ -- 227
 quote$ -- 0
-skip$ -- 307
+skip$ -- 332
 stack$ -- 0
-substring$ -- 668
-swap$ -- 83
-text.length$ -- 8
+substring$ -- 720
+swap$ -- 95
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 134
+type$ -- 140
 warning$ -- 2
-while$ -- 78
+while$ -- 83
 width$ -- 0
-write$ -- 302
+write$ -- 318
 (There were 3 error messages)

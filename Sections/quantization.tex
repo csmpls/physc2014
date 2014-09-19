@@ -43,7 +43,7 @@ We use scikit-learn's built-in cross-validation toolkit, which performs seven cr
 
 %\subsection{Creating a binary BCI}
 
-Out of the seven mental gestures in the dataset, we want to identify and select, for each individual subject, the two best gestures for that subject. This will result in a personalized binary (two-class) classifier, where the SVM can discriminate between two mental gestures performed by the subject with the highest classification accuracy. The gesture-pairs may vary from subject to subject. For example, one subject's best-case pair may be \textit{song} and \textit{sport} while another's may be \textit{color} and \textit{finger}.
+Out of the seven mental gestures in the dataset, we want to identify and select, for each individual subject, the two best gestures for that subject. This results in a personalized binary (two-class) classifier, where the SVM can discriminate between two mental gestures performed by the subject with the highest classification accuracy. The gesture-pairs may vary from subject to subject. For example, one subject's best-case pair may be \textit{song} and \textit{sport} while another's may be \textit{color} and \textit{finger}.
 
 %A binary BCI allows users to select one of two options. In our system, have a ``vocabulary'' of two mental gestures, and our SVM discriminates which gesture they are performing in a given recording. Thus, for any given user, we are interested in finding two tasks between which our SVM can reliably discriminate. This task-pair differs between subjects: one subject's best-case task-pair may be \textit{song} and \textit{sport} while another's could be \textit{eye} and \textit{finger}. 
 
