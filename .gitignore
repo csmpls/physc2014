@@ -3,4 +3,8 @@
 *.dvi
 *.aux
 *.blg
-test1.pdf
+*.pdf
+*.log
+*.aux
+*.synctex.gz
+*.DS_Store
