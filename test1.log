@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.3.4)  19 SEP 2014 11:57
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.3.4)  19 SEP 2014 12:03
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1010,17 +1010,12 @@ Package epstopdf Info: Source file: <Figures/figure1.eps>
 (epstopdf)                    date: 2014-09-19 11:55:10
 (epstopdf)                    size: 38933 bytes
 (epstopdf)             Output file: <Figures/figure1-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-09-19 11:47:27
+(epstopdf)                    date: 2014-09-19 11:57:45
 (epstopdf)                    size: 146813 bytes
 (epstopdf)             Command: <epstopdf --outfile=Figures/figure1-eps-convert
 ed-to.pdf Figures/figure1.eps>
 (epstopdf)             \includegraphics on input line 28.
-runsystem(epstopdf --outfile=Figures/figure1-eps-converted-to.pdf Figures/figur
-e1.eps)...executed.
-
-Package epstopdf Info: Result file: <Figures/figure1-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-09-19 11:57:45
-(epstopdf)                    size: 146813 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 <Figures/figure1-eps-converted-to.pdf, id=15, 722.7pt x 505.89pt>
 File: Figures/figure1-eps-converted-to.pdf Graphic file (type pdf)
@@ -1206,7 +1201,7 @@ c}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 /texlive/2012/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2
 012/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2012/texmf-
 dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on test1.pdf (8 pages, 294530 bytes).
+Output written on test1.pdf (8 pages, 294526 bytes).
 PDF statistics:
  94 PDF objects out of 1000 (max. 8388607)
  47 compressed objects within 1 object stream
