@@ -1,7 +1,7 @@
 \section{\uppercase{Progressive strategy for calibrating a binary BCI}}
 \label{sec:calibration_eval}
 
-\noindent In the previous section, we find that our compression technique can speed up an SVM classifier without significant detriment to BCI accuracy. However, it must also allow users to quickly calibrate the system to their personal physiological signals.
+\noindent In the previous section, we found that our compression technique can speed up an SVM classifier without significant detriment to BCI accuracy. However, it must also allow users to quickly calibrate the system to their personal physiological signals.
 
 In this section, we evaluate a strategy for user calibration in which mental gestures are recorded progressively on an ``as needed'' basis. Using  quantized signals with a resolution of 100 bins, we measure user calibration time (the time it takes a user to achieve a threshold accuracy with the BCI) and the classification accuracy each user achieves after calibration. 
 
@@ -31,7 +31,7 @@ In addition, we seek to minimize the amount of time users spend recording sample
 
 The opportunistic strategy starts with three gestures most commonly associated with best-case performance (\textit{color}, \textit{breathing}, \textit{pass}) for an initial user calibration time of 120 seconds (40 seconds per gesture). We then cross-validate every permutation of two of these gestures (i.e., \textit{color} versus \textit{breathing}, \textit{color} versus \textit{pass}, \textit{breathing} versus \textit{pass}). The gesture pair with the highest mean score across cross-validation rounds is selected for an additional testing session, in which the remaining 80 seconds of recordings for both gestures are used to generate an estimate of the classifier's accuracy on new EEG signals.
 
-If the score on this additional testing round is below 75\%, a commonly used threshold for BCI literacy \cite{vidaurre_towards_2010}, the user will be prompted to record sixty seconds of the next candidate mental gesture (e.g. \textit{sport}). We repeat the above process on unexplored pairs until a pair achieves over 75\% accuracy on post-calibration data, or until all combinations have been evaluated.
+If the score on this additional testing procedure is below 75\%, a commonly used threshold for BCI literacy \cite{vidaurre_towards_2010}, the user will be prompted to record sixty seconds of the next candidate mental gesture (e.g. \textit{sport}). We repeat the above process on unexplored pairs until a pair achieves over 75\% accuracy on post-calibration data, or until all combinations have been evaluated.
 
 \begin{figure}[!h]
   \vspace{-0.2cm}

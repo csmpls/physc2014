@@ -106,6 +106,13 @@ Jain, A.~K., Duin, R. P.~W., and Mao, J. (2000).
 \newblock {\em Pattern Analysis and Machine Intelligence, {IEEE} Transactions
   on}, 22(1):4–37.
 
+\bibitem[Johnson et~al., 2014]{johnson2014}
+Johnson, B., Maillart, T., and Chuang, J. (2014).
+\newblock My thoughts are not your thoughts.
+\newblock In {\em Proceedings of the 2014 ACM International Joint Conference on
+  Pervasive and Ubiquitous Computing: Adjunct Publication}, UbiComp '14
+  Adjunct, pages 1329--1338, New York, NY, USA. ACM.
+
 \bibitem[Larsen and Hokl, 2011]{larsen_classification_2011}
 Larsen, E.~A. and Hokl, C.-s.~J. (2011).
 \newblock {\em Classification of {EEG} Signals in a Brain- Computer Interface
