@@ -13,115 +13,6 @@
 
 
 
-.
-
-
-
-
-
-
-
-
-
-
------=RELATED WORK=-----
-
-go thru and clean up -- careful about stuff that isnt actually 'literature'
-
-rethink or reposition the 'co-adaptive' angle/stance/literature based on whatever happens in the earlier revision cycles
-
-
-
-
-
-
-
-
-
----INTRODUCTION----
-
-
-a logical **story** with one sentence building right off the next
-
-	past techniques work like this and this   buuuuut for them to work irl we need to show that they can work with a low number of sensors and not too much water from the computational faucet.
-
-
-
-
-
-
-
-
---- ABSTRACT ---
-
-emphasize that we're 'getting more out of' the signal
-
-
-
----OVERALL-----
-
-
-(i) you are not telling an organized and *logical* story, with one sentence logically followed the former one. 
-
-	In addition, you should always put your points in perspective with the main aim of the paper, i.e., the research question (c.f. my annotation on this), so that even if the reader has lost attention for a while she has a chance to reconnect at low cost. 
-
-
-By definition, a reviewer is a lazy person, because she does not get paid for this, and most often, in conferences a reviewer has an assignment of several papers to read, process, and judge in very little time. 
-
-
-
-
-
-
-(ii) The technical explanation of the methods used is very weak. 
-
-	For the binning, it says little on how it is new compared to formerly used techniques, and for the machine learning, the underpinning principles are not stated and explained. 
-
-I would be the reviewer I would reject the paper right away, because I would guess that the authors do not master the techniques they used. A researcher who has written ten papers on the topic of SVM, or could demonstrate enough quantitative expertise, might be forgiven, but this is not your case for the moment. Be patient it will come much faster than what you think, but in the meantime, you have to do the homework. Another even more important reason for taking time explaining clearly, but conceasily, a method, is that the world of science, is a world of massive reuse of methods...with different terminologies from one field to another If a method is explained clearly, then virtually everyone can reconnect and the reader will be very grateful for this :-) 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1. resist writing in a conversational tone; provide specifics where possible, e.g., accuracy declined by 2.5% when data compressed by 1000%; increasing training time from 3 minutes to 30 minutes only improved accuracy from 90% to 92%.
-
-2. practice to write "defensively". This is analogous to driving defensively. Be aware of the claims that you are making, and make sure that they are precise and defensible. It is better to err on making a narrower claim than one that may be challenged by the reviewers. 
-
-Also, you should always assume that the authors of the referenced papers will also be the reviewers of the paper, [..] when you describe the shortcomings of a cited work, you should feel confident of making that same criticism while you are standing up in a full room, with the authors of the cited work in the room. 
-
-
-x
-
-Section 1.
-
-(context, research questions, contributions, may include a summary of key techniques and main findings).........................after you have taken a pass through the rest of the paper
-
-
-Experiment 2:
-
-.
-
-The figure also raises a question for me: why is it that most of the accuracy loss occurs from 60s to 50s, particularly for larger bin-sizes? 
-
-
-
-
-
-
-
 
 
 
@@ -136,3 +27,21 @@ just slowly modulate the chorus
 
 
 `
+
+
+
+
+
+goal
+
+i dreamed that i was
+playing 
+soccer with your brother
+he was the goalie
+and i couldnt get one past him
+
+i woke in my bed 
+in my old house in oakland
+
+when it comes to you
+i just remember laughing

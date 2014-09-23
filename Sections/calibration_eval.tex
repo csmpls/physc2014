@@ -5,7 +5,7 @@
 
 In this section, we evaluate a strategy for user calibration in which mental gestures are recorded progressively on an ``as needed'' basis. Using  quantized signals with a resolution of 100 bins, we measure user calibration time (the time it takes a user to achieve a threshold accuracy with the BCI) and the classification accuracy each user achieves after calibration. 
 
-Our calibration strategy takes sixty-second sample recordings of mental gestures and splices them into 120 $\sfrac{1}{2}$-second chunks. By performing seven-fold cross-validation on sample data from a pair of mental gestures, we make an estimate of how easily discriminable these gestures are by our classifier. With this technique, we need only test only the most promising (highest-performing) of candidate gesture pairs for further testing.
+Our calibration strategy takes sixty-second sample recordings of mental gestures and splices them into 120 $\sfrac{1}{2}$-second chunks. By performing seven-fold cross-validation on sample data from a pair of mental gestures, we make an estimate of how easily discriminable these gestures are by our classifier. With this technique, we only need to identify the most promising (highest-performing) of candidate gesture pairs for further testing
 
 In addition, we seek to minimize the amount of time users spend recording samples of mental gestures. One way to minimize this time is to first test the subset of gestures most likely to yield strong performance. For each subject, we perform an exhaustive search of the 21 best-performing gesture pairs and record the frequency of each gesture's occurrence in a best-case pair (Table \ref{table:name}). Assuming that we can establish a consistent ordering of best-performing mental gestures for a target population, we use this data to inform the order in which our calibration strategy prompts the user to perform gestures.
 
@@ -29,7 +29,7 @@ In addition, we seek to minimize the amount of time users spend recording sample
 %  \vspace{-0.1cm}
 \end{table}
 
-The opportunistic strategy starts with three gestures most commonly associated with best-case performance (\textit{color}, \textit{breathing}, \textit{pass}) for an initial user calibration time of 120 seconds (40 seconds per gesture). We then cross-validate every permutation of two of these gestures (i.e., \textit{color} versus \textit{breathing}, \textit{color} versus \textit{pass}, \textit{breathing} versus \textit{pass}). The gesture pair with the highest mean score across cross-validation rounds is selected for an additional testing session, in which the remaining 80 seconds of recordings for both gestures are used to generate an estimate of the classifier's accuracy on new EEG signals.
+The progressive strategy starts with three gestures most commonly associated with best-case performance (\textit{color}, \textit{breathing}, \textit{pass}) for an initial user calibration time of 180 seconds (60 seconds per gesture). We then cross-validate every permutation of two of these gestures (i.e., \textit{color} versus \textit{breathing}, \textit{color} versus \textit{pass}, \textit{breathing} versus \textit{pass}). The gesture pair with the highest mean score across cross-validation rounds is selected for an additional testing session, in which the remaining 80 seconds of recordings for both gestures are used to generate an estimate of the classifier's accuracy on new EEG signals.
 
 If the score on this additional testing procedure is below 75\%, a commonly used threshold for BCI literacy \cite{vidaurre_towards_2010}, the user will be prompted to record sixty seconds of the next candidate mental gesture (e.g. \textit{sport}). We repeat the above process on unexplored pairs until a pair achieves over 75\% accuracy on post-calibration data, or until all combinations have been evaluated.
 
@@ -66,7 +66,7 @@ If the score on this additional testing procedure is below 75\%, a commonly used
   \end{tikzpicture}
   \vspace{0.3cm}
   
-  \caption{Progressive calibration routine. We begin with 60 second recordings of the three best-performing gestures (Table \ref{table:name}). We then perform seven-fold cross-validation on each pair of gestures. The pair that scored highest on cross-validation is selected for testing on an additional 80 seconds of data, 40 from each gesture. If this test fails to reach 75\% accuracy, we prompt the user to record a 60 second sample of the next highest-scoring gesture and repeat the cross-validation process on all new (unexplored) taskpairs.}
+  \caption{Progressive calibration routine. We begin with 60 second recordings of the three best-performing gestures (Table \ref{table:name}). We then perform seven-fold cross-validation on each pair of gestures. The pair that scored highest on cross-validation is selected for testing on an additional 80 seconds of data, 40 from each gesture. If this test fails to reach 75\% accuracy, we prompt the user to record a 60 second sample of the next highest-scoring gesture and repeat the cross-validation process on all new (unexplored) gesture pairs.}
 
   \label{fig:calibration_schematic}
   \vspace{-0.1cm}
@@ -74,9 +74,9 @@ If the score on this additional testing procedure is below 75\%, a commonly used
 
 %\subsection{Results}
 
-For the given set of seven candidate gestures, the baseline exhaustive search strategy requires 2100 seconds of calibration time (60 seconds times 7 gestures plus 80 seconds times 21 gesture pairs) and produces an average accuracy of 92.5\% across subjects (\textit{$\sigma$} = 0.09). Our opportunistic strategy takes an average of 374.6 seconds of calibration time (\textit{$\sigma$} = 52.2) and produces an average accuracy of 88.3\% (\textit{$\sigma$} = 0.11).
+For the given set of seven candidate gestures, the baseline exhaustive search strategy requires 2100 seconds of calibration time (60 seconds times 7 gestures plus 80 seconds times 21 gesture pairs) and produces an average accuracy of 92.5\% across subjects (\textit{$\sigma$} = 0.09). Our progressive strategy takes an average of 374.6 seconds of calibration time (\textit{$\sigma$} = 52.2) and produces an average accuracy of 88.3\% (\textit{$\sigma$} = 0.11).
 
-Figure \ref{fig:calibration_results} shows the results from a subject's perspective. Out of 15 subjects, the opportunistic calibration strategy allows 66.7\% (10 subjects) to be calibrated in under 5 minutes, and 86.7\% (13 subjects) in under 6 minutes. The remaining two subjects were calibrated in 11 minutes and 22 minutes, respectively. All 15 subjects achieve a minimum of 75\% classification accuracy. Six subjects (40\%) achieve 100\% accuracy.
+Figure \ref{fig:calibration_results} shows the results from a subject's perspective. Out of 15 subjects, the progressive calibration strategy allows 66.7\% (10 subjects) to be calibrated in under 5 minutes, and 86.7\% (13 subjects) in under 6 minutes. The remaining two subjects were calibrated in 11 minutes and 22 minutes, respectively. All 15 subjects achieve a minimum of 75\% classification accuracy. Six subjects (40\%) achieve 100\% accuracy.
 
 \begin{figure}[!h]
   \vspace{-0.2cm}
@@ -95,8 +95,8 @@ Figure \ref{fig:calibration_results} shows the results from a subject's perspect
 \begin{tikzpicture}[nodes = {font=\small}, scale = .75]
 \selectcolormodel{gray}
   \foreach \percent/\name in {
-      66.7/4 minutes,
-      20.0/5 minutes,
+      66.7/4.5 minutes,
+      20.0/5.5 minutes,
       6.6/11 minutes,
       6.6/22 minutes
     } {
@@ -122,7 +122,7 @@ Figure \ref{fig:calibration_results} shows the results from a subject's perspect
   \end{tikzpicture}
   \vspace{0.1cm}
   
-  \caption{Calibration time across subjects (top) and classifier accuracy (bottom). The vast majority of subjects achieve acceptable accuracy in under five minutes of training, and all subjects achieve BCI literacy in under 15 minutes. }
+  \caption{Calibration time across subjects (top) and classifier accuracy (bottom). The vast majority of subjects achieve acceptable accuracy in under five minutes of training, and all subjects achieve BCI literacy in under 22 minutes. }
   \label{fig:calibration_results}
   \vspace{-0.1cm}
 \end{figure}
