@@ -1,0 +1,1676 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0062)http://www.insticc.org/Primoris/person/author/AuthorsHome.aspx -->
+<html xmlns="http://www.w3.org/1999/xhtml"><script>(function main() {
+    // Create enabled event
+    function fireEnabledEvent() {
+        // If gli exists, then we are already present and shouldn't do anything
+        if (!window.gli) {
+            setTimeout(function () {
+                var enabledEvent = document.createEvent("Event");
+                enabledEvent.initEvent("WebGLEnabledEvent", true, true);
+                document.dispatchEvent(enabledEvent);
+            }, 0);
+        } else {
+            //console.log("WebGL Inspector already embedded on the page - disabling extension");
+        }
+    };
+
+    // Grab the path root from the extension
+    document.addEventListener("WebGLInspectorReadyEvent", function (e) {
+        var pathElement = document.getElementById("__webglpathroot");
+        if (window["gliloader"]) {
+            gliloader.pathRoot = pathElement.innerText;
+        } else {
+            // TODO: more?
+            window.gliCssUrl = pathElement.innerText + "gli.all.css";
+        }
+    }, false);
+
+    // Rewrite getContext to snoop for webgl
+    var originalGetContext = HTMLCanvasElement.prototype.getContext;
+    if (!HTMLCanvasElement.prototype.getContextRaw) {
+        HTMLCanvasElement.prototype.getContextRaw = originalGetContext;
+    }
+    HTMLCanvasElement.prototype.getContext = function () {
+        var ignoreCanvas = this.internalInspectorSurface;
+        if (ignoreCanvas) {
+            return originalGetContext.apply(this, arguments);
+        }
+
+        var result = originalGetContext.apply(this, arguments);
+        if (result == null) {
+            return null;
+        }
+
+        var contextNames = ["moz-webgl", "webkit-3d", "experimental-webgl", "webgl", "3d"];
+        var requestingWebGL = contextNames.indexOf(arguments[0]) != -1;
+        if (requestingWebGL) {
+            // Page is requesting a WebGL context!
+            fireEnabledEvent(this);
+
+            // If we are injected, inspect this context
+            if (window.gli) {
+                if (gli.host.inspectContext) {
+                    // TODO: pull options from extension
+                    result = gli.host.inspectContext(this, result);
+                    // NOTE: execute in a timeout so that if the dom is not yet
+                    // loaded this won't error out.
+                    window.setTimeout(function() {
+                        var hostUI = new gli.host.HostUI(result);
+                        result.hostUI = hostUI; // just so we can access it later for debugging
+                    }, 0);
+                }
+            }
+        }
+
+        return result;
+    };
+})();</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="shortcut icon" href="http://insticc.cachefly.net/Primoris/App_Themes/InsticcFavIcon.ico" type="image/x-icon"><link rel="icon" href="http://insticc.cachefly.net/Primoris/App_Themes/InsticcFavIcon.ico" type="image/x-icon">
+
+    <script language="JavaScript" type="text/javascript" src="./Author's Home_files/showPleaseWait.js">
+    </script><style type="text/css"></style>
+
+    <script language="JavaScript" type="text/javascript" src="./Author's Home_files/clickButton.js">
+    </script>
+
+    <title>
+	Author's Home
+</title><link href="./Author's Home_files/communities.css" type="text/css" rel="stylesheet"><link href="./Author's Home_files/default.css" type="text/css" rel="stylesheet"><link href="./Author's Home_files/listscreen.css" type="text/css" rel="stylesheet"><link href="./Author's Home_files/style.css" type="text/css" rel="stylesheet">
+    <link href="./Author's Home_files/WebResource.axd" type="text/css" rel="stylesheet" class="Telerik_stylesheet"></head>
+<body>
+    <noscript>
+        &lt;div id="noscript"&gt;
+            &lt;center&gt;
+                &lt;div id="noscriptContent"&gt;
+                    &lt;br /&gt;
+                    Your browser doesn't support JavaScript.
+                    &lt;br /&gt;
+                    &lt;br /&gt;
+                    Please enable it, or upgrade your browser.
+                &lt;/div&gt;
+            &lt;/center&gt;
+        &lt;/div&gt;
+    </noscript>
+    <form name="aspnetForm" method="post" action="./Author's Home_files/Author's Home.html" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VSTATE" id="__VSTATE" value="H4sIAAAAAAAEAJVU73IaNxA3B2diZ1o8rUP7pVjpuLUzSTCYUrszhKkh8cRt7XhM4n7IZBhxWjjVQrpIOjBf+ix9lr5Jn6Rd3fHHiR034UY7Yve3/3f1b6bwddYvdbttJa1WwpzB25hrOFXGtmhw8StMut3iqv9FYEWlsnk0pANoxdYqWfO/TXm/qQGXBxpoeutYamNT3XTC6kdgav53KeaYcrn5XA3hILah0ld9PQcR+ds3wyIagX6qxlIoyuq7tf19/9EtyFMNBiT650r+P7qtO3FvyI2Zo/duRvNFsB0QEDjzZ9BDBhWpYuVmxTPKfueSqfE1tVnt3tdI4S/ViwikvzbFxMLycw7jaqHAvAzzC+/VPWUX/NXqXu3H6m69slcvsKLXd8TLIl32Msk9M2M7RqHolXIv4dL6a8e6TE54cEGOQWsuBGOe7+QbS/6X2338/dwDfYE5TMrA4gcozqP4Doq/f30kjeVBgKpDBJmQR+RIUkx2BOVfFJfkRI3flFYOlYa2EkqvitLd2QC+0sJf/3PnBMYL7TI10WUp173faXk59JR9N/JcQtLwN5YgAcyvmSS1bGGtUMyV7nbvP6WWtlQs2aCUfyZpTwAL2dq9zHJa7fll/WE2Myhm+i4v1F0ufeY0XW0OOQjm52mglZwMS587/jkVMUwFnD0b4cRt5AZo11s9DSftDtmtVOvf/P2X+xYMso1b2AcNMoAH97zcT/vVwzySLh707w0wAOyit5I0Jn/ODcd4Q5e8t8gwN6/G8qwG/j9+g/ER4ezJ1qi21STJv0BQY55s9apbzUav2dhxB/nNd4S7qZA3G29R7A7/ELQ2h34Y88Ntvuq3CC1WGgNvgVBjMlExGeMQkj7uArEhEMGNJapPkq01BGdqHPIgJGjv2nA6B4QbkjZ2p60ep7dyo6d3muSVtFwkRs189wmjFhK3AZVkqBjvTxJI4o9QjELD4wRvCbdTSy+wj1dQITWkByAROsJVBfZokUhIR0BoEIAxxCpCkcWtmSJNau+gb50vBEWWoulUnWogA9wkmXhSUaS0jSW3E2cHy8MDF3qkYTpYzuiAasblII3tyoNITBBigQSUP7E7t/f1YwbjE+bs2rwmNJl8N+13wuRtmj0GuOvrD5c8PFm3NV+lS37wB73sXHB8bCUDjbVAJZboTYEbKwnnPwKafOsgBwAA">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./Author's Home_files/WebResource(1).axd" type="text/javascript"></script>
+
+<link rel="stylesheet" href="./Author's Home_files/tooltip.css" type="text/css" media="screen"><link rel="stylesheet" href="./Author's Home_files/ibox.css" type="text/css" media="screen"><link rel="stylesheet" href="./Author's Home_files/ibox.css" type="text/css" media="screen"> <div id="DivRow52388" style="display:none;"><div style="border:1px dashed #FFFFFF;padding:15px;margin:15px;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		                <tbody><tr>
+			                <td class="TopBarimpress_13">
+			                </td>
+			                <td class="TopBarimpress_15" align="left">
+				                <span class="txtwhite">Paper Details</span>
+			                </td>
+		                   <td class="TopBarimpress_20">
+			                </td>
+		                </tr>
+	                </tbody></table><div id="v3" class="ControlPanel4">
+            <div class="b1"><b></b></div><div class="b2"><b><i><q></q></i></b></div>
+            <div class="b3"><b><i></i></b></div><div class="b4"><b></b></div><div class="b5"><b></b></div>
+            <div class="text">
+            <table style="width: 100%">
+                    <tbody><tr>
+                        <td style="width: 20%;vertical-align:top;">
+                            <b>Paper Title: </b></td>
+                        <td>Improving Physiological Signal Classification Using Logarithmic Quantization &amp; a Progressive Calibration Technique</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 20%;vertical-align:top;">
+                            <b>Paper #: </b></td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 20%;vertical-align:top;">
+                            <b>Submitted to: </b></td>
+                        <td>PhyCS - International Conference on Physiological Computing Systems</td>
+                    </tr>
+                    <tr><td style="width: 20%;vertical-align:top;">
+                             <b>Number of Pages: </b></td>
+                             <td>8</td></tr>
+                    <tr>
+                        <td style="width: 20%;vertical-align:top;">
+                            <b>Selection State: </b></td>
+                        <td>Short Paper (poster presentation)</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Submission Type:</b></td>
+                        <td>Regular Paper</td>
+                    </tr>
+            </tbody></table></div><div class="b5"><b></b></div><div class="b4"><b></b></div><div class="b3"><b><i></i></b></div>
+                        <div class="b2"><b><i><q></q></i></b></div><div class="b1"><b></b>
+                        </div></div>
+        <div id="v3" class="ControlPanel4">
+            <div class="b1"><b></b></div><div class="b2"><b><i><q></q></i></b></div>
+            <div class="b3"><b><i></i></b></div><div class="b4"><b></b></div><div class="b5"><b></b></div>
+            <div class="text">
+            <table style="width: 100%">
+                    <tbody><tr>
+                       <td style="width: 20%;vertical-align:top;">
+                            <b>Contact Author: </b></td>
+                        <td>Nick Merrill (ffff@berkeley.edu)</td>
+                    </tr>
+                    <tr>
+                       <td style="width: 20%;vertical-align:top;">
+                            <b>MSc/PhD/Other Student: </b></td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                       <td style="width: 20%;vertical-align:top;">
+                            <b>Co-Authors: </b></td>
+                        <td>Thomas Maillart (thomas.maillart@ischool.berkeley.edu)<br>Benjamin Johnson (johnsonb@andrew.cmu.edu)<br>John Chuang (chuang@ischool.berkeley.edu)<br></td>
+                    </tr>
+ </tbody></table></div><div class="b5"><b></b></div><div class="b4"><b></b></div><div class="b3"><b><i></i></b></div>
+                        <div class="b2"><b><i><q></q></i></b></div><div class="b1"><b></b>
+                        </div></div>
+        <div id="v3" class="ControlPanel4">
+            <div class="b1"><b></b></div><div class="b2"><b><i><q></q></i></b></div>
+            <div class="b3"><b><i></i></b></div><div class="b4"><b></b></div><div class="b5"><b></b></div>
+            <div class="text">
+            <table style="width: 100%">
+                    <tbody><tr>
+                        <td style="width: 20%;vertical-align:top;">
+                            <b>Paper Keywords: </b></td>
+                        <td>bio-signal processing, signal quantization, logarithmic binning, calibration, mobile physiological computing</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 20%;vertical-align:top;">
+                            <b>Paper Abstract: </b></td>
+                        <td>Physiological signals vary widely between persons, and even within individuals over time. As a result, applications with physiological inputs usually require repeated calibration. Application designers face a tradeoff between computational complexity, calibration time, and classification accuracy. In this paper, we describe a data quantization technique that increases the computational speed associated with calibrating of power spectrum time series data. We test this technique on electroencephalograph (EEG) signals by simulating the calibration of a binary brain-computer interface (BCI). We find that we can increase the computational speed associated with training a machine-learning based classifier 4.5 times without a significant detriment to the system's accuracy. A progressive calibration strategy achieves high accuracy in 86.6% of subjects with under five minutes of quantized calibration data, and in 100% of subjects with under 15 minutes. We discuss implications for consumer BCI devices and for physiological computing applications generally.</td>
+                   </tr><tr>
+                            <td style="width: 20%;vertical-align:top;">
+                            <b>Paper Main Area: </b></td>
+                            <td>Methodologies and Methods</td>
+                        </tr><tr>
+                       <td style="width: 20%;vertical-align:top;">
+                                <b>Paper Topics: </b></td>
+                       <td>Physiological Computing in Mobile Devices; Biosignal&nbsp;Acquisition, Analysis and Processing</td>
+                       </tr></tbody></table></div><div class="b5"><b></b></div><div class="b4"><b></b></div><div class="b3"><b><i></i></b></div>
+                        <div class="b2"><b><i><q></q></i></b></div><div class="b1"><b></b>
+                        </div></div></div></div>
+<script src="./Author's Home_files/ScriptResource.axd" type="text/javascript"></script>
+<script src="./Author's Home_files/ScriptResource(1).axd" type="text/javascript"></script>
+<script src="./Author's Home_files/ScriptResource(2).axd" type="text/javascript"></script>
+<script src="./Author's Home_files/ScriptResource(3).axd" type="text/javascript"></script>
+<script src="./Author's Home_files/ScriptResource(4).axd" type="text/javascript"></script>
+<script src="./Author's Home_files/ScriptResource(5).axd" type="text/javascript"></script>
+<script src="./Author's Home_files/ScriptResource(6).axd" type="text/javascript"></script>
+<script src="./Author's Home_files/ScriptResource(7).axd" type="text/javascript"></script>
+<script src="./Author's Home_files/ScriptResource(8).axd" type="text/javascript"></script>
+<script src="./Author's Home_files/ScriptResource(9).axd" type="text/javascript"></script>
+<script src="./Author's Home_files/ScriptResource(10).axd" type="text/javascript"></script>
+<script src="./Author's Home_files/ScriptResource(11).axd" type="text/javascript"></script>
+<script src="./Author's Home_files/ScriptResource(12).axd" type="text/javascript"></script>
+<script src="./Author's Home_files/ScriptResource(13).axd" type="text/javascript"></script>
+<script src="./Author's Home_files/ScriptResource(14).axd" type="text/javascript"></script>
+<script src="./Author's Home_files/ScriptResource(15).axd" type="text/javascript"></script>
+<script src="./Author's Home_files/ScriptResource(16).axd" type="text/javascript"></script>
+<script src="./Author's Home_files/ScriptResource(17).axd" type="text/javascript"></script>
+<script src="./Author's Home_files/ScriptResource(18).axd" type="text/javascript"></script>
+<script src="./Author's Home_files/ScriptResource(19).axd" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0">
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="bFKJs5+A3xp1NI9TY1w5wAGMA46ghbHvb6MWucfpN2tK5lY38pJBST9WoGnaTP8FTRzD11YKJoMZMKJ0uJMuoyspzt2DtA+1MTOB/1y+tiiPCLHeYbSaSBrWAVQnTZtFwVvw46EpDDcuKjlrn+tUD8S5XWvc9BmA/pyb4cq8RYft087wQ/kL6e29nX3DBCFfXW7l5s5F3C4zdbr2j5T4YQmKzF/RIZFhLhhXJ9Nyf6XnAzB9U0eqW5kYt9jB529lCAwp8bpmfZKbAMvYp3KQ8Xs0bTToGn0ZMVFYjN8kz/YfoaZwmEHXfiHFNVjwKsgPBaqPhe76YSazg9azI1ZoajGllrgyOAkSeQ4OyhEpBvd0LfCZsr9HdgWDgRT64Re8izgYx2p8XZ9Ks85FmP9PVgwnDpctlq7faH0D9qSMN2464vHtKZUbhM/PA04=">
+</div>
+    <input type="image" name="ctl00$ImageButton3" id="ctl00_ImageButton3" class="dummyb" src="./Author's Home_files/false.png" alt=" " style="height:0px;width:0px;border-width:0px;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" id="newbgid">
+        <tbody><tr>
+            <td class="newbg">
+                <table width="100%" border="0" align="center" cellpadding="5" cellspacing="5">
+                    <tbody><tr>
+                        <td>
+                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                <tbody><tr>
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tbody><tr>
+                                                <td class="TopBarimpress_02">
+                                                </td>
+                                                <td class="TopBarimpress_03">
+                                                </td>
+                                                <td class="TopBarimpress_05">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TopBarimpress_07">
+                                                </td>
+                                                <td class="TopBarimpress_08">
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tbody><tr>
+                                                            <td>
+                                                                <table width="100%" border="0" cellspacing="2" cellpadding="2">
+                                                                    <tbody><tr>
+                                                                        <td width="60%">
+                                                                            <div class="banner">
+                                                                            </div>
+                                                                        </td>
+                                                                        <td align="right" style="width: 40%; vertical-align: top">
+                                                                            <div id="ctl00_PanelPrimorisLogin">
+	
+                                                                                
+                                                                                        <div class="ControlPanelLogin v3" style="margin: 0px">
+                                                                                            <div class="b1">
+                                                                                                <b></b>
+                                                                                            </div>
+                                                                                            <div class="b2">
+                                                                                                <b><i><q></q></i></b>
+                                                                                            </div>
+                                                                                            <div class="b3">
+                                                                                                <b><i></i></b>
+                                                                                            </div>
+                                                                                            <div class="b4">
+                                                                                                <b></b>
+                                                                                            </div>
+                                                                                            <div class="b5">
+                                                                                                <b></b>
+                                                                                            </div>
+                                                                                            <div class="text">
+                                                                                                <table class="logintable" style="width: 100%">
+                                                                                                    <tbody><tr>
+                                                                                                        <td style="width: 70%;" align="right">
+                                                                                                            <strong><span style="font-size: 12pt;">Welcome</span></strong>
+                                                                                                            <br>
+                                                                                                            <span id="ctl00_LoginArea_LabelUserTitle" style="display:inline-block;font-weight:bold;width:100%;">Mr. Nick Merrill</span>
+                                                                                                        </td>
+                                                                                                        <td align="center" width="25%" rowspan="2">
+                                                                                                            <input id="ctl00_LoginArea_LoginStatus1" type="image" name="ctl00$LoginArea$LoginStatus1$ctl01" title="Logout" src="./Author's Home_files/logout2.png" alt="Logout" style="border-width:0px;">
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td align="right" style="width: 70%;">
+                                                                                                            <span id="ctl00_LoginArea_LabelEmail" style="display:inline-block;width:100%;">(ffff@berkeley.edu)</span>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td align="right" style="width: 70%;">
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </tbody></table>
+                                                                                            </div>
+                                                                                            <div class="b5">
+                                                                                                <b></b>
+                                                                                            </div>
+                                                                                            <div class="b4">
+                                                                                                <b></b>
+                                                                                            </div>
+                                                                                            <div class="b3">
+                                                                                                <b><i></i></b>
+                                                                                            </div>
+                                                                                            <div class="b2">
+                                                                                                <b><i><q></q></i></b>
+                                                                                            </div>
+                                                                                            <div class="b1">
+                                                                                                <b></b>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        
+                                                                                    
+                                                                            
+</div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody></table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tbody><tr>
+                                                                        <td class="TopBarimpress_13">
+                                                                        </td>
+                                                                        <td class="TopBarimpress_15" align="left">
+                                                                            <span id="ctl00_SiteMapPath1" style="font-family:Verdana;font-size:0.8em;text-align: left"><a href="http://www.insticc.org/Primoris/person/author/AuthorsHome.aspx#ctl00_SiteMapPath1_SkipLink"><img alt="Skip Navigation Links" src="./Author's Home_files/WebResource(2).axd" width="0" height="0" style="border-width:0px;"></a><span><a title="Home" href="http://www.insticc.org/Primoris/Default.aspx" style="color:White;font-weight:bold;">Home</a></span><span style="color:White;font-weight:bold;"> : </span><span style="color:White;font-weight:bold;">Author's Home</span><a id="ctl00_SiteMapPath1_SkipLink"></a></span>
+                                                                        </td>
+                                                                        <td class="TopBarimpress_15" align="right">
+                                                                            <div id="clock" style="vertical-align: top; text-align: right; width: 100%; color: #FFFFFF;">
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="TopBarimpress_20">
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody></table>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                                <td class="TopBarimpress_09">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TopBarimpress_22">
+                                                </td>
+                                                <td class="TopBarimpress_26_2">
+                                                </td>
+                                                <td class="TopBarimpress_27">
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TopBarSpacer">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tbody><tr>
+                                                <td class="TopBarimpress_02">
+                                                </td>
+                                                <td class="TopBarimpress_03">
+                                                </td>
+                                                <td class="TopBarimpress_05">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TopBarimpress_07">
+                                                </td>
+                                                <td class="TopBarimpress_08">
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tbody><tr>
+                                                            <td>
+                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tbody><tr>
+                                                                        <td>
+                                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                                <tbody><tr>
+                                                                                    <td valign="top">
+                                                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                                            <tbody><tr>
+                                                                                                <td id="ctl00_FlashPane" width="100%" valign="top">
+                                                                                                    <div id="ctl00_PanelPrimorisButtons">
+	
+                                                                                                        <div class="ControlPanel4v3">
+                                                                                                            <div class="b1">
+                                                                                                                <b></b>
+                                                                                                            </div>
+                                                                                                            <div class="b2">
+                                                                                                                <b><i><q></q></i></b>
+                                                                                                            </div>
+                                                                                                            <div class="b3">
+                                                                                                                <b><i></i></b>
+                                                                                                            </div>
+                                                                                                            <div class="b4">
+                                                                                                                <b></b>
+                                                                                                            </div>
+                                                                                                            <div class="b5">
+                                                                                                                <b></b>
+                                                                                                            </div>
+                                                                                                            <div class="text">
+                                                                                                                <table width="100%">
+                                                                                                                    <tbody><tr>
+                                                                                                                        <td>
+                                                                                                                            <table style="width: 100%;">
+                                                                                                                                <tbody><tr>
+                                                                                                                                    <td style="vertical-align: top; text-align: left;">
+                                                                                                                                        
+                                                                                                                                                <div class="ControlPanel5" style="width: 290px; margin-bottom: 0px;">
+                                                                                                                                                    <div class="b1">
+                                                                                                                                                        <b></b>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="b2">
+                                                                                                                                                        <b><i><q></q></i></b>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="b3">
+                                                                                                                                                        <b><i></i></b>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="b4">
+                                                                                                                                                        <b></b>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="b5">
+                                                                                                                                                        <b></b>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="text">
+                                                                                                                                                        <div id="sidebar2">
+                                                                                                                                                            <table style="width: 100%">
+                                                                                                                                                                <tbody><tr>
+                                                                                                                                                                    <td style="width: 11%">
+                                                                                                                                                                        <span id="ctl00_Label3">Role:</span>
+                                                                                                                                                                    </td>
+                                                                                                                                                                    <td>
+                                                                                                                                                                        <select name="ctl00$ActiveRolesDropDownList" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ActiveRolesDropDownList\&#39;,\&#39;\&#39;)&#39;, 0)" id="ctl00_ActiveRolesDropDownList" disabled="disabled" class="NormalTextBox" style="height: 19px; width: 80%; font-size: 12px; visibility: visible;">
+		<option selected="selected" value="Author">Author</option>
+
+	</select>
+                                                                                                                                                                    </td>
+                                                                                                                                                                </tr>
+                                                                                                                                                                <tr>
+                                                                                                                                                                    <td style="width: 11%">
+                                                                                                                                                                        <label style="text-align: right">
+                                                                                                                                                                            <span id="ctl00_Label4">Event:</span>
+                                                                                                                                                                        </label>
+                                                                                                                                                                    </td>
+                                                                                                                                                                    <td>
+                                                                                                                                                                        <select name="ctl00$AvailableEventsDropDownList" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$AvailableEventsDropDownList\&#39;,\&#39;\&#39;)&#39;, 0)" id="ctl00_AvailableEventsDropDownList" class="NormalTextBox" style="height: 19px; width: 80%; font-size: 12px; visibility: visible;">
+		<option value="981F" style="font-weight:bold;font-style:italic;" disabled="disabled">PhyCS 2015</option>
+		<option selected="selected" value="981_981">&nbsp;&nbsp;&nbsp;PhyCS 2015 (Conference)</option>
+
+	</select>
+                                                                                                                                                                    </td>
+                                                                                                                                                                </tr>
+                                                                                                                                                            </tbody></table>
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                        </div>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="b5">
+                                                                                                                                                        <b></b>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="b4">
+                                                                                                                                                        <b></b>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="b3">
+                                                                                                                                                        <b><i></i></b>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="b2">
+                                                                                                                                                        <b><i><q></q></i></b>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="b1">
+                                                                                                                                                        <b></b>
+                                                                                                                                                    </div>
+                                                                                                                                                </div>
+                                                                                                                                            
+                                                                                                                                    </td>
+                                                                                                                                    <td style="vertical-align: top; text-align: right; width: 60%">
+                                                                                                                                        <div id="buttons">
+                                                                                                                                            <div id="s1" onmouseout="this.style.backgroundColor=&#39;#E2EBF4&#39;" onmouseover="this.style.backgroundColor=&#39;#B0C4DE&#39;">
+                                                                                                                                                <a id="ctl00_HyperLinkHome" href="http://www.insticc.org/Primoris/Default.aspx">Home</a>
+                                                                                                                                            </div>
+                                                                                                                                            
+                                                                                                                                            <div id="s5" onmouseout="this.style.backgroundColor=&#39;#E2EBF4&#39;" onmouseover="this.style.backgroundColor=&#39;#B0C4DE&#39;">
+                                                                                                                                                <a id="ctl00_HyperLinkMyAccount" href="http://www.insticc.org/Primoris/person/PersonalPage.aspx">My Account</a>
+                                                                                                                                            </div>
+                                                                                                                                            
+                                                                                                                                            <div id="s4" onmouseout="this.style.backgroundColor=&#39;#E2EBF4&#39;" onmouseover="this.style.backgroundColor=&#39;#B0C4DE&#39;">
+                                                                                                                                                <a id="ctl00_HyperLinkSubmitPaper" href="http://www.insticc.org/Primoris/person/SubmitPaper.aspx">Submit Paper</a>
+                                                                                                                                            </div>
+                                                                                                                                            
+                                                                                                                                            <div id="s2" onmouseout="this.style.backgroundColor=&#39;#E2EBF4&#39;" onmouseover="this.style.backgroundColor=&#39;#B0C4DE&#39;">
+                                                                                                                                                <a id="ctl00_HyperLinkUserRegistration" href="http://www.insticc.org/Primoris/person/registration/DelegateRegistration.aspx">Registration</a>
+                                                                                                                                            </div>
+                                                                                                                                            
+                                                                                                                                           
+                                                                                                                                            <div id="s8" onmouseout="this.style.backgroundColor=&#39;#E2EBF4&#39;" onmouseover="this.style.backgroundColor=&#39;#B0C4DE&#39;">
+                                                                                                                                                <a id="ctl00_HyperLinkAuthorsHome" href="./Author's Home_files/Author's Home.html">Author's Home</a></div>
+                                                                                                                                            
+                                                                                                                                        </div>
+                                                                                                                                    </td>
+                                                                                                                                </tr>
+																
+                                                                                                                            </tbody></table>
+                                                                                                                        </td>
+                                                                                                                    </tr>
+                                                                                                                </tbody></table>
+                                                                                                            </div>
+                                                                                                            <div class="b5">
+                                                                                                                <b></b>
+                                                                                                            </div>
+                                                                                                            <div class="b4">
+                                                                                                                <b></b>
+                                                                                                            </div>
+                                                                                                            <div class="b3">
+                                                                                                                <b><i></i></b>
+                                                                                                            </div>
+                                                                                                            <div class="b2">
+                                                                                                                <b><i><q></q></i></b>
+                                                                                                            </div>
+                                                                                                            <div class="b1">
+                                                                                                                <b></b>
+                                                                                                            </div>
+                                                                                                        </div>
+													
+                                                                                                    
+</div>
+                                                                                                </td>
+
+                                                                                            </tr>
+
+                                                                                        </tbody></table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td width="100%" valign="top">
+                                                                                        <div class="rightcolumn" style="width: 100%">
+                                                                                            
+    
+
+<script type="text/javascript" language="javascript" src="./Author's Home_files/Tooltip.js"></script>
+
+<script type="text/javascript" src="./Author's Home_files/ibox.js"></script>
+
+<script type="text/javascript" language="javascript" src="./Author's Home_files/boxover.js"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$Main$HomeAuthor$ScriptManager1', 'aspnetForm', ['tctl00$Main$HomeAuthor$UpdatePanel1',''], [], ['ctl00$Main$HomeAuthor$paperDownload52388','','paperCrDownload52388','','paperCrDownloadPDF52388','','paperCrDownloadFinal52388','','paperCopyrightDownload52388','','paperAttach52388',''], 216000, 'ctl00');
+//]]>
+</script>
+
+
+<script type="text/javascript" language="javascript">
+    var ModalProgress = 'ctl00_Main_HomeAuthor_ModalProgress';
+</script>
+
+<script type="text/javascript" language="javascript" src="./Author's Home_files/jsUpdateProgress.js"></script>
+
+<table width="100%">
+    <tbody><tr>
+        <td style="width: 100%">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody><tr>
+                    <td class="TopBarimpress_13"></td>
+                    <td class="TopBarimpress_15" align="left">
+                        <span class="txtwhite">Author's Home</span>
+                    </td>
+                    <td class="TopBarimpress_20"></td>
+                </tr>
+            </tbody></table>
+            <span id="ctl00_Main_HomeAuthor_AuthorHomeLbl" style="display:inline-block;width:100%;"><div id="v3"> <div class="b1"><b></b></div><div class="b2"><b><i><q></q></i></b></div><div class="b3"><b><i></i></b></div><div class="b4"><b></b></div><div class="b5"><b></b></div><div class="text"> Below you will find the list of papers in which <b>ffff@berkeley.edu</b> is Author/Co-Author.<br> Until the submission date you can modify the paper and re-submit it.<br> Once the paper has been reviewed, you will have access to all its reviews.<br>After acceptance, you are given the opportunity to indicate preferences regarding the presentation schedule.</div><div class="b5"><b></b></div><div class="b4"><b></b></div><div class="b3"><b><i></i></b></div><div class="b2"><b><i><q></q></i></b></div><div class="b1"><b></b></div></div></span>
+        </td>
+        <td style="text-align: right; vertical-align: top; width: 60px">
+            <input type="image" name="ctl00$Main$HomeAuthor$ImageButtonHelp" id="ctl00_Main_HomeAuthor_ImageButtonHelp" src="./Author's Home_files/help32.png" style="border-width:0px;">
+        </td>
+    </tr>
+</tbody></table>
+<table style="width: 100%">
+    <tbody><tr>
+        <td style="text-align: left">
+            <span id="ctl00_Main_HomeAuthor_Label1" style="display:inline-block;font-size:Small;font-weight:bold;width:100%;"></span>
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align: left">
+            <center>
+                <table width="90%">
+                    <tbody><tr>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                </tbody></table>
+            </center>
+            <div id="ctl00_Main_HomeAuthor_UpdatePanel1">
+	
+                    <div id="ctl00_Main_HomeAuthor_PanelPapers">
+		
+                    <div id="v3" style="width:98%">
+<div class="b1"><b></b></div><div class="b2"><b><i><q></q></i></b></div>
+<div class="b3"><b><i></i></b></div><div class="b4"><b></b></div><div class="b5"><b></b></div>
+ <div class="text"><div id="v3" class="ControlPanel4">
+<div class="b1"><b></b></div><div class="b2"><b><i><q></q></i></b></div>
+<div class="b3"><b><i></i></b></div><div class="b4"><b></b></div><div class="b5"><b></b></div>
+ <div class="text"><table style="width:100%"><tbody><tr><td colspan="5" style="text-align:center"><span>You are the <b>Contact Author</b> in this paper</span></td></tr><tr><td colspan="5" style="text-align:center"><span style="color:Green;font-weight:bold;">This paper has been accepted as a Short Paper for a poster presentation</span></td></tr><tr><td colspan="5" style="text-align:left"><b>Paper Title: </b><span>Improving Physiological Signal Classification Using Logarithmic Quantization &amp; a Progressive Calibration Technique</span></td></tr><tr><td style="text-align:left;width:20%"><b>Paper#: </b><span id="ctl00_Main_HomeAuthor_paperNumberLbl52388">15</span>&nbsp;</td><td style="text-align:left;width:20%"><b>Submitted to: </b><span>PhyCS 2015</span>&nbsp;</td><td style="text-align:center"><b>Paper Registered: </b><img id="ctl00_Main_HomeAuthor_registeredImg52388" src="./Author's Home_files/Delete16.png" style="border-width:0px;"></td><td style="text-align:center"><b>CR Received: </b><img id="ctl00_Main_HomeAuthor_crSubmittedImg52388" src="./Author's Home_files/Delete16.png" style="border-width:0px;"></td><td style="text-align:center"><b>Copyright Received: </b><img id="ctl00_Main_HomeAuthor_copyrightImg52388" src="./Author's Home_files/Delete16.png" style="border-width:0px;"></td></tr><tr><td colspan="5" style="text-align:left"><b>Abstract: </b><span>Physiological signals vary widely between persons, and even within individuals over time. As a result, applications with physiological inputs usually require repeated calibration. Application designers face a tradeoff between computational complexity, calibration time, and classification accuracy. In this paper, we describe a data quantization technique that increases the computational speed associated with calibrating of power spectrum time series data. We test this technique on electroencephalograph (EEG) signals by simulating the calibration of a binary brain-computer interface (BCI). We find that we can increase the computational speed associated with training a machine-learning based classifier 4.5 times without a significant detriment to the system's accuracy. A progressive calibration strategy achieves high accuracy in 86.6% of subjects with under five minutes of quantized calibration data, and in 100% of subjects with under 15 minutes. We discuss implications for consumer BCI devices and for physiological computing applications generally.</span></td></tr><tr><td colspan="5" style="text-align:left"><b>Keywords: </b><span>bio-signal processing, signal quantization, logarithmic binning, calibration, mobile physiological computing</span></td></tr></tbody></table></div><div class="b5"><b></b></div><div class="b4"><b></b></div><div class="b3"><b><i></i></b></div>
+                 <div class="b2"><b><i><q></q></i></b></div><div class="b1"><b></b></div></div><div id="v3" class="ControlPanel4">
+<div class="b1"><b></b></div><div class="b2"><b><i><q></q></i></b></div>
+<div class="b3"><b><i></i></b></div><div class="b4"><b></b></div><div class="b5"><b></b></div>
+ <div class="text"><table align="center"><tbody><tr><td style="text-align:center"><a id="ctl00_Main_HomeAuthor_paperDetails52388" href="javascript:__doPostBack('ctl00$Main$HomeAuthor$paperDetails52388','')"></a><a href="http://www.insticc.org/Primoris/person/author/AuthorsHome.aspx#DivRow52388" rel="ibox&amp;height=430&amp;width=650"><img src="./Author's Home_files/info32.png" border="0"></a><br>Paper Details &nbsp;</td><td style="text-align:center"><a id="ctl00_Main_HomeAuthor_paperRevisions52388" href="javascript:__doPostBack('ctl00$Main$HomeAuthor$paperRevisions52388','')"></a><a href="http://www.insticc.org/Primoris/person/author/PaperRevisionsPopup.aspx?idPaper=52388" rel="ibox&amp;height=430&amp;width=650"><img src="./Author's Home_files/revision32.png" border="0/"></a><br>&nbsp;Paper Reviews &nbsp;</td><td style="text-align:center"><input type="image" name="ctl00$Main$HomeAuthor$paperDownload52388" id="ctl00_Main_HomeAuthor_paperDownload52388" src="./Author's Home_files/Download.png" style="border-width:0px;"><br>&nbsp;Paper Download &nbsp;&nbsp;&nbsp;</td><td style="text-align:center"><input type="image" name="ctl00$Main$HomeAuthor$paperPresentation52388" id="ctl00_Main_HomeAuthor_paperPresentation52388" src="./Author's Home_files/Dashboard.png" style="border-width:0px;"><br>&nbsp;Presentation<br>Constraints&nbsp;</td><td style="text-align:center"><input type="image" name="ctl00$Main$HomeAuthor$paperCrSubmission52388" id="ctl00_Main_HomeAuthor_paperCrSubmission52388" src="./Author's Home_files/camera_ready32.png" style="border-width:0px;"><br>&nbsp;Camera-Ready<br>Submission &nbsp;</td><td style="text-align:center"><input type="image" name="ctl00$Main$HomeAuthor$imageButtonSelectionRebuttal52388" id="ctl00_Main_HomeAuthor_imageButtonSelectionRebuttal52388" src="./Author's Home_files/Refresh-32.png" style="border-width:0px;"><br>&nbsp;Rebuttal&nbsp;</td></tr></tbody></table><center></center></div><div class="b5"><b></b></div><div class="b4"><b></b></div><div class="b3"><b><i></i></b></div>
+                 <div class="b2"><b><i><q></q></i></b></div><div class="b1"><b></b></div></div></div><div class="b5"><b></b></div><div class="b4"><b></b></div><div class="b3"><b><i></i></b></div>
+                 <div class="b2"><b><i><q></q></i></b></div><div class="b1"><b></b></div></div>
+	</div>
+
+                    <div id="ctl00_Main_HomeAuthor_RadWindowSelectionRebuttal" class="primorisPopUpCssOut2" style="display:none;">
+		<!-- 2010.3.1215.35 --><div id="ctl00_Main_HomeAuthor_RadWindowSelectionRebuttal_alerttemplate" style="display:none;">
+		<div class="rwDialogPopup radalert">			
+			<div class="rwDialogText">
+			{1}				
+			</div>
+			
+			<div>
+				<a onclick="$find(&#39;{0}&#39;).close();" class="rwPopupButton" href="javascript:void(0);">
+					<span class="rwOuterSpan">
+						<span class="rwInnerSpan">##LOC[OK]##</span>
+					</span>
+				</a>				
+			</div>
+		</div>
+		</div><div id="ctl00_Main_HomeAuthor_RadWindowSelectionRebuttal_prompttemplate" style="display:none;">
+		 <div class="rwDialogPopup radprompt">			
+			    <div class="rwDialogText">
+			    {1}				
+			    </div>		
+			    <div>
+				    <script type="text/javascript">
+				    function RadWindowprompt_detectenter(id, ev, input)
+				    {							
+					    if (!ev) ev = window.event;                
+					    if (ev.keyCode == 13)
+					    {															        
+					        var but = input.parentNode.parentNode.getElementsByTagName("A")[0];					        
+					        if (but)
+						    {							
+							    if (but.click) but.click();
+							    else if (but.onclick)
+							    {
+							        but.focus(); var click = but.onclick; but.onclick = null; if (click) click.call(but);							 
+							    }
+						    }
+					       return false;
+					    } 
+					    else return true;
+				    }	 
+				    </script>
+				    <input title="Eneter Value" onkeydown="return RadWindowprompt_detectenter(&#39;{0}&#39;, event, this);" type="text" class="rwDialogInput" value="{2}">
+			    </div>
+			    <div>
+				    <a onclick="$find(&#39;{0}&#39;).close(this.parentNode.parentNode.getElementsByTagName(&#39;input&#39;)[0].value);" class="rwPopupButton" href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				    <a onclick="$find(&#39;{0}&#39;).close(null);" class="rwPopupButton" href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			    </div>
+		    </div>				       
+		</div><div id="ctl00_Main_HomeAuthor_RadWindowSelectionRebuttal_confirmtemplate" style="display:none;">
+		<div class="rwDialogPopup radconfirm">			
+			<div class="rwDialogText">
+			{1}				
+			</div>						
+			<div>
+				<a onclick="$find(&#39;{0}&#39;).close(true);" class="rwPopupButton" href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				<a onclick="$find(&#39;{0}&#39;).close(false);" class="rwPopupButton" href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			</div>
+		</div>		
+		</div><input id="ctl00_Main_HomeAuthor_RadWindowSelectionRebuttal_ClientState" name="ctl00_Main_HomeAuthor_RadWindowSelectionRebuttal_ClientState" type="hidden">
+	</div>
+                    <div id="ctl00_Main_HomeAuthor_WindowToOpen" class="primorisPopUpCssOut2" style="display:none;">
+		<div id="ctl00_Main_HomeAuthor_WindowToOpen_C">
+
+		</div><input id="ctl00_Main_HomeAuthor_WindowToOpen_ClientState" name="ctl00_Main_HomeAuthor_WindowToOpen_ClientState" type="hidden" autocomplete="off">
+	</div>
+                
+</div>
+        </td>
+    </tr>
+</tbody></table>
+<div id="ctl00_Main_HomeAuthor_PanelHelp" style="display: none; position: absolute; z-index: 100001;">
+	
+    <div id="Mwrapper" style="width: 670px">
+        <div id="Mcontent">
+            <div style="background-color: White; padding: 25px">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody><tr>
+                        <td class="TopBarimpress_13"></td>
+                        <td class="TopBarimpress_15" align="left">
+                            <span class="txtwhite">Author's Help &amp; Tips</span>
+                        </td>
+                        <td class="TopBarimpress_20"></td>
+                    </tr>
+                </tbody></table>
+                <div id="ctl00_Main_HomeAuthor_PanelHelpTopics" style="height:420px;overflow:auto;">
+		
+                    <div id="Div1" class="ControlPanel4">
+                        <div class="b1">
+                            <b></b>
+                        </div>
+                        <div class="b2">
+                            <b><i><q></q></i></b>
+                        </div>
+                        <div class="b3">
+                            <b><i></i></b>
+                        </div>
+                        <div class="b4">
+                            <b></b>
+                        </div>
+                        <div class="b5">
+                            <b></b>
+                        </div>
+                        <div class="text">
+                            <div style="width: 36px; float: left">
+                                <img src="./Author's Home_files/info32.png">
+                            </div>
+                            <div style="padding-left: 50px">
+                                <b>Paper Details</b><br>
+                                You may obtain detailed information by clicking the icon, including the following
+                                    items :
+                                    <br>
+                                Paper Number, Number of Pages, Author, Co-Authors, Paper Title, Paper Keywords,
+                                    Paper Abstract, Selection State, Submitted to Event, Paper Main Area.
+                            </div>
+                        </div>
+                        <div class="b5">
+                            <b></b>
+                        </div>
+                        <div class="b4">
+                            <b></b>
+                        </div>
+                        <div class="b3">
+                            <b><i></i></b>
+                        </div>
+                        <div class="b2">
+                            <b><i><q></q></i></b>
+                        </div>
+                        <div class="b1">
+                            <b></b>
+                        </div>
+                    </div>
+                    <div id="Div2" class="ControlPanel4">
+                        <div class="b1">
+                            <b></b>
+                        </div>
+                        <div class="b2">
+                            <b><i><q></q></i></b>
+                        </div>
+                        <div class="b3">
+                            <b><i></i></b>
+                        </div>
+                        <div class="b4">
+                            <b></b>
+                        </div>
+                        <div class="b5">
+                            <b></b>
+                        </div>
+                        <div class="text">
+                            <div style="width: 36px; float: left">
+                                <img src="./Author's Home_files/revision32.png">
+                            </div>
+                            <div style="padding-left: 50px">
+                                <b>Paper Reviews</b><br>
+                                Check the reviews made on your paper. To check the reviews please click on the icon.
+                            </div>
+                        </div>
+                        <div class="b5">
+                            <b></b>
+                        </div>
+                        <div class="b4">
+                            <b></b>
+                        </div>
+                        <div class="b3">
+                            <b><i></i></b>
+                        </div>
+                        <div class="b2">
+                            <b><i><q></q></i></b>
+                        </div>
+                        <div class="b1">
+                            <b></b>
+                        </div>
+                    </div>
+                    <div id="Div3" class="ControlPanel4">
+                        <div class="b1">
+                            <b></b>
+                        </div>
+                        <div class="b2">
+                            <b><i><q></q></i></b>
+                        </div>
+                        <div class="b3">
+                            <b><i></i></b>
+                        </div>
+                        <div class="b4">
+                            <b></b>
+                        </div>
+                        <div class="b5">
+                            <b></b>
+                        </div>
+                        <div class="text">
+                            <div style="width: 36px; float: left">
+                                <img src="./Author's Home_files/Dashboard.png">
+                            </div>
+                            <div style="padding-left: 50px">
+                                <b>Presentation Constraints</b><br>
+                                To indicate your preferences regarding the paper presentation schedule please click
+                                    the icon.
+                            </div>
+                        </div>
+                        <div class="b5">
+                            <b></b>
+                        </div>
+                        <div class="b4">
+                            <b></b>
+                        </div>
+                        <div class="b3">
+                            <b><i></i></b>
+                        </div>
+                        <div class="b2">
+                            <b><i><q></q></i></b>
+                        </div>
+                        <div class="b1">
+                            <b></b>
+                        </div>
+                    </div>
+                    <div id="Div4" class="ControlPanel4">
+                        <div class="b1">
+                            <b></b>
+                        </div>
+                        <div class="b2">
+                            <b><i><q></q></i></b>
+                        </div>
+                        <div class="b3">
+                            <b><i></i></b>
+                        </div>
+                        <div class="b4">
+                            <b></b>
+                        </div>
+                        <div class="b5">
+                            <b></b>
+                        </div>
+                        <div class="text">
+                            <div style="width: 36px; float: left">
+                                <img src="./Author's Home_files/Upload.png">
+                            </div>
+                            <div style="padding-left: 50px">
+                                <b>Paper Update</b><br>
+                                To change any details, paper topics or authors, or to upload a new version of the
+                                    paper please click on the icon.Please check carefully the coherence of the information
+                                    modified. The last version submitted before the deadline is the one that counts.
+                            </div>
+                        </div>
+                        <div class="b5">
+                            <b></b>
+                        </div>
+                        <div class="b4">
+                            <b></b>
+                        </div>
+                        <div class="b3">
+                            <b><i></i></b>
+                        </div>
+                        <div class="b2">
+                            <b><i><q></q></i></b>
+                        </div>
+                        <div class="b1">
+                            <b></b>
+                        </div>
+                    </div>
+                    <div id="Div5" class="ControlPanel4">
+                        <div class="b1">
+                            <b></b>
+                        </div>
+                        <div class="b2">
+                            <b><i><q></q></i></b>
+                        </div>
+                        <div class="b3">
+                            <b><i></i></b>
+                        </div>
+                        <div class="b4">
+                            <b></b>
+                        </div>
+                        <div class="b5">
+                            <b></b>
+                        </div>
+                        <div class="text">
+                            <div style="width: 36px; float: left">
+                                <img src="./Author's Home_files/Download.png">
+                            </div>
+                            <div style="padding-left: 50px">
+                                <b>Paper Download</b><br>
+                                To retrieve the paper you submitted please download your paper by clicking the icon.
+                            </div>
+                        </div>
+                        <div class="b5">
+                            <b></b>
+                        </div>
+                        <div class="b4">
+                            <b></b>
+                        </div>
+                        <div class="b3">
+                            <b><i></i></b>
+                        </div>
+                        <div class="b2">
+                            <b><i><q></q></i></b>
+                        </div>
+                        <div class="b1">
+                            <b></b>
+                        </div>
+                    </div>
+                    <div id="Div6" class="ControlPanel4">
+                        <div class="b1">
+                            <b></b>
+                        </div>
+                        <div class="b2">
+                            <b><i><q></q></i></b>
+                        </div>
+                        <div class="b3">
+                            <b><i></i></b>
+                        </div>
+                        <div class="b4">
+                            <b></b>
+                        </div>
+                        <div class="b5">
+                            <b></b>
+                        </div>
+                        <div class="text">
+                            <div style="width: 36px; float: left">
+                                <img src="./Author's Home_files/camera_ready32.png">
+                            </div>
+                            <div style="padding-left: 50px">
+                                <b>Camera Ready Submission</b><br>
+                                To submit the Camera Ready version of your Paper. You can also re-submit your Camera
+                                    Ready Paper if link is active.
+                            </div>
+                        </div>
+                        <div class="b5">
+                            <b></b>
+                        </div>
+                        <div class="b4">
+                            <b></b>
+                        </div>
+                        <div class="b3">
+                            <b><i></i></b>
+                        </div>
+                        <div class="b2">
+                            <b><i><q></q></i></b>
+                        </div>
+                        <div class="b1">
+                            <b></b>
+                        </div>
+                    </div>
+                    <div id="Div7" class="ControlPanel4">
+                        <div class="b1">
+                            <b></b>
+                        </div>
+                        <div class="b2">
+                            <b><i><q></q></i></b>
+                        </div>
+                        <div class="b3">
+                            <b><i></i></b>
+                        </div>
+                        <div class="b4">
+                            <b></b>
+                        </div>
+                        <div class="b5">
+                            <b></b>
+                        </div>
+                        <div class="text">
+                            <div style="width: 36px; float: left">
+                                <img src="./Author's Home_files/CRdownload.png">
+                            </div>
+                            <div style="padding-left: 50px">
+                                <b>Camera-Ready Source Download</b><br>
+                                By clicking on this icon you'll be able to download/view your last submitted camera-ready source
+                            </div>
+                        </div>
+                        <div class="b5">
+                            <b></b>
+                        </div>
+                        <div class="b4">
+                            <b></b>
+                        </div>
+                        <div class="b3">
+                            <b><i></i></b>
+                        </div>
+                        <div class="b2">
+                            <b><i><q></q></i></b>
+                        </div>
+                        <div class="b1">
+                            <b></b>
+                        </div>
+                    </div>
+                    <div id="Div8" class="ControlPanel4">
+                        <div class="b1">
+                            <b></b>
+                        </div>
+                        <div class="b2">
+                            <b><i><q></q></i></b>
+                        </div>
+                        <div class="b3">
+                            <b><i></i></b>
+                        </div>
+                        <div class="b4">
+                            <b></b>
+                        </div>
+                        <div class="b5">
+                            <b></b>
+                        </div>
+                        <div class="text">
+                            <div style="width: 36px; float: left">
+                                <img src="./Author's Home_files/acroread.png">
+                            </div>
+                            <div style="padding-left: 50px">
+                                <b>Camera-Ready PDF Download</b><br>
+                                By clicking on this icon you'll be able to download/view your last submitted camera-ready PDF
+                            </div>
+                        </div>
+                        <div class="b5">
+                            <b></b>
+                        </div>
+                        <div class="b4">
+                            <b></b>
+                        </div>
+                        <div class="b3">
+                            <b><i></i></b>
+                        </div>
+                        <div class="b2">
+                            <b><i><q></q></i></b>
+                        </div>
+                        <div class="b1">
+                            <b></b>
+                        </div>
+                    </div>
+                    <div id="Div9" class="ControlPanel4">
+                        <div class="b1">
+                            <b></b>
+                        </div>
+                        <div class="b2">
+                            <b><i><q></q></i></b>
+                        </div>
+                        <div class="b3">
+                            <b><i></i></b>
+                        </div>
+                        <div class="b4">
+                            <b></b>
+                        </div>
+                        <div class="b5">
+                            <b></b>
+                        </div>
+                        <div class="text">
+                            <div style="width: 36px; float: left">
+                                <img src="./Author's Home_files/kedit.png">
+                            </div>
+                            <div style="padding-left: 50px">
+                                <b>Copyright Form Download</b><br>
+                                By clicking on this icon you'll be able to download the copyright consent form. You'll then have to send it to the conference secretariat by e-mail or fax.
+                            </div>
+                        </div>
+                        <div class="b5">
+                            <b></b>
+                        </div>
+                        <div class="b4">
+                            <b></b>
+                        </div>
+                        <div class="b3">
+                            <b><i></i></b>
+                        </div>
+                        <div class="b2">
+                            <b><i><q></q></i></b>
+                        </div>
+                        <div class="b1">
+                            <b></b>
+                        </div>
+                    </div>
+                    <div id="Div10" class="ControlPanel4">
+                        <div class="b1">
+                            <b></b>
+                        </div>
+                        <div class="b2">
+                            <b><i><q></q></i></b>
+                        </div>
+                        <div class="b3">
+                            <b><i></i></b>
+                        </div>
+                        <div class="b4">
+                            <b></b>
+                        </div>
+                        <div class="b5">
+                            <b></b>
+                        </div>
+                        <div class="text">
+                            <div style="width: 36px; float: left">
+                                <img src="./Author's Home_files/attach.png">
+                            </div>
+                            <div style="padding-left: 50px">
+                                <b>Paper Attachments</b><br>
+                                By clicking on this icon you'll be able to manage your media files by uploading and downloading them.
+                            </div>
+                        </div>
+                        <div class="b5">
+                            <b></b>
+                        </div>
+                        <div class="b4">
+                            <b></b>
+                        </div>
+                        <div class="b3">
+                            <b><i></i></b>
+                        </div>
+                        <div class="b2">
+                            <b><i><q></q></i></b>
+                        </div>
+                        <div class="b1">
+                            <b></b>
+                        </div>
+                    </div>
+                
+	</div>
+            </div>
+        </div>
+        <div id="Mfooter_wrapper">
+            <a id="ctl00_Main_HomeAuthor_LinkButtonHelpClose" href="javascript:__doPostBack('ctl00$Main$HomeAuthor$LinkButtonHelpClose','')" style="color:White;font-size:12px;font-weight:bold;">Click here to Close</a>
+        </div>
+    </div>
+
+</div>
+
+<div id="ctl00_Main_HomeAuthor_panelUpdateProgress" class="updateProgress" style="display: none; position: absolute; z-index: 100001;">
+	
+    <div id="ctl00_Main_HomeAuthor_UpdateProg1" style="display:none;" role="status" aria-hidden="true">
+		
+            <div>
+                <img src="./Author's Home_files/barload.gif" style="vertical-align: middle">
+            </div>
+        
+	</div>
+
+</div>
+
+
+
+                                                                                            <br>
+                                                                                            <br>
+                                                                                        <div class="modalBackground" style="display: none; position: absolute; left: 0px; top: 0px; z-index: 10000;"></div><div class="modalBackground" style="display: none; position: absolute; left: 0px; top: 0px; z-index: 10000;"></div></div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody></table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody></table>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                                <td class="TopBarimpress_09">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TopBarimpress_22">
+                                                </td>
+                                                <td class="TopBarimpress_26_2">
+                                                </td>
+                                                <td class="TopBarimpress_27">
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TopBarSpacer">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <!-- Footer -->
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tbody><tr>
+                                                <td class="TopBarimpress_02">
+                                                </td>
+                                                <td class="TopBarimpress_03">
+                                                </td>
+                                                <td class="TopBarimpress_05">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TopBarimpress_07">
+                                                </td>
+                                                <td class="TopBarimpress_08">
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tbody><tr>
+                                                            <td>
+                                                                <table width="100%">
+                                                                    <tbody><tr>
+                                                                        <td align="left" class="Footer">
+                                                                            PRIMORIS - Event Management System -
+                                                                            <span title="Latin word for: first or most distinguished.." style="font-weight:bold;">PRIMORIS</span>
+                                                                            ©2008-2014 All rights reserved.
+                                                                        </td>
+                                                                        <td align="right" class="Footer">
+                                                                            Optimized for 1024x768 or higher resolutions
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody></table>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                                <td class="TopBarimpress_09">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TopBarimpress_22">
+                                                </td>
+                                                <td class="TopBarimpress_26_2">
+                                                </td>
+                                                <td class="TopBarimpress_27">
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindowManager, {"behaviors":36,"clientStateFieldID":"ctl00_Main_HomeAuthor_RadWindowSelectionRebuttal_ClientState","formID":"aspnetForm","height":"650px","iconUrl":"","minimizeIconUrl":"","modal":true,"name":"RadWindowSelectionRebuttal","reloadOnShow":true,"showContentDuringLoad":false,"skin":"Default","visibleStatusbar":false,"visibleTitlebar":false,"width":"750px","windowControls":"[]"}, null, null, $get("ctl00_Main_HomeAuthor_RadWindowSelectionRebuttal"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"behaviors":36,"clientStateFieldID":"ctl00_Main_HomeAuthor_WindowToOpen_ClientState","formID":"aspnetForm","height":"650px","iconUrl":"","minimizeIconUrl":"","modal":true,"name":"WindowToOpen","reloadOnShow":true,"showContentDuringLoad":false,"skin":"Default","visibleStatusbar":false,"visibleTitlebar":false,"width":"750px"}, null, null, $get("ctl00_Main_HomeAuthor_WindowToOpen"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","CancelControlID":"ctl00_Main_HomeAuthor_LinkButtonHelpClose","DynamicServicePath":"/Primoris/person/author/AuthorsHome.aspx","PopupControlID":"ctl00_Main_HomeAuthor_PanelHelp","id":"ctl00_Main_HomeAuthor_ModalPopupHelp"}, null, null, $get("ctl00_Main_HomeAuthor_ImageButtonHelp"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":0,"dynamicLayout":true}, null, null, $get("ctl00_Main_HomeAuthor_UpdateProg1"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","DynamicServicePath":"/Primoris/person/author/AuthorsHome.aspx","PopupControlID":"ctl00_Main_HomeAuthor_panelUpdateProgress","id":"ctl00_Main_HomeAuthor_ModalProgress"}, null, null, $get("ctl00_Main_HomeAuthor_panelUpdateProgress"));
+});
+//]]>
+</script>
+</form>
+
+
+<div id="ibox"><div id="ibox_w" style="opacity: 0.6; height: 625px;"></div><div id="ibox_progress" style="left: 619px; top: 591px; display: none;"><img src="./Author's Home_files/indicator.gif"></div><div id="ibox_wrapper" style="opacity: 1; height: 430px; width: 650px; visibility: visible; left: 347px; top: 77px;"><div id="ibox_content" style="overflow: auto;">
+
+
+<link rel="stylesheet" href="./Author's Home_files/default.css" type="text/css" media="screen"><title>
+
+</title>
+
+    <form name="form1" method="post" action="http://www.insticc.org/Primoris/person/author/PaperRevisionsPopup.aspx?idPaper=52388" id="form1">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="v7HsDKqk/AJEOsACBN2amgNu/HtRxkay5QJOFwSEwB2El1a8Pre0NGLPTrkQaNQ5j1Ai5zwlks5r+1ljaN8KJd60i5MhUC1BKjlCzWwiWjyUB/6vwCMNU53a8ZqaTtaW7rW9eFLhzAUiEbAVINMIxj9CcX4XmD/A4okPkuDlFzLwCHAp2d/WXZ012f/Daj4gWcpdSvbvbTD39/rDDn74XWbvYewSlnmTx6Zzgdd1v5Xt8syt8+n+FqWj1LMPVwyASkGbelmkcwuIB4nE8+w3UoFLykpdrshFsWHq/KXJ83hgQm+kENoZZI9CzmaheBATlTT+vnBbzOAU5PfzD+W/CQ8qoXHYbO22GPLGhLSPagIfygiBhfvMOl10WefkloImQonQIT/jVY98FHMhEAuJBh8fdw0VzCvUCWLhBgpD50XUpIBWryEcpPIEivYUGlcOgB5qkMn1jmdhnkJEvHYwQu822hI/+n/L7omF2oChkC3xojVYDHgwP1MbHbP4hav7wVyYdym776jREbnc5aAIRlUgxUywqweVwAS5PLm1fmfoc1aR4U8V7YEtXW39QkbAxujWGytEzcsfY2h4JLf7zhgXlGLLhmes0YjOrGrSGwZhTmDbIJNff03Nv8rPtCAZg7yN1jFoINMXTUxKvt/XpwUw7+FLkeifV7PhAfbAmOx72JMzu9NQIZMK99qk9NoR6QKYLsz7I63qmaL3Ivt3Y9bfh3+sMQlxH4xORiCDijFfzhI3JLjMZrLjy4fs5G/XtwmLOx1eeDoJ0pdJlaDlXaI2tDQ14y9qNPkdxmjGISS/GaGuvv5PW2RF8waAgsGyUPxe+pmkuq+7Fd0z9q9l/mOMg+XC33n8FGHqk5FdoHwHoAX7cTauLXNF1iSfSnhwxj/Y0ijpqN/+EF5rPmotVSy7o5BH48XM4GhFgJcaILC6kEDp/rTy6JPknEk51YKnUh40wCak1BLA/gY8FLLR6rrJHCegnGMZCJ53093fbkJ72FUeyGX3mBIzOYBM2NjBjXdBguu3Qf8lPpUokvV9sFG/Bzgb+eYJmIk07FZfM27U8b4FxO6ENGWE3XiS1UZWgJeQ/4ljOKsWRzoli6hiI0DpjZnXD/DUUJ52z221/ArTa5FFSdTnFGZSBENtvp0Yx6Uj2XDNMICni8eN78v5gHi82wc87Wgqlu5GhP7se9FWZ1oTZwb4KVUw0Q6p1GjCfCmVQdbpqGloiDrNZZgXXzR3Q3W/BodFjPOmoHkootvtWfQ6CUWLYA7Q87MFODrEA4fH7RDXz99hhlIzW8/scSYJfq8bEcgc2ee5GMVQR0rvYL4H6957iRpGaoyITf/JAv6+yp5O/gKEEErRMtM0st/o7ej/luuxGS4i0sWuPHC4krDo4xYS1FaxMSU7Aa1hSOohqAFoumzcA93CAq1qQOGODbzZrS+DSfjQ+Dhjpvs0NQkCHb+IQ0NWlGNeBX3Z8qPOEmlwtjCXqEmPk7qzDRnxTNcrWIqbN84SEBIB0tK3SIlYxUe84s8DwU7iPEMfO5TgMXx216bja915JSpUrTnAD1jdUJKhy9kPTWGCL5bQfvQMmOwqFi0hwOxy2ptl+Zqhi0MR7hpCr4GMaJYVJx+4phmMHwxmIKVNdhH6gsJqOu5BJKB9JxUEc7ZrFkWCze2z01sgAdHttDlT3Fk4lSxcfvsnMjQbnhUqqJbf1UDDtrZaGB7ZnHdZoVuboF5oaNwky1EawobcXglQMo9gSu4N/D8pr4LP0aIyXe/DxASILluMnuWaRo/ACTe7xRJ8LBeyz5Vwg2dc0TIQpnofkJHljqnAfHmvyqSOY4T1qizh4RvOpF2C3Gba7L9/y3T/NT50YtTo+hAcKQZcM+1A0amsllPv34xOKKMTJkr4qSunGHSAxjDdkxkQiXVN+JrXhDRmrh8uYBembx2tr7C9+nICzOeBRdf88vzT3+BOg8zTHTHOp5I9wep0bNEjb8OydGOI5HdUxP/X2KbNXuPA/HuHNpNAEdtwoqCN0UuDCC+saDekB2xv1kFxSlXmDaXdzYAzBGOhcONfGaBryIVSKEZasUdIwwti9kL6UGTLQSo/HMI7fgOwyikiKf1U2rbMVFwYUz8xPWFfFoS2x6C/Y6iYfFjsfvbojs06WjuQG30/rXYP6nOvoHpiXEntklQkS64GB43hFGNjc8nTpD1ij7pb6yklAOwYVHAnohfEaISSXSUU3f8lksrr2JvviOD/YPfKgzG2iTNictv62+BdV1cW1WaJ/0rg56terZbeP/6TpGzt0OnDjuVv3qEdoTxhgtzUu0NEF6py3w/aMB2AIRiOc6xDWsIXt2PMmmA4WJvjrI2Nd0g2d9esTYIaXiv/UuH43qOZQvou76paEIKVaDlXgsC6HMq/IIx32NL5+pN4qTpWc+49ljDtnyH/aILwiU9zjnonbWPNN1AI9zoP1OsnowoAnUhS1X23g/nnLZcoposEDYpd+D7vTkM+ZQf7fflM+LMDnkNnLXNVYH0OX5iyg997Wojj+Am3AhQZ1WWRjF7+y2cjJIMy2GhhZFOfyIGWdf7O9LFjjAjAkDXVqsGiWLB/NHVjV1zaljt616YRgZAYqgNG5mp+M5zS2NKsR4LD3fOp75IYP6jL9H2rm9uys7LYukl7F+A4K8jNXuaXYSqwAc5qAPF/T4iFe4k6Qj+KvAuT2XeKoxq00ftPfMhnyI3ABd2tAZAhspxJQEwJxiJ2NHxBykrhL7xYxfoN/Wkkf4RrFCymzoSwgJVmhkQlqB5gawyeV9NwCgLJgB+GQDCEs0jhc5rW/byW4U97hj4AURwZ0QkMKFHkSGgeRFo9ZctsbORzBp/95ntwwvp4+fISDWQP7NE99iBMywJeLY2L75OEhJZ/HHx9jpzFSJlKHMiUe3ACu1TNNBTC4x5u7jJEKOANgu+u5rscz0luPM28PcQw+BMF4lpcvGF6r8ZMpCAjs4j0Yd8y7dNErUZaV/h3nfF5ap5m/Li8a81vKOETSkHSDhEgfYH2Jr27J3iDEzUyt5T4DhR8bNgXlaTIVrgoUj8gTnY5dZUghcNH4FPwMhyFxKII83cbsztqVrKVtXL44ya20kRNNOKkQy+5jvFDK3X3QxhQP8GfVtVRbMHKJLNT1s5efK2hXBfkKn3Wx0Wu1A6V5HjluC8m0wF8nHGgKiP24xwg9QXVeMLivdx/DHQBfcVeExG0RHP0qfjIlKrCLiRtGnCHe2DLU9R9Dki2kGACke4HQMgmN6ZIFU4FuUUcrVgTLlPk6yBB4jMD7j97RzpqXbW2BoIhVSfMft2h2XJ303G8cuDZ1zY3zPoJc3NSYz1fNYgp8UTwfgwxBGYvzC+z8m5itBiNqCaMAkvJRnJjn/U4xnRPEFaa/L64k6oz17dam80Gl8MhZarbfvKyBlp0X5kwlYJjInILL5YQGtDOE6gVdD0wm4OID+IkcPGCVbhePBo7VuOOWXgxr5injpFI+/sxbYdstA1ow6eEC4t+qgeWegU1MCWuirz7llrqxcNIxQj5a0EMrzGrCT5V0Rl8fzcpGhuktetEpNSj5tbp71rP9GmhOImEsm6FdU1uKhcYntCFPGW45HoBen2ZCwPhVQXbA+ciqRs5EvsI4mxiewZqzwqKmQlevzcutK1xZHYbM9coBBcn3ZdmHlNFsAqr/7IgI7QfPHFaYSE7Q6khaFYvrWPQBeDthCZkzt1K7xwXpIedRdlBRiVyXwhydFuu1Th6pWSKKIGgB/fc/4NDM8OjNx1iBacJd7K4oX0iysQbDm9SesAjYM+qJ2y3Qb7ZjpYPGCM1exgq1qbGic2gYbrf90QCEjfwSzGI83xykFmCCPfRG28mRbWkWRqpALGPNWq6rq8qv10O5qfFjWRmVf409vkzbvEw4p26l2A5o9MbHo7IH5oj27y4yxwkx95+hbIfJmlqq6mnzkE4QwgMQQKuiThlLap/gvzO4A0YGKH12bEtXfzJh2xbmCzWRGZvszEL0Rj3fRUCiLlwyC2BcfIHBj9iTouEkAng9diZg0XcaRQgkBqSX+AGAOiFJAKwjCVeiWLvrjKAWbqn/o8pJ8qCKe4WaIawtmZPRW8wAdqOyz5LKCAWnXvr/3kc/eccL24hC7t/YUM9XZf2WaiFvlul2ydk4ablSUxdaIqul23sXo6D2Z7WnTO3jA2ahjplkwItmi6X/sRrC52gWUD/fVZHPGXgJftiXhJgaXVDpw5ysgEA6/u4gNslHcYogzWtPFLYBw7Geu4w643UooK038aOgFAYi6ZuBLJeHsrlWfRdWVVrhi7QzUBtkdkN7GjPiN3+Ky2gLzqB7zGQGo46rFY9Jp7sbGdlHgwuSVUv2z+EZr1OQJ5/1iG+VlhZW1zCobPNeJV3Q2ozqQDseb1Sjh3WmWOEtzLx9WdLvIhyfGcDZicg2dufNysxCBzSAZjqGaJozmXso7kA+nSvcEXuoOZAEVrVoYn9df/htNzJ2UGTuJTn8H8FAsvB48NK/hWbv2zYPg9EB+4JdCSdfxDkWU1l+gTKHV9Sbm/EwljMvgT6waz9jDKfH87CU0uZY8HljhXGLAgxDzUSf3g9ktSo4CJhB/PHL8+zHTLj8xEsEIy4qw/eTd6+M5Xcwtuc7fsHsUvk0zQWPe3YcZOeCHONU0KX5aAbn2kdpEjlNQyoT0uCI8/XIocL7GXe3a0ABOxAbkGZajbDe5sWs/KW0j/+u+AvTcBiJHVOqY6fXy4Y6M2mvsqhHoAGQOagYpw6LjP9nvPEmAjN4b4eoZ8/N3+ps85A4d/UTnXJ5/f0hJfj70ti3BfnDK/lIryETrPZED3oC0Ruuu4l1pPfilCSThQ3f7iGQSk/jirYrO+oEHNLc0/jgMCgmHQOjiCWgTTkA1UHe0zqf8LsfF8PG1NkC+XdwHxW3MeBgdecDG79H90ZxuwtbvrT5AEFRztemRopZl3WFZrS06SUQpZBpcVQMPisq1dhDdGwN5vYiBSbEtdTkUKNmiJh/yxV6LJ7vDxhPbX1dfDAARzan3eRMDVGEbNTpyMOILyeXIoIt9rK60vOyT/fZY6UicwjqwI1N+vk9Z/iJ6aZK9NoLMCwL8T4lwTEoPeCHG6sG6Rl27ah3qBw+JM59+eBMX8Wt3+jCv54mbbE/pZPvg7dawcj1X5oNOo6GkY7ORMFe3NplTMflvdQfL6WUgBoGyONtwp/5sKnSbEya6Z45bpF3LnapR567fWzwul17aCLpMvCtRkVvr7TGSX1beGIgvvVRMkwBLtNH2Z+tcsEMU98LxoHg3DJ1fo3Nk/yDOYGb/wORyhJq0etTryCnE980qQiHKHs1ueA3Nn0y4krlDEC+2X6lyBqNwExgqxAbhOi5nw36qmDdaELO3/6rvrBCpGyCgmgPznpSz1PpEYTGj5Ptxo3UwyTgmzrkPmewvHbWdPX5tetNbJiQ6BE2qGapI9369w9nSz9dtlRhe8UQM/tMq9JA+INoRr2UMjySuVZfYhUvpevojS26bfe+RrpIKDv6UMuLJKdl8GLoUWcM0vRWxHdrtEc4qbpgvcjjfi8L9zy9k84Mka9NztgZtYOzvdfA9OrRsExzIoPVg7p/rIAKCtBLvvkDffhmZ/TkSD20sezfmBnS/MhoeQi5FRWpqBYk7ur67Tvv+pLqf6LVwrfcgFI53YfDPaLAtpsB8RVJ+FKIxSqGHT8dA/jAFvoEWA5Ay/3xQ70k0pSkVjq32PASQXjyLK7w7SG0Jt+82EMW7RBM4OXalXECi1Fye8Aa/c4lQv5SnwK4xPS2gy4hw6C9OEAQMhhqETXuZ890GC/91EGu37iTCEcDPJN1jFn8T12H1nCFg8FawJsex/aWSE25aIE6AZMWpZ894cAS/74NrrjjZaS82/UZTEo2hjpSGQgOqWB4CRMCtZ8w7gvFMvvGDFD8CsnNa2di8X3lTG24ULwOKXd9rUd9WuQ+NLmlsG0P5Z5BAzvkJ0Fg2RLRa3YsSTUPgEnLI6T+WYDP7T0Mr31Pi7HCMiDeLxWmAMnt4FNbOaj/mxQbstjZvWRFx9SLTjEb1zf0utGwsj2wCsSDQYZoIuynWOnzUGoGt03bAMm7CsR62jnmVaDG0jtKbfoEZltDbttpIZ0hCLg0OkESPeDMDeuUXfmGC7WAUiJ5Mn65bveBfmxL2VayuNA0oUDMSRXOpBLol3k+lbAaZqUEhstDjMjvBM2HxaMHDgZ6DXtTSA41cqfKCvK6QWPoyEfi3YuuAR09mIJN+4WKwiUbP5ltSnfqtBjhPFhrNdikWG/uQ41QMtcxHf1Eg+YZFHvBLF/rZl/U1pi7VD8nNtYKm8KU88QnRrLGvglMd05rGOl6RsDUQ8kIMrLqH6rZ5RJVP6YVGW7hiL4E+YBuEKUWXXFVOdMfTalzgrAN3N0rmOCuOHMdi/zJz8XCgDUgdIpOSEYTac24kMCKwaNv8w0E3qpUktemfet64riYQqaZYUZlM/Kgk3Q9UFGWpSG/hrgwLRDZjyWElOI5tJdGWd5FKzmQfXtm2BZDae/HgYarEPQoUxtHOmPFKdLLIO8sWyAFEQWHsQ57qQGlflIFKuOX1bseMCVGdzwwaxIKebPrVhC0T3WyLMQOdWK+AZd1wXHKVmvNAlgkzNB+MjTH18/IzcQXWPtdfzV7LhzUKy15LG+/Eiw3OGA3A0vbtT5Igqb4vNnDo50V1pXQkgPuPierZKkSRzsDPTw6b651egvhA31a9NS6Faf5I/GWXCeUOVdgXbK3/vGvjSJQ+RLG8AXMRQOi1U+5/y3JL4w5tRUyvzSeW2FT7xzCnEFoiCfnNmtdY8Inp//PDaK160tRmS07M3dOJ7OXPB8DUnIYT5Z2GXVj9n4MOTg7pJ3D1uWCVovyCyAEJZ+xpvocvQtCrYwrerhzTHrJ9odFbxfEUfGCYzR38wwoTgeKducUiWYBiyoaBG4m74x8dlhyaK3ktcZbaFAEUc7qGpuJBXlNtqPp3Z9rRQRPPHp1SfmiSZGlB2m2VKvdoOLNjL9aat4OwHjvZApirRkSdU4aJ7vNB1w+ht92XwFeCsikiZCRniiTmxornfPDX0O2Tl72d9Brv/av8NHiLEj5l2O1PYUJdkv1ktdbn+lmaWEKOt1i2bmyQlQOydB+sq6DE9xufRsGdDVNETzzfMDj/O7dLguOxHovaxxQf2iFQkxPgj9Ih+jK/Zkgd9G97ArsrT2muqdEqrFiVtYm5P+v7VA4gjoY7tgyGczLXcKCA7JCw55rylPgt44g5Z/iRfDSNZc00Iv4T0h6xTB+uAo31NTg8omt5Q3IwLJl3VEQP+B5ndS2Ou3e49uUhv0Av4qi4yK5vl3EF5qvOlib6qhiWWOc3uH5yN99VShgzJwRYuNLpnsRIX1WSVNXJppEmPY4E0i/jg3Cja5H125ZjiCZONkDMuBrJVa0EMRJjP+Hdns+uzdhhCiK+7Llj0QW+fd2XkgpkdFTqbKhrt5AVXwVOxpEnZcopmZFAWddxdahv7tLw/iyUNr4VENGKqxR8Sf2b6m7/1ZdUoes1DtMbJZOLsSw5SRCJ8ql+S05/zcISyQbpg7SWpnGzk6jnnJ18FM++yKF0S2Nx6Kgvs/T7/y3p3AOXDWZNXC7MkqGkJpIuyDSDLHPv1FYFmde6BCLfRMojjiM5Rp1xo11qS5E9RJYaYHqQ9RrURI5vLyhZb0U335ABjpK03yTwK/R2IGtQvkwifYUXJPJYNmUAYMIXzwb6oFTysQm5Ed136Hs4YoF5Vjb0Lx6FJRzAc2oNLXPbhYAfi2/3ra4kGKYPiFEPwUU3uHsurnL5h6Jy8cCLKNaJiC8UtBtXlCUQKeMC9rjGHRyHZTSKqy5EfxLu0piHNQS4ciUK1Q6ygMGdLYlfrFmQ57345npMKa+4bcYEHc6maUglnniVj9WFi9S56ZYLhKRvPnXwtAOGpV7BZ1OhehH/k8DR3qAtAYDl1FqzZsLVxTSqOMCklUzr7RTew2jY/WJwj+gZscYcTVGdzIvKgIbqe3YnfX4GNQVtDMaj8hARXEmiqckSWPcE9t0KwQX9iDkfVltv5d21YMYS+26sY5teq1VrniANHZB0P+SA4pkVcwf29gHAFxO+2LjwzPn8xQQGaaPm8dTO5jfomusbYSy2LWO66SXXI7rlj+tU5bHt0IulQndBakCBjFdaVp/OtA5E6ov5RSEjn1t4B4r4u9wjZ6nNOOvsThsoz3EbSE7zRGc4LodNonbdBpj96Ca8eD/S3NkPs062RpCHa1WXqLquPQFXRGTkkt6b2HztnE1+K6z9V5eyWC/SsHlecuGfs6Ot5frDL6aJAoi9fwkE1fkqRVmPF+X3kqiOTNpp++inT1LGX86eCiF6orEqcO/epdwi/hDpI5u/o0AkzMuQz/wfk8oMQUDpal+JKZwTY5PnJE/51W9/fPW+FOUFjs1zfZ/9jbkFu8dPXi9t09lKaY498UWd5QgJDYuwO6JQw8ojjdG8IIdpND98uYoeFBQDYnrH7V8fHEzocjOTg9+j494xKRprIWlhjQqiidfZTpZvvzL6DPYv/s+YJYcQPsJWl+A2EuF5v+ZQSkrwvJzlWN2Qi1pLVaN19Twic72d68b/S53jl6/5VtA8sA7n2JQw/9qP96cXVnjn3MNytlq5K/O+k7kqEGunn3TKfLL9JQflREKaxQebrcIZkfnarzeERyQgxEmKJFEqzn4+E7dXbPrS89wrFEbqNb4tFDpnkBY+gdZ4dsgUBl0z4VMFwAv92eHgDRn4wJn4uP93sQ2o0i0PUQGVu6NX5JD5N7OOP2YE31t/j2FXPwKv8btSZQUiu5aH6heVA0FTj+EkpGBfhjXBuqIN1pKfXV6wwi98txh9GOuYCDlVKp1KN2IVpEn3j2jj4PWCIbkMgoOXZ31/ko8zqWkuBRXF4jsSTrgJhwoVBLx9fo6MqU8c2e6pbRYrtaHfdFjDsc8mQqNLSalMkF8xHjVR8E9V6D0MQRnpgNvW/l/gSdxNkIplZthgmSUffrDyqwqhkHDQc5sPEQ71/b3WSpwE/tris1ETfKSa/lF5NK3uLVjQ5o7TXBQZgmBr7xQSLYQx4M7QBw4Hu25eVQEfG+ZuQTru8v+NWapWrPksPzdgL7axh3p5QGPPq8Liktb7XVMAjU2+q/gc6vu7Gq+lS6dk0+pR8XGLLihyLhlMkPHX49djVB4nDBO9JP/Ax57KhlX21V+g2zToLlE0H4nrY/+olnQyq5GmScrerZ23Q574Dx8LKtpc6Irn3NRBVQ2xZSK5XI0YpdiCWblShHDDgWd9JxR5uspT9+nikEFx2R6Ct4BBkWQ4l6q5HSqGnSBQBq6rVDMxf2ob5ge1Bw1n3sZKIrOb4Kz9NlNawvN+UCKdM6xQh32ooJ6XkCudv44olCVIZDxvzd2hq3tdESNc9srRlplRY60qcIJidf1rREebD/YU4Vdp6vHx/GME78PyrpVxonj59XFm8kndpJRtl6OKD12MSMLcjOm5gkcvXsEIWgHwp+LvsT5yPNeC0xfC2TI+K4BfNAKyHUZSUb2rUMDwtfAJOif5yIDU90g2LToO3HlCI1oOYNBZ+e/88lmOi8rA1utXmFNrIFfzgT3AizIZJycedG6SEEJ+flsl3kCLZaxzJ3xjzUSuwAI14WSKkc4MWXJxyVKl/QN0uFLtNIB0r58eLZdh5i6/YYJG+WmR2DCHmMaC54p6nkBkbMeTymh3/LQnMHWLk3tnON/+ARfhTTJSJv9Bpyks7JdwYphzAGKYjiuVKTYHZhZt6b9gWksDnYwYpRl6j1ffpLXlhWcoMbFVl/bUV7zY/OM/ifHTcEfb0IJB0RLbEc40WdeO6j/E+q2BcbJUnZI8E54aYqKmY+jpzJI4Fe+f3EiDsLCCNA1VjFG81Vj2YemnDfSxAVwBE1rcBwfNuxtP0jU9MDVzjKS8v+D5qyB2AVxVoYKUq9SEY3KDsBDJhpP6qH1JSZ1seGToqtJZJXloXjiBqh5G1c6qY7t+ovaiJHhnRYpTbp4S7mj6nvcvFB+1Etbl6EILvp1TYVHd4Q2Tu5HZliNMur5fNeKaX11NWGQn1Hu5pNkBACeOw4X1PV+uLUoSrihr+ZQDOw5y4bHgPrZthxkT8wr5lpGiiQW5Ht4sfcfQIVGEK5nX7TsYX7+zQbYa6tcfpRK7qyBZSMuV7KpgJzG1RLV1q/cOfz1dZS/Tpzrx/cB0NiX3oZkOeLNtTmz/8yAQcvZVKbkLC7xzRndhI1w0EUTazYDVZPljEMxu7cgCFVSfg/LBt578u9q8pbiUXbFBxkwAjZkpLJoSTddZ2sVCdYbxBRdiDkyP6FKSfKD+02t9rVMMs7Y5rllnouguYZnlJujb00/mOHPHcwgNBxngdorRrDcaTga8wZ+ZScp2oACWPPcZBvS1qDKd7QFETR/uFpyB40m8p8ocLu6ghAEYfjLk64eLx3FDE/gPI3Qs1V038Cl/ZhGjflE925v0DjwzHYaLWqm5hr9T8t3r1p/m0Y37ws8WfDqQ/X+g/cjItFY4fh+ll9yLokw/hXKglc7OdE/LoKnG0ogPP9HMUO0b5Ko/g+2oUPf/Pl+GolgckjrqzBczGyfFVxXhgcqs+Q6OvLdgKMb45vHENSBWhxIdgOlnPGs+2SrZb7n8tdYakuC/MsieTwKCt4oNC9hI7mziT6936zyg+t+Mh41rrf11EwzEGhyD10+haD+1dK53dv4ixG9Q0z+shYuTP0yWw6AJkVOSxJmD2E/aVbvccfY7L4Q4tAaNM8MhZoEVwXWkm2zf4+pcbBCUvN+cw3LrqF6eQAa1QdAMgfg/1eYdm+h9jSNVbvBa7ckyDC/wShcrNBAOneB3dgtlCpZ66jgMeIK9z6YFbPesgDfGVgk6S8lQPtbKDEpkL0Ggo1m1h0Rm/QOcWbB5TaX2deLYl1GnaGCOX9gGOzH3iTto/8rmS+PMH6ai6q+luh2MOiQsONKB27V0JhI7+kCJp9y6yY0V33uEs9iRFu/B5JKAQcSfR4JjxceJBJlbRUnRmOSkGDFfkZRHTWATjiGFAiGqiNz/ZpoXobaC5af2xc6gqiLXbZ3mwuSNe6gp43qOPMnx/LUqGSHnrWqHOFkTG+wkhXT2iBj4iv0PDfKSlJKviy6FKROx1WtBCrwKjiqzPCv4inl9m3PK0e3IsFXKdKaz4tZN9gDvKLTev8uiavNngJ/Ce+BzJgJRKsrbUD1rZTDAPFkbLKMN6dEUbe6bj734wzfTnNV24ugRKF1PbrLSzV8Mp3ZEKoYCx6V2KK8cmVAZDKkwxpLQ5v+Qg3vQRCx/lsmSqE/hvP2b0/pHPaqDycEFL7BpfhE/loT3IsF6u8VhbyQVcb1Z/QsF//6hmEuRl3n5P1hf4npdtrq+UX4JcGxclvZqyGXx3dZ+bTd+2GQKTKK3N0C6K1RsWFXXWpcuVDAhj+LPl8j8gp7+zRiGobDYLBi3SexCTh9wBI+u363tS/XEFBB4tSdvHYTyMx8oiUW/TTyCcp5XusSWqgm81OYY3jwEh4PJVrOfl/T1w8Zjil+XZaA2FVi8dLgnauDGljMfYyxue0reSh8I15ADqTjGGeWkx8/mTjvbw+694Wli/PeDQvG/9CIy+wOXYJ1HnMdOa+J3kzbHrxIqyqG1avogyIkUq9zAfR7xu7YLJYBmcYe0Df9FmPvZhGeIdR5JkHJm0znqgYwqgEWAnAgCWLcwDnnHKLisUS5bBnRa0KG+599PY7qiej3WvuhwOchAxaRYq7Y493nsOOaWU2/Qb4IwcxCE6dcCTycEegsD0zbQFRVL2mtSwbxQG6N+6AIadP4xe4J6vcYDd18GnUcQGltXaaMrnKDgUbAqDSyqNnbzpAH6YZDmepZZTZPQdit7M/u/hcFpwtn9bdtkaQaPYITL6JJ0KRjoqhdlnLdszJCrPZKnYMFtg5RXQH1SmNt83Yw+dPlBQZOXiAXbxyTO8z9grZ/Y1aUNxpcxABwgFtX3zy98rwN02Nnxzmk6NEeYl518nZYZ7ujIGIJrty8XqYlFCos9vctAuBHHQT6CVODy+LwwzoaxPDl/Fmf2TimviKhy2rQRbSJ1Qv6+yYWzAeAxTdMeD1hYYWZ8zy2mNe2lyV0TZeHkJqQwPbe/apflnNk9tWJEYkJoWfCPuqJtvj7MYwOhwxof+ABCNQ5/U9sQBu0JG1sKTLExrOFK0kDKg4M8Ah2MldvJv5dHWxq3vIladkKdF2J33Rbb+MqDvdC9EQsmh/Yw0S/sRcstZUH9qriOM3AwQ42NiEMwfqMKdgQaLosF2Zn7KzF77InxYlSIzABRapiLVmiqdlOvQivbJD5IkUV3uvzAFSLwbcRWmNxTU1977uxyBaMooyGETe9QlUJVQGnka/5+RU3N8ASbl6ERbflAUKnB4kIJYZVuLfNeMSCQ7k0TLeJ49hmeYbI+AA2T8Xukn6TNSx8CQ5CL4KT6b6OXtoEsYvLBbJsv25b9Uc8VchAeaITOkW56UWZI8p4FOQDJH0x1AINtGA5GBdOsbjXyWtn63VwuafJq8GqHo5uzxGWo8Q3UjzzHnzyW6ag1nip7v5pYjOJOQ/kexDCuQPs8pN6R6qcXShOIBV6YAHoDfDZ+kOkDe1OIe3P4L+8XLqvJmc/hczD5p1YY0pSNUWn4amFZIdmupnvJ6QoHMxuI/jBc3SaaWoIomVsUDLelN0uLDtiSnZenDRpHMt/idPaFbBzGYqXY3NJDQ7fyZV+2QtxaNCXFa/h2JbNsczT7FnteoJpHBWkE7865AuZwx3xIQYAaHAVTjc9ct2RYN6AMYyqvBhWTpwXqRjVVi1lv8WmNxSUcV/sNJLcxnQisYiP7JYyWFf78Mp3ShSyvX4USmrdVriUQaG0Es61zQhF5nmk/3ihA4s34/SjzR9+FFcuk4/DhEuNRVz0/RhzBZNppzVClX3vSCoM8a98gM83JPe6i61NWjWkQ3yMqg9bUw9X969D7+Dyf9dQezawaDv/1cWPHxYlUvZAEkCh/mPA6oiYq6gl4lONknVNJulx/O/TCv0bgoKh64qzVayDN6LvGvWV/F+53ibZUdFkToBiIXunLCFoEePmYAh06xp/rDZMIigW/mtARAe5vqCrmbqBO4HaQvECTgyanbpI1bfaHykQoEOWmO9c7BO/lNYBxAFTmWhdZ3YMAHkgzaYG6XqMCdSfgzgtAmNN59OJ8B96NJRmOhTxdTALfxE5IGAmXE72a4Ju+6kTDproCemILPiJiEAUIi7Ub14K8ld7D8JNt+qAETbOEN2AZ+Z9LCTOvCXpZ9uxJp7Fwyk2Z3EWsnfeh0HCpGrMUWtjbudRE4ANN6Lwkd1/8ige7xHFGR9bnUoarIwyRYDgI4oWQVoEGZkUijgkzWPWW3wGDWfQlXogMdUmr0JRRaUsj1eTVdouB4LAZNuvC/cG/dlXneOwGjaam/BCeiyPA+xa0m/EHXtoCAZYlDSCm6ESThoEqHDk8vdvPVKqyWVXwn79FKtYNVxKWz34FM59GcWfT1+RMgRMjrI9xsgBackG6DYZgOQEjudhhqlixAlS+L38qyK32KBcEQJI2cJ7yPQAF0Adr9z6xmsQQiYCsjyAi/olMe1PqJRN0KP6MWNL8oCPJGQHU9Z5zya5k6bshmQDB0U5757yt/iio1H7XEgvaSaG4zbMV4oFK64LbqtGftz582D0fUFCO6+ONg6CYFlF3J6XxkIMeREnX8DDhSs3gVgf7yakw6oV5CImRwxF658HVPS3xtRYPLoXU+jprr+WI3Z3z5emT3FQk8TsEfrSxdhXQVygV7QhU/dF+NzfnBiCC4dgzvpNtfgnTR7dFozf2TeNTqWft2dXVJ91oJ86ZU3gH8O9xgz0uKffsTsxG5UmWOEU5GmI3GFGHHQeLWvnzuBsO0PnqSTZEWdqUKENmDMhFohLREqyterx+vw4m5ra0iQgH5zWwmhFuvpa5TnqgXImt05wohW26NNUcNsGU6SuA/IuUle6E8GkLcbDZ0UmtxnYtI+GR0QcN6G9+3hwEAgr+FYorW9WrpcAPzSEPjwWc12ns6ihl2vCPOvKFx6uxuaeX93wNPXTbO9chDGKgLElXKdTFeWeDAGolvAB48InvVdqfeYjc7pkeJyqAhu72zSP1WFQN239kwKzyE81Uqc39rhfmBWaBGmtFwdckW9POaMBa5GldvAo8kqP6+RlDl41MO41ihGee0cM9cexLqbHrmQV2m31Ql1UYVVrmqzm94wCGJOCQb5yqByTD6MJxRLT/48puI5XHAy+YqUCanqrlXG6reMslkJuBMSqlcvqGxOVSoUHLLfj/DkC6aNk7BoWHA5lvYtDC8ScozrJjWRTsygzMY2hrAI0L3f6SHpLh0Wwylhy1wk08dZgZUoQLL6cnLnGvo/nlgVBsAUWnvRZ+HgfIdEKnAmfUwTUti77prUld0BRGMPHkdOPFLowRzyBWwTZnAuC0gVQrZrTkYV+5w+jEOHSVQw5vlOc/DWitBikzVNUDLWUB3K3OkxaS/R8UTrB984D+r3b/dCqfQDfZOhx+gCGK0LopcagGFbqPqY1CT1H3oU/jl/7QrdpYZBK9a0U1XQ1wpkTU9/brnzy5tToPDDmDaMnK3HC+a3Fp977JJRx38JIxhS4rdzyNbAlUkoDS2HrdWryZNQe0U9bqBDEa21CeCUrPGDrDJZawLWu3+wsfcbTItp7LNu1fF4oQQca6Njg0KrmGQR3LBycuIaEtIXGVGW7xHF0V76PTpNPzCf942NFRgHSF2NDMeof9cU7BWnSzTftMdMfuNjBSRFT7yJH/kzj+NjTyNZNlRnwp1zI3PFiLI/+lOxtV2NAWijcO0EABW7y/IYtjYz8rlnPHb8l+AN/DFgh9Q0jWLmU22ZFxNVFK3ihGd2JVTnTvtKhOv6wEvcfU4zHcW/AHB3MiePxj9ughCCekxafB8iepG9zPtTLQsrCmGhO07GyTh0ih8qSS7hvka62FihlG/9N7G3KYL2LX4pqLZ804PgEkQgvgPB5qEKptQQjikwxVa7XtdeFhxm+vZok8D/iVpZf/7CDMUgi1mRUG/xbANRb/Q8gAD8+cIQpg5sryW1BhhlftcmFYbs3UhnzIjMeYgFFWk/St3Pedri74inrMkRHL/jXKhCfjPPLXH5KxrKcoK+4DEB9D67TF+ygRf1u3Fd4ngNoeaBKF1pUdBZSFiA6DF+vpg7YaqTdBx9qtdDnBJB+Za2wS51LA9kJ3yjEIi3ATqdhYgPCUYVVdrNX3Dvs6gDLcdJ3S3CNifUrcKvjXWi9+6bq7hGxbTky/INoV65vuJfxrw8TXOj8WrTSAWzEpC5UC2F8ev4tJ8erPfmvJd6+AMbbV7yb2pqMTUYOqCDT/FV+QRw9Jdkas9QTgZhYBn8dFMzkxrln7GJVF0vC1+diw59OEqQtRBJXVtlpxXHZIghz77uDLed1sQiAY/LCM0ASjtVbdoPtpTB7b0s4aODeiof42fQxr8DA8iXKUNuzlmvG05qgo4uCkc0NqFv9b/GNxHHbRzRQ7mbBNOQchFFg44dJ1x49r2oNDr5iHqsKGCKjmv9k2+gUPt0RUMsTBUuc9cVryN72SRRCDX3EglDSOwp84jDwHnjDXqrbXL4qd53wIq8XeYO8v/PvVDH9+88Z5vNITc5kYRsFr21LK7SJbpah9p+5qPa1QnHzRmJL4lEbeiCVIwSXc9f0VUXOdRR63jM2GPFImamOk6+QmtHrIvqYN4B3moBl5BLuMcEbbuA+FCDu/L+BxlF1TH0IYwUsc+NP9SW9k2+qCmeWQHzOdA8hGGje2owj1KKd+L2ARDWNoA2dJESJk1cdlKURUsGHf9RRo8SV/lw7rZ2Iu+O0EYi/ba0WfJpW5UitOSpcJUBGZgwV2nnwH2HkhOoGGZWoAwHtB5Gcuw/Aw4lKBG3Ab9SZUUdpc8/6kCANV2bijVlsF6+HMcYrs8b5B/bZfsrNk5aezkVDO0mgIcP2WF+743BHk4k62dDNVZR3ySM/XZlocjxDBsSQgQ8dyWDuN3frXTebYkDRWU0OFmteMeyD4NUkl7mbCDzKyY9ym7mGhMPkJC7SiiXP0ZlA2vSPymzYab09eDehcCXV3+NFFe2mhfcowPqb7fGzHfhbn8ySt5ozrP4vlEJBw5fF7xnvLhVSmcHI9MawXk3OVhhWVBzhp+EVkdfjN//JgI2bdIJ3qHKj091XIoaYozFWAVzP+gGryB+o4hK7dlbfLW1xRobJX9krUmY2bov6KbOuqc+CfrgWR6X2LC03Qc5giHiVssesZc9YgTDAp+t73I5omNmRfiRLiXZ7LSxob4OE+qVNAblpIErlx4wpuHgTiPJ9GgbMH3AS0W9X0GpluV4E7QPUKh6NzuBMfYo7mP6nA5FV0EnMn+vR2mTx5beDQNtftUbrzYan79nC89bmn1K80p9dDhperIhJ11NlRyVYb8m0WCrzZzzd8nKYBdf+aNW+xymCZMvp+LRG+gzuXGp6Upge64pne9VmfMm3xJJAPCELOkUUh6DgXc8oQ306J5kkYqe6L2dxk6qVBJTomQn6y1AZSy8O9hUyjn2nK8m1CEb2qO1YLJIMZYDHI4i8Rp9mQ==">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./Author's Home_files/WebResource(1).axd" type="text/javascript"></script>
+
+
+<script src="./Author's Home_files/ScriptResource.axd" type="text/javascript"></script>
+<script src="./Author's Home_files/ScriptResource(1).axd" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="63F26043">
+</div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tbody><tr>
+            <td class="TopBarimpress_13">
+            </td>
+            <td class="TopBarimpress_15" align="left">
+                <span class="txtwhite">Paper Reviews</span>
+            </td>
+            <td class="TopBarimpress_20">
+            </td>
+        </tr>
+    </tbody></table>
+    <center>
+        <div id="v3" class="ControlPanel4">
+            <div class="b1">
+                <b></b>
+            </div>
+            <div class="b2">
+                <b><i><q></q></i></b>
+            </div>
+            <div class="b3">
+                <b><i></i></b>
+            </div>
+            <div class="b4">
+                <b></b>
+            </div>
+            <div class="b5">
+                <b></b>
+            </div>
+            <div class="text">
+                <table width="100%">
+                    <tbody><tr>
+                        <td colspan="3" style="text-align: left">
+                            <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', [], [], [], 90, '');
+//]]>
+</script>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="text-align: left">
+                            <span id="PaperTitleLbl" style="display:inline-block;width:376px;"><b>Paper Title: </b>Improving Physiological Signal Classification Using Logarithmic Quantization &amp; a Progressive Calibration Technique</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">
+                            <span id="PaperNumberLbl" style="display:inline-block;width:376px;"><b>Paper #: </b>15</span>
+                        </td>
+                        <td style="width: 100px">
+                        </td>
+                        <td style="width: 100px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left">
+                            <span id="PaperTypeLbl" style="display:inline-block;width:376px;"><b>Paper Selection State: </b>Short Paper (poster presentation)</span>
+                        </td>
+                        <td style="width: 100px">
+                        </td>
+                        <td style="width: 100px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">
+                            <span id="MyStatusLbl" style="display:inline-block;width:376px;"><b>My Status: </b> Author</span>
+                        </td>
+                        <td style="width: 100px">
+                        </td>
+                        <td style="width: 100px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="text-align: center">
+                            <span id="PaperNumRevisionsLbl" style="display:inline-block;color:Black;font-weight:normal;width:100%;"><b>Number of Reviews: </b>5</span>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </div>
+            <div class="b5">
+                <b></b>
+            </div>
+            <div class="b4">
+                <b></b>
+            </div>
+            <div class="b3">
+                <b><i></i></b>
+            </div>
+            <div class="b2">
+                <b><i><q></q></i></b>
+            </div>
+            <div class="b1">
+                <b></b>
+            </div>
+        </div>
+    </center>
+    <br>
+    <div id="PanelReviews">
+	
+    <center><table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td class="TopBarimpress_13"></td><td class="TopBarimpress_15" align="left"><span class="txtwhite"><span>Review #: 1</span></span></td><td class="TopBarimpress_20"></td></tr></tbody></table><div id="v3" class="ControlPanel4" style="text-align:left"> <div class="b1"><b></b></div><div class="b2"><b><i><q></q></i></b></div><div class="b3"><b><i></i></b></div><div class="b4"><b></b></div><div class="b5"><b></b></div><div class="text"><div>
+		<table class="GridView" cellspacing="0" cellpadding="3" textalign="center" border="0" style="border-collapse:collapse;vertical-align: middle;text-align: left">
+			<tbody><tr class="GridViewHeaderFooter" align="center" style="color:White;">
+				<th scope="col">Criterium</th><th scope="col">Description</th><th scope="col">Value</th>
+			</tr><tr class="row" align="center">
+				<td>Abstract and Introduction are adequate?</td><td>&nbsp;</td><td>Yes</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Conclusions/Future Work are convincing?</td><td>&nbsp;</td><td>Yes</td>
+			</tr><tr class="row" align="center">
+				<td>Figures are adequate ?</td><td>in number and quality</td><td>Yes</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Improve critical discussion ?</td><td>validation</td><td>No</td>
+			</tr><tr class="row" align="center">
+				<td>Improve English?</td><td>&nbsp;</td><td>No</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Needs comparative evaluation?</td><td>&nbsp;</td><td>No</td>
+			</tr><tr class="row" align="center">
+				<td>Needs more experimental results?</td><td>&nbsp;</td><td>No</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Originality</td><td>Newness of the ideas expressed</td><td>3</td>
+			</tr><tr class="row" align="center">
+				<td>Overall Rating</td><td>Weighted value of above items</td><td>4</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Paper formatting needs adjustment?</td><td>&nbsp;</td><td>No</td>
+			</tr><tr class="row" align="center">
+				<td>Presentation</td><td>Structure/Length/English</td><td>4</td>
+			</tr><tr class="alterrow" align="center">
+				<td>References are up-to-date and appropriate?</td><td>&nbsp;</td><td>Yes</td>
+			</tr><tr class="row" align="center">
+				<td>Relevance</td><td>Paper fits one or more of the topic areas?</td><td>5</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Significance</td><td>Is the problem worth the given attention?</td><td>4</td>
+			</tr><tr class="row" align="center">
+				<td>Technical Quality</td><td>Theoretical soundness/methodology</td><td>4</td>
+			</tr>
+		</tbody></table>
+	</div><span>Scale: <b>1</b>:Lowest Value;<b>6</b>:Highest Value</span><br><br><div>
+		<table class="GridView" cellspacing="0" cellpadding="3" textalign="center" border="0" style="border-collapse:collapse;vertical-align: middle;text-align: left">
+			<tbody><tr class="GridViewHeaderFooter" align="center" style="color:White;text-align:left;">
+				<th scope="col">Observations for Author</th>
+			</tr><tr class="row" align="center" style="text-align:justify;">
+				<td>The authors dealt with the problem of physiological signal classification by means of Support Vector Machines (SVMs), and they also presented a logarithmic quantization approach to reduce the well-known high computational burden related to SVMs.
+
+The paper is well-written and fits in the conference's scope. However, one point is not clear: what is the main motivation of this paper: to improve both SVM effectiveness and efficiency, or to improve the signal classification itself? SVM is just a technique in this context? Please, make this point clear.</td>
+			</tr>
+		</tbody></table>
+	</div><br><br></div><div class="b5"><b></b></div><div class="b4"><b></b></div><div class="b3"><b><i></i></b></div><div class="b2"><b><i><q></q></i></b></div><div class="b1"><b></b></div></div></center><center><table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td class="TopBarimpress_13"></td><td class="TopBarimpress_15" align="left"><span class="txtwhite"><span>Review #: 2</span></span></td><td class="TopBarimpress_20"></td></tr></tbody></table><div id="v3" class="ControlPanel4" style="text-align:left"> <div class="b1"><b></b></div><div class="b2"><b><i><q></q></i></b></div><div class="b3"><b><i></i></b></div><div class="b4"><b></b></div><div class="b5"><b></b></div><div class="text"><div>
+		<table class="GridView" cellspacing="0" cellpadding="3" textalign="center" border="0" style="border-collapse:collapse;vertical-align: middle;text-align: left">
+			<tbody><tr class="GridViewHeaderFooter" align="center" style="color:White;">
+				<th scope="col">Criterium</th><th scope="col">Description</th><th scope="col">Value</th>
+			</tr><tr class="row" align="center">
+				<td>Abstract and Introduction are adequate?</td><td>&nbsp;</td><td>Yes</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Conclusions/Future Work are convincing?</td><td>&nbsp;</td><td>Yes</td>
+			</tr><tr class="row" align="center">
+				<td>Figures are adequate ?</td><td>in number and quality</td><td>Yes</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Improve critical discussion ?</td><td>validation</td><td>Yes</td>
+			</tr><tr class="row" align="center">
+				<td>Improve English?</td><td>&nbsp;</td><td>No</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Needs comparative evaluation?</td><td>&nbsp;</td><td>No</td>
+			</tr><tr class="row" align="center">
+				<td>Needs more experimental results?</td><td>&nbsp;</td><td>No</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Originality</td><td>Newness of the ideas expressed</td><td>3</td>
+			</tr><tr class="row" align="center">
+				<td>Overall Rating</td><td>Weighted value of above items</td><td>2</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Paper formatting needs adjustment?</td><td>&nbsp;</td><td>Yes</td>
+			</tr><tr class="row" align="center">
+				<td>Presentation</td><td>Structure/Length/English</td><td>3</td>
+			</tr><tr class="alterrow" align="center">
+				<td>References are up-to-date and appropriate?</td><td>&nbsp;</td><td>Yes</td>
+			</tr><tr class="row" align="center">
+				<td>Relevance</td><td>Paper fits one or more of the topic areas?</td><td>3</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Significance</td><td>Is the problem worth the given attention?</td><td>3</td>
+			</tr><tr class="row" align="center">
+				<td>Technical Quality</td><td>Theoretical soundness/methodology</td><td>2</td>
+			</tr>
+		</tbody></table>
+	</div><span>Scale: <b>1</b>:Lowest Value;<b>6</b>:Highest Value</span><br><br><div>
+		<table class="GridView" cellspacing="0" cellpadding="3" textalign="center" border="0" style="border-collapse:collapse;vertical-align: middle;text-align: left">
+			<tbody><tr class="GridViewHeaderFooter" align="center" style="color:White;text-align:left;">
+				<th scope="col">Observations for Author</th>
+			</tr><tr class="row" align="center" style="text-align:justify;">
+				<td>Review Report
+Manuscript No. PhyCS_2015_15
+A calibration method for a consumer BCI system is proposed based on the logarithmic binning of the power spectrum of an EEG signal from one electrode. This method decreases the number of input features (serves as feature extractor) for the classifier and consequently provides a significant decrease in calibration time, with only minor loses in accuracy.
+Major Comments
+1.	In the abstract the authors mention that 100% is achieved under 15 minutes but in the end of introduction this enhancement happens under 20 min. Which one is the correct?
+2.	The last paragraph of sect. 3 seems to repeat some information on the power spectrum. Please revise. Additionally, direct information on the total number of input patterns and the original size of the feature vector should be useful.
+3.	Sect. 4 should be better placed after the related work, then present the data along with the experimental results in the following sect..
+4.	What is the reasoning behind the choice of the specific number of bins for this experiment? What would happen to the accuracy and training time with higher or lower values? Please provide a general description of this behavior if possible.
+5.	What are the criteria for defining the two best gestures?
+6.	The experiment on sect. 5 is not completely understood. SVM is a binary classifier, so the two best gestures are chosen, from 21 possible combinations. But if each subject’s data is classified based on different classes, then how can the results between various subjects be comparable and consequently support the conclusions? And what happens to the remaining 5 classes in each case? Please revise this part by answering the above questions and by providing a more clear and sequential description of the process.
+Minor Comments
+1.	In the received pdf copy, there were some cases where there was a big space between words and missing letters from words, as for example in Fig. 6. Please correct where appropriate.
+</td>
+			</tr>
+		</tbody></table>
+	</div><br><br></div><div class="b5"><b></b></div><div class="b4"><b></b></div><div class="b3"><b><i></i></b></div><div class="b2"><b><i><q></q></i></b></div><div class="b1"><b></b></div></div></center><center><table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td class="TopBarimpress_13"></td><td class="TopBarimpress_15" align="left"><span class="txtwhite"><span>Review #: 3</span></span></td><td class="TopBarimpress_20"></td></tr></tbody></table><div id="v3" class="ControlPanel4" style="text-align:left"> <div class="b1"><b></b></div><div class="b2"><b><i><q></q></i></b></div><div class="b3"><b><i></i></b></div><div class="b4"><b></b></div><div class="b5"><b></b></div><div class="text"><div>
+		<table class="GridView" cellspacing="0" cellpadding="3" textalign="center" border="0" style="border-collapse:collapse;vertical-align: middle;text-align: left">
+			<tbody><tr class="GridViewHeaderFooter" align="center" style="color:White;">
+				<th scope="col">Criterium</th><th scope="col">Description</th><th scope="col">Value</th>
+			</tr><tr class="row" align="center">
+				<td>Abstract and Introduction are adequate?</td><td>&nbsp;</td><td>Yes</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Conclusions/Future Work are convincing?</td><td>&nbsp;</td><td>Yes</td>
+			</tr><tr class="row" align="center">
+				<td>Figures are adequate ?</td><td>in number and quality</td><td>Yes</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Improve critical discussion ?</td><td>validation</td><td>No</td>
+			</tr><tr class="row" align="center">
+				<td>Improve English?</td><td>&nbsp;</td><td>No</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Needs comparative evaluation?</td><td>&nbsp;</td><td>Yes</td>
+			</tr><tr class="row" align="center">
+				<td>Needs more experimental results?</td><td>&nbsp;</td><td>Yes</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Originality</td><td>Newness of the ideas expressed</td><td>4</td>
+			</tr><tr class="row" align="center">
+				<td>Overall Rating</td><td>Weighted value of above items</td><td>4</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Paper formatting needs adjustment?</td><td>&nbsp;</td><td>No</td>
+			</tr><tr class="row" align="center">
+				<td>Presentation</td><td>Structure/Length/English</td><td>4</td>
+			</tr><tr class="alterrow" align="center">
+				<td>References are up-to-date and appropriate?</td><td>&nbsp;</td><td>Yes</td>
+			</tr><tr class="row" align="center">
+				<td>Relevance</td><td>Paper fits one or more of the topic areas?</td><td>6</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Significance</td><td>Is the problem worth the given attention?</td><td>4</td>
+			</tr><tr class="row" align="center">
+				<td>Technical Quality</td><td>Theoretical soundness/methodology</td><td>4</td>
+			</tr>
+		</tbody></table>
+	</div><span>Scale: <b>1</b>:Lowest Value;<b>6</b>:Highest Value</span><br><br><div>
+		<table class="GridView" cellspacing="0" cellpadding="3" textalign="center" border="0" style="border-collapse:collapse;vertical-align: middle;text-align: left">
+			<tbody><tr class="GridViewHeaderFooter" align="center" style="color:White;text-align:left;">
+				<th scope="col">Observations for Author</th>
+			</tr><tr class="row" align="center" style="text-align:justify;">
+				<td>This paper describes a data quantization technique that applies logarithmic binning to power spectrum data from a single EEG electrode and a progressive strategy calibration technique. The experimental results show that the computational speed can be improved significantly without a significant detriment to the system’s accuracy.
+
+Suggestions for the improvement of the paper are as follows:
+1. The blank in the first sentence of Section 3 should be removed. 
+2. In Figure 1, the number of the red squares representing the 100 bins is less than 100. It should match the introduction in the paper. 
+3. There lacks the comparison results with the existing methods in the experimental parts.
+</td>
+			</tr>
+		</tbody></table>
+	</div><br><br></div><div class="b5"><b></b></div><div class="b4"><b></b></div><div class="b3"><b><i></i></b></div><div class="b2"><b><i><q></q></i></b></div><div class="b1"><b></b></div></div></center><center><table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td class="TopBarimpress_13"></td><td class="TopBarimpress_15" align="left"><span class="txtwhite"><span>Review #: 4</span></span></td><td class="TopBarimpress_20"></td></tr></tbody></table><div id="v3" class="ControlPanel4" style="text-align:left"> <div class="b1"><b></b></div><div class="b2"><b><i><q></q></i></b></div><div class="b3"><b><i></i></b></div><div class="b4"><b></b></div><div class="b5"><b></b></div><div class="text"><div>
+		<table class="GridView" cellspacing="0" cellpadding="3" textalign="center" border="0" style="border-collapse:collapse;vertical-align: middle;text-align: left">
+			<tbody><tr class="GridViewHeaderFooter" align="center" style="color:White;">
+				<th scope="col">Criterium</th><th scope="col">Description</th><th scope="col">Value</th>
+			</tr><tr class="row" align="center">
+				<td>Abstract and Introduction are adequate?</td><td>&nbsp;</td><td>Yes</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Conclusions/Future Work are convincing?</td><td>&nbsp;</td><td>Yes</td>
+			</tr><tr class="row" align="center">
+				<td>Figures are adequate ?</td><td>in number and quality</td><td>Yes</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Improve critical discussion ?</td><td>validation</td><td>Yes</td>
+			</tr><tr class="row" align="center">
+				<td>Improve English?</td><td>&nbsp;</td><td>No</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Needs comparative evaluation?</td><td>&nbsp;</td><td>No</td>
+			</tr><tr class="row" align="center">
+				<td>Needs more experimental results?</td><td>&nbsp;</td><td>Yes</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Originality</td><td>Newness of the ideas expressed</td><td>4</td>
+			</tr><tr class="row" align="center">
+				<td>Overall Rating</td><td>Weighted value of above items</td><td>4</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Paper formatting needs adjustment?</td><td>&nbsp;</td><td>No</td>
+			</tr><tr class="row" align="center">
+				<td>Presentation</td><td>Structure/Length/English</td><td>5</td>
+			</tr><tr class="alterrow" align="center">
+				<td>References are up-to-date and appropriate?</td><td>&nbsp;</td><td>Yes</td>
+			</tr><tr class="row" align="center">
+				<td>Relevance</td><td>Paper fits one or more of the topic areas?</td><td>6</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Significance</td><td>Is the problem worth the given attention?</td><td>4</td>
+			</tr><tr class="row" align="center">
+				<td>Technical Quality</td><td>Theoretical soundness/methodology</td><td>4</td>
+			</tr>
+		</tbody></table>
+	</div><span>Scale: <b>1</b>:Lowest Value;<b>6</b>:Highest Value</span><br><br><div>
+		<table class="GridView" cellspacing="0" cellpadding="3" textalign="center" border="0" style="border-collapse:collapse;vertical-align: middle;text-align: left">
+			<tbody><tr class="GridViewHeaderFooter" align="center" style="color:White;text-align:left;">
+				<th scope="col">Observations for Author</th>
+			</tr><tr class="row" align="center" style="text-align:justify;">
+				<td>The authors perform an interesting work. However, I believe the paper could be improved and more significant with a few more experiments.
+
+Namely, only the best pairs are evaluated. It would be interesting to show results on the worst cases as well.
+
+Morevover, when compressing the power spectrum, what if the distribution is not Gaussian? Is it ok to assume that no significant dynamic changes occur?</td>
+			</tr>
+		</tbody></table>
+	</div><br><br></div><div class="b5"><b></b></div><div class="b4"><b></b></div><div class="b3"><b><i></i></b></div><div class="b2"><b><i><q></q></i></b></div><div class="b1"><b></b></div></div></center><center><table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td class="TopBarimpress_13"></td><td class="TopBarimpress_15" align="left"><span class="txtwhite"><span>Review #: 5</span></span></td><td class="TopBarimpress_20"></td></tr></tbody></table><div id="v3" class="ControlPanel4" style="text-align:left"> <div class="b1"><b></b></div><div class="b2"><b><i><q></q></i></b></div><div class="b3"><b><i></i></b></div><div class="b4"><b></b></div><div class="b5"><b></b></div><div class="text"><div>
+		<table class="GridView" cellspacing="0" cellpadding="3" textalign="center" border="0" style="border-collapse:collapse;vertical-align: middle;text-align: left">
+			<tbody><tr class="GridViewHeaderFooter" align="center" style="color:White;">
+				<th scope="col">Criterium</th><th scope="col">Description</th><th scope="col">Value</th>
+			</tr><tr class="row" align="center">
+				<td>Abstract and Introduction are adequate?</td><td>&nbsp;</td><td>Yes</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Conclusions/Future Work are convincing?</td><td>&nbsp;</td><td>Yes</td>
+			</tr><tr class="row" align="center">
+				<td>Figures are adequate ?</td><td>in number and quality</td><td>Yes</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Improve critical discussion ?</td><td>validation</td><td>No</td>
+			</tr><tr class="row" align="center">
+				<td>Improve English?</td><td>&nbsp;</td><td>No</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Needs comparative evaluation?</td><td>&nbsp;</td><td>No</td>
+			</tr><tr class="row" align="center">
+				<td>Needs more experimental results?</td><td>&nbsp;</td><td>No</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Originality</td><td>Newness of the ideas expressed</td><td>3</td>
+			</tr><tr class="row" align="center">
+				<td>Overall Rating</td><td>Weighted value of above items</td><td>4</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Paper formatting needs adjustment?</td><td>&nbsp;</td><td>No</td>
+			</tr><tr class="row" align="center">
+				<td>Presentation</td><td>Structure/Length/English</td><td>4</td>
+			</tr><tr class="alterrow" align="center">
+				<td>References are up-to-date and appropriate?</td><td>&nbsp;</td><td>Yes</td>
+			</tr><tr class="row" align="center">
+				<td>Relevance</td><td>Paper fits one or more of the topic areas?</td><td>3</td>
+			</tr><tr class="alterrow" align="center">
+				<td>Significance</td><td>Is the problem worth the given attention?</td><td>3</td>
+			</tr><tr class="row" align="center">
+				<td>Technical Quality</td><td>Theoretical soundness/methodology</td><td>4</td>
+			</tr>
+		</tbody></table>
+	</div><span>Scale: <b>1</b>:Lowest Value;<b>6</b>:Highest Value</span><br><br><div>
+		<table class="GridView" cellspacing="0" cellpadding="3" textalign="center" border="0" style="border-collapse:collapse;vertical-align: middle;text-align: left">
+			<tbody><tr class="GridViewHeaderFooter" align="center" style="color:White;text-align:left;">
+				<th scope="col">Observations for Author</th>
+			</tr><tr class="row" align="center" style="text-align:justify;">
+				<td>In section 3 L4, there is unnecessary space. </td>
+			</tr>
+		</tbody></table>
+	</div><br><br></div><div class="b5"><b></b></div><div class="b4"><b></b></div><div class="b3"><b><i></i></b></div><div class="b2"><b><i><q></q></i></b></div><div class="b1"><b></b></div></div></center>
+</div>
+    </form>
+
+
+</div><div id="ibox_footer_wrapper"><a id="ibox_close_a" href="javascript:void(null);"><b><font color="#FFFFFF" size="2">Click here to close</font></b></a><div id="ibox_close" style="float:center;"></div><div id="ibox_footer">&nbsp;</div></div></div></div><div style="position: absolute; visibility: hidden;"><div></div><div></div></div></body></html>
