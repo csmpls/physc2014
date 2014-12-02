@@ -1,19 +1,17 @@
 However, one point is not clear: what is the main motivation of this paper: to improve both SVM effectiveness and efficiency, or to improve the signal classification itself? SVM is just a technique in this context? Please, make this point clear.
 
-1.	In the abstract the authors mention that 100% is achieved under 15 minutes but in the end of introduction this enhancement happens under 20 min. Which one is the correct? 
+.
+.
 
-2.	The last paragraph of sect. 3 seems to repeat some information on the power spectrum. Please revise. Additionally, direct information on the total number of input patterns and the original size of the feature vector should be useful. 
+3.	"Signal quantization for logarithmic binning" should be better placed after the related work, (true) then present the data along with the experimental results in the following sect.
 
-3.	Sect. 4 should be better placed after the related work, then present the data along with the experimental results in the following sect.. 
+4. What would happen to the accuracy and training time with higher or lower values? Please provide a general description of this behavior if possible. 
 
-4.	What is the reasoning behind the choice of the specific number of bins for this experiment? What would happen to the accuracy and training time with higher or lower values? Please provide a general description of this behavior if possible. 
-
-5.	What are the criteria for defining the two best gestures? 
+.
 
 6.	The experiment on sect. 5 is not completely understood. SVM is a binary classifier, so the two best gestures are chosen, from 21 possible combinations. But if each subject’s data is classified based on different classes, then how can the results between various subjects be comparable and consequently support the conclusions? And what happens to the remaining 5 classes in each case? Please revise this part by answering the above questions and by providing a more clear and sequential description of the process. 
 
-Minor Comments 1.	In the received pdf copy, there were some cases where there was a big space between words and missing letters from words, as for example in Fig. 6. Please correct where appropriate.
-
+1. missing letters from words, in Fig. 6.    go over all words with a fine-toothed com
 
 1. The blank in the first sentence of Section 3 should be removed. 
 
