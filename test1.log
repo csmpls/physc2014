@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  2 DEC 2014 16:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  2 DEC 2014 16:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -874,9 +874,47 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 50.
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 50
+.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
+File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 50
+.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlptmcm.fd
+File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 50
+.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omxpsycm.fd
+File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 50.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 50.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.69997> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
+LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <9> not available
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 50.
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--56
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
 
  []
 
@@ -902,7 +940,7 @@ Package epstopdf Info: Source file: <Figures/figure1.eps>
 ted-to.pdf Figures/figure1.eps>
 (epstopdf)             \includegraphics on input line 28.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/figure1-eps-converted-to.pdf, id=15, 722.7pt x 505.89pt>
+<Figures/figure1-eps-converted-to.pdf, id=16, 722.7pt x 505.89pt>
 File: Figures/figure1-eps-converted-to.pdf Graphic file (type pdf)
 <use Figures/figure1-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/figure1-eps-converted-to.pdf used on input lin
@@ -925,7 +963,7 @@ File: omlptm.fd
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 20.
-<Figures/acc-bins.png, id=46, 578.16pt x 433.62pt>
+<Figures/acc-bins.png, id=47, 578.16pt x 433.62pt>
 File: Figures/acc-bins.png Graphic file (type png)
 <use Figures/acc-bins.png>
 Package pdftex.def Info: Figures/acc-bins.png used on input line 31.
@@ -935,7 +973,7 @@ Overfull \hbox (14.20761pt too wide) in paragraph at lines 31--32
  [][] 
  []
 
-<Figures/traintime-bins.png, id=48, 578.16pt x 433.62pt>
+<Figures/traintime-bins.png, id=49, 578.16pt x 433.62pt>
 File: Figures/traintime-bins.png Graphic file (type png)
 <use Figures/traintime-bins.png>
 Package pdftex.def Info: Figures/traintime-bins.png used on input line 40.
@@ -948,7 +986,7 @@ Overfull \hbox (14.20761pt too wide) in paragraph at lines 40--41
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/acc-traintime.png, id=49, 578.16pt x 433.62pt>
+<Figures/acc-traintime.png, id=50, 578.16pt x 433.62pt>
 File: Figures/acc-traintime.png Graphic file (type png)
 <use Figures/acc-traintime.png>
 Package pdftex.def Info: Figures/acc-traintime.png used on input line 49.
@@ -972,29 +1010,6 @@ Underfull \hbox (badness 1990) in paragraph at lines 55--1
  []
 
 [4 </Users/ffff/Documents/physc2014/Figures/acc-bins.png>]
-LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 8.
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
-File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
-)
-LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 8.
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlptmcm.fd
-File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
-)
-LaTeX Font Info:    Try loading font information for OMX+psycm on input line 8.
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omxpsycm.fd
-File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
-)
-LaTeX Font Info:    Try loading font information for U+msa on input line 8.
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 8.
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
@@ -1020,6 +1035,8 @@ Underfull \hbox (badness 1448) in paragraph at lines 10--11
 
 Missing character: There is no â in font ptmr7t!
 ) (/Users/ffff/Documents/physc2014/test1.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
@@ -1031,25 +1048,25 @@ Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ˜ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ™ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ˜ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ™ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
 [7]
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ˜ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ˜ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no © in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
@@ -1068,11 +1085,11 @@ Missing character: There is no ¼ in font ptmr7t!
 
 ] (/Users/ffff/Documents/physc2014/test1.aux) ) 
 Here is how much of TeX's memory you used:
- 21508 strings out of 493117
- 435999 string characters out of 6135433
- 452168 words of memory out of 5000000
- 24595 multiletter control sequences out of 15000+600000
- 66324 words of font info for 154 fonts, out of 8000000 for 9000
+ 21565 strings out of 493117
+ 436786 string characters out of 6135433
+ 451168 words of memory out of 5000000
+ 24643 multiletter control sequences out of 15000+600000
+ 86077 words of font info for 202 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,60p,10448b,798s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-d
@@ -1082,7 +1099,7 @@ public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/u
 rw/symbol/usyr.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/ut
 mb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
 /usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/ffff/Documents/physc2014/test1.pdf (8 pages, 295328 by
+Output written on /Users/ffff/Documents/physc2014/test1.pdf (8 pages, 297020 by
 tes).
 PDF statistics:
  94 PDF objects out of 1000 (max. 8388607)

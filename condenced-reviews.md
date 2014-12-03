@@ -2,8 +2,6 @@
 
 However, one point is not clear: what is the main motivation of this paper: to improve both SVM effectiveness and efficiency, or to improve the signal classification itself? SVM is just a technique in this context? Please, make this point clear.
 
-acknowledgements:
-> This research was supported in part by the National Science Foundation under award CCF-0424422 (TRUST) and the Swiss National Science Foundation under award PA00P2-145368
 
 .
 .
