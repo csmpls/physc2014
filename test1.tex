@@ -32,23 +32,17 @@
 
 %\title{Strategies for the quick calibration of sensor-driven systems with low computational overhead}
 
-\author{\authorname{Anonymized Authors}
-\affiliation{Anonymized Institution}
-\affiliation{Anonymized Institution}
-\email{Anonymized Emails}
+\author{\authorname{Nick Merrill\sup{1}, Thomas Maillart\sup{1}, Benjamin Johnson\sup{2} and John Chuang\sup{1}}
+\affiliation{\sup{1}School of Information, UC Berkeley, Berkeley, California, USA}
+\affiliation{\sup{2}Carnegie Mellon University}
+\email{ffff@berkeley.edu,,,john.chuang@berkeley.edu}
 }
-
-%\author{\authorname{Nick Merrill\sup{1}, Thomas Maillart\sup{1}, Benjamin Johnson\sup{2} and John Chuang\sup{1}}
-%\affiliation{\sup{1}School of Information, UC Berkeley, Berkeley, California, USA}
-%\affiliation{\sup{2}Carnegie Mellon University}
-%\email{ffff@berkeley.edu,,,john.chuang@berkeley.edu}
-%}
 
 \keywords{bio-signal processing, signal quantization, logarithmic binning, calibration, mobile physiological computing}
 %\keywords{BCI, Mobile, Ubiquitous Computing}
 
 
-\abstract{Physiological signals vary widely between persons, and even within individuals over time. As a result, applications with physiological inputs usually require repeated calibration. Application designers face a tradeoff between computational complexity, calibration time, and classification accuracy. In this paper, we describe a data quantization technique that increases the computational speed associated with calibrating of power spectrum time series data. We test this technique on electroencephalograph (EEG) signals by simulating the calibration of a binary brain-computer interface (BCI). We find that we can increase the computational speed associated with training a machine-learning based classifier 4.5 times without a significant detriment to the system's accuracy. A progressive calibration strategy achieves high accuracy in 86.6\% of subjects with under five minutes of quantized calibration data, and in 100\% of subjects with under half an hour. We discuss implications for consumer BCI devices and for physiological computing applications generally.}
+\abstract{Physiological signals vary widely between persons, and even within individuals over time. As a result, applications with physiological inputs usually require repeated calibration. Application designers face a tradeoff between computational complexity, calibration time, and classification accuracy. In this paper, we describe a data quantization technique that increases the computational speed associated with calibrating of power spectrum time series data. We test this technique on electroencephalograph (EEG) signals by simulating the calibration of a binary brain-computer interface (BCI). We find that we can increase the computational speed associated with training a machine-learning based classifier 4.5 times without a significant detriment to the system's accuracy. A progressive calibration strategy achieves high accuracy in 86.6\% of subjects with under five minutes of quantized training data, in all but one subject with under fifteen minutes and in all subjects with under half an hour. We discuss implications for consumer BCI devices and for physiological computing applications generally.}
 
 % \abstract{Physiological computing applications rely on time series sensor data, the meanings of which vary widely between users and change over time. Application designers face a tradeoff between computational complexity, calibration time, and classification accuracy. We describe a quantization technique for electroencephalograph (EEG) signals which increases the computational speed associated with training a machine-learning based classifier without a significant detriment to the system's accuracy. We test this technique on a brain-computer interface (BCI) that uses a single EEG sensor, and find that a progressive calibration strategy achieves high accuracy in 86.6\% of subjects with under five minutes of training, and in 100\% of subjects with under 15 minutes. We discuss implications for consumer-ready BCI and for physiological computing applications generally.}
 
@@ -57,9 +51,8 @@
 
 \input{Sections/intro}
 \input{Sections/background}
-\input{Sections/data}
-%\input{Sections/method}
 \input{Sections/quantization}
+\input{Sections/data}
 \input{Sections/quantization_eval}
 \input{Sections/calibration_eval}
 \input{Sections/discussion}
