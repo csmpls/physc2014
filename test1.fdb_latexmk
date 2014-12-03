@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex test1"] 1417566892 "test1.aux" "test1.bbl" "test1" 1417567302
+["bibtex test1"] 1417566892 "test1.aux" "test1.bbl" "test1" 1417567836
   "./apalike.bst" 1417200974 21813 a6bc43259122f57cbcaa6ae34b78e94b ""
   "references.bib" 1417200974 28826 1a00fabdca5b9f12d6895de3c8112102 ""
-  "test1.aux" 1417567301 3164 ae31bd69cd89331da630d9867e74c280 ""
+  "test1.aux" 1417567836 3164 ae31bd69cd89331da630d9867e74c280 ""
   "test1.bcf" 0 -1 0 ""
   (generated)
-  "test1.bbl"
   "test1.blg"
-["pdflatex"] 1417567299 "/Users/ffff/Documents/physc2014/test1.tex" "/Users/ffff/Documents/physc2014/test1.pdf" "test1" 1417567302
-  "/Users/ffff/Documents/physc2014/test1.aux" 1417567301 3164 ae31bd69cd89331da630d9867e74c280 ""
+  "test1.bbl"
+["pdflatex"] 1417567834 "/Users/ffff/Documents/physc2014/test1.tex" "/Users/ffff/Documents/physc2014/test1.pdf" "test1" 1417567836
+  "/Users/ffff/Documents/physc2014/test1.aux" 1417567836 3164 ae31bd69cd89331da630d9867e74c280 ""
   "/Users/ffff/Documents/physc2014/test1.tex" 1417567297 3814 ee5ccbff3176a82938f8fe6cdb9c1355 ""
   "/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2014/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
@@ -178,17 +178,17 @@
   "Sections/calibration_eval.tex" 1417566199 8679 b06e8737fbadb4bafc4adac1ea6ac4fc ""
   "Sections/data.tex" 1417403149 2990 39d77b2b03c42b965a1c089d048b899c ""
   "Sections/discussion.tex" 1417566877 3175 dad4142e3a61f6d6e67aeae3f5c6c958 ""
-  "Sections/intro.tex" 1417311368 4407 0e1a0c41900e91cf257b3dc4844e70b8 ""
-  "Sections/quantization.tex" 1417566106 9306 c6794e4e00742e0848193c517cdc102d ""
-  "Sections/quantization_eval.tex" 1417566077 4655 1bd53e5a382cf03b9ce26960371cb80a ""
+  "Sections/intro.tex" 1417567468 4384 fe2fec6bfe124158673a4187918dfe3c ""
+  "Sections/quantization.tex" 1417567425 9305 781ec3a848b4d75b10fc9a41d21b5a87 ""
+  "Sections/quantization_eval.tex" 1417567831 4777 8e98e09fa3afee382808a1704df212e5 ""
   "apalike.sty" 1417200974 1152 7e0216a1c626932f944fefc448e30fd5 ""
   "article.cls" 1417200974 20842 1d83f5084dd6851bbb8f990661490551 ""
-  "test1.aux" 1417567301 3164 ae31bd69cd89331da630d9867e74c280 ""
+  "test1.aux" 1417567836 3164 ae31bd69cd89331da630d9867e74c280 ""
   "test1.bbl" 1417566893 7204 bf1ac0ce2597905d92ad754ca188d018 "bibtex test1"
   "test1.tex" 1417567297 3814 ee5ccbff3176a82938f8fe6cdb9c1355 ""
   (generated)
-  "test1.aux"
-  "test1.pdf"
-  "test1.log"
   "/Users/ffff/Documents/physc2014/test1.log"
+  "test1.aux"
+  "test1.log"
+  "test1.pdf"
   "/Users/ffff/Documents/physc2014/test1.pdf"

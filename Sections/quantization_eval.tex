@@ -11,9 +11,9 @@ We hypothesize that both the SVM training time and accuracy increase with number
 
 %\subsection{Protocol}
 
-For each subject, we generate every pair of two mental gestures and cross-validate our SVM on the recordings for this pair. Given seven candidate gestures, we have a total of 21 possible gesture pairs. For every pair, we vary the signal resolution by varying the number of bins from 1 to 1024. For every pair processed, we record mean classification accuracy across all rounds of cross-validation. For each subject, we record the best-performing pair, which corresponds to our estimation of optimal performance of the BCI for that subject.
+In order to make an optimal binary BCI for each subject, we must find the two gestures that the SVM distinguishes most reliably. For each subject, we generate every pair of two mental gestures and cross-validate our SVM on the recordings for this pair. Given seven candidate gestures, we have a total of 21 possible gesture pairs. For every pair processed, we record mean classification accuracy across all rounds of cross-validation. We record the best-performing gesture pair for each subject, which yields the optimal pair for the binary BCI.
 
-As an additional performance audit, we measure the time needed to fit an SVM to the data for two randomly selected gesture pairs across all subjects. We repeat this process ten thousand times at different resolutions, collecting the minimum time observed in each series of attempts.
+We perform this process multiple times, varying the signal resolution by varying the number of bins from 1 to 1024. As an additional performance audit, we measure the time needed to fit an SVM to the data for two randomly selected gesture pairs across all subjects. We repeat this process ten thousand times at different resolutions, collecting the minimum time observed in each series of attempts.
 
 %\subsection{Results}
 
