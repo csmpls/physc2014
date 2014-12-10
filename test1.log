@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  2 DEC 2014 16:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  10 DEC 2014 11:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -874,62 +874,65 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 50.
-LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 50
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 59.
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 59
 .
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 50
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 59
 .
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlptmcm.fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+psycm on input line 50
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 59
 .
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omxpsycm.fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 50.
+LaTeX Font Info:    Try loading font information for U+msa on input line 59.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 50.
+LaTeX Font Info:    Try loading font information for U+msb on input line 59.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.69997> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
 LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <9> not available
-(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 50.
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 59.
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--50
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
 
  []
 
 (/Users/ffff/Documents/physc2014/Sections/intro.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+) (/Users/ffff/Documents/physc2014/Sections/background.tex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
 
-]) (/Users/ffff/Documents/physc2014/Sections/background.tex
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
-) (/Users/ffff/Documents/physc2014/Sections/quantization.tex [2]
+]) (/Users/ffff/Documents/physc2014/Sections/quantization.tex [2]
 Package epstopdf Info: Source file: <Figures/figure1.eps>
 (epstopdf)                    date: 2014-11-28 10:56:14
 (epstopdf)                    size: 38933 bytes
@@ -938,21 +941,18 @@ Package epstopdf Info: Source file: <Figures/figure1.eps>
 (epstopdf)                    size: 146783 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/figure1-eps-conver
 ted-to.pdf Figures/figure1.eps>
-(epstopdf)             \includegraphics on input line 28.
+(epstopdf)             \includegraphics on input line 27.
 Package epstopdf Info: Output file is already uptodate.
 <Figures/figure1-eps-converted-to.pdf, id=16, 722.7pt x 505.89pt>
 File: Figures/figure1-eps-converted-to.pdf Graphic file (type pdf)
 <use Figures/figure1-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/figure1-eps-converted-to.pdf used on input lin
-e 28.
+e 27.
 (pdftex.def)             Requested size: 227.62204pt x 159.33302pt.
 
-Overfull \hbox (14.20761pt too wide) in paragraph at lines 28--29
+Overfull \hbox (14.20761pt too wide) in paragraph at lines 27--28
  [][] 
  []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ) (/Users/ffff/Documents/physc2014/Sections/data.tex [3 </Users/ffff/Documents/
 physc2014/Figures/figure1-eps-converted-to.pdf>]) (/Users/ffff/Documents/physc2
@@ -999,17 +999,8 @@ Overfull \hbox (14.20761pt too wide) in paragraph at lines 49--50
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (/Users/ffff/Documents/physc2014/Sections/calibration_eval.tex
-Underfull \hbox (badness 1442) in paragraph at lines 55--1
-[]\OT1/ptm/m/n/10 Overall, we find that rel-a-tively small fea-ture
- []
-
-
-Underfull \hbox (badness 1990) in paragraph at lines 55--1
-\OT1/ptm/m/n/10 vec-tors pro-duced with our method (100 val-ues)
- []
-
-[4 </Users/ffff/Documents/physc2014/Figures/acc-bins.png>]
+) (/Users/ffff/Documents/physc2014/Sections/calibration_eval.tex [4 </Users/fff
+f/Documents/physc2014/Figures/acc-bins.png>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
@@ -1023,20 +1014,19 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <4.89995> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <3.49998> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 [5 </Users/ffff/Documents/physc2014/Figures/traintime-bins.png> </Users/ffff/Do
 cuments/physc2014/Figures/acc-traintime.png>]
 \cyclecount=\count173
 \ind=\count174
 Missing character: There is no ; in font nullfont!
-) (/Users/ffff/Documents/physc2014/Sections/discussion.tex [6]
-Underfull \hbox (badness 1448) in paragraph at lines 10--11
-[]\OT1/ptm/m/n/10 Our study im-plies that prac-ti-cal BCI can be
- []
 
-Missing character: There is no â in font ptmr7t!
-) (/Users/ffff/Documents/physc2014/test1.bbl
-Underfull \vbox (badness 4378) has occurred while \output is active []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+) (/Users/ffff/Documents/physc2014/Sections/discussion.tex [6]) (/Users/ffff/Do
+cuments/physc2014/test1.bbl
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
@@ -1048,7 +1038,6 @@ Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
-[7]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
@@ -1072,6 +1061,7 @@ Missing character: There is no © in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
+[7]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
@@ -1087,7 +1077,7 @@ Missing character: There is no ¼ in font ptmr7t!
 Here is how much of TeX's memory you used:
  21565 strings out of 493117
  436786 string characters out of 6135433
- 451168 words of memory out of 5000000
+ 452168 words of memory out of 5000000
  24643 multiletter control sequences out of 15000+600000
  86077 words of font info for 202 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1099,7 +1089,7 @@ public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/u
 rw/symbol/usyr.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/ut
 mb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
 /usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/ffff/Documents/physc2014/test1.pdf (8 pages, 297120 by
+Output written on /Users/ffff/Documents/physc2014/test1.pdf (8 pages, 295190 by
 tes).
 PDF statistics:
  94 PDF objects out of 1000 (max. 8388607)

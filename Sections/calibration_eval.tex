@@ -3,7 +3,7 @@
 
 \noindent In the previous section, we found that our compression technique can speed up an SVM classifier without significant detriment to BCI accuracy. However, it must also allow users to quickly calibrate the system to their personal physiological signals.
 
-In this section, we evaluate a strategy for user calibration in which mental gestures are recorded progressively on an ``as needed'' basis. Using  quantized signals with a resolution of 100 bins, we measure user calibration time (the time it takes a user to achieve a threshold accuracy with the BCI) and the classification accuracy each user achieves after calibration. 
+In this section, we evaluate a strategy for user calibration in which mental gestures are recorded progressively on an \textit{as needed} basis. Using  quantized signals with a resolution of 50 bins, we measure user calibration time (the time it takes a user to achieve a threshold accuracy with the BCI) and the classification accuracy each user achieves after calibration. 
 
 Our calibration strategy takes sixty-second sample recordings of mental gestures and splices them into 120 $\sfrac{1}{2}$-second chunks. By performing seven-fold cross-validation on sample data from a pair of mental gestures, we make an estimate of how easily discriminable these gestures are by our classifier. With this technique, we only need to identify the most promising (highest-performing) of candidate gesture pairs for further testing
 
@@ -122,7 +122,7 @@ Figure \ref{fig:calibration_results} shows the results from a subject's perspect
   \end{tikzpicture}
   \vspace{0.1cm}
   
-  \caption{Calibration time across subjects (top) and classifier accuracy (bottom). The vast majority of subjects achieve acceptable accuracy in under five minutes of training, all but one subject in under 12 minutes, and the remaining subject in 22 minutes. }
+  \caption{Calibration time across subjects (top) and classifier accuracy (bottom). The vast majority of subjects achieve acceptable accuracy in 4.5 minutes of training, all but one subject in 11 minutes, and the remaining subject in 22 minutes. }
   \label{fig:calibration_results}
   \vspace{-0.1cm}
 \end{figure}
