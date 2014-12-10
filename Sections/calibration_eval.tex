@@ -29,7 +29,7 @@ In addition, we seek to minimize the amount of time users spend recording sample
 %  \vspace{-0.1cm}
 \end{table}
 
-The progressive strategy starts with three gestures most commonly associated with best-case performance (\textit{color}, \textit{breathing}, \textit{pass}) for an initial user calibration time of 180 seconds (60 seconds per gesture). We then cross-validate every permutation of two of these gestures (i.e., \textit{color} versus \textit{breathing}, \textit{color} versus \textit{pass}, \textit{breathing} versus \textit{pass}). The gesture pair with the highest mean score across cross-validation rounds is selected for an additional testing session, in which the remaining 80 seconds of recordings for both gestures are used to generate an estimate of the classifier's accuracy on new EEG signals.
+The progressive strategy starts with three gestures most commonly associated with best-case performance (\textit{color}, \textit{breathing}, \textit{pass}) for an initial user calibration time of 180 seconds (60 seconds per gesture). We then cross-validate every permutation of two of these gestures (i.e. \textit{color} versus \textit{breathing}, \textit{color} versus \textit{pass}, \textit{breathing} versus \textit{pass}). The gesture pair with the highest mean score across cross-validation rounds is selected for an additional testing session, in which the remaining 80 seconds of recordings for both gestures are used to generate an estimate of the classifier's accuracy on new EEG signals.
 
 If the score on this additional testing procedure is below 75\%, a commonly used threshold for BCI literacy \cite{vidaurre_towards_2010}, the user will be prompted to record sixty seconds of the next candidate mental gesture (e.g. \textit{sport}). We repeat the above process on unexplored pairs until a pair achieves over 75\% accuracy on post-calibration data, or until all combinations have been evaluated.
 
@@ -74,9 +74,9 @@ If the score on this additional testing procedure is below 75\%, a commonly used
 
 %\subsection{Results}
 
-For the given set of seven candidate gestures, the baseline exhaustive search strategy requires 2100 seconds of calibration time (60 seconds times 7 gestures plus 80 seconds times 21 gesture pairs) and produces an average accuracy of 92.5\% across subjects (\textit{$\sigma$} = 0.09). Our progressive strategy takes an average of 374.6 seconds of calibration time (\textit{$\sigma$} = 52.2) and produces an average accuracy of 88.3\% (\textit{$\sigma$} = 0.11).
+For the given set of seven candidate gestures, the baseline exhaustive search strategy requires 2100 seconds of calibration time (60 seconds times 7 gestures plus 80 seconds times 21 gesture pairs) and produces an average accuracy of 92.5\% across subjects (\textit{$\sigma$} = 0.09). Our progressive strategy takes an average of 374.6 seconds of calibration time (\textit{$\sigma$} = 52.2) and produces an average accuracy of 88.3\% (\textit{$\sigma$} = 0.11\%).
 
-Figure \ref{fig:calibration_results} shows the results from a subject's perspective. Out of 15 subjects, the progressive calibration strategy allows 66.7\% (10 subjects) to be calibrated in under 5 minutes, and 86.7\% (13 subjects) in under 6 minutes. The remaining two subjects were calibrated in 11 minutes and 22 minutes, respectively. All 15 subjects achieve a minimum of 75\% classification accuracy. Six subjects (40\%) achieve 100\% accuracy.
+Figure \ref{fig:calibration_results} shows the results from a subject's perspective. Out of 15 subjects, the progressive calibration strategy allowed 66.7\% (10 subjects) to be calibrated in under 5 minutes, and 86.7\% (13 subjects) in under 6 minutes. The system calibrated the remaining two subjects in 11 minutes and 22 minutes, respectively. All 15 subjects achieved a minimum of 75\% classification accuracy. Six subjects (40\%) achieve 100\% accuracy.
 
 \begin{figure}[!h]
   \vspace{-0.2cm}

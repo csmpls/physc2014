@@ -5,22 +5,12 @@
 
 Supervised learning algorithms have assisted systems in adapting to users' personal physiology after a calibration period. In BCI, this approach has yielded proof-of-concept systems ranging from brain-controlled keyboards and wheelchairs to prosthetic arms and hands \cite{blankertz_note_2007,millan_combining_2010,d._mattia_brain_2011,hill_practical_2014,campbell_neurophone:_2010}. 
 
-% For similar devices to find use outside of the lab, they  minimize both the size of our sensing devices and the amount of time users spend calibrating the interface. % minimal number of sensors + limited computational power on mobile devices % while still accurate and quick-to-calibrate
-
-% BCIs often require upward of an hour to calibrate to their users, with close supervision by researchers, and may require regular recalibration due to the nonstationary nature of EEG signals. \cite{vidaurre_fully_2006,vidaurre_co-adaptive_2011,blankertz_non-invasive_2007} Recent work has come close to eliminating traditional calibration, though these techniques have not yet been applied to consumer headsets. \cite{kindermans_true_2014}
-
 However, in order to move BCI into broader consumer markets, systems must work with more mobile sensing equipment and wearable computing platforms. Mobile device architectures limit computational complexity relative to lab-based systems, and ergonomic considerations limit the number and quality of sensors on the device. 
 
-% This leads us to pose the following research question: how fast and with how little computational power can we build a practical BCI?
-
 In this study, we simulate a simple brain-computer interface using signals acquired from a low-cost, mobile electroencephalograph (EEG) device with a single electrode. Using a BCI that takes \textit{mental gestures} as input, we investigate how the processing of bio-signals and the strategy for user calibration can impact the computational performance, reliability and calibration time of a physiological signal classification system. 
-
-% How can we characterize the tradeoff between computational complexity and classification accuracy at the signal processing step? Is it possible to achieve user calibration on the order of minutes rather than hours or days?
-
-%How can we process EEG signals such that we minimize the computational expense of classification while maximizing the system's accuracy? Is a computationally efficient signal processing technique compatible with a user-calibration protocol that achieves ``BCI literacy'' across all subjects on the order of minutes rather than hours or days?
 
 First, we present a novel signal quantization technique in which we apply logarithmic binning to power spectrum data from an EEG electrode. We find that this technique can speed up the computational performance of a classification-based BCI by 450\% without significant detriment to the system's accuracy. 
 
 Second, we combine this technique with a progressive user calibration strategy, in which candidate mental gestures are tested in an order designed to minimize calibration time. We calibrate 86.6\% of users to a threshold of \textit{BCI literacy} (75\% accuracy) \cite{vidaurre_towards_2010} with under five minutes of training data, and 100\% of users within half an hour. 
 
-This paper is organized as follows. We introduce relevant background research in Section \ref{sec:related}. We present the power spectrum quantization method in Section \ref{sec:quantization} and the data used for calibration in Section \ref{sec:data}. We then evaluate the quantization method (Section \ref{sec:quantization_eval}), and we present a time-efficient calibration strategy for our BCI apparatus (Section \ref{sec:calibration_eval}). We conclude with limitations and future research directions.
+This paper is organized as follows. We introduce relevant background research in Section \ref{sec:related}. We present the power spectrum quantization method in Section \ref{sec:quantization}, and the data used for calibration in Section \ref{sec:data}. We then evaluate the quantization method (Section \ref{sec:quantization_eval}), and we present a time-efficient calibration strategy for our BCI apparatus (Section \ref{sec:calibration_eval}). We conclude with limitations and future research directions.
