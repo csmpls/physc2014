@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex test1"] 1418243622 "test1.aux" "test1.bbl" "test1" 1418243712
+["bibtex test1"] 1418243622 "test1.aux" "test1.bbl" "test1" 1418243848
   "./apalike.bst" 1417200974 21813 a6bc43259122f57cbcaa6ae34b78e94b ""
   "references.bib" 1417200974 28826 1a00fabdca5b9f12d6895de3c8112102 ""
-  "test1.aux" 1418243711 3221 bd3967e360d1f94575532989379d3432 ""
+  "test1.aux" 1418243847 3221 bd3967e360d1f94575532989379d3432 ""
   "test1.bcf" 0 -1 0 ""
   (generated)
   "test1.blg"
   "test1.bbl"
-["pdflatex"] 1418243710 "/Users/ffff/Documents/physc2014/test1.tex" "/Users/ffff/Documents/physc2014/test1.pdf" "test1" 1418243712
-  "/Users/ffff/Documents/physc2014/test1.aux" 1418243711 3221 bd3967e360d1f94575532989379d3432 ""
-  "/Users/ffff/Documents/physc2014/test1.tex" 1418243707 5378 754b7d7d8c0c0087860d6b5a285bf941 ""
+["pdflatex"] 1418243846 "/Users/ffff/Documents/physc2014/test1.tex" "/Users/ffff/Documents/physc2014/test1.pdf" "test1" 1418243848
+  "/Users/ffff/Documents/physc2014/test1.aux" 1418243847 3221 bd3967e360d1f94575532989379d3432 ""
+  "/Users/ffff/Documents/physc2014/test1.tex" 1418243844 5382 a0959da04d181001713e7940c8a7e8c6 ""
   "/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2014/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -183,12 +183,12 @@
   "Sections/quantization_eval.tex" 1418240838 4754 7856e0aebb2462a12111bb0dfa9462e2 ""
   "apalike.sty" 1417200974 1152 7e0216a1c626932f944fefc448e30fd5 ""
   "article.cls" 1417200974 20842 1d83f5084dd6851bbb8f990661490551 ""
-  "test1.aux" 1418243711 3221 bd3967e360d1f94575532989379d3432 ""
+  "test1.aux" 1418243847 3221 bd3967e360d1f94575532989379d3432 ""
   "test1.bbl" 1418243622 7204 bf1ac0ce2597905d92ad754ca188d018 "bibtex test1"
-  "test1.tex" 1418243707 5378 754b7d7d8c0c0087860d6b5a285bf941 ""
+  "test1.tex" 1418243844 5382 a0959da04d181001713e7940c8a7e8c6 ""
   (generated)
   "/Users/ffff/Documents/physc2014/test1.log"
-  "/Users/ffff/Documents/physc2014/test1.pdf"
-  "test1.aux"
   "test1.log"
+  "/Users/ffff/Documents/physc2014/test1.pdf"
   "test1.pdf"
+  "test1.aux"
