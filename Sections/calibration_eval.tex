@@ -69,12 +69,11 @@ If the score on this additional testing procedure is below 75\%, a commonly used
   \caption{Progressive calibration routine. We begin with 60 second recordings of the three best-performing gestures (Table \ref{table:name}). We then perform seven-fold cross-validation on each pair of gestures. The pair that scored highest on cross-validation is selected for testing on an additional 80 seconds of data, 40 from each gesture. If this test fails to reach 75\% accuracy, we prompt the user to record a 60 second sample of the next highest-scoring gesture and repeat the cross-validation process on all new (unexplored) gesture pairs.}
 
   \label{fig:calibration_schematic}
-  \vspace{-0.1cm}
+  \vspace{-0.3cm}
 \end{figure}
 
 %\subsection{Results}
 
-For the given set of seven candidate gestures, the baseline exhaustive search strategy requires 2100 seconds of calibration time (60 seconds times 7 gestures plus 80 seconds times 21 gesture pairs) and produces an average accuracy of 92.5\% across subjects (\textit{$\sigma$} = 0.09). Our progressive strategy takes an average of 374.6 seconds of calibration time (\textit{$\sigma$} = 52.2) and produces an average accuracy of 88.3\% (\textit{$\sigma$} = 0.11\%).
 
 Figure \ref{fig:calibration_results} shows the results from a subject's perspective. Out of 15 subjects, the progressive calibration strategy allowed 66.7\% (10 subjects) to be calibrated in under 5 minutes, and 86.7\% (13 subjects) in under 6 minutes. The system calibrated the remaining two subjects in 11 minutes and 22 minutes, respectively. All 15 subjects achieved a minimum of 75\% classification accuracy. Six subjects (40\%) achieve 100\% accuracy.
 
@@ -120,9 +119,9 @@ Figure \ref{fig:calibration_results} shows the results from a subject's perspect
       \fi
     };
   \end{tikzpicture}
-  \vspace{0.1cm}
+  \vspace{-0.1cm}
   
-  \caption{Calibration time across subjects (top) and classifier accuracy (bottom). The vast majority of subjects achieve acceptable accuracy in 4.5 minutes of training, all but one subject in 11 minutes, and the remaining subject in 22 minutes. }
+  \caption{Calibration time across subjects. The vast majority of subjects subjects achieve acceptable accuracy in 4.5 or 5.5 minutes. The remaining two subjects require 11 minutes and 22 minutes to calibrate, respectively. }
   \label{fig:calibration_results}
   \vspace{-0.1cm}
 \end{figure}

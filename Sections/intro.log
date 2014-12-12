@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  10 DEC 2014 12:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  12 DEC 2014 14:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1337,19 +1337,10 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no a in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no s in font nullfont!
+Missing character: There is no b in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
+Missing character: There is no - in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no g in font nullfont!
@@ -1378,27 +1369,27 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 10--12
+Overfull \hbox (20.0pt too wide) in paragraph at lines 10--11
 []
  []
 
 
-Overfull \hbox (21.97763pt too wide) in paragraph at lines 10--12
+Overfull \hbox (21.97763pt too wide) in paragraph at lines 10--11
 \OT1/cmr/m/it/10 men-
  []
 
 
-Overfull \hbox (10.98882pt too wide) in paragraph at lines 10--12
+Overfull \hbox (10.98882pt too wide) in paragraph at lines 10--11
 \OT1/cmr/m/it/10 tal
  []
 
 
-Overfull \hbox (16.86653pt too wide) in paragraph at lines 10--12
+Overfull \hbox (16.86653pt too wide) in paragraph at lines 10--11
 \OT1/cmr/m/it/10 ges-
  []
 
 
-Overfull \hbox (21.08316pt too wide) in paragraph at lines 10--12
+Overfull \hbox (21.08316pt too wide) in paragraph at lines 10--11
 \OT1/cmr/m/it/10 tures
  []
 
@@ -1409,7 +1400,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.15 F
+l.12 F
       irst, we present a novel signal quantization technique in which we app...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -1675,7 +1666,7 @@ Missing character: There is no c in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 15--16
+Overfull \hbox (20.0pt too wide) in paragraph at lines 12--13
 []
  []
 
@@ -1686,7 +1677,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.17 S
+l.14 S
       econd, we combine this technique with a progressive user calibration s...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -1898,7 +1889,7 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.17 ...5\% accuracy) \cite{vidaurre_towards_2010}
+l.14 ...5\% accuracy) \cite{vidaurre_towards_2010}
                                                    with under five minutes o...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1908,7 +1899,7 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Citation `vidaurre_towards_2010' on page  undefined on input lin
-e 17.
+e 14.
 
 Missing character: There is no ] in font nullfont!
 Missing character: There is no w in font nullfont!
@@ -1978,32 +1969,32 @@ Missing character: There is no u in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 17--18
+Overfull \hbox (20.0pt too wide) in paragraph at lines 14--15
 []
  []
 
 
-Overfull \hbox (18.04988pt too wide) in paragraph at lines 17--18
+Overfull \hbox (18.04988pt too wide) in paragraph at lines 14--15
 \OT1/cmr/m/it/10 BCI
  []
 
 
-Overfull \hbox (12.52213pt too wide) in paragraph at lines 17--18
+Overfull \hbox (12.52213pt too wide) in paragraph at lines 14--15
 \OT1/cmr/m/it/10 lit-
  []
 
 
-Overfull \hbox (12.39433pt too wide) in paragraph at lines 17--18
+Overfull \hbox (12.39433pt too wide) in paragraph at lines 14--15
 \OT1/cmr/m/it/10 er-
  []
 
 
-Overfull \hbox (14.56656pt too wide) in paragraph at lines 17--18
+Overfull \hbox (14.56656pt too wide) in paragraph at lines 14--15
 \OT1/cmr/m/it/10 acy
  []
 
 
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 17--18
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 14--15
 []
  []
 
@@ -2014,7 +2005,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.19 T
+l.16 T
       his paper is organized as follows. We introduce relevant background re...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -2099,7 +2090,7 @@ Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
 <write> ...ference `sec:related' on page \thepage 
                                                   \space undefined\on@line .
-l.19 ...ound research in Section \ref{sec:related}
+l.16 ...ound research in Section \ref{sec:related}
                                                   . We present the power spe...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2108,7 +2099,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `sec:related' on page  undefined on input line 19.
+LaTeX Warning: Reference `sec:related' on page  undefined on input line 16.
 
 Missing character: There is no . in font nullfont!
 Missing character: There is no W in font nullfont!
@@ -2166,7 +2157,7 @@ Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
 <write> ...ce `sec:quantization' on page \thepage 
                                                   \space undefined\on@line .
-l.19 ...n method in Section \ref{sec:quantization}
+l.16 ...n method in Section \ref{sec:quantization}
                                                   , and the data used for ca...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2175,7 +2166,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `sec:quantization' on page  undefined on input line 19
+LaTeX Warning: Reference `sec:quantization' on page  undefined on input line 16
 .
 
 Missing character: There is no , in font nullfont!
@@ -2219,7 +2210,7 @@ Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
 <write> ... Reference `sec:data' on page \thepage 
                                                   \space undefined\on@line .
-l.19 ... for calibration in Section \ref{sec:data}
+l.16 ... for calibration in Section \ref{sec:data}
                                                   . We then evaluate the qua...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2228,7 +2219,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `sec:data' on page  undefined on input line 19.
+LaTeX Warning: Reference `sec:data' on page  undefined on input line 16.
 
 Missing character: There is no . in font nullfont!
 Missing character: There is no W in font nullfont!
@@ -2277,7 +2268,7 @@ Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
 <write> ...ec:quantization_eval' on page \thepage 
                                                   \space undefined\on@line .
-l.19 ...ethod (Section \ref{sec:quantization_eval}
+l.16 ...ethod (Section \ref{sec:quantization_eval}
                                                   ), and we present a time-e...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2287,7 +2278,7 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `sec:quantization_eval' on page  undefined on input li
-ne 19.
+ne 16.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no , in font nullfont!
@@ -2366,7 +2357,7 @@ Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
 <write> ...sec:calibration_eval' on page \thepage 
                                                   \space undefined\on@line .
-l.19 ...aratus (Section \ref{sec:calibration_eval}
+l.16 ...aratus (Section \ref{sec:calibration_eval}
                                                   ). We conclude with limita...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2376,7 +2367,7 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `sec:calibration_eval' on page  undefined on input lin
-e 19.
+e 16.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no . in font nullfont!
